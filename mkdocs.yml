@@ -22,15 +22,83 @@ nav:
       - Glossary: index/GLOSSARY.md
   - Cards:
       - Graphs:
+          - Adjacency Matrix: cards/graphs/adjacency-matrix.md
+          - Clustering Coefficient: cards/graphs/clustering-coefficient.md
+          - Degree Matrix: cards/graphs/degree-matrix.md
+          - Graph Laplacian: cards/graphs/laplacian.md
           - Modularity (Community Quality): cards/graphs/modularity.md
+          - PageRank: cards/graphs/pagerank.md
+          - Spectral Clustering: cards/graphs/spectral-clustering.md
       - Information Theory:
+          - Channel Capacity: cards/info-theory/channel-capacity.md
+          - Conditional Entropy: cards/info-theory/conditional-entropy.md
+          - Cross Entropy: cards/info-theory/cross-entropy.md
+          - Data Processing Inequality: cards/info-theory/data-processing-inequality.md
+          - Entropy Rate: cards/info-theory/entropy-rate.md
+          - Fisher Information: cards/info-theory/fisher-information.md
+          - Jensen-Shannon Divergence: cards/info-theory/js-divergence.md
+          - Joint Entropy: cards/info-theory/joint-entropy.md
           - KL Divergence (Relative Entropy): cards/info-theory/kl-divergence.md
+          - Mutual Information: cards/info-theory/mutual-information.md
+          - Perplexity: cards/info-theory/perplexity.md
           - Shannon Entropy: cards/info-theory/entropy-shannon.md
+      - Linear Algebra:
+          - Cholesky Decomposition: cards/linear-algebra/cholesky.md
+          - Condition Number: cards/linear-algebra/condition-number.md
+          - Dot Product: cards/linear-algebra/dot-product.md
+          - Eigendecomposition: cards/linear-algebra/eigendecomposition.md
+          - Least Squares: cards/linear-algebra/least-squares.md
+          - Orthogonal Projection: cards/linear-algebra/projection.md
+          - Orthonormal Basis: cards/linear-algebra/orthonormal-basis.md
+          - QR Decomposition: cards/linear-algebra/qr.md
+          - Singular Value Decomposition (SVD): cards/linear-algebra/svd.md
+          - Vector Norms: cards/linear-algebra/norms.md
       - ML Metrics:
+          - Average Precision: cards/ml-metrics/average-precision.md
+          - Brier Score: cards/ml-metrics/brier-score.md
+          - Calibration Error (ECE): cards/ml-metrics/calibration-error.md
+          - Cohen's Kappa: cards/ml-metrics/cohen-kappa.md
+          - F1 Score: cards/ml-metrics/f1-score.md
           - Jaccard Similarity / IoU: cards/ml-metrics/jaccard.md
           - Log Loss (Binary Cross-Entropy): cards/ml-metrics/log-loss.md
+          - Matthews Correlation Coefficient: cards/ml-metrics/matthews-corrcoef.md
           - Negative Log-Likelihood (NLL): cards/ml-metrics/negative-log-likelihood.md
+          - Precision: cards/ml-metrics/precision.md
+          - Precision-Recall Curve: cards/ml-metrics/pr-curve.md
+          - Recall: cards/ml-metrics/recall.md
           - ROC AUC: cards/ml-metrics/auc-roc.md
+          - ROC Curve: cards/ml-metrics/roc-curve.md
+      - Optimization:
+          - Gradient Descent: cards/optimization/gradient-descent.md
+          - KKT Conditions: cards/optimization/kkt-conditions.md
+          - Lagrangian: cards/optimization/lagrangian.md
+          - Lagrangian Duality: cards/optimization/duality.md
+          - Line Search: cards/optimization/line-search.md
+          - Newton's Method: cards/optimization/newton-method.md
+          - Proximal Operator: cards/optimization/proximal-operator.md
+          - Stochastic Gradient Descent: cards/optimization/stochastic-gradient-descent.md
+      - Probability Stats:
+          - Bayes' Rule: cards/probability-stats/bayes-rule.md
+          - Central Limit Theorem: cards/probability-stats/central-limit-theorem.md
+          - Characteristic Function: cards/probability-stats/characteristic-function.md
+          - Chebyshev's Inequality: cards/probability-stats/chebyshev-inequality.md
+          - Conditional Expectation: cards/probability-stats/conditional-expectation.md
+          - Correlation: cards/probability-stats/correlation.md
+          - Covariance: cards/probability-stats/covariance.md
+          - Expectation: cards/probability-stats/expectation.md
+          - Jensen's Inequality: cards/probability-stats/jensen-inequality.md
+          - Law of Large Numbers: cards/probability-stats/law-of-large-numbers.md
+          - Law of Total Probability: cards/probability-stats/total-probability.md
+          - Markov's Inequality: cards/probability-stats/markov-inequality.md
+          - Moment Generating Function: cards/probability-stats/mgf.md
+          - Variance: cards/probability-stats/variance.md
+      - Signal Processing:
+          - Aliasing: cards/signal-processing/aliasing.md
+          - Convolution: cards/signal-processing/convolution.md
+          - Discrete Fourier Transform: cards/signal-processing/dft.md
+          - Fast Fourier Transform: cards/signal-processing/fft.md
+          - Fourier Transform: cards/signal-processing/fourier-transform.md
+          - Nyquist-Shannon Sampling Theorem: cards/signal-processing/sampling-theorem.md
 
 theme:
   name: material
