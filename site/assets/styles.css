@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap');
+
+:root {
+  --bg: #f7f2e8;
+  --ink: #111111;
+  --accent: #ff6b2c;
+  --accent-2: #1f6feb;
+  --paper: #fffaf0;
+  --grid: rgba(0, 0, 0, 0.08);
+  --border: #111111;
+}
+
+/* Global */
+body {
+  background:
+    linear-gradient(0deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    var(--bg);
+  background-size: 24px 24px, 24px 24px, auto;
+  color: var(--ink);
+  font-family: "Fraunces", serif;
+}
+
+.md-container {
+  background: transparent;
+}
+
+.md-main__inner {
+  background: var(--paper);
+  border: 3px solid var(--border);
+  box-shadow: 8px 8px 0 var(--border);
+  padding: 1.5rem;
+}
+
+.md-header, .md-tabs {
+  background: var(--paper);
+  color: var(--ink);
+  border-bottom: 3px solid var(--border);
+}
+
+.md-header__title, .md-tabs__link {
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.02em;
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.md-typeset h1 {
+  border-bottom: 4px solid var(--border);
+  padding-bottom: 0.3rem;
+}
+
+.md-typeset a {
+  color: var(--accent-2);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+.md-typeset a:hover {
+  color: var(--accent);
+}
+
+.md-typeset hr {
+  border-top: 3px solid var(--border);
+}
+
+.md-typeset code, .md-typeset pre {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.md-typeset pre {
+  border: 3px solid var(--border);
+  box-shadow: 6px 6px 0 var(--border);
+}
+
+.md-typeset blockquote {
+  border-left: 6px solid var(--border);
+  background: #fff3d6;
+}
+
+/* Large, punchy equations */
+.md-typeset .arithmatex {
+  font-size: 1.25em;
+}
+
+.md-typeset .arithmatex * {
+  font-size: 1.1em;
+}
+
+/* Buttons and pills */
+.md-button {
+  border: 3px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Sidebar */
+.md-sidebar {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.md-nav__link--active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .md-main__inner {
+    padding: 1rem;
+    box-shadow: 5px 5px 0 var(--border);
+  }
+}
