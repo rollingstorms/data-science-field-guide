@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import ast
+import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -12,6 +13,7 @@ INDEX_PATH = ROOT / "index" / "INDEX.md"
 TAGS_PATH = ROOT / "index" / "TAGS.md"
 MKDOCS_PATH = ROOT / "mkdocs.yml"
 DOCS_DIR = ROOT / "docs"
+CARD_TAGS_JSON_PATH = ROOT / "assets" / "card-tags.json"
 
 CATEGORY_ALIASES = {
     "info-theory": "Information Theory",
@@ -205,13 +207,13 @@ theme:
   features:
     - navigation.instant
     - navigation.sections
-    - navigation.expand
     - search.suggest
     - search.highlight
 
 markdown_extensions:
   - admonition
   - footnotes
+  - md_in_html
   - tables
   - toc:
       permalink: true
@@ -223,9 +225,22 @@ extra_css:
 
 extra_javascript:
   - assets/mathjax-config.js
+  - assets/tag-pills.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js
 """
     return mkdocs.rstrip() + "\n"
+
+
+def build_card_tags_json(cards: List[Card]) -> str:
+    mapping: Dict[str, Dict[str, object]] = {}
+    for card in cards:
+        route = "/" + card.rel_path[:-3] + "/"  # replace .md with trailing slash route
+        mapping[route] = {
+            "title": card.title,
+            "tags": card.tags,
+            "category": card.category,
+        }
+    return json.dumps(mapping, ensure_ascii=True, indent=2, sort_keys=True) + "\n"
 
 
 def main() -> None:
@@ -244,6 +259,7 @@ def main() -> None:
     INDEX_PATH.write_text(build_index(cards), encoding="utf-8")
     TAGS_PATH.write_text(build_tags(cards), encoding="utf-8")
     MKDOCS_PATH.write_text(build_mkdocs(cards), encoding="utf-8")
+    CARD_TAGS_JSON_PATH.write_text(build_card_tags_json(cards), encoding="utf-8")
     ensure_docs_symlinks()
 
 

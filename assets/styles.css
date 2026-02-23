@@ -82,15 +82,9 @@ body {
   background: #fff3d6;
 }
 
-/* Large, punchy equations */
+/* Keep inline math consistent with surrounding text */
 .md-typeset .arithmatex {
-  font-size: clamp(1.4rem, 2.6vw, 2.1rem);
-  overflow-x: auto;
-  max-width: 100%;
-}
-
-.md-typeset .arithmatex * {
-  font-size: 1.05em;
+  font-size: 1em;
 }
 
 /* Prevent display math from clipping */
@@ -100,9 +94,17 @@ body {
   max-width: 100%;
 }
 
-/* Make Parameters slightly smaller than the formula */
-.md-typeset h2 + ul,
-.md-typeset h2 + p + ul {
+/* Section-specific math sizing */
+.md-typeset .formula .arithmatex,
+.md-typeset .formula .MathJax_Display {
+  font-size: clamp(1.4rem, 2.6vw, 2.1rem);
+}
+
+.md-typeset .parameters {
+  font-size: 0.95em;
+}
+
+.md-typeset .parameters .arithmatex {
   font-size: 0.95em;
 }
 
@@ -129,4 +131,46 @@ body {
     padding: 1rem;
     box-shadow: 5px 5px 0 var(--border);
   }
+}
+
+/* Per-card tag pills (rendered by assets/tag-pills.js) */
+.md-typeset .card-tags-footer {
+  margin-top: 1.25rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid color-mix(in srgb, var(--border) 20%, transparent);
+}
+
+.md-typeset .card-tags-label {
+  margin-bottom: 0.45rem;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: color-mix(in srgb, var(--ink) 55%, white);
+}
+
+.md-typeset .card-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.md-typeset .card-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--border) 16%, white);
+  background: color-mix(in srgb, var(--paper) 76%, #d9d9d9);
+  color: color-mix(in srgb, var(--ink) 72%, white);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.md-typeset .card-tag-pill:hover,
+.md-typeset .card-tag-pill:focus-visible {
+  background: color-mix(in srgb, var(--paper) 62%, #c9c9c9);
+  border-color: color-mix(in srgb, var(--border) 28%, white);
+  color: var(--ink);
 }

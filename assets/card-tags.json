@@ -1,0 +1,1617 @@
+{
+  "/cards/activations/activations/": {
+    "category": "activations",
+    "tags": [
+      "deep-learning",
+      "neural-networks"
+    ],
+    "title": "Activation Functions"
+  },
+  "/cards/activations/elu/": {
+    "category": "activations",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "activations"
+    ],
+    "title": "ELU (Exponential Linear Unit)"
+  },
+  "/cards/activations/gelu/": {
+    "category": "activations",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "activations",
+      "transformers"
+    ],
+    "title": "GELU (Gaussian Error Linear Unit)"
+  },
+  "/cards/activations/leaky-relu/": {
+    "category": "activations",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "activations"
+    ],
+    "title": "Leaky ReLU"
+  },
+  "/cards/activations/relu/": {
+    "category": "activations",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "activations"
+    ],
+    "title": "ReLU (Rectified Linear Unit)"
+  },
+  "/cards/activations/selu/": {
+    "category": "activations",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "activations"
+    ],
+    "title": "SELU (Scaled ELU)"
+  },
+  "/cards/activations/sigmoid/": {
+    "category": "activations",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "activations",
+      "probability"
+    ],
+    "title": "Sigmoid (Logistic)"
+  },
+  "/cards/activations/softmax/": {
+    "category": "activations",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "activations",
+      "probability"
+    ],
+    "title": "Softmax"
+  },
+  "/cards/activations/softplus/": {
+    "category": "activations",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "activations"
+    ],
+    "title": "Softplus"
+  },
+  "/cards/activations/swish-silu/": {
+    "category": "activations",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "activations"
+    ],
+    "title": "Swish / SiLU"
+  },
+  "/cards/activations/tanh/": {
+    "category": "activations",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "activations"
+    ],
+    "title": "Tanh (Hyperbolic Tangent)"
+  },
+  "/cards/calculus/chain-rule/": {
+    "category": "calculus",
+    "tags": [
+      "calculus"
+    ],
+    "title": "Chain Rule"
+  },
+  "/cards/calculus/derivative/": {
+    "category": "calculus",
+    "tags": [
+      "calculus"
+    ],
+    "title": "Derivative"
+  },
+  "/cards/calculus/gradient/": {
+    "category": "calculus",
+    "tags": [
+      "calculus",
+      "multivariable",
+      "optimization"
+    ],
+    "title": "Gradient"
+  },
+  "/cards/calculus/hessian/": {
+    "category": "calculus",
+    "tags": [
+      "calculus",
+      "multivariable",
+      "optimization"
+    ],
+    "title": "Hessian"
+  },
+  "/cards/calculus/integral/": {
+    "category": "calculus",
+    "tags": [
+      "calculus"
+    ],
+    "title": "Integral"
+  },
+  "/cards/calculus/jacobian/": {
+    "category": "calculus",
+    "tags": [
+      "calculus",
+      "multivariable",
+      "linear-algebra"
+    ],
+    "title": "Jacobian"
+  },
+  "/cards/calculus/multivariable-chain-rule/": {
+    "category": "calculus",
+    "tags": [
+      "calculus",
+      "multivariable",
+      "linear-algebra"
+    ],
+    "title": "Multivariable Chain Rule"
+  },
+  "/cards/calculus/partial-derivative/": {
+    "category": "calculus",
+    "tags": [
+      "calculus",
+      "multivariable"
+    ],
+    "title": "Partial Derivative"
+  },
+  "/cards/calculus/taylor-expansion/": {
+    "category": "calculus",
+    "tags": [
+      "calculus",
+      "approximation"
+    ],
+    "title": "Taylor Expansion"
+  },
+  "/cards/deep-learning/attention/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "transformers",
+      "nlp"
+    ],
+    "title": "Attention"
+  },
+  "/cards/deep-learning/backpropagation/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "optimization",
+      "calculus"
+    ],
+    "title": "Backpropagation"
+  },
+  "/cards/deep-learning/batch-normalization/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "normalization"
+    ],
+    "title": "Batch Normalization"
+  },
+  "/cards/deep-learning/cross-attention/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "transformers",
+      "nlp"
+    ],
+    "title": "Cross-Attention"
+  },
+  "/cards/deep-learning/dropout/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "regularization"
+    ],
+    "title": "Dropout"
+  },
+  "/cards/deep-learning/embedding/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "representation-learning",
+      "nlp"
+    ],
+    "title": "Embedding"
+  },
+  "/cards/deep-learning/feedforward-network-transformer/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "transformers",
+      "mlp"
+    ],
+    "title": "Feedforward Network (Transformer FFN)"
+  },
+  "/cards/deep-learning/layer-normalization/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "neural-networks",
+      "normalization"
+    ],
+    "title": "Layer Normalization"
+  },
+  "/cards/deep-learning/mlp/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "neural-networks"
+    ],
+    "title": "MLP (Multi-Layer Perceptron)"
+  },
+  "/cards/deep-learning/multi-head-attention/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "transformers"
+    ],
+    "title": "Multi-Head Attention"
+  },
+  "/cards/deep-learning/positional-encoding/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "transformers",
+      "sequence-modeling"
+    ],
+    "title": "Positional Encoding"
+  },
+  "/cards/deep-learning/residual-connection/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "neural-networks"
+    ],
+    "title": "Residual Connection (Skip Connection)"
+  },
+  "/cards/deep-learning/self-attention/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "transformers",
+      "nlp"
+    ],
+    "title": "Self-Attention"
+  },
+  "/cards/deep-learning/transformer/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "transformers",
+      "nlp"
+    ],
+    "title": "Transformer"
+  },
+  "/cards/graphs/adjacency-matrix/": {
+    "category": "graphs",
+    "tags": [
+      "graph-theory",
+      "linear-algebra"
+    ],
+    "title": "Adjacency Matrix"
+  },
+  "/cards/graphs/bellman-ford/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "shortest-path"
+    ],
+    "title": "Bellman-Ford Algorithm"
+  },
+  "/cards/graphs/bfs/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "traversal"
+    ],
+    "title": "Breadth-First Search (BFS)"
+  },
+  "/cards/graphs/clustering-coefficient/": {
+    "category": "graphs",
+    "tags": [
+      "graph-theory",
+      "networks"
+    ],
+    "title": "Clustering Coefficient"
+  },
+  "/cards/graphs/connected-components/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "connectivity"
+    ],
+    "title": "Connected Components"
+  },
+  "/cards/graphs/degree-matrix/": {
+    "category": "graphs",
+    "tags": [
+      "graph-theory",
+      "linear-algebra"
+    ],
+    "title": "Degree Matrix"
+  },
+  "/cards/graphs/dfs/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "traversal"
+    ],
+    "title": "Depth-First Search (DFS)"
+  },
+  "/cards/graphs/dijkstra/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "shortest-path"
+    ],
+    "title": "Dijkstra's Algorithm"
+  },
+  "/cards/graphs/graph-algorithms/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms"
+    ],
+    "title": "Graph Algorithms (Overview)"
+  },
+  "/cards/graphs/kruskal/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "mst"
+    ],
+    "title": "Kruskal's Algorithm"
+  },
+  "/cards/graphs/label-propagation/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "community-detection"
+    ],
+    "title": "Label Propagation (LPA)"
+  },
+  "/cards/graphs/laplacian/": {
+    "category": "graphs",
+    "tags": [
+      "graph-theory",
+      "spectral",
+      "linear-algebra"
+    ],
+    "title": "Graph Laplacian"
+  },
+  "/cards/graphs/message-passing/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "graph-ml",
+      "gnn"
+    ],
+    "title": "Message Passing (on Graphs)"
+  },
+  "/cards/graphs/minimum-spanning-tree/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "optimization"
+    ],
+    "title": "Minimum Spanning Tree (MST)"
+  },
+  "/cards/graphs/modularity/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "community-detection"
+    ],
+    "title": "Modularity (Community Quality)"
+  },
+  "/cards/graphs/network-significance-profile/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "motifs",
+      "statistics"
+    ],
+    "title": "Network Significance Profile"
+  },
+  "/cards/graphs/pagerank/": {
+    "category": "graphs",
+    "tags": [
+      "graph-theory",
+      "networks"
+    ],
+    "title": "PageRank"
+  },
+  "/cards/graphs/prim/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "mst"
+    ],
+    "title": "Prim's Algorithm"
+  },
+  "/cards/graphs/shortest-path/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "shortest-path"
+    ],
+    "title": "Shortest Path (Overview)"
+  },
+  "/cards/graphs/spectral-clustering/": {
+    "category": "graphs",
+    "tags": [
+      "graph-theory",
+      "clustering"
+    ],
+    "title": "Spectral Clustering"
+  },
+  "/cards/graphs/topological-sort/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "dag"
+    ],
+    "title": "Topological Sort"
+  },
+  "/cards/info-theory/channel-capacity/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory"
+    ],
+    "title": "Channel Capacity"
+  },
+  "/cards/info-theory/conditional-entropy/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory",
+      "probability"
+    ],
+    "title": "Conditional Entropy"
+  },
+  "/cards/info-theory/cross-entropy/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory",
+      "probability",
+      "ml"
+    ],
+    "title": "Cross Entropy"
+  },
+  "/cards/info-theory/data-processing-inequality/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory",
+      "dependence"
+    ],
+    "title": "Data Processing Inequality"
+  },
+  "/cards/info-theory/entropy-rate/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory",
+      "stochastic-processes"
+    ],
+    "title": "Entropy Rate"
+  },
+  "/cards/info-theory/entropy-shannon/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory",
+      "probability"
+    ],
+    "title": "Shannon Entropy"
+  },
+  "/cards/info-theory/fisher-information/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory",
+      "statistics"
+    ],
+    "title": "Fisher Information"
+  },
+  "/cards/info-theory/joint-entropy/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory",
+      "probability"
+    ],
+    "title": "Joint Entropy"
+  },
+  "/cards/info-theory/js-divergence/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory",
+      "divergence"
+    ],
+    "title": "Jensen-Shannon Divergence"
+  },
+  "/cards/info-theory/kl-divergence/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory",
+      "probability",
+      "optimization"
+    ],
+    "title": "KL Divergence (Relative Entropy)"
+  },
+  "/cards/info-theory/mutual-information/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory",
+      "probability",
+      "dependence"
+    ],
+    "title": "Mutual Information"
+  },
+  "/cards/info-theory/perplexity/": {
+    "category": "info-theory",
+    "tags": [
+      "information-theory",
+      "ml"
+    ],
+    "title": "Perplexity"
+  },
+  "/cards/linear-algebra/cholesky/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra",
+      "matrix-decomposition"
+    ],
+    "title": "Cholesky Decomposition"
+  },
+  "/cards/linear-algebra/condition-number/": {
+    "category": "linear-algebra",
+    "tags": [
+      "numerical"
+    ],
+    "title": "Condition Number"
+  },
+  "/cards/linear-algebra/determinant/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra"
+    ],
+    "title": "Determinant"
+  },
+  "/cards/linear-algebra/dot-product/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra"
+    ],
+    "title": "Dot Product"
+  },
+  "/cards/linear-algebra/eigendecomposition/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra",
+      "matrix-decomposition"
+    ],
+    "title": "Eigendecomposition"
+  },
+  "/cards/linear-algebra/eigenvalues-eigenvectors/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra"
+    ],
+    "title": "Eigenvalues and Eigenvectors"
+  },
+  "/cards/linear-algebra/least-squares/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra",
+      "optimization"
+    ],
+    "title": "Least Squares"
+  },
+  "/cards/linear-algebra/linear-independence/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra"
+    ],
+    "title": "Linear Independence"
+  },
+  "/cards/linear-algebra/matrix-rank/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra"
+    ],
+    "title": "Matrix Rank"
+  },
+  "/cards/linear-algebra/norms/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra"
+    ],
+    "title": "Vector Norms"
+  },
+  "/cards/linear-algebra/orthonormal-basis/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra"
+    ],
+    "title": "Orthonormal Basis"
+  },
+  "/cards/linear-algebra/positive-definite-matrix/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra",
+      "optimization"
+    ],
+    "title": "Positive Definite Matrix"
+  },
+  "/cards/linear-algebra/projection/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra"
+    ],
+    "title": "Orthogonal Projection"
+  },
+  "/cards/linear-algebra/pseudoinverse/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra"
+    ],
+    "title": "Pseudo-inverse (Moore-Penrose)"
+  },
+  "/cards/linear-algebra/qr/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra",
+      "matrix-decomposition"
+    ],
+    "title": "QR Decomposition"
+  },
+  "/cards/linear-algebra/span/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra"
+    ],
+    "title": "Span"
+  },
+  "/cards/linear-algebra/svd/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra",
+      "matrix-decomposition"
+    ],
+    "title": "Singular Value Decomposition (SVD)"
+  },
+  "/cards/linear-algebra/trace/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra"
+    ],
+    "title": "Trace"
+  },
+  "/cards/ml-metrics/auc-roc/": {
+    "category": "ml-metrics",
+    "tags": [
+      "ml",
+      "metrics",
+      "ranking"
+    ],
+    "title": "ROC AUC"
+  },
+  "/cards/ml-metrics/average-precision/": {
+    "category": "ml-metrics",
+    "tags": [
+      "classification",
+      "evaluation"
+    ],
+    "title": "Average Precision"
+  },
+  "/cards/ml-metrics/brier-score/": {
+    "category": "ml-metrics",
+    "tags": [
+      "calibration",
+      "evaluation"
+    ],
+    "title": "Brier Score"
+  },
+  "/cards/ml-metrics/calibration-error/": {
+    "category": "ml-metrics",
+    "tags": [
+      "calibration",
+      "evaluation"
+    ],
+    "title": "Calibration Error (ECE)"
+  },
+  "/cards/ml-metrics/cohen-kappa/": {
+    "category": "ml-metrics",
+    "tags": [
+      "classification",
+      "evaluation"
+    ],
+    "title": "Cohen's Kappa"
+  },
+  "/cards/ml-metrics/dice/": {
+    "category": "ml-metrics",
+    "tags": [
+      "ml",
+      "metrics",
+      "similarity"
+    ],
+    "title": "Dice Coefficient (Sorensen-Dice)"
+  },
+  "/cards/ml-metrics/f1-score/": {
+    "category": "ml-metrics",
+    "tags": [
+      "classification",
+      "evaluation"
+    ],
+    "title": "F1 Score"
+  },
+  "/cards/ml-metrics/jaccard/": {
+    "category": "ml-metrics",
+    "tags": [
+      "ml",
+      "metrics",
+      "similarity"
+    ],
+    "title": "Jaccard Similarity / IoU"
+  },
+  "/cards/ml-metrics/log-loss/": {
+    "category": "ml-metrics",
+    "tags": [
+      "ml",
+      "metrics",
+      "classification",
+      "likelihood"
+    ],
+    "title": "Log Loss (Binary Cross-Entropy)"
+  },
+  "/cards/ml-metrics/mae/": {
+    "category": "ml-metrics",
+    "tags": [
+      "ml",
+      "metrics",
+      "regression"
+    ],
+    "title": "Mean Absolute Error (MAE)"
+  },
+  "/cards/ml-metrics/matthews-corrcoef/": {
+    "category": "ml-metrics",
+    "tags": [
+      "classification",
+      "evaluation"
+    ],
+    "title": "Matthews Correlation Coefficient"
+  },
+  "/cards/ml-metrics/mse/": {
+    "category": "ml-metrics",
+    "tags": [
+      "ml",
+      "metrics",
+      "regression"
+    ],
+    "title": "Mean Squared Error (MSE)"
+  },
+  "/cards/ml-metrics/negative-log-likelihood/": {
+    "category": "ml-metrics",
+    "tags": [
+      "ml",
+      "likelihood",
+      "optimization"
+    ],
+    "title": "Negative Log-Likelihood (NLL)"
+  },
+  "/cards/ml-metrics/pr-curve/": {
+    "category": "ml-metrics",
+    "tags": [
+      "classification",
+      "evaluation"
+    ],
+    "title": "Precision-Recall Curve"
+  },
+  "/cards/ml-metrics/precision/": {
+    "category": "ml-metrics",
+    "tags": [
+      "classification",
+      "evaluation"
+    ],
+    "title": "Precision"
+  },
+  "/cards/ml-metrics/r2/": {
+    "category": "ml-metrics",
+    "tags": [
+      "ml",
+      "metrics",
+      "regression"
+    ],
+    "title": "R^2 (Coefficient of Determination)"
+  },
+  "/cards/ml-metrics/recall/": {
+    "category": "ml-metrics",
+    "tags": [
+      "classification",
+      "evaluation"
+    ],
+    "title": "Recall"
+  },
+  "/cards/ml-metrics/rmse/": {
+    "category": "ml-metrics",
+    "tags": [
+      "ml",
+      "metrics",
+      "regression"
+    ],
+    "title": "Root Mean Squared Error (RMSE)"
+  },
+  "/cards/ml-metrics/roc-curve/": {
+    "category": "ml-metrics",
+    "tags": [
+      "classification",
+      "evaluation"
+    ],
+    "title": "ROC Curve"
+  },
+  "/cards/nlp/causal-language-modeling/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "llms",
+      "transformers"
+    ],
+    "title": "Causal Language Modeling"
+  },
+  "/cards/nlp/inverse-document-frequency/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "information-retrieval",
+      "text"
+    ],
+    "title": "Inverse Document Frequency (IDF)"
+  },
+  "/cards/nlp/language-model/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "llms",
+      "probability"
+    ],
+    "title": "Language Model"
+  },
+  "/cards/nlp/masked-language-modeling/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "transformers",
+      "pretraining"
+    ],
+    "title": "Masked Language Modeling (MLM)"
+  },
+  "/cards/nlp/next-token-prediction/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "llms",
+      "transformers"
+    ],
+    "title": "Next-Token Prediction"
+  },
+  "/cards/nlp/subword-tokenization/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "llms",
+      "tokenization"
+    ],
+    "title": "Subword Tokenization (BPE / WordPiece)"
+  },
+  "/cards/nlp/temperature-sampling/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "llms",
+      "decoding"
+    ],
+    "title": "Temperature (Sampling)"
+  },
+  "/cards/nlp/term-frequency/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "information-retrieval",
+      "text"
+    ],
+    "title": "Term Frequency (TF)"
+  },
+  "/cards/nlp/tf-idf/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "information-retrieval",
+      "text"
+    ],
+    "title": "TF-IDF"
+  },
+  "/cards/nlp/tokenization/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "text-processing",
+      "llms"
+    ],
+    "title": "Tokenization"
+  },
+  "/cards/nlp/top-k-sampling/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "llms",
+      "decoding"
+    ],
+    "title": "Top-k Sampling"
+  },
+  "/cards/nlp/top-p-sampling/": {
+    "category": "nlp",
+    "tags": [
+      "nlp",
+      "llms",
+      "decoding"
+    ],
+    "title": "Top-p Sampling (Nucleus)"
+  },
+  "/cards/optimization/adam/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "deep-learning"
+    ],
+    "title": "Adam Optimizer"
+  },
+  "/cards/optimization/adamw/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "deep-learning"
+    ],
+    "title": "AdamW Optimizer"
+  },
+  "/cards/optimization/duality/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "convex-analysis"
+    ],
+    "title": "Lagrangian Duality"
+  },
+  "/cards/optimization/early-stopping/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "regularization",
+      "model-selection"
+    ],
+    "title": "Early Stopping"
+  },
+  "/cards/optimization/gradient-clipping/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "deep-learning"
+    ],
+    "title": "Gradient Clipping"
+  },
+  "/cards/optimization/gradient-descent/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "first-order"
+    ],
+    "title": "Gradient Descent"
+  },
+  "/cards/optimization/kkt-conditions/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "convex-analysis"
+    ],
+    "title": "KKT Conditions"
+  },
+  "/cards/optimization/lagrangian/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "constraints"
+    ],
+    "title": "Lagrangian"
+  },
+  "/cards/optimization/learning-rate-schedule/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "deep-learning"
+    ],
+    "title": "Learning Rate Schedule"
+  },
+  "/cards/optimization/line-search/": {
+    "category": "optimization",
+    "tags": [
+      "optimization"
+    ],
+    "title": "Line Search"
+  },
+  "/cards/optimization/momentum/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "deep-learning"
+    ],
+    "title": "Momentum (SGD with Momentum)"
+  },
+  "/cards/optimization/newton-method/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "second-order"
+    ],
+    "title": "Newton's Method"
+  },
+  "/cards/optimization/proximal-operator/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "convex-analysis"
+    ],
+    "title": "Proximal Operator"
+  },
+  "/cards/optimization/regularization/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "statistics",
+      "deep-learning"
+    ],
+    "title": "Regularization (L1/L2)"
+  },
+  "/cards/optimization/rmsprop/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "deep-learning"
+    ],
+    "title": "RMSProp"
+  },
+  "/cards/optimization/stochastic-gradient-descent/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "stochastic"
+    ],
+    "title": "Stochastic Gradient Descent"
+  },
+  "/cards/optimization/warmup/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "deep-learning"
+    ],
+    "title": "Learning Rate Warmup"
+  },
+  "/cards/optimization/weight-decay/": {
+    "category": "optimization",
+    "tags": [
+      "optimization",
+      "regularization",
+      "deep-learning"
+    ],
+    "title": "Weight Decay"
+  },
+  "/cards/probability-stats/bayes-rule/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "conditional",
+      "inference"
+    ],
+    "title": "Bayes' Rule"
+  },
+  "/cards/probability-stats/bernoulli-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "discrete"
+    ],
+    "title": "Bernoulli Distribution"
+  },
+  "/cards/probability-stats/bernoulli-trial/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "sampling"
+    ],
+    "title": "Bernoulli Trial"
+  },
+  "/cards/probability-stats/beta-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "continuous"
+    ],
+    "title": "Beta Distribution"
+  },
+  "/cards/probability-stats/binomial-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "discrete"
+    ],
+    "title": "Binomial Distribution"
+  },
+  "/cards/probability-stats/cdf/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution"
+    ],
+    "title": "CDF (Cumulative Distribution Function)"
+  },
+  "/cards/probability-stats/central-limit-theorem/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "asymptotics"
+    ],
+    "title": "Central Limit Theorem"
+  },
+  "/cards/probability-stats/characteristic-function/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "distributions"
+    ],
+    "title": "Characteristic Function"
+  },
+  "/cards/probability-stats/chebyshev-inequality/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "bounds"
+    ],
+    "title": "Chebyshev's Inequality"
+  },
+  "/cards/probability-stats/chi-square-test/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "hypothesis-testing"
+    ],
+    "title": "Chi-Square Test"
+  },
+  "/cards/probability-stats/conditional-expectation/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics"
+    ],
+    "title": "Conditional Expectation"
+  },
+  "/cards/probability-stats/conditional-probability/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "conditional"
+    ],
+    "title": "Conditional Probability"
+  },
+  "/cards/probability-stats/confidence-interval/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "inference"
+    ],
+    "title": "Confidence Interval"
+  },
+  "/cards/probability-stats/correlation/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "dependence"
+    ],
+    "title": "Correlation"
+  },
+  "/cards/probability-stats/covariance/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "dependence"
+    ],
+    "title": "Covariance"
+  },
+  "/cards/probability-stats/expectation/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics"
+    ],
+    "title": "Expectation"
+  },
+  "/cards/probability-stats/exponential-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "continuous"
+    ],
+    "title": "Exponential Distribution"
+  },
+  "/cards/probability-stats/gamma-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "continuous"
+    ],
+    "title": "Gamma Distribution"
+  },
+  "/cards/probability-stats/geometric-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "discrete"
+    ],
+    "title": "Geometric Distribution"
+  },
+  "/cards/probability-stats/independence/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "conditional"
+    ],
+    "title": "Independence"
+  },
+  "/cards/probability-stats/jensen-inequality/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "convexity"
+    ],
+    "title": "Jensen's Inequality"
+  },
+  "/cards/probability-stats/joint-probability/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "joint"
+    ],
+    "title": "Joint Probability"
+  },
+  "/cards/probability-stats/law-of-large-numbers/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "asymptotics"
+    ],
+    "title": "Law of Large Numbers"
+  },
+  "/cards/probability-stats/lognormal-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "continuous"
+    ],
+    "title": "Lognormal Distribution"
+  },
+  "/cards/probability-stats/marginal-probability/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "joint"
+    ],
+    "title": "Marginal Probability"
+  },
+  "/cards/probability-stats/markov-inequality/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "bounds"
+    ],
+    "title": "Markov's Inequality"
+  },
+  "/cards/probability-stats/maximum-a-posteriori/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "inference",
+      "bayesian"
+    ],
+    "title": "Maximum A Posteriori (MAP)"
+  },
+  "/cards/probability-stats/maximum-likelihood-estimation/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "inference",
+      "estimation"
+    ],
+    "title": "Maximum Likelihood Estimation (MLE)"
+  },
+  "/cards/probability-stats/mean/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "central-tendency"
+    ],
+    "title": "Mean (Expected Value)"
+  },
+  "/cards/probability-stats/median/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "central-tendency"
+    ],
+    "title": "Median"
+  },
+  "/cards/probability-stats/mgf/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "distributions"
+    ],
+    "title": "Moment Generating Function"
+  },
+  "/cards/probability-stats/multinomial-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "discrete"
+    ],
+    "title": "Multinomial Distribution"
+  },
+  "/cards/probability-stats/normal-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "continuous"
+    ],
+    "title": "Normal Distribution (Gaussian)"
+  },
+  "/cards/probability-stats/null-hypothesis/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "hypothesis-testing"
+    ],
+    "title": "Null Hypothesis"
+  },
+  "/cards/probability-stats/p-value/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "hypothesis-testing"
+    ],
+    "title": "P-Value"
+  },
+  "/cards/probability-stats/pdf/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "continuous"
+    ],
+    "title": "PDF (Probability Density Function)"
+  },
+  "/cards/probability-stats/pmf/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "discrete"
+    ],
+    "title": "PMF (Probability Mass Function)"
+  },
+  "/cards/probability-stats/poisson-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution",
+      "discrete"
+    ],
+    "title": "Poisson Distribution"
+  },
+  "/cards/probability-stats/probability-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution"
+    ],
+    "title": "Probability Distribution"
+  },
+  "/cards/probability-stats/random-variable/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "random-variable"
+    ],
+    "title": "Random Variable"
+  },
+  "/cards/probability-stats/standard-deviation/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "dispersion"
+    ],
+    "title": "Standard Deviation"
+  },
+  "/cards/probability-stats/statistical-power/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "hypothesis-testing"
+    ],
+    "title": "Statistical Power"
+  },
+  "/cards/probability-stats/t-test-one-sample/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "hypothesis-testing"
+    ],
+    "title": "One-Sample t-Test"
+  },
+  "/cards/probability-stats/t-test-paired/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "hypothesis-testing"
+    ],
+    "title": "Paired t-Test"
+  },
+  "/cards/probability-stats/t-test-two-sample/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "hypothesis-testing"
+    ],
+    "title": "Two-Sample t-Test (Welch)"
+  },
+  "/cards/probability-stats/total-probability/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability"
+    ],
+    "title": "Law of Total Probability"
+  },
+  "/cards/probability-stats/type-i-type-ii-errors/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "hypothesis-testing"
+    ],
+    "title": "Type I and Type II Errors"
+  },
+  "/cards/probability-stats/uniform-distribution/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "distribution"
+    ],
+    "title": "Uniform Distribution"
+  },
+  "/cards/probability-stats/variance/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "dispersion"
+    ],
+    "title": "Variance"
+  },
+  "/cards/probability-stats/z-score/": {
+    "category": "probability-stats",
+    "tags": [
+      "probability",
+      "statistics",
+      "normalization"
+    ],
+    "title": "Z-Score"
+  },
+  "/cards/signal-processing/aliasing/": {
+    "category": "signal-processing",
+    "tags": [
+      "signal-processing",
+      "sampling"
+    ],
+    "title": "Aliasing"
+  },
+  "/cards/signal-processing/convolution/": {
+    "category": "signal-processing",
+    "tags": [
+      "signal-processing",
+      "linear-systems"
+    ],
+    "title": "Convolution"
+  },
+  "/cards/signal-processing/dft/": {
+    "category": "signal-processing",
+    "tags": [
+      "signal-processing",
+      "frequency"
+    ],
+    "title": "Discrete Fourier Transform"
+  },
+  "/cards/signal-processing/fft/": {
+    "category": "signal-processing",
+    "tags": [
+      "signal-processing",
+      "algorithms"
+    ],
+    "title": "Fast Fourier Transform"
+  },
+  "/cards/signal-processing/fourier-transform/": {
+    "category": "signal-processing",
+    "tags": [
+      "signal-processing",
+      "frequency"
+    ],
+    "title": "Fourier Transform"
+  },
+  "/cards/signal-processing/sampling-theorem/": {
+    "category": "signal-processing",
+    "tags": [
+      "signal-processing",
+      "sampling"
+    ],
+    "title": "Nyquist-Shannon Sampling Theorem"
+  }
+}
