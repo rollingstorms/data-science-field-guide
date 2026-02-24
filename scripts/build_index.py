@@ -209,10 +209,9 @@ def build_mkdocs(cards: List[Card]) -> str:
     nav_lines: List[str] = [
         "nav:",
         "  - Home: README.md",
-        "  - Index:",
-        "      - Index: index/INDEX.md",
-        "      - Tags: index/TAGS.md",
-        "      - Glossary: index/GLOSSARY.md",
+        "  - Index: index/INDEX.md",
+        "  - Tags: index/TAGS.md",
+        "  - Glossary: index/GLOSSARY.md",
         "  - Cards:",
     ]
     for category in sorted(by_category.keys()):
