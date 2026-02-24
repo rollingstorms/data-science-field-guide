@@ -1,0 +1,44 @@
+---
+id: ml.mae
+title: Mean Absolute Error (MAE)
+tags: [ml, metrics, regression]
+related: [ml.mse, ml.rmse]
+prereqs: []
+---
+
+# Mean Absolute Error (MAE)
+
+<div class="formula" markdown="1">
+## Formula
+\[
+\mathrm{MAE} = \frac{1}{n}\sum_{i=1}^n |y_i-\hat y_i|
+\]
+
+</div>
+<div class="parameters" markdown="1">
+## Parameters
+- \(y_i\): true value
+- \(\hat y_i\): prediction
+- \(n\): number of samples
+
+</div>
+## What it means
+Average absolute prediction error.
+
+
+
+## What it's used for
+- Robust regression error metric.
+- Comparing models when outliers should not dominate.
+
+## Key properties
+- Same units as the target.
+- Less sensitive to outliers than MSE/RMSE.
+
+## Common gotchas
+- Absolute value makes gradients nondifferentiable at 0 (subgradient works).
+- Can under-penalize large errors vs MSE.
+
+## Example
+If errors are \([-1, 2, 0]\),
+\(\mathrm{MAE}=(1+2+0)/3=1.000\).

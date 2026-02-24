@@ -47,6 +47,7 @@ nav:
           - Attention: cards/deep-learning/attention.md
           - Backpropagation: cards/deep-learning/backpropagation.md
           - Batch Normalization: cards/deep-learning/batch-normalization.md
+          - Cosine Embedding Loss (Metric Learning): cards/deep-learning/cosine-embedding-loss.md
           - Cross-Attention: cards/deep-learning/cross-attention.md
           - Dropout: cards/deep-learning/dropout.md
           - Embedding: cards/deep-learning/embedding.md
@@ -106,6 +107,7 @@ nav:
           - Orthogonal Projection: cards/linear-algebra/projection.md
           - Orthonormal Basis: cards/linear-algebra/orthonormal-basis.md
           - Positive Definite Matrix: cards/linear-algebra/positive-definite-matrix.md
+          - Principal Component Analysis (PCA): cards/linear-algebra/pca.md
           - Pseudo-inverse (Moore-Penrose): cards/linear-algebra/pseudoinverse.md
           - QR Decomposition: cards/linear-algebra/qr.md
           - Singular Value Decomposition (SVD): cards/linear-algebra/svd.md
@@ -113,18 +115,26 @@ nav:
           - Trace: cards/linear-algebra/trace.md
           - Vector Norms: cards/linear-algebra/norms.md
       - ML Metrics:
+          - Adjusted Rand Index (ARI): cards/ml-metrics/adjusted-rand-index.md
+          - Akaike Information Criterion (AIC): cards/ml-metrics/aic.md
           - Average Precision: cards/ml-metrics/average-precision.md
+          - Bayesian Information Criterion (BIC): cards/ml-metrics/bic.md
           - Brier Score: cards/ml-metrics/brier-score.md
           - Calibration Error (ECE): cards/ml-metrics/calibration-error.md
+          - Calinski-Harabasz Score: cards/ml-metrics/calinski-harabasz-score.md
           - Cohen's Kappa: cards/ml-metrics/cohen-kappa.md
+          - Davies-Bouldin Index: cards/ml-metrics/davies-bouldin-index.md
+          - Density-Based Clustering Validation (DBCV): cards/ml-metrics/density-based-clustering-validation.md
           - Dice Coefficient (Sorensen-Dice): cards/ml-metrics/dice.md
           - F1 Score: cards/ml-metrics/f1-score.md
+          - Fowlkes-Mallows Index: cards/ml-metrics/fowlkes-mallows-index.md
           - Jaccard Similarity / IoU: cards/ml-metrics/jaccard.md
           - Log Loss (Binary Cross-Entropy): cards/ml-metrics/log-loss.md
           - Matthews Correlation Coefficient: cards/ml-metrics/matthews-corrcoef.md
           - Mean Absolute Error (MAE): cards/ml-metrics/mae.md
           - Mean Squared Error (MSE): cards/ml-metrics/mse.md
           - Negative Log-Likelihood (NLL): cards/ml-metrics/negative-log-likelihood.md
+          - Normalized Mutual Information (NMI): cards/ml-metrics/normalized-mutual-information.md
           - Precision: cards/ml-metrics/precision.md
           - Precision-Recall Curve: cards/ml-metrics/pr-curve.md
           - R^2 (Coefficient of Determination): cards/ml-metrics/r2.md
@@ -132,6 +142,7 @@ nav:
           - ROC AUC: cards/ml-metrics/auc-roc.md
           - ROC Curve: cards/ml-metrics/roc-curve.md
           - Root Mean Squared Error (RMSE): cards/ml-metrics/rmse.md
+          - Silhouette Score: cards/ml-metrics/silhouette-score.md
       - NLP:
           - Causal Language Modeling: cards/nlp/causal-language-modeling.md
           - Inverse Document Frequency (IDF): cards/nlp/inverse-document-frequency.md
@@ -247,4 +258,5 @@ extra_css:
 extra_javascript:
   - assets/mathjax-config.js
   - assets/tag-pills.js
+  - assets/formula-of-day.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js

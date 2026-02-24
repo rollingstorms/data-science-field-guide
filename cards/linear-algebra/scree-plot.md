@@ -1,0 +1,42 @@
+---
+id: linalg.scree-plot
+title: Scree Plot
+tags: [linear-algebra, dimensionality-reduction, visualization]
+related: [linalg.pca, linalg.pca-explained-variance]
+prereqs: [linalg.pca-explained-variance]
+---
+
+# Scree Plot
+
+<div class="formula" markdown="1">
+## Formula
+\[
+\text{scree plot: } k \mapsto \lambda_k \quad \text{or} \quad k \mapsto \sum_{j=1}^{k}\mathrm{EVR}_j
+\]
+
+</div>
+<div class="parameters" markdown="1">
+## Parameters
+- \(k\): component index
+- \(\lambda_k\): ordered eigenvalue
+
+</div>
+## What it means
+A scree plot visualizes component importance to help choose a truncation point in PCA/factor methods.
+
+## What it's used for
+- Selecting a practical number of principal components.
+- Explaining diminishing returns from additional components.
+## Key properties
+- Often look for an "elbow" where gains flatten.
+- Can plot eigenvalues or cumulative explained variance.
+
+## Common gotchas
+- Elbows can be subjective.
+- Task performance should still validate the dimensionality choice.
+
+## Example
+If cumulative variance jumps to 95% by component 20 and then flattens, 20 is a reasonable candidate.
+
+## See also
+- [PCA Explained Variance Ratio](../linear-algebra/pca-explained-variance.md)

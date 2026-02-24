@@ -174,3 +174,40 @@ body {
   border-color: color-mix(in srgb, var(--border) 28%, white);
   color: var(--ink);
 }
+
+/* Homepage formula-of-the-day banner (rendered by assets/formula-of-day.js) */
+.md-typeset .formula-of-day-banner {
+  margin: 0 0 1.1rem;
+  padding: 0.9rem 1rem 1rem;
+  border: 3px solid var(--border);
+  box-shadow: 6px 6px 0 var(--border);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--paper) 82%, #ffe1c9), var(--paper));
+}
+
+.md-typeset .formula-of-day-eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: var(--accent);
+  margin-bottom: 0.15rem;
+}
+
+.md-typeset .formula-of-day-meta {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-bottom: 0.35rem;
+}
+
+.md-typeset .formula-of-day-title {
+  display: inline-block;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.md-typeset .formula-of-day-math {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  overflow-x: auto;
+}

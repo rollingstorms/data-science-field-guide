@@ -14,6 +14,7 @@ TAGS_PATH = ROOT / "index" / "TAGS.md"
 MKDOCS_PATH = ROOT / "mkdocs.yml"
 DOCS_DIR = ROOT / "docs"
 CARD_TAGS_JSON_PATH = ROOT / "assets" / "card-tags.json"
+FORMULAS_JSON_PATH = ROOT / "assets" / "formulas.json"
 
 CATEGORY_ALIASES = {
     "info-theory": "Information Theory",
@@ -134,6 +135,34 @@ def collect_cards() -> List[Card]:
     return cards
 
 
+def extract_section(text: str, heading: str) -> Optional[str]:
+    lines = text.splitlines()
+    start_idx: Optional[int] = None
+    for i, line in enumerate(lines):
+        if line.strip() == heading:
+            start_idx = i + 1
+            break
+    if start_idx is None:
+        return None
+
+    out: List[str] = []
+    for line in lines[start_idx:]:
+        if line.startswith("## "):
+            break
+        stripped = line.strip()
+        if stripped == "<div class=\"formula\" markdown=\"1\">":
+            continue
+        if stripped == "</div>":
+            break
+        out.append(line)
+    section = "\n".join(out).strip()
+    return section or None
+
+
+def normalize_formula_markdown(formula: str) -> str:
+    return formula.strip()
+
+
 def build_index(cards: List[Card]) -> str:
     by_category: Dict[str, List[Card]] = {}
     for card in cards:
@@ -226,6 +255,7 @@ extra_css:
 extra_javascript:
   - assets/mathjax-config.js
   - assets/tag-pills.js
+  - assets/formula-of-day.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js
 """
     return mkdocs.rstrip() + "\n"
@@ -241,6 +271,24 @@ def build_card_tags_json(cards: List[Card]) -> str:
             "category": card.category,
         }
     return json.dumps(mapping, ensure_ascii=True, indent=2, sort_keys=True) + "\n"
+
+
+def build_formulas_json(cards: List[Card]) -> str:
+    records: List[Dict[str, str]] = []
+    for card in cards:
+        card_text = (ROOT / card.rel_path).read_text(encoding="utf-8")
+        formula = extract_section(card_text, "## Formula")
+        if not formula:
+            continue
+        records.append(
+            {
+                "title": card.title,
+                "category": humanize_category(card.category),
+                "route": "/" + card.rel_path[:-3] + "/",
+                "formula_markdown": normalize_formula_markdown(formula),
+            }
+        )
+    return json.dumps(records, ensure_ascii=True, indent=2) + "\n"
 
 
 def main() -> None:
@@ -260,6 +308,7 @@ def main() -> None:
     TAGS_PATH.write_text(build_tags(cards), encoding="utf-8")
     MKDOCS_PATH.write_text(build_mkdocs(cards), encoding="utf-8")
     CARD_TAGS_JSON_PATH.write_text(build_card_tags_json(cards), encoding="utf-8")
+    FORMULAS_JSON_PATH.write_text(build_formulas_json(cards), encoding="utf-8")
     ensure_docs_symlinks()
 
 

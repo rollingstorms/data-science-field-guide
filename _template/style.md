@@ -4,10 +4,11 @@
 1. **Formula** (first, no prose before it)
 2. **Parameters** (short bullet list)
 3. **What it means** (1–2 lines, smaller)
-4. **Key properties**
-5. **Common gotchas**
-6. **Quick example** (optional)
-7. **See also** (optional)
+4. **What it's used for** (1–3 bullets)
+5. **Key properties**
+6. **Common gotchas**
+7. **Example** (required)
+8. **See also** (optional)
 
 ## Typography intent
 - Formula is the hero: large and visually dominant.

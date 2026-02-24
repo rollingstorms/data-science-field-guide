@@ -1,0 +1,44 @@
+---
+id: prob.t-test-two-sample
+title: Two-Sample t-Test (Welch)
+tags: [probability, statistics, hypothesis-testing]
+related: [prob.mean, prob.standard-deviation]
+prereqs: [prob.mean, prob.standard-deviation]
+---
+
+# Two-Sample t-Test (Welch)
+
+<div class="formula" markdown="1">
+## Formula
+\[
+t = \frac{\bar x_1 - \bar x_2}{\sqrt{s_1^2/n_1 + s_2^2/n_2}}
+\]
+
+</div>
+<div class="parameters" markdown="1">
+## Parameters
+- \(\bar x_1, \bar x_2\): sample means
+- \(s_1, s_2\): sample standard deviations
+- \(n_1, n_2\): sample sizes
+
+</div>
+## What it means
+Tests whether two population means differ.
+
+
+
+## What it's used for
+- Comparing means from two independent groups.
+- Works with unequal variances (Welch's t-test).
+
+## Key properties
+- Degrees of freedom use the Welch-Satterthwaite approximation.
+- Does not assume equal variances.
+
+## Common gotchas
+- Assumes independent samples and roughly normal data in each group.
+- If samples are paired, use a paired t-test instead.
+
+## Example
+If \(\bar x_1=5\), \(\bar x_2=3\), \(s_1=2\), \(s_2=1\), \(n_1=n_2=10\), then
+\(t=(5-3)/\sqrt{4/10+1/10}=2.828\).

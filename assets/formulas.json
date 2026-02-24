@@ -1,0 +1,1208 @@
+[
+  {
+    "title": "Activation Functions",
+    "category": "Activations",
+    "route": "/cards/activations/activations/",
+    "formula_markdown": "\\[\nh = \\phi(Wx + b)\n\\]"
+  },
+  {
+    "title": "ELU (Exponential Linear Unit)",
+    "category": "Activations",
+    "route": "/cards/activations/elu/",
+    "formula_markdown": "\\[\n\\mathrm{ELU}(x)=\n\\begin{cases}\nx, & x>0\\\\\n\\alpha(e^x-1), & x\\le 0\n\\end{cases}\n\\]"
+  },
+  {
+    "title": "GELU (Gaussian Error Linear Unit)",
+    "category": "Activations",
+    "route": "/cards/activations/gelu/",
+    "formula_markdown": "\\[\n\\mathrm{GELU}(x)=x\\,\\Phi(x)\n\\]\n\n\\[\n\\approx \\frac{1}{2}x\\left(1+\\tanh\\!\\left(\\sqrt{\\frac{2}{\\pi}}\\left(x+0.044715x^3\\right)\\right)\\right)\n\\]"
+  },
+  {
+    "title": "Leaky ReLU",
+    "category": "Activations",
+    "route": "/cards/activations/leaky-relu/",
+    "formula_markdown": "\\[\nf(x)=\\max(\\alpha x, x),\\quad \\alpha \\in (0,1)\n\\]"
+  },
+  {
+    "title": "ReLU (Rectified Linear Unit)",
+    "category": "Activations",
+    "route": "/cards/activations/relu/",
+    "formula_markdown": "\\[\n\\mathrm{ReLU}(x)=\\max(0,x)\n\\]"
+  },
+  {
+    "title": "SELU (Scaled ELU)",
+    "category": "Activations",
+    "route": "/cards/activations/selu/",
+    "formula_markdown": "\\[\n\\mathrm{SELU}(x)=\\lambda\n\\begin{cases}\nx, & x>0\\\\\n\\alpha(e^x-1), & x\\le 0\n\\end{cases}\n\\]"
+  },
+  {
+    "title": "Sigmoid (Logistic)",
+    "category": "Activations",
+    "route": "/cards/activations/sigmoid/",
+    "formula_markdown": "\\[\n\\sigma(x)=\\frac{1}{1+e^{-x}}\n\\]"
+  },
+  {
+    "title": "Softmax",
+    "category": "Activations",
+    "route": "/cards/activations/softmax/",
+    "formula_markdown": "\\[\n\\mathrm{softmax}(z)_i=\\frac{e^{z_i}}{\\sum_j e^{z_j}}\n\\]"
+  },
+  {
+    "title": "Softplus",
+    "category": "Activations",
+    "route": "/cards/activations/softplus/",
+    "formula_markdown": "\\[\n\\mathrm{Softplus}(x)=\\log(1+e^x)\n\\]"
+  },
+  {
+    "title": "Swish / SiLU",
+    "category": "Activations",
+    "route": "/cards/activations/swish-silu/",
+    "formula_markdown": "\\[\n\\mathrm{Swish}(x)=x\\,\\sigma(\\beta x)\n\\]\n\n\\[\n\\mathrm{SiLU}(x)=x\\,\\sigma(x)\\quad (\\beta=1)\n\\]"
+  },
+  {
+    "title": "Tanh (Hyperbolic Tangent)",
+    "category": "Activations",
+    "route": "/cards/activations/tanh/",
+    "formula_markdown": "\\[\n\\tanh(x)=\\frac{e^x-e^{-x}}{e^x+e^{-x}}\n\\]"
+  },
+  {
+    "title": "Chain Rule",
+    "category": "Calculus",
+    "route": "/cards/calculus/chain-rule/",
+    "formula_markdown": "\\[\n\\frac{d}{dx} f(g(x)) = f'(g(x))\\,g'(x)\n\\]"
+  },
+  {
+    "title": "Derivative",
+    "category": "Calculus",
+    "route": "/cards/calculus/derivative/",
+    "formula_markdown": "\\[\nf'(x)=\\lim_{h\\to 0}\\frac{f(x+h)-f(x)}{h}\n\\]"
+  },
+  {
+    "title": "Gradient",
+    "category": "Calculus",
+    "route": "/cards/calculus/gradient/",
+    "formula_markdown": "\\[\n\\nabla f(x)=\n\\begin{bmatrix}\n\\frac{\\partial f}{\\partial x_1} \\\\\n\\vdots \\\\\n\\frac{\\partial f}{\\partial x_n}\n\\end{bmatrix}\n\\]"
+  },
+  {
+    "title": "Hessian",
+    "category": "Calculus",
+    "route": "/cards/calculus/hessian/",
+    "formula_markdown": "\\[\nH_f(x)=\\left[\\frac{\\partial^2 f}{\\partial x_i \\partial x_j}\\right]_{i,j}\n\\]"
+  },
+  {
+    "title": "Integral",
+    "category": "Calculus",
+    "route": "/cards/calculus/integral/",
+    "formula_markdown": "\\[\n\\int_a^b f(x)\\,dx\n\\]\n\n\\[\n\\frac{d}{dx}\\int^x f(t)\\,dt = f(x)\n\\]"
+  },
+  {
+    "title": "Jacobian",
+    "category": "Calculus",
+    "route": "/cards/calculus/jacobian/",
+    "formula_markdown": "\\[\nJ_f(x)=\\left[\\frac{\\partial f_i}{\\partial x_j}\\right]_{i,j}\n\\]"
+  },
+  {
+    "title": "Multivariable Chain Rule",
+    "category": "Calculus",
+    "route": "/cards/calculus/multivariable-chain-rule/",
+    "formula_markdown": "\\[\nJ_{f\\circ g}(x)=J_f(g(x))\\,J_g(x)\n\\]"
+  },
+  {
+    "title": "Partial Derivative",
+    "category": "Calculus",
+    "route": "/cards/calculus/partial-derivative/",
+    "formula_markdown": "\\[\n\\frac{\\partial f}{\\partial x_i}(x)=\n\\lim_{h\\to 0}\\frac{f(x_1,\\dots,x_i+h,\\dots,x_n)-f(x)}{h}\n\\]"
+  },
+  {
+    "title": "Taylor Expansion",
+    "category": "Calculus",
+    "route": "/cards/calculus/taylor-expansion/",
+    "formula_markdown": "\\[\nf(x)\\approx f(a)+f'(a)(x-a)+\\frac{f''(a)}{2}(x-a)^2+\\cdots\n\\]"
+  },
+  {
+    "title": "Attention",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/attention/",
+    "formula_markdown": "\\[\n\\mathrm{Attention}(Q,K,V)=\\mathrm{softmax}\\!\\left(\\frac{QK^\\top}{\\sqrt{d_k}}\\right)V\n\\]"
+  },
+  {
+    "title": "Backpropagation",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/backpropagation/",
+    "formula_markdown": "\\[\n\\frac{\\partial \\mathcal{L}}{\\partial x}\n=\n\\frac{\\partial \\mathcal{L}}{\\partial y}\n\\frac{\\partial y}{\\partial x}\n\\]"
+  },
+  {
+    "title": "Batch Normalization",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/batch-normalization/",
+    "formula_markdown": "\\[\n\\hat{x}=\\frac{x-\\mu_B}{\\sqrt{\\sigma_B^2+\\epsilon}},\\qquad y=\\gamma \\hat{x}+\\beta\n\\]"
+  },
+  {
+    "title": "Cosine Embedding Loss (Metric Learning)",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/cosine-embedding-loss/",
+    "formula_markdown": "\\[\n\\cos(x_i,x_j)=\\frac{x_i^T x_j}{\\|x_i\\|\\|x_j\\|}\n\\]\n\n\\[\n\\hat{x}=\\frac{x}{\\|x\\|}\n\\]\n\n\\[\nL=\n\\begin{cases}\n1-\\cos(x_i,x_j), & y_{ij}=1 \\\\\n\\max\\!\\bigl(0,\\cos(x_i,x_j)-m\\bigr), & y_{ij}=0\n\\end{cases}\n\\]"
+  },
+  {
+    "title": "Cross-Attention",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/cross-attention/",
+    "formula_markdown": "\\[\nQ = X_{q} W_{Q},\\quad K = X_{c} W_{K},\\quad V = X_{c} W_{V}\n\\]\n\\[\n\\operatorname{CrossAttn}(X_{q},X_{c})=\\operatorname{softmax}\\!\\left(\\frac{QK^\\top}{\\sqrt{d_{k}}}\\right)V\n\\]"
+  },
+  {
+    "title": "Dropout",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/dropout/",
+    "formula_markdown": "\\[\n\\tilde{h} = \\frac{m \\odot h}{1-p},\\quad m_i \\sim \\mathrm{Bernoulli}(1-p)\n\\]"
+  },
+  {
+    "title": "Embedding",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/embedding/",
+    "formula_markdown": "\\[\ne_i = E[i] \\in \\mathbb{R}^d\n\\]"
+  },
+  {
+    "title": "Feedforward Network (Transformer FFN)",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/feedforward-network-transformer/",
+    "formula_markdown": "\\[\n\\mathrm{FFN}(x)=W_2\\,\\phi(W_1x+b_1)+b_2\n\\]"
+  },
+  {
+    "title": "Layer Normalization",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/layer-normalization/",
+    "formula_markdown": "\\[\n\\mu = \\frac{1}{d}\\sum_{i=1}^d x_i,\\quad\n\\sigma^2=\\frac{1}{d}\\sum_{i=1}^d (x_i-\\mu)^2\n\\]\n\\[\n\\mathrm{LN}(x)=\\gamma \\odot \\frac{x-\\mu}{\\sqrt{\\sigma^2+\\epsilon}}+\\beta\n\\]"
+  },
+  {
+    "title": "MLP (Multi-Layer Perceptron)",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/mlp/",
+    "formula_markdown": "\\[\nh^{(1)}=\\phi(W^{(1)}x+b^{(1)}),\\quad\nh^{(\\ell+1)}=\\phi(W^{(\\ell+1)}h^{(\\ell)}+b^{(\\ell+1)})\n\\]\n\n\\[\n\\hat{y}=W^{(L)}h^{(L-1)}+b^{(L)}\n\\]"
+  },
+  {
+    "title": "Multi-Head Attention",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/multi-head-attention/",
+    "formula_markdown": "\\[\n\\mathrm{MHA}(Q,K,V)=\\mathrm{Concat}(\\mathrm{head}_1,\\dots,\\mathrm{head}_h)W_O\n\\]\n\\[\n\\mathrm{head}_i=\\mathrm{Attention}(QW_i^Q,KW_i^K,VW_i^V)\n\\]"
+  },
+  {
+    "title": "Positional Encoding",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/positional-encoding/",
+    "formula_markdown": "\\[\n\\mathrm{PE}(pos,2i)=\\sin\\!\\left(\\frac{pos}{10000^{2i/d}}\\right),\\quad\n\\mathrm{PE}(pos,2i+1)=\\cos\\!\\left(\\frac{pos}{10000^{2i/d}}\\right)\n\\]\n\n\\[\nX_{\\text{in}} = E + \\mathrm{PE}\n\\]"
+  },
+  {
+    "title": "Residual Connection (Skip Connection)",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/residual-connection/",
+    "formula_markdown": "\\[\ny = x + F(x)\n\\]"
+  },
+  {
+    "title": "Self-Attention",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/self-attention/",
+    "formula_markdown": "\\[\nQ = XW_{Q},\\quad K = XW_{K},\\quad V = XW_{V}\n\\]\n\\[\n\\operatorname{SelfAttn}(X)=\\operatorname{softmax}\\!\\left(\\frac{QK^\\top}{\\sqrt{d_{k}}}\\right)V\n\\]"
+  },
+  {
+    "title": "Transformer",
+    "category": "Deep Learning",
+    "route": "/cards/deep-learning/transformer/",
+    "formula_markdown": "\\[\n\\mathrm{TransformerBlock}(X)=\\mathrm{FFN}\\big(\\mathrm{AttnBlock}(X)\\big)\n\\]"
+  },
+  {
+    "title": "Adjacency Matrix",
+    "category": "Graphs",
+    "route": "/cards/graphs/adjacency-matrix/",
+    "formula_markdown": "\\[\nA_{ij} = \\begin{cases}1,& (i,j)\\in E\\\\0,&\\text{otherwise}\\end{cases}\n\\]"
+  },
+  {
+    "title": "Bellman-Ford Algorithm",
+    "category": "Graphs",
+    "route": "/cards/graphs/bellman-ford/",
+    "formula_markdown": "\\[\nd(v) \\leftarrow \\min\\big(d(v),\\ d(u)+w(u,v)\\big)\n\\quad \\text{for each edge } (u,v)\n\\]"
+  },
+  {
+    "title": "Breadth-First Search (BFS)",
+    "category": "Graphs",
+    "route": "/cards/graphs/bfs/",
+    "formula_markdown": "\\[\n\\text{Explore nodes in increasing distance (number of edges) from a source}\n\\]"
+  },
+  {
+    "title": "Clustering Coefficient",
+    "category": "Graphs",
+    "route": "/cards/graphs/clustering-coefficient/",
+    "formula_markdown": "\\[\nC_i = \\frac{2 e_i}{k_i(k_i-1)}\n\\]"
+  },
+  {
+    "title": "Connected Components",
+    "category": "Graphs",
+    "route": "/cards/graphs/connected-components/",
+    "formula_markdown": "\\[\nu \\sim v \\iff \\text{there exists a path between } u \\text{ and } v\n\\]"
+  },
+  {
+    "title": "Degree Matrix",
+    "category": "Graphs",
+    "route": "/cards/graphs/degree-matrix/",
+    "formula_markdown": "\\[\nD = \\operatorname{diag}(d_1,\\ldots,d_n),\\quad d_i = \\sum_j A_{ij}\n\\]"
+  },
+  {
+    "title": "Depth-First Search (DFS)",
+    "category": "Graphs",
+    "route": "/cards/graphs/dfs/",
+    "formula_markdown": "\\[\n\\text{Explore a path deeply before backtracking}\n\\]"
+  },
+  {
+    "title": "Dijkstra's Algorithm",
+    "category": "Graphs",
+    "route": "/cards/graphs/dijkstra/",
+    "formula_markdown": "\\[\nd(v) = \\min_{(u,v)\\in E}\\big(d(u)+w(u,v)\\big)\n\\]"
+  },
+  {
+    "title": "Graph Algorithms (Overview)",
+    "category": "Graphs",
+    "route": "/cards/graphs/graph-algorithms/",
+    "formula_markdown": "\\[\nG=(V,E)\n\\]"
+  },
+  {
+    "title": "Kruskal's Algorithm",
+    "category": "Graphs",
+    "route": "/cards/graphs/kruskal/",
+    "formula_markdown": "\\[\n\\text{Sort edges by weight and add if they do not create a cycle}\n\\]"
+  },
+  {
+    "title": "Label Propagation (LPA)",
+    "category": "Graphs",
+    "route": "/cards/graphs/label-propagation/",
+    "formula_markdown": "\\[\n\\ell_i \\leftarrow \\arg\\max_c \\sum_j A_{ij}\\,\\mathbf{1}[\\ell_j=c]\n\\]"
+  },
+  {
+    "title": "Graph Laplacian",
+    "category": "Graphs",
+    "route": "/cards/graphs/laplacian/",
+    "formula_markdown": "\\[\nL = D - A\n\\]"
+  },
+  {
+    "title": "Message Passing (on Graphs)",
+    "category": "Graphs",
+    "route": "/cards/graphs/message-passing/",
+    "formula_markdown": "\\[\nm_v^{(t+1)}=\\mathrm{AGG}\\big(\\{\\,\\phi(h_v^{(t)},h_u^{(t)},e_{uv}) : u\\in \\mathcal{N}(v)\\,\\}\\big)\n\\]\n\\[\nh_v^{(t+1)}=\\psi(h_v^{(t)}, m_v^{(t+1)})\n\\]"
+  },
+  {
+    "title": "Minimum Spanning Tree (MST)",
+    "category": "Graphs",
+    "route": "/cards/graphs/minimum-spanning-tree/",
+    "formula_markdown": "\\[\nT^*=\\arg\\min_{T \\text{ spans } V}\\ \\sum_{e\\in T} w(e)\n\\]"
+  },
+  {
+    "title": "Modularity (Community Quality)",
+    "category": "Graphs",
+    "route": "/cards/graphs/modularity/",
+    "formula_markdown": "\\[\nQ = \\frac{1}{2m}\\sum_{i,j}\\left(A_{ij} - \\frac{k_i k_j}{2m}\\right)\\,\\mathbf{1}[c_i=c_j]\n\\]"
+  },
+  {
+    "title": "Network Significance Profile",
+    "category": "Graphs",
+    "route": "/cards/graphs/network-significance-profile/",
+    "formula_markdown": "\\[\n\\mathrm{SP}_i = \\frac{Z_i}{\\sqrt{\\sum_j Z_j^2}}\n\\]"
+  },
+  {
+    "title": "PageRank",
+    "category": "Graphs",
+    "route": "/cards/graphs/pagerank/",
+    "formula_markdown": "\\[\nr = \\alpha P^T r + (1-\\alpha) v\n\\]"
+  },
+  {
+    "title": "Prim's Algorithm",
+    "category": "Graphs",
+    "route": "/cards/graphs/prim/",
+    "formula_markdown": "\\[\n\\text{Grow a tree by repeatedly adding the minimum-weight edge crossing the cut}\n\\]"
+  },
+  {
+    "title": "Shortest Path (Overview)",
+    "category": "Graphs",
+    "route": "/cards/graphs/shortest-path/",
+    "formula_markdown": "\\[\n\\operatorname{dist}(s,v)=\\min_{p:s\\to v}\\sum_{e\\in p} w(e)\n\\]"
+  },
+  {
+    "title": "Spectral Clustering",
+    "category": "Graphs",
+    "route": "/cards/graphs/spectral-clustering/",
+    "formula_markdown": "\\[\nL_{\\mathrm{sym}} = I - D^{-1/2} A D^{-1/2}\n\\]"
+  },
+  {
+    "title": "Topological Sort",
+    "category": "Graphs",
+    "route": "/cards/graphs/topological-sort/",
+    "formula_markdown": "\\[\nu \\to v \\implies u \\text{ appears before } v\n\\]"
+  },
+  {
+    "title": "Channel Capacity",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/channel-capacity/",
+    "formula_markdown": "\\[\nC = \\max_{p(x)} I(X;Y)\n\\]"
+  },
+  {
+    "title": "Conditional Entropy",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/conditional-entropy/",
+    "formula_markdown": "\\[\nH(X\\mid Y) = -\\sum_{x,y} p(x,y)\\,\\log p(x\\mid y)\n\\]"
+  },
+  {
+    "title": "Cross Entropy",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/cross-entropy/",
+    "formula_markdown": "\\[\nH(P,Q) = -\\sum_x p(x)\\,\\log q(x)\n\\]\n\n\\[\nH(P,Q) = -\\int p(x)\\,\\log q(x)\\,dx\n\\]"
+  },
+  {
+    "title": "Data Processing Inequality",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/data-processing-inequality/",
+    "formula_markdown": "\\[\nX \\rightarrow Y \\rightarrow Z \\quad \\Rightarrow \\quad I(X;Z) \\le I(X;Y)\n\\]"
+  },
+  {
+    "title": "Entropy Rate",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/entropy-rate/",
+    "formula_markdown": "\\[\n\\bar{H} = \\lim_{n\\to\\infty} \\frac{1}{n} H(X_1,\\ldots,X_n)\n\\]"
+  },
+  {
+    "title": "Shannon Entropy",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/entropy-shannon/",
+    "formula_markdown": "\\[\nH(X) = -\\sum_{x} p(x)\\,\\log p(x)\n\\]"
+  },
+  {
+    "title": "Fisher Information",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/fisher-information/",
+    "formula_markdown": "\\[\n\\mathcal{I}(\\theta) = \\mathbb{E}\\left[\\left(\\frac{\\partial}{\\partial\\theta} \\log p(X;\\theta)\\right)^2\\right]\n\\]"
+  },
+  {
+    "title": "Joint Entropy",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/joint-entropy/",
+    "formula_markdown": "\\[\nH(X,Y) = -\\sum_{x,y} p(x,y)\\,\\log p(x,y)\n\\]"
+  },
+  {
+    "title": "Jensen-Shannon Divergence",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/js-divergence/",
+    "formula_markdown": "\\[\n\\operatorname{JSD}(P\\|Q) = \\frac{1}{2} D_{\\mathrm{KL}}(P\\|M) + \\frac{1}{2} D_{\\mathrm{KL}}(Q\\|M),\\quad M=\\frac{1}{2}(P+Q)\n\\]"
+  },
+  {
+    "title": "KL Divergence (Relative Entropy)",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/kl-divergence/",
+    "formula_markdown": "\\[\nD_{\\mathrm{KL}}(P\\|Q) = \\sum_x p(x)\\,\\log\\frac{p(x)}{q(x)}\n\\]\n\n\\[\nD_{\\mathrm{KL}}(P\\|Q) = \\int p(x)\\,\\log\\frac{p(x)}{q(x)}\\,dx\n\\]"
+  },
+  {
+    "title": "Mutual Information",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/mutual-information/",
+    "formula_markdown": "\\[\nI(X;Y) = \\sum_{x,y} p(x,y)\\,\\log\\frac{p(x,y)}{p(x)\\,p(y)}\n\\]"
+  },
+  {
+    "title": "Perplexity",
+    "category": "Information Theory",
+    "route": "/cards/info-theory/perplexity/",
+    "formula_markdown": "\\[\n\\operatorname{PP}(P,Q) = \\exp\\big(H(P,Q)\\big)\n\\]"
+  },
+  {
+    "title": "Cholesky Decomposition",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/cholesky/",
+    "formula_markdown": "\\[\nA = L L^T\n\\]"
+  },
+  {
+    "title": "Condition Number",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/condition-number/",
+    "formula_markdown": "\\[\n\\kappa(A) = \\|A\\|\\,\\|A^{-1}\\|\n\\]"
+  },
+  {
+    "title": "Determinant",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/determinant/",
+    "formula_markdown": "\\[\n\\det(A)\n\\]\n\n\\[\nA \\text{ invertible } \\iff \\det(A)\\ne 0\n\\]"
+  },
+  {
+    "title": "Dot Product",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/dot-product/",
+    "formula_markdown": "\\[\nx\\cdot y = \\sum_{i=1}^n x_i y_i\n\\]"
+  },
+  {
+    "title": "Eigendecomposition",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/eigendecomposition/",
+    "formula_markdown": "\\[\nA = Q\\,\\Lambda\\,Q^{-1}\n\\]"
+  },
+  {
+    "title": "Eigenvalues and Eigenvectors",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/eigenvalues-eigenvectors/",
+    "formula_markdown": "\\[\nAv=\\lambda v,\\quad v\\ne 0\n\\]"
+  },
+  {
+    "title": "Least Squares",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/least-squares/",
+    "formula_markdown": "\\[\nx^* = \\arg\\min_x \\|Ax-b\\|_2^2,\\quad A^T A x = A^T b\n\\]"
+  },
+  {
+    "title": "Linear Independence",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/linear-independence/",
+    "formula_markdown": "\\[\n\\sum_{i=1}^k c_i v_i = 0 \\implies c_1=\\cdots=c_k=0\n\\]"
+  },
+  {
+    "title": "Matrix Rank",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/matrix-rank/",
+    "formula_markdown": "\\[\n\\operatorname{rank}(A)=\\dim(\\operatorname{col}(A))=\\dim(\\operatorname{row}(A))\n\\]"
+  },
+  {
+    "title": "Vector Norms",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/norms/",
+    "formula_markdown": "\\[\n\\|x\\|_p = \\left(\\sum_i |x_i|^p\\right)^{1/p}\\quad (p\\ge 1),\\qquad \\|x\\|_\\infty = \\max_i |x_i|\n\\]"
+  },
+  {
+    "title": "Orthonormal Basis",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/orthonormal-basis/",
+    "formula_markdown": "\\[\nq_i^T q_j = \\delta_{ij},\\quad i,j=1,\\ldots,n\n\\]"
+  },
+  {
+    "title": "Principal Component Analysis (PCA)",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/pca/",
+    "formula_markdown": "\\[\n\\Sigma=\\frac{1}{n-1}X_c^T X_c\n\\]\n\n\\[\nw_1=\\arg\\max_{\\|w\\|=1}\\; w^T \\Sigma w\n\\]\n\n\\[\nZ=X_c W_k\n\\]"
+  },
+  {
+    "title": "Positive Definite Matrix",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/positive-definite-matrix/",
+    "formula_markdown": "\\[\nA \\succ 0 \\iff x^\\top A x > 0 \\quad \\forall x\\ne 0\n\\]"
+  },
+  {
+    "title": "Orthogonal Projection",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/projection/",
+    "formula_markdown": "\\[\n\\operatorname{proj}_U(x) = Q Q^T x\n\\]"
+  },
+  {
+    "title": "Pseudo-inverse (Moore-Penrose)",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/pseudoinverse/",
+    "formula_markdown": "\\[\nA^+ = V\\Sigma^+ U^\\top \\quad \\text{if } A=U\\Sigma V^\\top\n\\]"
+  },
+  {
+    "title": "QR Decomposition",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/qr/",
+    "formula_markdown": "\\[\nA = Q R\n\\]"
+  },
+  {
+    "title": "Span",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/span/",
+    "formula_markdown": "\\[\n\\operatorname{span}\\{v_1,\\dots,v_k\\}=\n\\left\\{\\sum_{i=1}^k c_i v_i : c_i\\in\\mathbb{R}\\right\\}\n\\]"
+  },
+  {
+    "title": "Singular Value Decomposition (SVD)",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/svd/",
+    "formula_markdown": "\\[\nA = U\\,\\Sigma\\,V^T\n\\]"
+  },
+  {
+    "title": "Trace",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/trace/",
+    "formula_markdown": "\\[\n\\operatorname{tr}(A)=\\sum_i A_{ii}\n\\]"
+  },
+  {
+    "title": "Adjusted Rand Index (ARI)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/adjusted-rand-index/",
+    "formula_markdown": "\\[\n\\mathrm{ARI}=\\frac{\\mathrm{RI}-\\mathbb{E}[\\mathrm{RI}]}\n{\\max(\\mathrm{RI})-\\mathbb{E}[\\mathrm{RI}]}\n\\]"
+  },
+  {
+    "title": "Akaike Information Criterion (AIC)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/aic/",
+    "formula_markdown": "\\[\n\\mathrm{AIC} = 2k - 2\\log \\hat{L}\n\\]"
+  },
+  {
+    "title": "ROC AUC",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/auc-roc/",
+    "formula_markdown": "\\[\n\\mathrm{AUC} = P(s(x^+) > s(x^-)) + \\tfrac{1}{2}P(s(x^+)=s(x^-))\n\\]"
+  },
+  {
+    "title": "Average Precision",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/average-precision/",
+    "formula_markdown": "\\[\n\\operatorname{AP} = \\sum_k (R_k - R_{k-1})\\,P_k\n\\]"
+  },
+  {
+    "title": "Bayesian Information Criterion (BIC)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/bic/",
+    "formula_markdown": "\\[\n\\mathrm{BIC} = k\\log n - 2\\log \\hat{L}\n\\]"
+  },
+  {
+    "title": "Brier Score",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/brier-score/",
+    "formula_markdown": "\\[\n\\operatorname{BS} = \\frac{1}{N}\\sum_{i=1}^N (p_i - y_i)^2\n\\]"
+  },
+  {
+    "title": "Calibration Error (ECE)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/calibration-error/",
+    "formula_markdown": "\\[\n\\operatorname{ECE} = \\sum_{m=1}^M \\frac{n_m}{N}\\,\\big|\\operatorname{acc}(B_m) - \\operatorname{conf}(B_m)\\big|\n\\]"
+  },
+  {
+    "title": "Calinski-Harabasz Score",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/calinski-harabasz-score/",
+    "formula_markdown": "\\[\n\\mathrm{CH}\n=\n\\frac{\\operatorname{tr}(B_k)/(k-1)}{\\operatorname{tr}(W_k)/(n-k)}\n\\]"
+  },
+  {
+    "title": "Cohen's Kappa",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/cohen-kappa/",
+    "formula_markdown": "\\[\n\\kappa = \\frac{p_o - p_e}{1 - p_e}\n\\]"
+  },
+  {
+    "title": "Davies-Bouldin Index",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/davies-bouldin-index/",
+    "formula_markdown": "\\[\n\\mathrm{DB}=\\frac{1}{k}\\sum_{i=1}^k \\max_{j\\ne i}\\left(\\frac{S_i+S_j}{M_{ij}}\\right)\n\\]"
+  },
+  {
+    "title": "Density-Based Clustering Validation (DBCV)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/density-based-clustering-validation/",
+    "formula_markdown": "\\[\n\\mathrm{DBCV}\n=\n\\sum_{i=1}^k \\frac{|C_i|}{n}\\,V(C_i)\n\\]\n\n\\[\nV(C_i)=\\frac{\\mathrm{Sep}(C_i)-\\mathrm{Spar}(C_i)}\n{\\max\\{\\mathrm{Sep}(C_i),\\mathrm{Spar}(C_i)\\}}\n\\]"
+  },
+  {
+    "title": "Dice Coefficient (Sorensen-Dice)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/dice/",
+    "formula_markdown": "\\[\nD(A,B) = \\frac{2|A\\cap B|}{|A|+|B|}\n\\]\n\n\\[\nD = \\frac{2\\mathrm{TP}}{2\\mathrm{TP}+\\mathrm{FP}+\\mathrm{FN}}\n\\]"
+  },
+  {
+    "title": "F1 Score",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/f1-score/",
+    "formula_markdown": "\\[\nF_1 = \\frac{2\\,\\mathrm{Precision}\\,\\mathrm{Recall}}{\\mathrm{Precision}+\\mathrm{Recall}}\n\\]"
+  },
+  {
+    "title": "Fowlkes-Mallows Index",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/fowlkes-mallows-index/",
+    "formula_markdown": "\\[\n\\mathrm{FM}=\\frac{\\mathrm{TP}}{\\sqrt{(\\mathrm{TP}+\\mathrm{FP})(\\mathrm{TP}+\\mathrm{FN})}}\n=\\sqrt{\\mathrm{Precision}\\cdot \\mathrm{Recall}}\n\\]"
+  },
+  {
+    "title": "Jaccard Similarity / IoU",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/jaccard/",
+    "formula_markdown": "\\[\nJ(A,B) = \\frac{|A\\cap B|}{|A\\cup B|}\n\\]\n\n\\[\nJ = \\frac{\\mathrm{TP}}{\\mathrm{TP}+\\mathrm{FP}+\\mathrm{FN}}\n\\]"
+  },
+  {
+    "title": "Log Loss (Binary Cross-Entropy)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/log-loss/",
+    "formula_markdown": "\\[\n\\mathrm{LogLoss} = -\\frac{1}{n}\\sum_{i=1}^n \\left[y_i\\log(\\hat p_i) + (1-y_i)\\log(1-\\hat p_i)\\right]\n\\]"
+  },
+  {
+    "title": "Mean Absolute Error (MAE)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/mae/",
+    "formula_markdown": "\\[\n\\mathrm{MAE} = \\frac{1}{n}\\sum_{i=1}^n |y_i-\\hat y_i|\n\\]"
+  },
+  {
+    "title": "Matthews Correlation Coefficient",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/matthews-corrcoef/",
+    "formula_markdown": "\\[\n\\operatorname{MCC} = \\frac{\\mathrm{TP}\\cdot\\mathrm{TN}-\\mathrm{FP}\\cdot\\mathrm{FN}}{\\sqrt{(\\mathrm{TP}+\\mathrm{FP})(\\mathrm{TP}+\\mathrm{FN})(\\mathrm{TN}+\\mathrm{FP})(\\mathrm{TN}+\\mathrm{FN})}}\n\\]"
+  },
+  {
+    "title": "Mean Squared Error (MSE)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/mse/",
+    "formula_markdown": "\\[\n\\mathrm{MSE} = \\frac{1}{n}\\sum_{i=1}^n (y_i-\\hat y_i)^2\n\\]"
+  },
+  {
+    "title": "Negative Log-Likelihood (NLL)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/negative-log-likelihood/",
+    "formula_markdown": "\\[\n\\mathrm{NLL}(\\theta) = -\\sum_{i=1}^n \\log p_\\theta(x_i)\n\\]"
+  },
+  {
+    "title": "Normalized Mutual Information (NMI)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/normalized-mutual-information/",
+    "formula_markdown": "\\[\n\\mathrm{NMI}(U,V)=\\frac{I(U;V)}{\\sqrt{H(U)\\,H(V)}}\n\\]"
+  },
+  {
+    "title": "Precision-Recall Curve",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/pr-curve/",
+    "formula_markdown": "\\[\n\\mathcal{C} = \\{(\\mathrm{Precision}(t),\\,\\mathrm{Recall}(t)) : t \\in \\mathbb{R}\\}\n\\]"
+  },
+  {
+    "title": "Precision",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/precision/",
+    "formula_markdown": "\\[\n\\operatorname{Precision} = \\frac{\\mathrm{TP}}{\\mathrm{TP}+\\mathrm{FP}}\n\\]"
+  },
+  {
+    "title": "R^2 (Coefficient of Determination)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/r2/",
+    "formula_markdown": "\\[\nR^2 = 1 - \\frac{\\sum_i (y_i-\\hat y_i)^2}{\\sum_i (y_i-\\bar y)^2}\n\\]"
+  },
+  {
+    "title": "Recall",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/recall/",
+    "formula_markdown": "\\[\n\\operatorname{Recall} = \\frac{\\mathrm{TP}}{\\mathrm{TP}+\\mathrm{FN}}\n\\]"
+  },
+  {
+    "title": "Root Mean Squared Error (RMSE)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/rmse/",
+    "formula_markdown": "\\[\n\\mathrm{RMSE} = \\sqrt{\\frac{1}{n}\\sum_{i=1}^n (y_i-\\hat y_i)^2}\n\\]"
+  },
+  {
+    "title": "ROC Curve",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/roc-curve/",
+    "formula_markdown": "\\[\n\\mathcal{C} = \\{(\\mathrm{FPR}(t),\\,\\mathrm{TPR}(t)) : t \\in \\mathbb{R}\\}\n\\]"
+  },
+  {
+    "title": "Silhouette Score",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/silhouette-score/",
+    "formula_markdown": "\\[\ns(i)=\\frac{b(i)-a(i)}{\\max\\{a(i),\\,b(i)\\}}\n\\]\n\n\\[\n\\mathrm{Silhouette}=\\frac{1}{n}\\sum_{i=1}^n s(i)\n\\]"
+  },
+  {
+    "title": "Causal Language Modeling",
+    "category": "NLP",
+    "route": "/cards/nlp/causal-language-modeling/",
+    "formula_markdown": "\\[\n\\mathcal{L}=-\\sum_{t=1}^T \\log P(x_t\\mid x_{<t})\n\\]"
+  },
+  {
+    "title": "Inverse Document Frequency (IDF)",
+    "category": "NLP",
+    "route": "/cards/nlp/inverse-document-frequency/",
+    "formula_markdown": "\\[\n\\mathrm{idf}(t) = \\log\\frac{N}{\\mathrm{df}(t)}\n\\]"
+  },
+  {
+    "title": "Language Model",
+    "category": "NLP",
+    "route": "/cards/nlp/language-model/",
+    "formula_markdown": "\\[\nP(x_1,\\dots,x_T)=\\prod_{t=1}^T P(x_t\\mid x_{<t})\n\\]"
+  },
+  {
+    "title": "Masked Language Modeling (MLM)",
+    "category": "NLP",
+    "route": "/cards/nlp/masked-language-modeling/",
+    "formula_markdown": "\\[\n\\mathcal{L}=-\\sum_{t\\in M}\\log P(x_t\\mid x_{\\setminus M})\n\\]"
+  },
+  {
+    "title": "Next-Token Prediction",
+    "category": "NLP",
+    "route": "/cards/nlp/next-token-prediction/",
+    "formula_markdown": "\\[\n\\hat{x}_{t+1}\\sim P(\\cdot \\mid x_{\\le t})\n\\]"
+  },
+  {
+    "title": "Subword Tokenization (BPE / WordPiece)",
+    "category": "NLP",
+    "route": "/cards/nlp/subword-tokenization/",
+    "formula_markdown": "\\[\n\\text{word} \\rightarrow \\text{subword pieces}\n\\]"
+  },
+  {
+    "title": "Temperature (Sampling)",
+    "category": "NLP",
+    "route": "/cards/nlp/temperature-sampling/",
+    "formula_markdown": "\\[\nP_i^{(T)}=\\frac{\\exp(z_i/T)}{\\sum_j \\exp(z_j/T)}\n\\]"
+  },
+  {
+    "title": "Term Frequency (TF)",
+    "category": "NLP",
+    "route": "/cards/nlp/term-frequency/",
+    "formula_markdown": "\\[\n\\mathrm{tf}(t,d) = \\frac{\\mathrm{count}(t,d)}{\\sum_{t'} \\mathrm{count}(t',d)}\n\\]"
+  },
+  {
+    "title": "TF-IDF",
+    "category": "NLP",
+    "route": "/cards/nlp/tf-idf/",
+    "formula_markdown": "\\[\n\\mathrm{tfidf}(t,d) = \\mathrm{tf}(t,d)\\cdot \\mathrm{idf}(t)\n\\]"
+  },
+  {
+    "title": "Tokenization",
+    "category": "NLP",
+    "route": "/cards/nlp/tokenization/",
+    "formula_markdown": "\\[\n\\text{text} \\rightarrow (t_1,t_2,\\dots,t_n)\n\\]"
+  },
+  {
+    "title": "Top-k Sampling",
+    "category": "NLP",
+    "route": "/cards/nlp/top-k-sampling/",
+    "formula_markdown": "\\[\nP'(i)=\n\\begin{cases}\n\\frac{P(i)}{\\sum_{j\\in K}P(j)}, & i\\in K\\\\\n0, & i\\notin K\n\\end{cases}\n\\]\n\\[\nK=\\text{indices of the top }k\\text{ probabilities}\n\\]"
+  },
+  {
+    "title": "Top-p Sampling (Nucleus)",
+    "category": "NLP",
+    "route": "/cards/nlp/top-p-sampling/",
+    "formula_markdown": "\\[\nS=\\min\\left\\{A:\\sum_{i\\in A} P(i)\\ge p\\right\\}\n\\]"
+  },
+  {
+    "title": "Adam Optimizer",
+    "category": "Optimization",
+    "route": "/cards/optimization/adam/",
+    "formula_markdown": "\\[\nm_t=\\beta_1 m_{t-1}+(1-\\beta_1)g_t,\\quad\nv_t=\\beta_2 v_{t-1}+(1-\\beta_2)g_t^2\n\\]\n\\[\n\\theta_{t+1}=\\theta_t-\\eta \\frac{\\hat m_t}{\\sqrt{\\hat v_t}+\\epsilon}\n\\]"
+  },
+  {
+    "title": "AdamW Optimizer",
+    "category": "Optimization",
+    "route": "/cards/optimization/adamw/",
+    "formula_markdown": "\\[\n\\theta_{t+1}=\\theta_t-\\eta \\frac{\\hat m_t}{\\sqrt{\\hat v_t}+\\epsilon}-\\eta\\lambda\\theta_t\n\\]"
+  },
+  {
+    "title": "Lagrangian Duality",
+    "category": "Optimization",
+    "route": "/cards/optimization/duality/",
+    "formula_markdown": "\\[\n\\max_{\\lambda\\ge 0,\\,\\nu}\\; \\phi(\\lambda,\\nu) \\quad \\text{where}\\quad \\phi(\\lambda,\\nu)=\\inf_x \\mathcal{L}(x,\\lambda,\\nu)\n\\]"
+  },
+  {
+    "title": "Early Stopping",
+    "category": "Optimization",
+    "route": "/cards/optimization/early-stopping/",
+    "formula_markdown": "\\[\nt^*=\\arg\\min_t \\ \\text{ValLoss}(t)\n\\]"
+  },
+  {
+    "title": "Gradient Clipping",
+    "category": "Optimization",
+    "route": "/cards/optimization/gradient-clipping/",
+    "formula_markdown": "\\[\ng \\leftarrow g \\cdot \\min\\!\\left(1,\\frac{\\tau}{\\|g\\|}\\right)\n\\]"
+  },
+  {
+    "title": "Gradient Descent",
+    "category": "Optimization",
+    "route": "/cards/optimization/gradient-descent/",
+    "formula_markdown": "\\[\nx_{k+1} = x_k - \\eta_k\\,\\nabla f(x_k)\n\\]"
+  },
+  {
+    "title": "KKT Conditions",
+    "category": "Optimization",
+    "route": "/cards/optimization/kkt-conditions/",
+    "formula_markdown": "\\[\n\\nabla_x \\mathcal{L}(x,\\lambda,\\nu)=0,\\quad g(x)\\le 0,\\quad h(x)=0,\\quad \\lambda\\ge 0,\\quad \\lambda \\odot g(x)=0\n\\]"
+  },
+  {
+    "title": "Lagrangian",
+    "category": "Optimization",
+    "route": "/cards/optimization/lagrangian/",
+    "formula_markdown": "\\[\n\\mathcal{L}(x,\\lambda,\\nu) = f(x) + \\lambda^T g(x) + \\nu^T h(x)\n\\]"
+  },
+  {
+    "title": "Learning Rate Schedule",
+    "category": "Optimization",
+    "route": "/cards/optimization/learning-rate-schedule/",
+    "formula_markdown": "\\[\n\\eta_t = s(t)\n\\]"
+  },
+  {
+    "title": "Line Search",
+    "category": "Optimization",
+    "route": "/cards/optimization/line-search/",
+    "formula_markdown": "\\[\n\\eta_k = \\arg\\min_{\\eta>0} f\\big(x_k - \\eta\\,\\nabla f(x_k)\\big)\n\\]"
+  },
+  {
+    "title": "Momentum (SGD with Momentum)",
+    "category": "Optimization",
+    "route": "/cards/optimization/momentum/",
+    "formula_markdown": "\\[\nv_t = \\beta v_{t-1} + g_t,\\qquad\n\\theta_{t+1}=\\theta_t-\\eta v_t\n\\]"
+  },
+  {
+    "title": "Newton's Method",
+    "category": "Optimization",
+    "route": "/cards/optimization/newton-method/",
+    "formula_markdown": "\\[\nx_{k+1} = x_k - \\big(\\nabla^2 f(x_k)\\big)^{-1}\\nabla f(x_k)\n\\]"
+  },
+  {
+    "title": "Proximal Operator",
+    "category": "Optimization",
+    "route": "/cards/optimization/proximal-operator/",
+    "formula_markdown": "\\[\n\\operatorname{prox}_{\\lambda f}(v) = \\arg\\min_x \\left(f(x) + \\frac{1}{2\\lambda}\\|x-v\\|_2^2\\right)\n\\]"
+  },
+  {
+    "title": "Regularization (L1/L2)",
+    "category": "Optimization",
+    "route": "/cards/optimization/regularization/",
+    "formula_markdown": "\\[\n\\mathcal{L}_{\\text{reg}} = \\mathcal{L} + \\lambda \\|\\theta\\|_1\n\\quad \\text{or} \\quad\n\\mathcal{L}_{\\text{reg}} = \\mathcal{L} + \\lambda \\|\\theta\\|_2^2\n\\]"
+  },
+  {
+    "title": "RMSProp",
+    "category": "Optimization",
+    "route": "/cards/optimization/rmsprop/",
+    "formula_markdown": "\\[\ns_t=\\rho s_{t-1}+(1-\\rho)g_t^2\n\\]\n\\[\n\\theta_{t+1}=\\theta_t-\\eta \\frac{g_t}{\\sqrt{s_t}+\\epsilon}\n\\]"
+  },
+  {
+    "title": "Stochastic Gradient Descent",
+    "category": "Optimization",
+    "route": "/cards/optimization/stochastic-gradient-descent/",
+    "formula_markdown": "\\[\nx_{k+1} = x_k - \\eta_k\\,g_k,\\quad \\mathbb{E}[g_k\\mid x_k]=\\nabla f(x_k)\n\\]"
+  },
+  {
+    "title": "Learning Rate Warmup",
+    "category": "Optimization",
+    "route": "/cards/optimization/warmup/",
+    "formula_markdown": "\\[\n\\eta_t = \\eta_{\\max}\\frac{t}{T_{\\text{warmup}}}\n\\quad \\text{for } t \\le T_{\\text{warmup}}\n\\]"
+  },
+  {
+    "title": "Weight Decay",
+    "category": "Optimization",
+    "route": "/cards/optimization/weight-decay/",
+    "formula_markdown": "\\[\n\\theta_{t+1}=(1-\\eta\\lambda)\\theta_t - \\eta g_t\n\\]"
+  },
+  {
+    "title": "Bayes' Rule",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/bayes-rule/",
+    "formula_markdown": "\\[\nP(A\\mid B) = \\frac{P(B\\mid A)\\,P(A)}{P(B)}\n\\]"
+  },
+  {
+    "title": "Bernoulli Distribution",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/bernoulli-distribution/",
+    "formula_markdown": "\\[\nP(X=1)=p,\\quad P(X=0)=1-p\n\\]\n\n\\[\n\\mathbb{E}[X]=p,\\quad \\operatorname{Var}(X)=p(1-p)\n\\]"
+  },
+  {
+    "title": "Bernoulli Trial",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/bernoulli-trial/",
+    "formula_markdown": "\\[\nX \\sim \\mathrm{Bernoulli}(p),\\quad X\\in\\{0,1\\}\n\\]\n\n\\[\n\\hat p = \\frac{1}{n}\\sum_{i=1}^n X_i\n\\]"
+  },
+  {
+    "title": "Beta Distribution",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/beta-distribution/",
+    "formula_markdown": "\\[\nf(x)=\\frac{x^{\\alpha-1}(1-x)^{\\beta-1}}{B(\\alpha,\\beta)},\\quad 0\\le x \\le 1\n\\]"
+  },
+  {
+    "title": "Binomial Distribution",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/binomial-distribution/",
+    "formula_markdown": "\\[\nX\\sim \\mathrm{Binomial}(n,p),\\qquad\nP(X=k)=\\binom{n}{k}p^k(1-p)^{n-k}\n\\]"
+  },
+  {
+    "title": "CDF (Cumulative Distribution Function)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/cdf/",
+    "formula_markdown": "\\[\nF_X(x)=P(X\\le x)\n\\]"
+  },
+  {
+    "title": "Central Limit Theorem",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/central-limit-theorem/",
+    "formula_markdown": "\\[\n\\frac{\\sqrt{n}(\\bar{X}_n-\\mu)}{\\sigma} \\xrightarrow[]{\\;d\\;} \\mathcal{N}(0,1)\n\\]"
+  },
+  {
+    "title": "Characteristic Function",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/characteristic-function/",
+    "formula_markdown": "\\[\n\\varphi_X(t) = \\mathbb{E}[e^{itX}]\n\\]"
+  },
+  {
+    "title": "Chebyshev's Inequality",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/chebyshev-inequality/",
+    "formula_markdown": "\\[\nP(|X-\\mu| \\ge k\\sigma) \\le \\frac{1}{k^2},\\quad k>0\n\\]"
+  },
+  {
+    "title": "Chi-Square Test",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/chi-square-test/",
+    "formula_markdown": "\\[\n\\chi^2 = \\sum_{i} \\frac{(O_i - E_i)^2}{E_i}\n\\]"
+  },
+  {
+    "title": "Conditional Expectation",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/conditional-expectation/",
+    "formula_markdown": "\\[\n\\mathbb{E}[X\\mid Y] = \\sum_x x\\,p(x\\mid Y) \\quad\\text{or}\\quad \\mathbb{E}[X\\mid Y] = \\int x\\,p(x\\mid Y)\\,dx\n\\]"
+  },
+  {
+    "title": "Conditional Probability",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/conditional-probability/",
+    "formula_markdown": "\\[\nP(A\\mid B)=\\frac{P(A,B)}{P(B)} \\quad \\text{for } P(B)>0\n\\]"
+  },
+  {
+    "title": "Confidence Interval",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/confidence-interval/",
+    "formula_markdown": "\\[\n\\hat{\\theta}\\ \\pm\\ z_{\\alpha/2}\\,\\mathrm{SE}(\\hat{\\theta})\n\\]"
+  },
+  {
+    "title": "Correlation",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/correlation/",
+    "formula_markdown": "\\[\n\\rho_{XY} = \\frac{\\operatorname{Cov}(X,Y)}{\\sigma_X\\,\\sigma_Y}\n\\]"
+  },
+  {
+    "title": "Covariance",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/covariance/",
+    "formula_markdown": "\\[\n\\operatorname{Cov}(X,Y) = \\mathbb{E}[(X-\\mu_X)(Y-\\mu_Y)] = \\mathbb{E}[XY] - \\mu_X\\mu_Y\n\\]"
+  },
+  {
+    "title": "Expectation",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/expectation/",
+    "formula_markdown": "\\[\n\\mathbb{E}[X] = \\sum_x x\\,p(x) \\quad\\text{or}\\quad \\mathbb{E}[X] = \\int x\\,p(x)\\,dx\n\\]"
+  },
+  {
+    "title": "Exponential Distribution",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/exponential-distribution/",
+    "formula_markdown": "\\[\nf(x)=\\lambda e^{-\\lambda x},\\quad x\\ge 0\n\\]\n\\[\nF(x)=1-e^{-\\lambda x}\n\\]"
+  },
+  {
+    "title": "Gamma Distribution",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/gamma-distribution/",
+    "formula_markdown": "\\[\nf(x)=\\frac{\\beta^\\alpha}{\\Gamma(\\alpha)}x^{\\alpha-1}e^{-\\beta x},\\quad x\\ge 0\n\\]"
+  },
+  {
+    "title": "Geometric Distribution",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/geometric-distribution/",
+    "formula_markdown": "\\[\nP(X=k)=(1-p)^{k-1}p,\\quad k=1,2,\\dots\n\\]"
+  },
+  {
+    "title": "Independence",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/independence/",
+    "formula_markdown": "\\[\nA \\perp B \\iff P(A,B)=P(A)P(B)\n\\]\n\n\\[\nX \\perp Y \\iff p_{X,Y}(x,y)=p_X(x)p_Y(y)\n\\]"
+  },
+  {
+    "title": "Jensen's Inequality",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/jensen-inequality/",
+    "formula_markdown": "\\[\n\\varphi(\\mathbb{E}[X]) \\le \\mathbb{E}[\\varphi(X)] \\quad \\text{for convex } \\varphi\n\\]"
+  },
+  {
+    "title": "Joint Probability",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/joint-probability/",
+    "formula_markdown": "\\[\nP(A\\cap B)=P(A,B)\n\\]\n\n\\[\nP(A,B)=P(A\\mid B)P(B)=P(B\\mid A)P(A)\n\\]"
+  },
+  {
+    "title": "Law of Large Numbers",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/law-of-large-numbers/",
+    "formula_markdown": "\\[\n\\bar{X}_n = \\frac{1}{n}\\sum_{i=1}^n X_i \\xrightarrow[]{\\;P\\;} \\mu\n\\]"
+  },
+  {
+    "title": "Lognormal Distribution",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/lognormal-distribution/",
+    "formula_markdown": "\\[\nX \\text{ is lognormal } \\iff \\log X \\sim \\mathcal{N}(\\mu,\\sigma^2)\n\\]"
+  },
+  {
+    "title": "Marginal Probability",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/marginal-probability/",
+    "formula_markdown": "\\[\nP(A)=\\sum_b P(A,b) \\quad \\text{(discrete)}\n\\]\n\n\\[\nf_X(x)=\\int f_{X,Y}(x,y)\\,dy \\quad \\text{(continuous)}\n\\]"
+  },
+  {
+    "title": "Markov's Inequality",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/markov-inequality/",
+    "formula_markdown": "\\[\nP(X \\ge a) \\le \\frac{\\mathbb{E}[X]}{a},\\quad a>0\n\\]"
+  },
+  {
+    "title": "Maximum A Posteriori (MAP)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/maximum-a-posteriori/",
+    "formula_markdown": "\\[\n\\hat{\\theta}_{\\text{MAP}}=\\arg\\max_\\theta p(\\theta\\mid x)\n=\\arg\\max_\\theta p(x\\mid \\theta)p(\\theta)\n\\]"
+  },
+  {
+    "title": "Maximum Likelihood Estimation (MLE)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/maximum-likelihood-estimation/",
+    "formula_markdown": "\\[\n\\hat{\\theta}_{\\text{MLE}}=\\arg\\max_\\theta \\prod_{i=1}^n p(x_i\\mid \\theta)\n\\]\n\\[\n=\\arg\\max_\\theta \\sum_{i=1}^n \\log p(x_i\\mid \\theta)\n\\]"
+  },
+  {
+    "title": "Mean (Expected Value)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/mean/",
+    "formula_markdown": "\\[\n\\mu = \\mathbb{E}[X]\n\\]\n\n\\[\n\\bar x = \\frac{1}{n}\\sum_{i=1}^n x_i\n\\]"
+  },
+  {
+    "title": "Median",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/median/",
+    "formula_markdown": "\\[\n\\mathrm{median}(X) = m \\text{ such that } P(X\\le m)\\ge \\tfrac{1}{2} \\text{ and } P(X\\ge m)\\ge \\tfrac{1}{2}\n\\]"
+  },
+  {
+    "title": "Moment Generating Function",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/mgf/",
+    "formula_markdown": "\\[\nM_X(t) = \\mathbb{E}[e^{tX}]\n\\]"
+  },
+  {
+    "title": "Multinomial Distribution",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/multinomial-distribution/",
+    "formula_markdown": "\\[\nP(X_1=x_1,\\dots,X_K=x_K)=\n\\frac{n!}{x_1!\\cdots x_K!}\\prod_{i=1}^K p_i^{x_i}\n\\]"
+  },
+  {
+    "title": "Normal Distribution (Gaussian)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/normal-distribution/",
+    "formula_markdown": "\\[\nX\\sim \\mathcal{N}(\\mu,\\sigma^2),\\qquad\nf(x)=\\frac{1}{\\sqrt{2\\pi\\sigma^2}}\\exp\\!\\left(-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right)\n\\]"
+  },
+  {
+    "title": "Null Hypothesis",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/null-hypothesis/",
+    "formula_markdown": "\\[\nH_0: \\theta = \\theta_0\n\\quad \\text{(example form)}\n\\]"
+  },
+  {
+    "title": "P-Value",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/p-value/",
+    "formula_markdown": "\\[\np = P(T \\ge t_{\\text{obs}}\\mid H_0)\n\\]"
+  },
+  {
+    "title": "PDF (Probability Density Function)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/pdf/",
+    "formula_markdown": "\\[\nP(a \\le X \\le b)=\\int_a^b f_X(x)\\,dx\n\\]\n\n\\[\nf_X(x)\\ge 0,\\quad \\int_{-\\infty}^{\\infty} f_X(x)\\,dx=1\n\\]"
+  },
+  {
+    "title": "PMF (Probability Mass Function)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/pmf/",
+    "formula_markdown": "\\[\np_X(x)=P(X=x)\n\\]\n\n\\[\n\\sum_x p_X(x)=1\n\\]"
+  },
+  {
+    "title": "Poisson Distribution",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/poisson-distribution/",
+    "formula_markdown": "\\[\nX\\sim \\mathrm{Poisson}(\\lambda),\\qquad\nP(X=k)=e^{-\\lambda}\\frac{\\lambda^k}{k!},\\quad k=0,1,2,\\dots\n\\]\n\n\\[\n\\mathbb{E}[X]=\\lambda,\\qquad \\operatorname{Var}(X)=\\lambda\n\\]"
+  },
+  {
+    "title": "Probability Distribution",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/probability-distribution/",
+    "formula_markdown": "\\[\n\\text{Distribution of }X \\text{ is the rule that gives } P(X \\in A)\n\\]"
+  },
+  {
+    "title": "Random Variable",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/random-variable/",
+    "formula_markdown": "\\[\nX:\\Omega \\to \\mathbb{R}\n\\]"
+  },
+  {
+    "title": "Standard Deviation",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/standard-deviation/",
+    "formula_markdown": "\\[\n\\sigma = \\sqrt{\\operatorname{Var}(X)}\n\\]\n\n\\[\ns = \\sqrt{\\frac{1}{n-1}\\sum_{i=1}^n (x_i-\\bar x)^2}\n\\]"
+  },
+  {
+    "title": "Statistical Power",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/statistical-power/",
+    "formula_markdown": "\\[\n\\text{Power}=P(\\text{reject } H_0 \\mid H_1 \\text{ is true}) = 1-\\beta\n\\]"
+  },
+  {
+    "title": "One-Sample t-Test",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/t-test-one-sample/",
+    "formula_markdown": "\\[\nt = \\frac{\\bar x - \\mu_0}{s/\\sqrt{n}}\n\\]"
+  },
+  {
+    "title": "Paired t-Test",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/t-test-paired/",
+    "formula_markdown": "\\[\nt = \\frac{\\bar d}{s_d/\\sqrt{n}}\n\\]"
+  },
+  {
+    "title": "Two-Sample t-Test (Welch)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/t-test-two-sample/",
+    "formula_markdown": "\\[\nt = \\frac{\\bar x_1 - \\bar x_2}{\\sqrt{s_1^2/n_1 + s_2^2/n_2}}\n\\]"
+  },
+  {
+    "title": "Law of Total Probability",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/total-probability/",
+    "formula_markdown": "\\[\nP(B) = \\sum_i P(B\\mid A_i)\\,P(A_i)\n\\]"
+  },
+  {
+    "title": "Type I and Type II Errors",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/type-i-type-ii-errors/",
+    "formula_markdown": "\\[\n\\alpha = P(\\text{reject } H_0 \\mid H_0 \\text{ true}),\\qquad\n\\beta = P(\\text{fail to reject } H_0 \\mid H_1 \\text{ true})\n\\]"
+  },
+  {
+    "title": "Uniform Distribution",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/uniform-distribution/",
+    "formula_markdown": "\\[\nX\\sim \\mathrm{Uniform}(a,b),\\qquad\nf(x)=\\frac{1}{b-a}\\ \\text{ for } a\\le x\\le b\n\\]"
+  },
+  {
+    "title": "Variance",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/variance/",
+    "formula_markdown": "\\[\n\\operatorname{Var}(X) = \\mathbb{E}\\big[(X-\\mu)^2\\big] = \\mathbb{E}[X^2] - \\mu^2\n\\]"
+  },
+  {
+    "title": "Z-Score",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/z-score/",
+    "formula_markdown": "\\[\nz = \\frac{x-\\mu}{\\sigma}\n\\]"
+  },
+  {
+    "title": "Aliasing",
+    "category": "Signal Processing",
+    "route": "/cards/signal-processing/aliasing/",
+    "formula_markdown": "\\[\n\\omega_{\\text{alias}} = \\omega + 2\\pi k\\quad (k\\in\\mathbb{Z})\n\\]"
+  },
+  {
+    "title": "Convolution",
+    "category": "Signal Processing",
+    "route": "/cards/signal-processing/convolution/",
+    "formula_markdown": "\\[\n(f * g)(t) = \\int_{-\\infty}^{\\infty} f(\\tau)\\,g(t-\\tau)\\,d\\tau\n\\]"
+  },
+  {
+    "title": "Discrete Fourier Transform",
+    "category": "Signal Processing",
+    "route": "/cards/signal-processing/dft/",
+    "formula_markdown": "\\[\nX_k = \\sum_{n=0}^{N-1} x_n\\,e^{-i 2\\pi kn/N}\n\\]"
+  },
+  {
+    "title": "Fast Fourier Transform",
+    "category": "Signal Processing",
+    "route": "/cards/signal-processing/fft/",
+    "formula_markdown": "\\[\nX_k = \\sum_{n=0}^{N-1} x_n\\,e^{-i 2\\pi kn/N}\n\\]"
+  },
+  {
+    "title": "Fourier Transform",
+    "category": "Signal Processing",
+    "route": "/cards/signal-processing/fourier-transform/",
+    "formula_markdown": "\\[\nX(\\omega) = \\int_{-\\infty}^{\\infty} x(t)\\,e^{-i\\omega t}\\,dt\n\\]"
+  },
+  {
+    "title": "Nyquist-Shannon Sampling Theorem",
+    "category": "Signal Processing",
+    "route": "/cards/signal-processing/sampling-theorem/",
+    "formula_markdown": "\\[\n\\text{If } f_s \\ge 2B,\\quad x(t)=\\sum_{n=-\\infty}^{\\infty} x(nT)\\,\\operatorname{sinc}\\left(\\frac{t-nT}{T}\\right)\n\\]"
+  }
+]

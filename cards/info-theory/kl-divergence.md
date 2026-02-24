@@ -8,6 +8,7 @@ prereqs: [info.entropy.shannon]
 
 # KL Divergence (Relative Entropy)
 
+<div class="formula" markdown="1">
 ## Formula
 \[
 D_{\mathrm{KL}}(P\|Q) = \sum_x p(x)\,\log\frac{p(x)}{q(x)}
@@ -17,15 +18,23 @@ D_{\mathrm{KL}}(P\|Q) = \sum_x p(x)\,\log\frac{p(x)}{q(x)}
 D_{\mathrm{KL}}(P\|Q) = \int p(x)\,\log\frac{p(x)}{q(x)}\,dx
 \]
 
+</div>
+<div class="parameters" markdown="1">
 ## Parameters
 - \(P\): true distribution (often “data”)
 - \(Q\): approximate / model distribution
 - Top equation: discrete case
 - Bottom equation: continuous case
 
+</div>
 ## What it means
 “How many extra nats/bits” you spend coding samples from \(P\) using a code optimized for \(Q\).
 
+
+
+## What it's used for
+- Measuring how a model \(Q\) deviates from data \(P\).
+- Deriving variational objectives and regularizers.
 ## Key properties
 - \(D_{\mathrm{KL}}(P\|Q) \ge 0\) (equals 0 iff \(P=Q\) a.e.)
 - Not symmetric: \(D_{\mathrm{KL}}(P\|Q) \ne D_{\mathrm{KL}}(Q\|P)\)
@@ -38,3 +47,6 @@ D_{\mathrm{KL}}(P\|Q) = \int p(x)\,\log\frac{p(x)}{q(x)}\,dx
 ## Common gotchas
 - If \(q(x)=0\) where \(p(x)>0\), KL is infinite.
 - Requires matching support between \(P\) and \(Q\).
+
+## Example
+If \(P=Q\), then \(D_{\mathrm{KL}}(P\|Q)=0\).

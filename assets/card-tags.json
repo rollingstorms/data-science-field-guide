@@ -200,6 +200,15 @@
     ],
     "title": "Batch Normalization"
   },
+  "/cards/deep-learning/cosine-embedding-loss/": {
+    "category": "deep-learning",
+    "tags": [
+      "deep-learning",
+      "metric-learning",
+      "embeddings"
+    ],
+    "title": "Cosine Embedding Loss (Metric Learning)"
+  },
   "/cards/deep-learning/cross-attention/": {
     "category": "deep-learning",
     "tags": [
@@ -654,6 +663,14 @@
     ],
     "title": "Orthonormal Basis"
   },
+  "/cards/linear-algebra/pca/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra",
+      "dimensionality-reduction"
+    ],
+    "title": "Principal Component Analysis (PCA)"
+  },
   "/cards/linear-algebra/positive-definite-matrix/": {
     "category": "linear-algebra",
     "tags": [
@@ -706,6 +723,24 @@
     ],
     "title": "Trace"
   },
+  "/cards/ml-metrics/adjusted-rand-index/": {
+    "category": "ml-metrics",
+    "tags": [
+      "clustering",
+      "evaluation",
+      "external-validation"
+    ],
+    "title": "Adjusted Rand Index (ARI)"
+  },
+  "/cards/ml-metrics/aic/": {
+    "category": "ml-metrics",
+    "tags": [
+      "model-selection",
+      "evaluation",
+      "statistics"
+    ],
+    "title": "Akaike Information Criterion (AIC)"
+  },
   "/cards/ml-metrics/auc-roc/": {
     "category": "ml-metrics",
     "tags": [
@@ -723,6 +758,15 @@
     ],
     "title": "Average Precision"
   },
+  "/cards/ml-metrics/bic/": {
+    "category": "ml-metrics",
+    "tags": [
+      "model-selection",
+      "evaluation",
+      "statistics"
+    ],
+    "title": "Bayesian Information Criterion (BIC)"
+  },
   "/cards/ml-metrics/brier-score/": {
     "category": "ml-metrics",
     "tags": [
@@ -739,6 +783,14 @@
     ],
     "title": "Calibration Error (ECE)"
   },
+  "/cards/ml-metrics/calinski-harabasz-score/": {
+    "category": "ml-metrics",
+    "tags": [
+      "clustering",
+      "evaluation"
+    ],
+    "title": "Calinski-Harabasz Score"
+  },
   "/cards/ml-metrics/cohen-kappa/": {
     "category": "ml-metrics",
     "tags": [
@@ -746,6 +798,23 @@
       "evaluation"
     ],
     "title": "Cohen's Kappa"
+  },
+  "/cards/ml-metrics/davies-bouldin-index/": {
+    "category": "ml-metrics",
+    "tags": [
+      "clustering",
+      "evaluation"
+    ],
+    "title": "Davies-Bouldin Index"
+  },
+  "/cards/ml-metrics/density-based-clustering-validation/": {
+    "category": "ml-metrics",
+    "tags": [
+      "clustering",
+      "evaluation",
+      "density-based"
+    ],
+    "title": "Density-Based Clustering Validation (DBCV)"
   },
   "/cards/ml-metrics/dice/": {
     "category": "ml-metrics",
@@ -763,6 +832,15 @@
       "evaluation"
     ],
     "title": "F1 Score"
+  },
+  "/cards/ml-metrics/fowlkes-mallows-index/": {
+    "category": "ml-metrics",
+    "tags": [
+      "clustering",
+      "evaluation",
+      "external-validation"
+    ],
+    "title": "Fowlkes-Mallows Index"
   },
   "/cards/ml-metrics/jaccard/": {
     "category": "ml-metrics",
@@ -818,6 +896,15 @@
     ],
     "title": "Negative Log-Likelihood (NLL)"
   },
+  "/cards/ml-metrics/normalized-mutual-information/": {
+    "category": "ml-metrics",
+    "tags": [
+      "clustering",
+      "evaluation",
+      "information-theory"
+    ],
+    "title": "Normalized Mutual Information (NMI)"
+  },
   "/cards/ml-metrics/pr-curve/": {
     "category": "ml-metrics",
     "tags": [
@@ -867,6 +954,14 @@
       "evaluation"
     ],
     "title": "ROC Curve"
+  },
+  "/cards/ml-metrics/silhouette-score/": {
+    "category": "ml-metrics",
+    "tags": [
+      "clustering",
+      "evaluation"
+    ],
+    "title": "Silhouette Score"
   },
   "/cards/nlp/causal-language-modeling/": {
     "category": "nlp",

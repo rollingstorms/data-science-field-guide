@@ -11,10 +11,11 @@ This spec defines the canonical card format for the handbook.
 1. `## Formula`
 2. `## Parameters`
 3. `## What it means`
-4. `## Key properties`
-5. `## Common gotchas`
-6. `## Quick example` (optional)
-7. `## See also` (optional)
+4. `## What it's used for`
+5. `## Key properties`
+6. `## Common gotchas`
+7. `## Example`
+8. `## See also` (optional)
 
 ## Section labels
 - Use `##` headings for sections.
@@ -50,13 +51,16 @@ heading: Title
 ## What it means
 ...
 
+## What it's used for
+...
+
 ## Key properties
 - ...
 
 ## Common gotchas
 - ...
 
-## Quick example
+## Example
 ...
 
 ## See also
