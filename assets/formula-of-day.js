@@ -106,7 +106,7 @@
 
     const meta = document.createElement("div");
     meta.className = "formula-of-day-meta";
-    meta.textContent = "Formula of the day: " + pick.dateStr;
+    meta.textContent = pick.dateStr;
     wrap.appendChild(meta);
 
     const title = document.createElement("a");
