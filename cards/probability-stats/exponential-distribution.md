@@ -13,11 +13,23 @@ prereqs: [prob.pdf, prob.cdf]
 \[
 f(x)=\lambda e^{-\lambda x},\quad x\ge 0
 \]
+
 \[
 F(x)=1-e^{-\lambda x}
 \]
 
 </div>
+## Plot
+```plot
+fn: exp(-x)
+xmin: 0
+xmax: 6
+ymin: 0
+ymax: 1.1
+height: 280
+title: Exponential PDF (lambda=1)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\lambda>0\): rate

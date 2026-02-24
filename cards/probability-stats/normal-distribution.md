@@ -16,6 +16,17 @@ f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right
 \]
 
 </div>
+## Plot
+```plot
+fn: exp(-(x^2)/2)/sqrt(2*pi)
+xmin: -4
+xmax: 4
+ymin: 0
+ymax: 0.45
+height: 280
+title: Standard normal PDF (mu=0, sigma=1)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\mu\): mean (center)

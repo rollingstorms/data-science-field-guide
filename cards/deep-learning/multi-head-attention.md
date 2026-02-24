@@ -13,6 +13,7 @@ prereqs: [dl.attention]
 \[
 \mathrm{MHA}(Q,K,V)=\mathrm{Concat}(\mathrm{head}_1,\dots,\mathrm{head}_h)W_O
 \]
+
 \[
 \mathrm{head}_i=\mathrm{Attention}(QW_i^Q,KW_i^K,VW_i^V)
 \]

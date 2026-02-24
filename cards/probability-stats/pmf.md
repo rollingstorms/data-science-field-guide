@@ -19,6 +19,19 @@ p_X(x)=P(X=x)
 \]
 
 </div>
+## Plot
+```plot
+type: bars
+xs: 0 | 1 | 2 | 3
+ys: 0.1 | 0.4 | 0.3 | 0.2
+xmin: -0.5
+xmax: 3.5
+ymin: 0
+ymax: 0.45
+height: 280
+title: Example PMF (discrete probabilities)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(X\): discrete random variable

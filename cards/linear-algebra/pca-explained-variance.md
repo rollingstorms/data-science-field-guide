@@ -15,6 +15,19 @@ prereqs: [linalg.pca]
 \]
 
 </div>
+## Plot
+```plot
+type: bars
+xs: 1 | 2 | 3 | 4 | 5
+ys: 0.55 | 0.22 | 0.11 | 0.07 | 0.05
+xmin: 0.5
+xmax: 5.5
+ymin: 0
+ymax: 0.6
+height: 280
+title: Example explained variance ratios
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\lambda_k\): \(k\)-th eigenvalue of covariance matrix

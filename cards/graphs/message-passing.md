@@ -13,6 +13,7 @@ prereqs: [graph.adjacency-matrix]
 \[
 m_v^{(t+1)}=\mathrm{AGG}\big(\{\,\phi(h_v^{(t)},h_u^{(t)},e_{uv}) : u\in \mathcal{N}(v)\,\}\big)
 \]
+
 \[
 h_v^{(t+1)}=\psi(h_v^{(t)}, m_v^{(t+1)})
 \]

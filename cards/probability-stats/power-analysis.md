@@ -15,6 +15,17 @@ prereqs: [stat.statistical-power]
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+exp(-4*(x-0.5)))
+xmin: 0
+xmax: 1.5
+ymin: 0
+ymax: 1.05
+height: 280
+title: Example target power vs effect size (illustrative)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - Power depends on effect size, sample size, variance, significance level, and test choice.

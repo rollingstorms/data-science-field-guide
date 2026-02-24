@@ -57,6 +57,10 @@ _This file is auto-generated. Do not edit by hand._
 ## calibration
 - [Brier Score](../cards/ml-metrics/brier-score.md)
 - [Calibration Error (ECE)](../cards/ml-metrics/calibration-error.md)
+- [Probability Calibration](../cards/machine-learning/probability-calibration.md)
+
+## causal-inference
+- [A/B Testing](../cards/probability-stats/ab-testing.md)
 
 ## central-tendency
 - [Mean (Expected Value)](../cards/probability-stats/mean.md)
@@ -64,21 +68,32 @@ _This file is auto-generated. Do not edit by hand._
 
 ## classification
 - [Average Precision](../cards/ml-metrics/average-precision.md)
+- [Class Imbalance](../cards/machine-learning/class-imbalance.md)
 - [Cohen's Kappa](../cards/ml-metrics/cohen-kappa.md)
+- [Confusion Matrix](../cards/ml-metrics/confusion-matrix.md)
 - [F1 Score](../cards/ml-metrics/f1-score.md)
+- [K-Nearest Neighbors (k-NN)](../cards/machine-learning/k-nearest-neighbors.md)
 - [Log Loss (Binary Cross-Entropy)](../cards/ml-metrics/log-loss.md)
+- [Logistic Regression](../cards/machine-learning/logistic-regression.md)
 - [Matthews Correlation Coefficient](../cards/ml-metrics/matthews-corrcoef.md)
 - [Precision](../cards/ml-metrics/precision.md)
 - [Precision-Recall Curve](../cards/ml-metrics/pr-curve.md)
+- [Probability Calibration](../cards/machine-learning/probability-calibration.md)
 - [Recall](../cards/ml-metrics/recall.md)
 - [ROC Curve](../cards/ml-metrics/roc-curve.md)
+- [Sensitivity (True Positive Rate)](../cards/ml-metrics/sensitivity.md)
+- [Specificity (True Negative Rate)](../cards/ml-metrics/specificity.md)
+- [Threshold Selection](../cards/machine-learning/threshold-selection.md)
 
 ## clustering
 - [Adjusted Rand Index (ARI)](../cards/ml-metrics/adjusted-rand-index.md)
 - [Calinski-Harabasz Score](../cards/ml-metrics/calinski-harabasz-score.md)
 - [Davies-Bouldin Index](../cards/ml-metrics/davies-bouldin-index.md)
+- [DBSCAN](../cards/machine-learning/dbscan.md)
 - [Density-Based Clustering Validation (DBCV)](../cards/ml-metrics/density-based-clustering-validation.md)
 - [Fowlkes-Mallows Index](../cards/ml-metrics/fowlkes-mallows-index.md)
+- [Hierarchical Clustering](../cards/machine-learning/hierarchical-clustering.md)
+- [K-Means Clustering](../cards/machine-learning/k-means-clustering.md)
 - [Normalized Mutual Information (NMI)](../cards/ml-metrics/normalized-mutual-information.md)
 - [Silhouette Score](../cards/ml-metrics/silhouette-score.md)
 - [Spectral Clustering](../cards/graphs/spectral-clustering.md)
@@ -116,6 +131,13 @@ _This file is auto-generated. Do not edit by hand._
 
 ## dag
 - [Topological Sort](../cards/graphs/topological-sort.md)
+
+## data-quality
+- [Imputation](../cards/machine-learning/imputation.md)
+- [Missing Data](../cards/machine-learning/missing-data.md)
+
+## decision-making
+- [Threshold Selection](../cards/machine-learning/threshold-selection.md)
 
 ## decoding
 - [Temperature (Sampling)](../cards/nlp/temperature-sampling.md)
@@ -169,7 +191,9 @@ _This file is auto-generated. Do not edit by hand._
 - [Mutual Information](../cards/info-theory/mutual-information.md)
 
 ## dimensionality-reduction
+- [PCA Explained Variance Ratio](../cards/linear-algebra/pca-explained-variance.md)
 - [Principal Component Analysis (PCA)](../cards/linear-algebra/pca.md)
+- [Scree Plot](../cards/linear-algebra/scree-plot.md)
 
 ## discrete
 - [Bernoulli Distribution](../cards/probability-stats/bernoulli-distribution.md)
@@ -207,6 +231,9 @@ _This file is auto-generated. Do not edit by hand._
 ## divergence
 - [Jensen-Shannon Divergence](../cards/info-theory/js-divergence.md)
 
+## effect-size
+- [Cohen's d (Effect Size)](../cards/probability-stats/cohens-d.md)
+
 ## embeddings
 - [Cosine Embedding Loss (Metric Learning)](../cards/deep-learning/cosine-embedding-loss.md)
 
@@ -221,7 +248,11 @@ _This file is auto-generated. Do not edit by hand._
 - [Brier Score](../cards/ml-metrics/brier-score.md)
 - [Calibration Error (ECE)](../cards/ml-metrics/calibration-error.md)
 - [Calinski-Harabasz Score](../cards/ml-metrics/calinski-harabasz-score.md)
+- [Class Imbalance](../cards/machine-learning/class-imbalance.md)
 - [Cohen's Kappa](../cards/ml-metrics/cohen-kappa.md)
+- [Confusion Matrix](../cards/ml-metrics/confusion-matrix.md)
+- [Cross-Validation](../cards/machine-learning/cross-validation.md)
+- [Data Leakage](../cards/machine-learning/data-leakage.md)
 - [Davies-Bouldin Index](../cards/ml-metrics/davies-bouldin-index.md)
 - [Density-Based Clustering Validation (DBCV)](../cards/ml-metrics/density-based-clustering-validation.md)
 - [F1 Score](../cards/ml-metrics/f1-score.md)
@@ -232,11 +263,26 @@ _This file is auto-generated. Do not edit by hand._
 - [Precision-Recall Curve](../cards/ml-metrics/pr-curve.md)
 - [Recall](../cards/ml-metrics/recall.md)
 - [ROC Curve](../cards/ml-metrics/roc-curve.md)
+- [Sensitivity (True Positive Rate)](../cards/ml-metrics/sensitivity.md)
 - [Silhouette Score](../cards/ml-metrics/silhouette-score.md)
+- [Specificity (True Negative Rate)](../cards/ml-metrics/specificity.md)
+- [Train/Validation/Test Split](../cards/machine-learning/train-validation-test-split.md)
+
+## experimentation
+- [A/B Testing](../cards/probability-stats/ab-testing.md)
+- [ANOVA (Analysis of Variance)](../cards/probability-stats/anova.md)
+- [Power Analysis (Sample Size Planning)](../cards/probability-stats/power-analysis.md)
 
 ## external-validation
 - [Adjusted Rand Index (ARI)](../cards/ml-metrics/adjusted-rand-index.md)
 - [Fowlkes-Mallows Index](../cards/ml-metrics/fowlkes-mallows-index.md)
+
+## fdr
+- [Benjamini-Hochberg Procedure](../cards/probability-stats/benjamini-hochberg.md)
+
+## features
+- [Categorical Encoding](../cards/machine-learning/categorical-encoding.md)
+- [Feature Scaling (Standardization vs Normalization)](../cards/machine-learning/feature-scaling.md)
 
 ## first-order
 - [Gradient Descent](../cards/optimization/gradient-descent.md)
@@ -244,6 +290,9 @@ _This file is auto-generated. Do not edit by hand._
 ## frequency
 - [Discrete Fourier Transform](../cards/signal-processing/dft.md)
 - [Fourier Transform](../cards/signal-processing/fourier-transform.md)
+
+## generalization
+- [Bias-Variance Tradeoff](../cards/machine-learning/bias-variance-tradeoff.md)
 
 ## gnn
 - [Message Passing (on Graphs)](../cards/graphs/message-passing.md)
@@ -277,20 +326,29 @@ _This file is auto-generated. Do not edit by hand._
 - [Topological Sort](../cards/graphs/topological-sort.md)
 
 ## hypothesis-testing
+- [Benjamini-Hochberg Procedure](../cards/probability-stats/benjamini-hochberg.md)
 - [Chi-Square Test](../cards/probability-stats/chi-square-test.md)
+- [False Discovery Rate (FDR)](../cards/probability-stats/false-discovery-rate.md)
+- [Multiple Hypothesis Testing](../cards/probability-stats/multiple-hypothesis-testing.md)
 - [Null Hypothesis](../cards/probability-stats/null-hypothesis.md)
 - [One-Sample t-Test](../cards/probability-stats/t-test-one-sample.md)
 - [P-Value](../cards/probability-stats/p-value.md)
 - [Paired t-Test](../cards/probability-stats/t-test-paired.md)
+- [Permutation Test](../cards/probability-stats/permutation-test.md)
 - [Statistical Power](../cards/probability-stats/statistical-power.md)
 - [Two-Sample t-Test (Welch)](../cards/probability-stats/t-test-two-sample.md)
 - [Type I and Type II Errors](../cards/probability-stats/type-i-type-ii-errors.md)
 
 ## inference
+- [ANOVA (Analysis of Variance)](../cards/probability-stats/anova.md)
 - [Bayes' Rule](../cards/probability-stats/bayes-rule.md)
+- [Bootstrap](../cards/probability-stats/bootstrap.md)
+- [Cohen's d (Effect Size)](../cards/probability-stats/cohens-d.md)
 - [Confidence Interval](../cards/probability-stats/confidence-interval.md)
+- [False Discovery Rate (FDR)](../cards/probability-stats/false-discovery-rate.md)
 - [Maximum A Posteriori (MAP)](../cards/probability-stats/maximum-a-posteriori.md)
 - [Maximum Likelihood Estimation (MLE)](../cards/probability-stats/maximum-likelihood-estimation.md)
+- [Multiple Hypothesis Testing](../cards/probability-stats/multiple-hypothesis-testing.md)
 
 ## information-retrieval
 - [Inverse Document Frequency (IDF)](../cards/nlp/inverse-document-frequency.md)
@@ -311,6 +369,12 @@ _This file is auto-generated. Do not edit by hand._
 - [Normalized Mutual Information (NMI)](../cards/ml-metrics/normalized-mutual-information.md)
 - [Perplexity](../cards/info-theory/perplexity.md)
 - [Shannon Entropy](../cards/info-theory/entropy-shannon.md)
+
+## interpretability
+- [Model Interpretability](../cards/machine-learning/model-interpretability.md)
+- [Partial Dependence Plot (PDP)](../cards/machine-learning/partial-dependence-plot.md)
+- [Permutation Feature Importance](../cards/machine-learning/permutation-feature-importance.md)
+- [SHAP Values](../cards/machine-learning/shap-values.md)
 
 ## joint
 - [Joint Probability](../cards/probability-stats/joint-probability.md)
@@ -334,12 +398,15 @@ _This file is auto-generated. Do not edit by hand._
 - [Linear Independence](../cards/linear-algebra/linear-independence.md)
 - [Matrix Rank](../cards/linear-algebra/matrix-rank.md)
 - [Multivariable Chain Rule](../cards/calculus/multivariable-chain-rule.md)
+- [Nuclear Norm (Trace Norm)](../cards/linear-algebra/nuclear-norm.md)
 - [Orthogonal Projection](../cards/linear-algebra/projection.md)
 - [Orthonormal Basis](../cards/linear-algebra/orthonormal-basis.md)
+- [PCA Explained Variance Ratio](../cards/linear-algebra/pca-explained-variance.md)
 - [Positive Definite Matrix](../cards/linear-algebra/positive-definite-matrix.md)
 - [Principal Component Analysis (PCA)](../cards/linear-algebra/pca.md)
 - [Pseudo-inverse (Moore-Penrose)](../cards/linear-algebra/pseudoinverse.md)
 - [QR Decomposition](../cards/linear-algebra/qr.md)
+- [Scree Plot](../cards/linear-algebra/scree-plot.md)
 - [Singular Value Decomposition (SVD)](../cards/linear-algebra/svd.md)
 - [Span](../cards/linear-algebra/span.md)
 - [Trace](../cards/linear-algebra/trace.md)
@@ -358,6 +425,39 @@ _This file is auto-generated. Do not edit by hand._
 - [Top-k Sampling](../cards/nlp/top-k-sampling.md)
 - [Top-p Sampling (Nucleus)](../cards/nlp/top-p-sampling.md)
 
+## machine-learning
+- [Bias-Variance Tradeoff](../cards/machine-learning/bias-variance-tradeoff.md)
+- [Categorical Encoding](../cards/machine-learning/categorical-encoding.md)
+- [Class Imbalance](../cards/machine-learning/class-imbalance.md)
+- [Concept Drift](../cards/machine-learning/concept-drift.md)
+- [Cross-Validation](../cards/machine-learning/cross-validation.md)
+- [Data Drift](../cards/machine-learning/data-drift.md)
+- [Data Leakage](../cards/machine-learning/data-leakage.md)
+- [DBSCAN](../cards/machine-learning/dbscan.md)
+- [Decision Tree](../cards/machine-learning/decision-tree.md)
+- [Elastic Net](../cards/machine-learning/elastic-net.md)
+- [Feature Scaling (Standardization vs Normalization)](../cards/machine-learning/feature-scaling.md)
+- [Feature Store](../cards/machine-learning/feature-store.md)
+- [Gradient Boosting](../cards/machine-learning/gradient-boosting.md)
+- [Hierarchical Clustering](../cards/machine-learning/hierarchical-clustering.md)
+- [Imputation](../cards/machine-learning/imputation.md)
+- [K-Means Clustering](../cards/machine-learning/k-means-clustering.md)
+- [K-Nearest Neighbors (k-NN)](../cards/machine-learning/k-nearest-neighbors.md)
+- [Lasso Regression (L1)](../cards/machine-learning/lasso-regression.md)
+- [Linear Regression](../cards/machine-learning/linear-regression.md)
+- [Logistic Regression](../cards/machine-learning/logistic-regression.md)
+- [Machine Learning Pipeline](../cards/machine-learning/machine-learning-pipeline.md)
+- [Missing Data](../cards/machine-learning/missing-data.md)
+- [Model Interpretability](../cards/machine-learning/model-interpretability.md)
+- [Partial Dependence Plot (PDP)](../cards/machine-learning/partial-dependence-plot.md)
+- [Permutation Feature Importance](../cards/machine-learning/permutation-feature-importance.md)
+- [Probability Calibration](../cards/machine-learning/probability-calibration.md)
+- [Random Forest](../cards/machine-learning/random-forest.md)
+- [Ridge Regression (L2)](../cards/machine-learning/ridge-regression.md)
+- [SHAP Values](../cards/machine-learning/shap-values.md)
+- [Threshold Selection](../cards/machine-learning/threshold-selection.md)
+- [Train/Validation/Test Split](../cards/machine-learning/train-validation-test-split.md)
+
 ## matrix-decomposition
 - [Cholesky Decomposition](../cards/linear-algebra/cholesky.md)
 - [Eigendecomposition](../cards/linear-algebra/eigendecomposition.md)
@@ -368,6 +468,7 @@ _This file is auto-generated. Do not edit by hand._
 - [Cosine Embedding Loss (Metric Learning)](../cards/deep-learning/cosine-embedding-loss.md)
 
 ## metrics
+- [Confusion Matrix](../cards/ml-metrics/confusion-matrix.md)
 - [Dice Coefficient (Sorensen-Dice)](../cards/ml-metrics/dice.md)
 - [Jaccard Similarity / IoU](../cards/ml-metrics/jaccard.md)
 - [Log Loss (Binary Cross-Entropy)](../cards/ml-metrics/log-loss.md)
@@ -376,6 +477,8 @@ _This file is auto-generated. Do not edit by hand._
 - [R^2 (Coefficient of Determination)](../cards/ml-metrics/r2.md)
 - [ROC AUC](../cards/ml-metrics/auc-roc.md)
 - [Root Mean Squared Error (RMSE)](../cards/ml-metrics/rmse.md)
+- [Sensitivity (True Positive Rate)](../cards/ml-metrics/sensitivity.md)
+- [Specificity (True Negative Rate)](../cards/ml-metrics/specificity.md)
 
 ## ml
 - [Cross Entropy](../cards/info-theory/cross-entropy.md)
@@ -396,7 +499,14 @@ _This file is auto-generated. Do not edit by hand._
 ## model-selection
 - [Akaike Information Criterion (AIC)](../cards/ml-metrics/aic.md)
 - [Bayesian Information Criterion (BIC)](../cards/ml-metrics/bic.md)
+- [Bias-Variance Tradeoff](../cards/machine-learning/bias-variance-tradeoff.md)
+- [Cross-Validation](../cards/machine-learning/cross-validation.md)
 - [Early Stopping](../cards/optimization/early-stopping.md)
+
+## models
+- [Decision Tree](../cards/machine-learning/decision-tree.md)
+- [Gradient Boosting](../cards/machine-learning/gradient-boosting.md)
+- [Random Forest](../cards/machine-learning/random-forest.md)
 
 ## motifs
 - [Network Significance Profile](../cards/graphs/network-significance-profile.md)
@@ -481,12 +591,22 @@ _This file is auto-generated. Do not edit by hand._
 - [Momentum (SGD with Momentum)](../cards/optimization/momentum.md)
 - [Negative Log-Likelihood (NLL)](../cards/ml-metrics/negative-log-likelihood.md)
 - [Newton's Method](../cards/optimization/newton-method.md)
+- [Nuclear Norm (Trace Norm)](../cards/linear-algebra/nuclear-norm.md)
 - [Positive Definite Matrix](../cards/linear-algebra/positive-definite-matrix.md)
 - [Proximal Operator](../cards/optimization/proximal-operator.md)
 - [Regularization (L1/L2)](../cards/optimization/regularization.md)
 - [RMSProp](../cards/optimization/rmsprop.md)
 - [Stochastic Gradient Descent](../cards/optimization/stochastic-gradient-descent.md)
 - [Weight Decay](../cards/optimization/weight-decay.md)
+
+## pca
+- [PCA Explained Variance Ratio](../cards/linear-algebra/pca-explained-variance.md)
+
+## preprocessing
+- [Categorical Encoding](../cards/machine-learning/categorical-encoding.md)
+- [Feature Scaling (Standardization vs Normalization)](../cards/machine-learning/feature-scaling.md)
+- [Imputation](../cards/machine-learning/imputation.md)
+- [Missing Data](../cards/machine-learning/missing-data.md)
 
 ## pretraining
 - [Masked Language Modeling (MLM)](../cards/nlp/masked-language-modeling.md)
@@ -543,6 +663,12 @@ _This file is auto-generated. Do not edit by hand._
 - [Variance](../cards/probability-stats/variance.md)
 - [Z-Score](../cards/probability-stats/z-score.md)
 
+## production
+- [Concept Drift](../cards/machine-learning/concept-drift.md)
+- [Data Drift](../cards/machine-learning/data-drift.md)
+- [Feature Store](../cards/machine-learning/feature-store.md)
+- [Machine Learning Pipeline](../cards/machine-learning/machine-learning-pipeline.md)
+
 ## random-variable
 - [Random Variable](../cards/probability-stats/random-variable.md)
 
@@ -550,18 +676,29 @@ _This file is auto-generated. Do not edit by hand._
 - [ROC AUC](../cards/ml-metrics/auc-roc.md)
 
 ## regression
+- [Elastic Net](../cards/machine-learning/elastic-net.md)
+- [Lasso Regression (L1)](../cards/machine-learning/lasso-regression.md)
+- [Linear Regression](../cards/machine-learning/linear-regression.md)
 - [Mean Absolute Error (MAE)](../cards/ml-metrics/mae.md)
 - [Mean Squared Error (MSE)](../cards/ml-metrics/mse.md)
 - [R^2 (Coefficient of Determination)](../cards/ml-metrics/r2.md)
+- [Ridge Regression (L2)](../cards/machine-learning/ridge-regression.md)
 - [Root Mean Squared Error (RMSE)](../cards/ml-metrics/rmse.md)
 
 ## regularization
 - [Dropout](../cards/deep-learning/dropout.md)
 - [Early Stopping](../cards/optimization/early-stopping.md)
+- [Elastic Net](../cards/machine-learning/elastic-net.md)
+- [Lasso Regression (L1)](../cards/machine-learning/lasso-regression.md)
+- [Ridge Regression (L2)](../cards/machine-learning/ridge-regression.md)
 - [Weight Decay](../cards/optimization/weight-decay.md)
 
 ## representation-learning
 - [Embedding](../cards/deep-learning/embedding.md)
+
+## resampling
+- [Bootstrap](../cards/probability-stats/bootstrap.md)
+- [Permutation Test](../cards/probability-stats/permutation-test.md)
 
 ## sampling
 - [Aliasing](../cards/signal-processing/aliasing.md)
@@ -595,14 +732,19 @@ _This file is auto-generated. Do not edit by hand._
 - [Graph Laplacian](../cards/graphs/laplacian.md)
 
 ## statistics
+- [A/B Testing](../cards/probability-stats/ab-testing.md)
 - [Akaike Information Criterion (AIC)](../cards/ml-metrics/aic.md)
+- [ANOVA (Analysis of Variance)](../cards/probability-stats/anova.md)
 - [Bayesian Information Criterion (BIC)](../cards/ml-metrics/bic.md)
+- [Benjamini-Hochberg Procedure](../cards/probability-stats/benjamini-hochberg.md)
 - [Bernoulli Distribution](../cards/probability-stats/bernoulli-distribution.md)
 - [Bernoulli Trial](../cards/probability-stats/bernoulli-trial.md)
 - [Beta Distribution](../cards/probability-stats/beta-distribution.md)
 - [Binomial Distribution](../cards/probability-stats/binomial-distribution.md)
+- [Bootstrap](../cards/probability-stats/bootstrap.md)
 - [CDF (Cumulative Distribution Function)](../cards/probability-stats/cdf.md)
 - [Chi-Square Test](../cards/probability-stats/chi-square-test.md)
+- [Cohen's d (Effect Size)](../cards/probability-stats/cohens-d.md)
 - [Conditional Expectation](../cards/probability-stats/conditional-expectation.md)
 - [Conditional Probability](../cards/probability-stats/conditional-probability.md)
 - [Confidence Interval](../cards/probability-stats/confidence-interval.md)
@@ -610,6 +752,7 @@ _This file is auto-generated. Do not edit by hand._
 - [Covariance](../cards/probability-stats/covariance.md)
 - [Expectation](../cards/probability-stats/expectation.md)
 - [Exponential Distribution](../cards/probability-stats/exponential-distribution.md)
+- [False Discovery Rate (FDR)](../cards/probability-stats/false-discovery-rate.md)
 - [Fisher Information](../cards/info-theory/fisher-information.md)
 - [Gamma Distribution](../cards/probability-stats/gamma-distribution.md)
 - [Geometric Distribution](../cards/probability-stats/geometric-distribution.md)
@@ -622,6 +765,7 @@ _This file is auto-generated. Do not edit by hand._
 - [Mean (Expected Value)](../cards/probability-stats/mean.md)
 - [Median](../cards/probability-stats/median.md)
 - [Multinomial Distribution](../cards/probability-stats/multinomial-distribution.md)
+- [Multiple Hypothesis Testing](../cards/probability-stats/multiple-hypothesis-testing.md)
 - [Network Significance Profile](../cards/graphs/network-significance-profile.md)
 - [Normal Distribution (Gaussian)](../cards/probability-stats/normal-distribution.md)
 - [Null Hypothesis](../cards/probability-stats/null-hypothesis.md)
@@ -629,8 +773,10 @@ _This file is auto-generated. Do not edit by hand._
 - [P-Value](../cards/probability-stats/p-value.md)
 - [Paired t-Test](../cards/probability-stats/t-test-paired.md)
 - [PDF (Probability Density Function)](../cards/probability-stats/pdf.md)
+- [Permutation Test](../cards/probability-stats/permutation-test.md)
 - [PMF (Probability Mass Function)](../cards/probability-stats/pmf.md)
 - [Poisson Distribution](../cards/probability-stats/poisson-distribution.md)
+- [Power Analysis (Sample Size Planning)](../cards/probability-stats/power-analysis.md)
 - [Probability Distribution](../cards/probability-stats/probability-distribution.md)
 - [Random Variable](../cards/probability-stats/random-variable.md)
 - [Regularization (L1/L2)](../cards/optimization/regularization.md)
@@ -647,6 +793,14 @@ _This file is auto-generated. Do not edit by hand._
 
 ## stochastic-processes
 - [Entropy Rate](../cards/info-theory/entropy-rate.md)
+
+## study-design
+- [Power Analysis (Sample Size Planning)](../cards/probability-stats/power-analysis.md)
+
+## supervised-learning
+- [K-Nearest Neighbors (k-NN)](../cards/machine-learning/k-nearest-neighbors.md)
+- [Linear Regression](../cards/machine-learning/linear-regression.md)
+- [Logistic Regression](../cards/machine-learning/logistic-regression.md)
 
 ## text
 - [Inverse Document Frequency (IDF)](../cards/nlp/inverse-document-frequency.md)
@@ -675,3 +829,15 @@ _This file is auto-generated. Do not edit by hand._
 ## traversal
 - [Breadth-First Search (BFS)](../cards/graphs/bfs.md)
 - [Depth-First Search (DFS)](../cards/graphs/dfs.md)
+
+## unsupervised-learning
+- [DBSCAN](../cards/machine-learning/dbscan.md)
+- [Hierarchical Clustering](../cards/machine-learning/hierarchical-clustering.md)
+- [K-Means Clustering](../cards/machine-learning/k-means-clustering.md)
+
+## visualization
+- [Scree Plot](../cards/linear-algebra/scree-plot.md)
+
+## workflow
+- [Data Leakage](../cards/machine-learning/data-leakage.md)
+- [Train/Validation/Test Split](../cards/machine-learning/train-validation-test-split.md)

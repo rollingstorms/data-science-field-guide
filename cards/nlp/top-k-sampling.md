@@ -17,6 +17,7 @@ P'(i)=
 0, & i\notin K
 \end{cases}
 \]
+
 \[
 K=\text{indices of the top }k\text{ probabilities}
 \]

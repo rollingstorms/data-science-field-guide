@@ -19,6 +19,19 @@ y=0 & FP & TN
 \]
 
 </div>
+## Plot
+```plot
+type: bars
+xs: 0 | 1 | 2 | 3
+ys: 42 | 8 | 6 | 44
+xmin: -0.5
+xmax: 3.5
+ymin: 0
+ymax: 50
+height: 280
+title: Example counts: TP, FP, FN, TN (bar view)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - TP, FP, TN, FN: classification outcome counts

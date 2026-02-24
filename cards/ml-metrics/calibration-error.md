@@ -15,6 +15,19 @@ prereqs: [ml.brier-score]
 \]
 
 </div>
+## Plot
+```plot
+fns: x | x^0.8
+colors: #111111 | #ff6b2c
+labels: Perfect calibration | Example reliability curve
+xmin: 0
+xmax: 1
+ymin: 0
+ymax: 1.05
+height: 280
+title: Reliability curve and ideal diagonal (ECE intuition)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(B_m\): probability bin \(m\)

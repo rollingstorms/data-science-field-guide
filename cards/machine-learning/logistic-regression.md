@@ -19,6 +19,17 @@ P(y=1\mid x)=\sigma(w^Tx+b)=\frac{1}{1+e^{-(w^Tx+b)}}
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+exp(-x))
+xmin: -6
+xmax: 6
+ymin: -0.05
+ymax: 1.05
+height: 280
+title: Logistic link / sigmoid over score z
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x\): feature vector

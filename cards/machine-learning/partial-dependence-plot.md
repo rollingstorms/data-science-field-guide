@@ -15,6 +15,17 @@ prereqs: []
 \]
 
 </div>
+## Plot
+```plot
+fn: 0.6*sin(x)+0.12*x
+xmin: -6
+xmax: 6
+ymin: -1.4
+ymax: 1.4
+height: 280
+title: Example partial dependence shape (illustrative)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(S\): feature subset of interest

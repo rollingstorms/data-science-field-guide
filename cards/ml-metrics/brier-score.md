@@ -15,6 +15,17 @@ prereqs: [prob.expectation]
 \]
 
 </div>
+## Plot
+```plot
+fn: (1-x)^2
+xmin: 0
+xmax: 1
+ymin: 0
+ymax: 1.05
+height: 280
+title: Brier score for y=1 vs predicted p
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(p_i\): predicted probability for positive class

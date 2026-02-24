@@ -15,6 +15,17 @@ prereqs: [info.kl-divergence]
 \]
 
 </div>
+## Plot
+```plot
+fn: (-(0.5*x+0.25)*log(0.5*x+0.25)-(0.75-0.5*x)*log(0.75-0.5*x) + 0.5*(x*log(x)+(1-x)*log(1-x)) + 0.5*(0.5*log(0.5)+0.5*log(0.5)))/log(2)
+xmin: 0.001
+xmax: 0.999
+ymin: 0
+ymax: 0.35
+height: 280
+title: Bernoulli JSD(P || Bern(0.5)) (bits)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(P,Q\): distributions

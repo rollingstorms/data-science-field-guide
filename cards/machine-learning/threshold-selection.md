@@ -15,6 +15,17 @@ prereqs: [ml.confusion-matrix]
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+exp(-30*(x-0.5)))
+xmin: 0
+xmax: 1
+ymin: -0.05
+ymax: 1.05
+height: 280
+title: Thresholding behavior (smooth step approximation)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\hat p\): predicted score/probability

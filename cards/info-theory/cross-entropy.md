@@ -19,6 +19,17 @@ H(P,Q) = -\int p(x)\,\log q(x)\,dx
 \]
 
 </div>
+## Plot
+```plot
+fn: -(0.7*log(x)+0.3*log(1-x))/log(2)
+xmin: 0.001
+xmax: 0.999
+ymin: 0
+ymax: 8
+height: 280
+title: Bernoulli cross-entropy H(P,Q) with P(1)=0.7 (bits)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(P\): true/data distribution

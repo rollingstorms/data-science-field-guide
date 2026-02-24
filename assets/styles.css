@@ -175,6 +175,42 @@ body {
   color: var(--ink);
 }
 
+/* Plot blocks (rendered from ```plot fences by assets/plot-blocks.js) */
+.md-typeset .plot-block-figure {
+  margin: 1rem 0 1.25rem;
+  padding: 0.7rem;
+  border: 2px solid var(--border);
+  background: color-mix(in srgb, var(--paper) 88%, white);
+  box-shadow: 4px 4px 0 var(--border);
+}
+
+.md-typeset .plot-block-canvas {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.md-typeset .plot-block-canvas svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.md-typeset .plot-block-caption {
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  color: color-mix(in srgb, var(--ink) 72%, white);
+}
+
+.md-typeset .plot-block-error {
+  margin: 0.5rem 0 1rem;
+  padding: 0.45rem 0.6rem;
+  border-left: 4px solid #b42318;
+  background: #fff1ef;
+  color: #7a271a;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+}
+
 /* Homepage formula-of-the-day banner (rendered by assets/formula-of-day.js) */
 .md-typeset .formula-of-day-banner {
   margin: 0 0 1.1rem;

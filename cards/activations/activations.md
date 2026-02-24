@@ -15,6 +15,19 @@ h = \phi(Wx + b)
 \]
 
 </div>
+## Plot
+```plot
+fns: (x+abs(x))/2 | 1/(1+exp(-x)) | tanh(x)
+colors: #ff6b2c | #1f6feb | #111111
+labels: ReLU | Sigmoid | Tanh
+xmin: -4
+xmax: 4
+ymin: -1.2
+ymax: 4
+height: 300
+title: Common activation shapes (illustrative)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x\): input vector

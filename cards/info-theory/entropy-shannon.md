@@ -15,6 +15,17 @@ H(X) = -\sum_{x} p(x)\,\log p(x)
 \]
 
 </div>
+## Plot
+```plot
+fn: -(x*log(x)+(1-x)*log(1-x))/log(2)
+xmin: 0.001
+xmax: 0.999
+ymin: 0
+ymax: 1.05
+height: 280
+title: Binary entropy H(p)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(p(x)\): probability of outcome \(x\)

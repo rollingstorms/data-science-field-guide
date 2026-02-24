@@ -13,6 +13,7 @@ prereqs: [opt.stochastic-gradient-descent]
 \[
 s_t=\rho s_{t-1}+(1-\rho)g_t^2
 \]
+
 \[
 \theta_{t+1}=\theta_t-\eta \frac{g_t}{\sqrt{s_t}+\epsilon}
 \]

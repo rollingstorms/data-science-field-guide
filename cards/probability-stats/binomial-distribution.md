@@ -16,6 +16,19 @@ P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}
 \]
 
 </div>
+## Plot
+```plot
+type: bars
+xs: 0 | 1 | 2 | 3 | 4 | 5
+ys: 0.03125 | 0.15625 | 0.3125 | 0.3125 | 0.15625 | 0.03125
+xmin: -0.5
+xmax: 5.5
+ymin: 0
+ymax: 0.36
+height: 280
+title: Binomial PMF example (n=5, p=0.5)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(n\): number of trials

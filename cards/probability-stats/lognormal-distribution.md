@@ -15,6 +15,17 @@ X \text{ is lognormal } \iff \log X \sim \mathcal{N}(\mu,\sigma^2)
 \]
 
 </div>
+## Plot
+```plot
+fn: exp(-(log(x)^2)/2)/(x*sqrt(2*PI))
+xmin: 0.05
+xmax: 4
+ymin: 0
+ymax: 1.0
+height: 280
+title: Lognormal PDF (mu=0, sigma=1)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(X>0\): positive random variable

@@ -15,6 +15,17 @@ prereqs: []
 \]
 
 </div>
+## Plot
+```plot
+fn: x^2
+xmin: -3
+xmax: 3
+ymin: 0
+ymax: 9.5
+height: 280
+title: Squared error vs residual r
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(y_i\): true value

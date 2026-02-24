@@ -15,6 +15,19 @@ prereqs: [linalg.pca-explained-variance]
 \]
 
 </div>
+## Plot
+```plot
+type: bars
+xs: 1 | 2 | 3 | 4 | 5 | 6
+ys: 0.42 | 0.24 | 0.14 | 0.09 | 0.06 | 0.05
+xmin: 0.5
+xmax: 6.5
+ymin: 0
+ymax: 0.48
+height: 280
+title: Example scree plot (explained variance by component)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(k\): component index

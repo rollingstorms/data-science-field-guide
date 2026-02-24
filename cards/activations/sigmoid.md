@@ -15,6 +15,17 @@ prereqs: [dl.activations]
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+exp(-x))
+xmin: -6
+xmax: 6
+ymin: -0.1
+ymax: 1.1
+height: 280
+title: Sigmoid(x)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x\): scalar input (applied elementwise)

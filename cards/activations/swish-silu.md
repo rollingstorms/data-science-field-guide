@@ -19,6 +19,17 @@ prereqs: [dl.activations]
 \]
 
 </div>
+## Plot
+```plot
+fn: x/(1+exp(-x))
+xmin: -6
+xmax: 6
+ymin: -1.0
+ymax: 6.5
+height: 280
+title: SiLU / Swish (beta=1)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x\): scalar input (applied elementwise)

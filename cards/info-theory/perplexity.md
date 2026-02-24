@@ -15,6 +15,17 @@ prereqs: [info.cross-entropy]
 \]
 
 </div>
+## Plot
+```plot
+fn: exp((-(x*log(x)+(1-x)*log(1-x)))*1)
+xmin: 0.001
+xmax: 0.999
+ymin: 1
+ymax: 2.1
+height: 280
+title: exp(H) for binary entropy (natural-log convention)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(H(P,Q)\): cross-entropy

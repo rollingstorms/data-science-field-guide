@@ -19,6 +19,17 @@ x' = \frac{x-x_{min}}{x_{max}-x_{min}}
 \]
 
 </div>
+## Plot
+```plot
+fn: x/10
+xmin: 0
+xmax: 10
+ymin: -0.05
+ymax: 1.05
+height: 280
+title: Example min-max scaling to [0,1]
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - First formula: standardization (z-score).

@@ -19,6 +19,17 @@ prereqs: [dl.activations]
 \]
 
 </div>
+## Plot
+```plot
+fn: 0.5*x*(1+tanh(sqrt(2/PI)*(x+0.044715*x^3)))
+xmin: -4
+xmax: 4
+ymin: -1.0
+ymax: 4.2
+height: 280
+title: GELU(x) (tanh approximation)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x\): scalar input (applied elementwise)

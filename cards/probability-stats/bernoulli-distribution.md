@@ -19,6 +19,19 @@ P(X=1)=p,\quad P(X=0)=1-p
 \]
 
 </div>
+## Plot
+```plot
+type: bars
+xs: 0 | 1
+ys: 0.7 | 0.3
+xmin: -0.5
+xmax: 1.5
+ymin: 0
+ymax: 1.0
+height: 280
+title: Bernoulli PMF example (p=0.3)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(X\): binary random variable

@@ -15,6 +15,17 @@ prereqs: []
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+exp(-4*(x-0.5)))
+xmin: 0
+xmax: 1.5
+ymin: 0
+ymax: 1.05
+height: 280
+title: Example power curve vs effect size (illustrative)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(H_0\): null hypothesis

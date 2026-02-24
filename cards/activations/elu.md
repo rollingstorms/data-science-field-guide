@@ -19,6 +19,17 @@ x, & x>0\\
 \]
 
 </div>
+## Plot
+```plot
+fn: (x+abs(x))/2 + (exp((x-abs(x))/2)-1)
+xmin: -4
+xmax: 4
+ymin: -1.2
+ymax: 4
+height: 280
+title: ELU(x) (alpha=1)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x\): scalar input (applied elementwise)

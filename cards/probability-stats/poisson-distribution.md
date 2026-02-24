@@ -20,6 +20,19 @@ P(X=k)=e^{-\lambda}\frac{\lambda^k}{k!},\quad k=0,1,2,\dots
 \]
 
 </div>
+## Plot
+```plot
+type: bars
+xs: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
+ys: 0.13534 | 0.27067 | 0.27067 | 0.18045 | 0.09022 | 0.03609 | 0.01203 | 0.00344
+xmin: -0.5
+xmax: 7.5
+ymin: 0
+ymax: 0.31
+height: 280
+title: Poisson PMF example (lambda=2)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\lambda>0\): average count/rate in a fixed interval

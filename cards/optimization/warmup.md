@@ -16,6 +16,17 @@ prereqs: [opt.learning-rate-schedule]
 \]
 
 </div>
+## Plot
+```plot
+fn: x
+xmin: 0
+xmax: 1
+ymin: 0
+ymax: 1.05
+height: 280
+title: Linear warmup phase (normalized)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\eta_t\): learning rate at step \(t\)

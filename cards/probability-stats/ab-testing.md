@@ -15,6 +15,17 @@ prereqs: [stat.p-value]
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+exp(-10*(x-0.2)))
+xmin: 0
+xmax: 0.5
+ymin: 0
+ymax: 1.05
+height: 280
+title: Example test power vs uplift (illustrative)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\hat{	heta}_A,\hat{	heta}_B\): estimated metrics for control and treatment

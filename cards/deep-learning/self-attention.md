@@ -13,6 +13,7 @@ prereqs: [dl.attention]
 \[
 Q = XW_{Q},\quad K = XW_{K},\quad V = XW_{V}
 \]
+
 \[
 \operatorname{SelfAttn}(X)=\operatorname{softmax}\!\left(\frac{QK^\top}{\sqrt{d_{k}}}\right)V
 \]

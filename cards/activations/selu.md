@@ -19,6 +19,17 @@ x, & x>0\\
 \]
 
 </div>
+## Plot
+```plot
+fn: 1.0507*((x+abs(x))/2 + 1.67326*(exp((x-abs(x))/2)-1))
+xmin: -4
+xmax: 4
+ymin: -2
+ymax: 4.5
+height: 280
+title: SELU(x) (default alpha, lambda)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x\): scalar input (applied elementwise)

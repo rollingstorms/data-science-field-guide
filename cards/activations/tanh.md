@@ -15,6 +15,17 @@ prereqs: [dl.activations]
 \]
 
 </div>
+## Plot
+```plot
+fn: tanh(x)
+xmin: -4
+xmax: 4
+ymin: -1.2
+ymax: 1.2
+height: 280
+title: tanh(x)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x\): scalar input (applied elementwise)

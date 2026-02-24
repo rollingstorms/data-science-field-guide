@@ -15,6 +15,17 @@ prereqs: [opt.stochastic-gradient-descent]
 \]
 
 </div>
+## Plot
+```plot
+fn: exp(-0.6*x)
+xmin: 0
+xmax: 8
+ymin: 0
+ymax: 1.05
+height: 280
+title: Example decay schedule (normalized)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\eta_t\): learning rate at step/epoch \(t\)

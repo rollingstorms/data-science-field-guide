@@ -15,6 +15,17 @@ prereqs: [ml.precision, ml.recall]
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+2*x)
+xmin: 0
+xmax: 1
+ymin: 0.3
+ymax: 1.05
+height: 280
+title: Example precision-recall curve (illustrative)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(t\): decision threshold

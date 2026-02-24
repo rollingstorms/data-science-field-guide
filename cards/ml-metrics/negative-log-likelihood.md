@@ -15,6 +15,17 @@ prereqs: [prob.likelihood]
 \]
 
 </div>
+## Plot
+```plot
+fn: -log(x)
+xmin: 0.001
+xmax: 0.999
+ymin: 0
+ymax: 7
+height: 280
+title: Negative log-likelihood for one observed event
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(p_\theta(x)\): model density/mass

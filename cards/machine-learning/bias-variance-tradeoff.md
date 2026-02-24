@@ -15,6 +15,19 @@ prereqs: [prob.expectation, prob.variance]
 \]
 
 </div>
+## Plot
+```plot
+fns: 0.75*exp(-0.45*x)+0.08 | 0.03*(x^2)+0.05 | 0.75*exp(-0.45*x)+0.03*(x^2)+0.2
+colors: #1f6feb | #ff6b2c | #111111
+labels: Bias^2 | Variance | Total error
+xmin: 0
+xmax: 8
+ymin: 0
+ymax: 1.25
+height: 300
+title: Bias-variance tradeoff (illustrative)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\hat f(x)\): learned predictor

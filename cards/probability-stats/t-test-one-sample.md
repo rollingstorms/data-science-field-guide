@@ -15,6 +15,17 @@ t = \frac{\bar x - \mu_0}{s/\sqrt{n}}
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+exp(-5*(x-0.5)))
+xmin: 0
+xmax: 1.5
+ymin: 0
+ymax: 1.05
+height: 280
+title: Example power curve for one-sample t-test (illustrative)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\bar x\): sample mean

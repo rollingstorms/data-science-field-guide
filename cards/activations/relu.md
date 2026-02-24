@@ -15,6 +15,17 @@ prereqs: [dl.activations]
 \]
 
 </div>
+## Plot
+```plot
+fn: (x+abs(x))/2
+xmin: -4
+xmax: 4
+ymin: -1
+ymax: 4
+height: 280
+title: ReLU(x)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x\): scalar (applied elementwise to vectors/tensors)

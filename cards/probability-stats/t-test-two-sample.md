@@ -15,6 +15,17 @@ t = \frac{\bar x_1 - \bar x_2}{\sqrt{s_1^2/n_1 + s_2^2/n_2}}
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+exp(-5*(x-0.5)))
+xmin: 0
+xmax: 1.5
+ymin: 0
+ymax: 1.05
+height: 280
+title: Example power curve for two-sample t-test (illustrative)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\bar x_1, \bar x_2\): sample means

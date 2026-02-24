@@ -15,6 +15,19 @@ prereqs: [ml.confusion-matrix]
 \]
 
 </div>
+## Plot
+```plot
+fns: x | sqrt(x)
+colors: #111111 | #ff6b2c
+labels: Random baseline | Example model
+xmin: 0
+xmax: 1
+ymin: 0
+ymax: 1.05
+height: 280
+title: AUC intuition from area under ROC (illustrative)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(s(\cdot)\): score function

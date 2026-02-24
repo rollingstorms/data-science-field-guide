@@ -19,6 +19,17 @@ D_{\mathrm{KL}}(P\|Q) = \int p(x)\,\log\frac{p(x)}{q(x)}\,dx
 \]
 
 </div>
+## Plot
+```plot
+fn: (0.7*log(0.7/x)+0.3*log(0.3/(1-x)))/log(2)
+xmin: 0.001
+xmax: 0.999
+ymin: 0
+ymax: 6
+height: 280
+title: Bernoulli KL divergence D_KL(P||Q), P(1)=0.7 (bits)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(P\): true distribution (often “data”)

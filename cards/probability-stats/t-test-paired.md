@@ -15,6 +15,17 @@ t = \frac{\bar d}{s_d/\sqrt{n}}
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+exp(-5*(x-0.4)))
+xmin: 0
+xmax: 1.5
+ymin: 0
+ymax: 1.05
+height: 280
+title: Example power curve for paired t-test (illustrative)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(d_i\): paired differences \(x_i - y_i\)

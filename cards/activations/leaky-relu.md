@@ -15,6 +15,17 @@ f(x)=\max(\alpha x, x),\quad \alpha \in (0,1)
 \]
 
 </div>
+## Plot
+```plot
+fn: 0.55*x + 0.45*abs(x)
+xmin: -4
+xmax: 4
+ymin: -1
+ymax: 4
+height: 280
+title: Leaky ReLU (alpha=0.1)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x\): scalar input (applied elementwise)

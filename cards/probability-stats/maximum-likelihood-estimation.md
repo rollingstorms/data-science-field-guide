@@ -13,6 +13,7 @@ prereqs: [prob.probability-distribution]
 \[
 \hat{\theta}_{\text{MLE}}=\arg\max_\theta \prod_{i=1}^n p(x_i\mid \theta)
 \]
+
 \[
 =\arg\max_\theta \sum_{i=1}^n \log p(x_i\mid \theta)
 \]

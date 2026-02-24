@@ -13,6 +13,7 @@ prereqs: [dl.attention]
 \[
 Q = X_{q} W_{Q},\quad K = X_{c} W_{K},\quad V = X_{c} W_{V}
 \]
+
 \[
 \operatorname{CrossAttn}(X_{q},X_{c})=\operatorname{softmax}\!\left(\frac{QK^\top}{\sqrt{d_{k}}}\right)V
 \]

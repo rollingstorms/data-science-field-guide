@@ -14,6 +14,7 @@ prereqs: []
 \mu = \frac{1}{d}\sum_{i=1}^d x_i,\quad
 \sigma^2=\frac{1}{d}\sum_{i=1}^d (x_i-\mu)^2
 \]
+
 \[
 \mathrm{LN}(x)=\gamma \odot \frac{x-\mu}{\sqrt{\sigma^2+\epsilon}}+\beta
 \]

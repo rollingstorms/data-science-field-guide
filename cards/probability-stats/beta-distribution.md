@@ -15,6 +15,17 @@ f(x)=\frac{x^{\alpha-1}(1-x)^{\beta-1}}{B(\alpha,\beta)},\quad 0\le x \le 1
 \]
 
 </div>
+## Plot
+```plot
+fn: 6*x*(1-x)
+xmin: 0
+xmax: 1
+ymin: 0
+ymax: 1.7
+height: 280
+title: Beta PDF (alpha=2, beta=2)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\alpha,\beta>0\): shape parameters

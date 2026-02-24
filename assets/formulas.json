@@ -147,7 +147,7 @@
     "title": "Cross-Attention",
     "category": "Deep Learning",
     "route": "/cards/deep-learning/cross-attention/",
-    "formula_markdown": "\\[\nQ = X_{q} W_{Q},\\quad K = X_{c} W_{K},\\quad V = X_{c} W_{V}\n\\]\n\\[\n\\operatorname{CrossAttn}(X_{q},X_{c})=\\operatorname{softmax}\\!\\left(\\frac{QK^\\top}{\\sqrt{d_{k}}}\\right)V\n\\]"
+    "formula_markdown": "\\[\nQ = X_{q} W_{Q},\\quad K = X_{c} W_{K},\\quad V = X_{c} W_{V}\n\\]\n\n\\[\n\\operatorname{CrossAttn}(X_{q},X_{c})=\\operatorname{softmax}\\!\\left(\\frac{QK^\\top}{\\sqrt{d_{k}}}\\right)V\n\\]"
   },
   {
     "title": "Dropout",
@@ -171,7 +171,7 @@
     "title": "Layer Normalization",
     "category": "Deep Learning",
     "route": "/cards/deep-learning/layer-normalization/",
-    "formula_markdown": "\\[\n\\mu = \\frac{1}{d}\\sum_{i=1}^d x_i,\\quad\n\\sigma^2=\\frac{1}{d}\\sum_{i=1}^d (x_i-\\mu)^2\n\\]\n\\[\n\\mathrm{LN}(x)=\\gamma \\odot \\frac{x-\\mu}{\\sqrt{\\sigma^2+\\epsilon}}+\\beta\n\\]"
+    "formula_markdown": "\\[\n\\mu = \\frac{1}{d}\\sum_{i=1}^d x_i,\\quad\n\\sigma^2=\\frac{1}{d}\\sum_{i=1}^d (x_i-\\mu)^2\n\\]\n\n\\[\n\\mathrm{LN}(x)=\\gamma \\odot \\frac{x-\\mu}{\\sqrt{\\sigma^2+\\epsilon}}+\\beta\n\\]"
   },
   {
     "title": "MLP (Multi-Layer Perceptron)",
@@ -183,7 +183,7 @@
     "title": "Multi-Head Attention",
     "category": "Deep Learning",
     "route": "/cards/deep-learning/multi-head-attention/",
-    "formula_markdown": "\\[\n\\mathrm{MHA}(Q,K,V)=\\mathrm{Concat}(\\mathrm{head}_1,\\dots,\\mathrm{head}_h)W_O\n\\]\n\\[\n\\mathrm{head}_i=\\mathrm{Attention}(QW_i^Q,KW_i^K,VW_i^V)\n\\]"
+    "formula_markdown": "\\[\n\\mathrm{MHA}(Q,K,V)=\\mathrm{Concat}(\\mathrm{head}_1,\\dots,\\mathrm{head}_h)W_O\n\\]\n\n\\[\n\\mathrm{head}_i=\\mathrm{Attention}(QW_i^Q,KW_i^K,VW_i^V)\n\\]"
   },
   {
     "title": "Positional Encoding",
@@ -201,7 +201,7 @@
     "title": "Self-Attention",
     "category": "Deep Learning",
     "route": "/cards/deep-learning/self-attention/",
-    "formula_markdown": "\\[\nQ = XW_{Q},\\quad K = XW_{K},\\quad V = XW_{V}\n\\]\n\\[\n\\operatorname{SelfAttn}(X)=\\operatorname{softmax}\\!\\left(\\frac{QK^\\top}{\\sqrt{d_{k}}}\\right)V\n\\]"
+    "formula_markdown": "\\[\nQ = XW_{Q},\\quad K = XW_{K},\\quad V = XW_{V}\n\\]\n\n\\[\n\\operatorname{SelfAttn}(X)=\\operatorname{softmax}\\!\\left(\\frac{QK^\\top}{\\sqrt{d_{k}}}\\right)V\n\\]"
   },
   {
     "title": "Transformer",
@@ -285,7 +285,7 @@
     "title": "Message Passing (on Graphs)",
     "category": "Graphs",
     "route": "/cards/graphs/message-passing/",
-    "formula_markdown": "\\[\nm_v^{(t+1)}=\\mathrm{AGG}\\big(\\{\\,\\phi(h_v^{(t)},h_u^{(t)},e_{uv}) : u\\in \\mathcal{N}(v)\\,\\}\\big)\n\\]\n\\[\nh_v^{(t+1)}=\\psi(h_v^{(t)}, m_v^{(t+1)})\n\\]"
+    "formula_markdown": "\\[\nm_v^{(t+1)}=\\mathrm{AGG}\\big(\\{\\,\\phi(h_v^{(t)},h_u^{(t)},e_{uv}) : u\\in \\mathcal{N}(v)\\,\\}\\big)\n\\]\n\n\\[\nh_v^{(t+1)}=\\psi(h_v^{(t)}, m_v^{(t+1)})\n\\]"
   },
   {
     "title": "Minimum Spanning Tree (MST)",
@@ -468,10 +468,22 @@
     "formula_markdown": "\\[\n\\|x\\|_p = \\left(\\sum_i |x_i|^p\\right)^{1/p}\\quad (p\\ge 1),\\qquad \\|x\\|_\\infty = \\max_i |x_i|\n\\]"
   },
   {
+    "title": "Nuclear Norm (Trace Norm)",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/nuclear-norm/",
+    "formula_markdown": "\\[\n\\|A\\|_* = \\sum_{i=1}^{\\min(m,n)} \\sigma_i(A)\n\\]"
+  },
+  {
     "title": "Orthonormal Basis",
     "category": "Linear Algebra",
     "route": "/cards/linear-algebra/orthonormal-basis/",
     "formula_markdown": "\\[\nq_i^T q_j = \\delta_{ij},\\quad i,j=1,\\ldots,n\n\\]"
+  },
+  {
+    "title": "PCA Explained Variance Ratio",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/pca-explained-variance/",
+    "formula_markdown": "\\[\n\\mathrm{EVR}_k = \\frac{\\lambda_k}{\\sum_{j=1}^{p}\\lambda_j}\n\\]"
   },
   {
     "title": "Principal Component Analysis (PCA)",
@@ -504,6 +516,12 @@
     "formula_markdown": "\\[\nA = Q R\n\\]"
   },
   {
+    "title": "Scree Plot",
+    "category": "Linear Algebra",
+    "route": "/cards/linear-algebra/scree-plot/",
+    "formula_markdown": "\\[\n\\text{scree plot: } k \\mapsto \\lambda_k \\quad \\text{or} \\quad k \\mapsto \\sum_{j=1}^{k}\\mathrm{EVR}_j\n\\]"
+  },
+  {
     "title": "Span",
     "category": "Linear Algebra",
     "route": "/cards/linear-algebra/span/",
@@ -520,6 +538,192 @@
     "category": "Linear Algebra",
     "route": "/cards/linear-algebra/trace/",
     "formula_markdown": "\\[\n\\operatorname{tr}(A)=\\sum_i A_{ii}\n\\]"
+  },
+  {
+    "title": "Bias-Variance Tradeoff",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/bias-variance-tradeoff/",
+    "formula_markdown": "\\[\n\\mathbb{E}\\big[(\\hat f(x)-f(x))^2\\big] = \\mathrm{Bias}[\\hat f(x)]^2 + \\mathrm{Var}[\\hat f(x)] + \\sigma^2\n\\]"
+  },
+  {
+    "title": "Categorical Encoding",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/categorical-encoding/",
+    "formula_markdown": "\\[\n\\text{one-hot}(c_i) \\in \\{0,1\\}^{K},\\quad \\sum_{j=1}^K \\text{one-hot}(c_i)_j = 1\n\\]"
+  },
+  {
+    "title": "Class Imbalance",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/class-imbalance/",
+    "formula_markdown": "\\[\n\\pi = P(y=1),\\quad \\pi \\ll 0.5\\ \\text{(rare positive class)}\n\\]"
+  },
+  {
+    "title": "Concept Drift",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/concept-drift/",
+    "formula_markdown": "\\[\nP_t(Y\\mid X) \\ne P_{t'}(Y\\mid X)\n\\]"
+  },
+  {
+    "title": "Cross-Validation",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/cross-validation/",
+    "formula_markdown": "\\[\n\\mathrm{CVScore}=\\frac{1}{K}\\sum_{k=1}^{K} M\\big(f^{(-k)}, \\mathcal{D}^{(k)}\\big)\n\\]"
+  },
+  {
+    "title": "Data Drift",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/data-drift/",
+    "formula_markdown": "\\[\nP_t(X) \\ne P_{t'}(X)\n\\]"
+  },
+  {
+    "title": "Data Leakage",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/data-leakage/",
+    "formula_markdown": "\\[\nP(\\text{feature}\\mid \\text{deployment}) \\ne P(\\text{feature}\\mid \\text{training pipeline assumptions})\n\\]\n\n\\[\n\\text{Leakage} \\Rightarrow \\widehat{\\text{generalization}}\\ \\text{too optimistic}\n\\]"
+  },
+  {
+    "title": "DBSCAN",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/dbscan/",
+    "formula_markdown": "\\[\n\\text{core point } x_i: |\\{x_j: d(x_i,x_j)\\le \\varepsilon\\}| \\ge \\text{MinPts}\n\\]"
+  },
+  {
+    "title": "Decision Tree",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/decision-tree/",
+    "formula_markdown": "\\[\n\\text{Choose split } s^* = \\arg\\max_s\\ \\Delta I(s)\n\\]\n\n\\[\n\\Delta I(s)=I(\\text{parent})-\\sum_{c\\in\\{L,R\\}}\\frac{n_c}{n}I(c)\n\\]"
+  },
+  {
+    "title": "Elastic Net",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/elastic-net/",
+    "formula_markdown": "\\[\\n\\hat{\\beta}=\\arg\\min_\\beta \\|y-X\\beta\\|_2^2 + \\lambda\\big(\\alpha\\|\\beta\\|_1+(1-\\alpha)\\|\\beta\\|_2^2\\big)\\n\\]"
+  },
+  {
+    "title": "Feature Scaling (Standardization vs Normalization)",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/feature-scaling/",
+    "formula_markdown": "\\[\nz = \\frac{x-\\mu}{\\sigma}\n\\]\n\n\\[\nx' = \\frac{x-x_{min}}{x_{max}-x_{min}}\n\\]"
+  },
+  {
+    "title": "Feature Store",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/feature-store/",
+    "formula_markdown": "\\[\n\\text{feature view} = (\\text{entity id}, \\text{timestamp}) \\mapsto \\text{feature vector}\n\\]"
+  },
+  {
+    "title": "Gradient Boosting",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/gradient-boosting/",
+    "formula_markdown": "\\[\nF_m(x)=F_{m-1}(x)+\\eta\\,h_m(x)\n\\]"
+  },
+  {
+    "title": "Hierarchical Clustering",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/hierarchical-clustering/",
+    "formula_markdown": "\\[\nd(A\\cup B,C)=\\text{linkage}(A,B,C)\n\\]"
+  },
+  {
+    "title": "Imputation",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/imputation/",
+    "formula_markdown": "\\[\n\\tilde{x}_{ij}=\\begin{cases}\nx_{ij}, & x_{ij}\\ \\text{observed}\\\\\ng(x_{\\cdot j}), & x_{ij}\\ \\text{missing}\n\\end{cases}\n\\]"
+  },
+  {
+    "title": "K-Means Clustering",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/k-means-clustering/",
+    "formula_markdown": "\\[\n\\min_{\\{C_k,\\mu_k\\}}\\sum_{k=1}^{K}\\sum_{x_i\\in C_k}\\|x_i-\\mu_k\\|_2^2\n\\]"
+  },
+  {
+    "title": "K-Nearest Neighbors (k-NN)",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/k-nearest-neighbors/",
+    "formula_markdown": "\\[\n\\mathcal{N}_k(x)=\\text{k nearest training points to } x\n\\]\n\n\\[\n\\hat y=\n\\begin{cases}\n\\mathrm{mode}\\{y_i: x_i\\in \\mathcal{N}_k(x)\\}, & \\text{classification}\\\\\n\\frac{1}{k}\\sum_{x_i\\in \\mathcal{N}_k(x)} y_i, & \\text{regression}\n\\end{cases}\n\\]"
+  },
+  {
+    "title": "Lasso Regression (L1)",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/lasso-regression/",
+    "formula_markdown": "\\[\\n\\hat{\\beta}=\\arg\\min_\\beta \\|y-X\\beta\\|_2^2 + \\lambda\\|\\beta\\|_1\\n\\]"
+  },
+  {
+    "title": "Linear Regression",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/linear-regression/",
+    "formula_markdown": "\\[\n\\hat{\\beta} = (X^T X)^{-1} X^T y\n\\]\n\n\\[\n\\hat{y} = X\\hat{\\beta}\n\\]"
+  },
+  {
+    "title": "Logistic Regression",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/logistic-regression/",
+    "formula_markdown": "\\[\nP(y=1\\mid x)=\\sigma(w^Tx+b)=\\frac{1}{1+e^{-(w^Tx+b)}}\n\\]\n\n\\[\n\\log\\frac{p}{1-p}=w^Tx+b\n\\]"
+  },
+  {
+    "title": "Machine Learning Pipeline",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/machine-learning-pipeline/",
+    "formula_markdown": "\\[\n\\hat y = (T_n\\circ\\cdots\\circ T_1\\circ f)(x)\n\\]"
+  },
+  {
+    "title": "Missing Data",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/missing-data/",
+    "formula_markdown": "\\[\nX = X_{obs} \\cup X_{mis}\n\\]"
+  },
+  {
+    "title": "Model Interpretability",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/model-interpretability/",
+    "formula_markdown": "\\[\n\\hat y = f(x) \\quad \\Rightarrow \\quad \\text{interpretability asks how } x \\text{ drives } \\hat y\n\\]"
+  },
+  {
+    "title": "Partial Dependence Plot (PDP)",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/partial-dependence-plot/",
+    "formula_markdown": "\\[\n\\mathrm{PD}_S(z_S)=\\mathbb{E}_{X_C}[f(z_S, X_C)]\n\\]"
+  },
+  {
+    "title": "Permutation Feature Importance",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/permutation-feature-importance/",
+    "formula_markdown": "\\[\nI_j = M(f, X, y) - M\\big(f, \\pi_j(X), y\\big)\n\\]"
+  },
+  {
+    "title": "Probability Calibration",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/probability-calibration/",
+    "formula_markdown": "\\[\nP(Y=1\\mid \\hat p = p) \\approx p\n\\]"
+  },
+  {
+    "title": "Random Forest",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/random-forest/",
+    "formula_markdown": "\\[\n\\hat f(x)=\\frac{1}{B}\\sum_{b=1}^{B} T_b(x)\n\\]"
+  },
+  {
+    "title": "Ridge Regression (L2)",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/ridge-regression/",
+    "formula_markdown": "\\[\\n\\hat{\\beta}=\\arg\\min_\\beta \\|y-X\\beta\\|_2^2 + \\lambda\\|\\beta\\|_2^2\\n\\]"
+  },
+  {
+    "title": "SHAP Values",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/shap-values/",
+    "formula_markdown": "\\[\n\\phi_i = \\sum_{S\\subseteq F\\setminus\\{i\\}} \\frac{|S|!(|F|-|S|-1)!}{|F|!}\\big(v(S\\cup\\{i\\})-v(S)\\big)\n\\]"
+  },
+  {
+    "title": "Threshold Selection",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/threshold-selection/",
+    "formula_markdown": "\\[\n\\hat y = \\mathbf{1}[\\hat p \\ge t]\n\\]"
+  },
+  {
+    "title": "Train/Validation/Test Split",
+    "category": "Machine Learning",
+    "route": "/cards/machine-learning/train-validation-test-split/",
+    "formula_markdown": "\\[\n\\mathcal{D}=\\mathcal{D}_{train}\\ \\cup\\ \\mathcal{D}_{val}\\ \\cup\\ \\mathcal{D}_{test}\n\\]\n\n\\[\n\\mathcal{D}_{train}\\cap\\mathcal{D}_{val}=\\mathcal{D}_{train}\\cap\\mathcal{D}_{test}=\\mathcal{D}_{val}\\cap\\mathcal{D}_{test}=\\varnothing\n\\]"
   },
   {
     "title": "Adjusted Rand Index (ARI)",
@@ -574,6 +778,12 @@
     "category": "ML Metrics",
     "route": "/cards/ml-metrics/cohen-kappa/",
     "formula_markdown": "\\[\n\\kappa = \\frac{p_o - p_e}{1 - p_e}\n\\]"
+  },
+  {
+    "title": "Confusion Matrix",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/confusion-matrix/",
+    "formula_markdown": "\\[\n\\begin{array}{c|cc}\n & \\hat y=1 & \\hat y=0 \\\\\\hline\ny=1 & TP & FN \\\\\ny=0 & FP & TN\n\\end{array}\n\\]"
   },
   {
     "title": "Davies-Bouldin Index",
@@ -684,10 +894,22 @@
     "formula_markdown": "\\[\n\\mathcal{C} = \\{(\\mathrm{FPR}(t),\\,\\mathrm{TPR}(t)) : t \\in \\mathbb{R}\\}\n\\]"
   },
   {
+    "title": "Sensitivity (True Positive Rate)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/sensitivity/",
+    "formula_markdown": "\\[\n\\mathrm{Sensitivity}=\\frac{TP}{TP+FN}\n\\]"
+  },
+  {
     "title": "Silhouette Score",
     "category": "ML Metrics",
     "route": "/cards/ml-metrics/silhouette-score/",
     "formula_markdown": "\\[\ns(i)=\\frac{b(i)-a(i)}{\\max\\{a(i),\\,b(i)\\}}\n\\]\n\n\\[\n\\mathrm{Silhouette}=\\frac{1}{n}\\sum_{i=1}^n s(i)\n\\]"
+  },
+  {
+    "title": "Specificity (True Negative Rate)",
+    "category": "ML Metrics",
+    "route": "/cards/ml-metrics/specificity/",
+    "formula_markdown": "\\[\n\\mathrm{Specificity}=\\frac{TN}{TN+FP}\n\\]"
   },
   {
     "title": "Causal Language Modeling",
@@ -753,7 +975,7 @@
     "title": "Top-k Sampling",
     "category": "NLP",
     "route": "/cards/nlp/top-k-sampling/",
-    "formula_markdown": "\\[\nP'(i)=\n\\begin{cases}\n\\frac{P(i)}{\\sum_{j\\in K}P(j)}, & i\\in K\\\\\n0, & i\\notin K\n\\end{cases}\n\\]\n\\[\nK=\\text{indices of the top }k\\text{ probabilities}\n\\]"
+    "formula_markdown": "\\[\nP'(i)=\n\\begin{cases}\n\\frac{P(i)}{\\sum_{j\\in K}P(j)}, & i\\in K\\\\\n0, & i\\notin K\n\\end{cases}\n\\]\n\n\\[\nK=\\text{indices of the top }k\\text{ probabilities}\n\\]"
   },
   {
     "title": "Top-p Sampling (Nucleus)",
@@ -765,7 +987,7 @@
     "title": "Adam Optimizer",
     "category": "Optimization",
     "route": "/cards/optimization/adam/",
-    "formula_markdown": "\\[\nm_t=\\beta_1 m_{t-1}+(1-\\beta_1)g_t,\\quad\nv_t=\\beta_2 v_{t-1}+(1-\\beta_2)g_t^2\n\\]\n\\[\n\\theta_{t+1}=\\theta_t-\\eta \\frac{\\hat m_t}{\\sqrt{\\hat v_t}+\\epsilon}\n\\]"
+    "formula_markdown": "\\[\nm_t=\\beta_1 m_{t-1}+(1-\\beta_1)g_t,\\quad\nv_t=\\beta_2 v_{t-1}+(1-\\beta_2)g_t^2\n\\]\n\n\\[\n\\theta_{t+1}=\\theta_t-\\eta \\frac{\\hat m_t}{\\sqrt{\\hat v_t}+\\epsilon}\n\\]"
   },
   {
     "title": "AdamW Optimizer",
@@ -849,7 +1071,7 @@
     "title": "RMSProp",
     "category": "Optimization",
     "route": "/cards/optimization/rmsprop/",
-    "formula_markdown": "\\[\ns_t=\\rho s_{t-1}+(1-\\rho)g_t^2\n\\]\n\\[\n\\theta_{t+1}=\\theta_t-\\eta \\frac{g_t}{\\sqrt{s_t}+\\epsilon}\n\\]"
+    "formula_markdown": "\\[\ns_t=\\rho s_{t-1}+(1-\\rho)g_t^2\n\\]\n\n\\[\n\\theta_{t+1}=\\theta_t-\\eta \\frac{g_t}{\\sqrt{s_t}+\\epsilon}\n\\]"
   },
   {
     "title": "Stochastic Gradient Descent",
@@ -870,10 +1092,28 @@
     "formula_markdown": "\\[\n\\theta_{t+1}=(1-\\eta\\lambda)\\theta_t - \\eta g_t\n\\]"
   },
   {
+    "title": "A/B Testing",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/ab-testing/",
+    "formula_markdown": "\\[\n\\Delta = \\hat{\\theta}_B - \\hat{\\theta}_A\n\\]"
+  },
+  {
+    "title": "ANOVA (Analysis of Variance)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/anova/",
+    "formula_markdown": "\\[\nF = \\frac{\\text{between-group variance estimate}}{\\text{within-group variance estimate}}\n\\]"
+  },
+  {
     "title": "Bayes' Rule",
     "category": "Probability Stats",
     "route": "/cards/probability-stats/bayes-rule/",
     "formula_markdown": "\\[\nP(A\\mid B) = \\frac{P(B\\mid A)\\,P(A)}{P(B)}\n\\]"
+  },
+  {
+    "title": "Benjamini-Hochberg Procedure",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/benjamini-hochberg/",
+    "formula_markdown": "\\[\np_{(k)} \\le \\frac{k}{m}q\n\\]"
   },
   {
     "title": "Bernoulli Distribution",
@@ -898,6 +1138,12 @@
     "category": "Probability Stats",
     "route": "/cards/probability-stats/binomial-distribution/",
     "formula_markdown": "\\[\nX\\sim \\mathrm{Binomial}(n,p),\\qquad\nP(X=k)=\\binom{n}{k}p^k(1-p)^{n-k}\n\\]"
+  },
+  {
+    "title": "Bootstrap",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/bootstrap/",
+    "formula_markdown": "\\[\n\\hat{\\theta}^{*(b)} = s(X^{*(b)}),\\quad X^{*(b)}\\sim \\text{resample with replacement from } X\n\\]"
   },
   {
     "title": "CDF (Cumulative Distribution Function)",
@@ -928,6 +1174,12 @@
     "category": "Probability Stats",
     "route": "/cards/probability-stats/chi-square-test/",
     "formula_markdown": "\\[\n\\chi^2 = \\sum_{i} \\frac{(O_i - E_i)^2}{E_i}\n\\]"
+  },
+  {
+    "title": "Cohen's d (Effect Size)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/cohens-d/",
+    "formula_markdown": "\\[\n d = \\frac{\\bar x_1-\\bar x_2}{s_p}\n\\]\n\n\\[\n s_p = \\sqrt{\\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}}\n\\]"
   },
   {
     "title": "Conditional Expectation",
@@ -969,7 +1221,13 @@
     "title": "Exponential Distribution",
     "category": "Probability Stats",
     "route": "/cards/probability-stats/exponential-distribution/",
-    "formula_markdown": "\\[\nf(x)=\\lambda e^{-\\lambda x},\\quad x\\ge 0\n\\]\n\\[\nF(x)=1-e^{-\\lambda x}\n\\]"
+    "formula_markdown": "\\[\nf(x)=\\lambda e^{-\\lambda x},\\quad x\\ge 0\n\\]\n\n\\[\nF(x)=1-e^{-\\lambda x}\n\\]"
+  },
+  {
+    "title": "False Discovery Rate (FDR)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/false-discovery-rate/",
+    "formula_markdown": "\\[\n\\mathrm{FDR}=\\mathbb{E}\\left[\\frac{V}{\\max(R,1)}\\right]\n\\]"
   },
   {
     "title": "Gamma Distribution",
@@ -1035,7 +1293,7 @@
     "title": "Maximum Likelihood Estimation (MLE)",
     "category": "Probability Stats",
     "route": "/cards/probability-stats/maximum-likelihood-estimation/",
-    "formula_markdown": "\\[\n\\hat{\\theta}_{\\text{MLE}}=\\arg\\max_\\theta \\prod_{i=1}^n p(x_i\\mid \\theta)\n\\]\n\\[\n=\\arg\\max_\\theta \\sum_{i=1}^n \\log p(x_i\\mid \\theta)\n\\]"
+    "formula_markdown": "\\[\n\\hat{\\theta}_{\\text{MLE}}=\\arg\\max_\\theta \\prod_{i=1}^n p(x_i\\mid \\theta)\n\\]\n\n\\[\n=\\arg\\max_\\theta \\sum_{i=1}^n \\log p(x_i\\mid \\theta)\n\\]"
   },
   {
     "title": "Mean (Expected Value)",
@@ -1062,6 +1320,12 @@
     "formula_markdown": "\\[\nP(X_1=x_1,\\dots,X_K=x_K)=\n\\frac{n!}{x_1!\\cdots x_K!}\\prod_{i=1}^K p_i^{x_i}\n\\]"
   },
   {
+    "title": "Multiple Hypothesis Testing",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/multiple-hypothesis-testing/",
+    "formula_markdown": "\\[\nP(\\text{at least one false positive}) = 1-(1-\\alpha)^m\n\\]"
+  },
+  {
     "title": "Normal Distribution (Gaussian)",
     "category": "Probability Stats",
     "route": "/cards/probability-stats/normal-distribution/",
@@ -1086,6 +1350,12 @@
     "formula_markdown": "\\[\nP(a \\le X \\le b)=\\int_a^b f_X(x)\\,dx\n\\]\n\n\\[\nf_X(x)\\ge 0,\\quad \\int_{-\\infty}^{\\infty} f_X(x)\\,dx=1\n\\]"
   },
   {
+    "title": "Permutation Test",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/permutation-test/",
+    "formula_markdown": "\\[\np\\text{-value} \\approx \\frac{1+\\sum_{b=1}^{B}\\mathbf{1}[T^{*(b)}\\ge T_{obs}]}{B+1}\n\\]"
+  },
+  {
     "title": "PMF (Probability Mass Function)",
     "category": "Probability Stats",
     "route": "/cards/probability-stats/pmf/",
@@ -1096,6 +1366,12 @@
     "category": "Probability Stats",
     "route": "/cards/probability-stats/poisson-distribution/",
     "formula_markdown": "\\[\nX\\sim \\mathrm{Poisson}(\\lambda),\\qquad\nP(X=k)=e^{-\\lambda}\\frac{\\lambda^k}{k!},\\quad k=0,1,2,\\dots\n\\]\n\n\\[\n\\mathbb{E}[X]=\\lambda,\\qquad \\operatorname{Var}(X)=\\lambda\n\\]"
+  },
+  {
+    "title": "Power Analysis (Sample Size Planning)",
+    "category": "Probability Stats",
+    "route": "/cards/probability-stats/power-analysis/",
+    "formula_markdown": "\\[\n\\text{Power}=P(\\text{reject }H_0\\mid H_1\\ \\text{true})\n\\]"
   },
   {
     "title": "Probability Distribution",

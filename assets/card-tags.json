@@ -656,12 +656,29 @@
     ],
     "title": "Vector Norms"
   },
+  "/cards/linear-algebra/nuclear-norm/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra",
+      "optimization"
+    ],
+    "title": "Nuclear Norm (Trace Norm)"
+  },
   "/cards/linear-algebra/orthonormal-basis/": {
     "category": "linear-algebra",
     "tags": [
       "linear-algebra"
     ],
     "title": "Orthonormal Basis"
+  },
+  "/cards/linear-algebra/pca-explained-variance/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra",
+      "dimensionality-reduction",
+      "pca"
+    ],
+    "title": "PCA Explained Variance Ratio"
   },
   "/cards/linear-algebra/pca/": {
     "category": "linear-algebra",
@@ -701,6 +718,15 @@
     ],
     "title": "QR Decomposition"
   },
+  "/cards/linear-algebra/scree-plot/": {
+    "category": "linear-algebra",
+    "tags": [
+      "linear-algebra",
+      "dimensionality-reduction",
+      "visualization"
+    ],
+    "title": "Scree Plot"
+  },
   "/cards/linear-algebra/span/": {
     "category": "linear-algebra",
     "tags": [
@@ -722,6 +748,274 @@
       "linear-algebra"
     ],
     "title": "Trace"
+  },
+  "/cards/machine-learning/bias-variance-tradeoff/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "generalization",
+      "model-selection"
+    ],
+    "title": "Bias-Variance Tradeoff"
+  },
+  "/cards/machine-learning/categorical-encoding/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "preprocessing",
+      "features"
+    ],
+    "title": "Categorical Encoding"
+  },
+  "/cards/machine-learning/class-imbalance/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "classification",
+      "evaluation"
+    ],
+    "title": "Class Imbalance"
+  },
+  "/cards/machine-learning/concept-drift/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "production"
+    ],
+    "title": "Concept Drift"
+  },
+  "/cards/machine-learning/cross-validation/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "evaluation",
+      "model-selection"
+    ],
+    "title": "Cross-Validation"
+  },
+  "/cards/machine-learning/data-drift/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "production"
+    ],
+    "title": "Data Drift"
+  },
+  "/cards/machine-learning/data-leakage/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "evaluation",
+      "workflow"
+    ],
+    "title": "Data Leakage"
+  },
+  "/cards/machine-learning/dbscan/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "clustering",
+      "unsupervised-learning"
+    ],
+    "title": "DBSCAN"
+  },
+  "/cards/machine-learning/decision-tree/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "models"
+    ],
+    "title": "Decision Tree"
+  },
+  "/cards/machine-learning/elastic-net/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "regression",
+      "regularization"
+    ],
+    "title": "Elastic Net"
+  },
+  "/cards/machine-learning/feature-scaling/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "preprocessing",
+      "features"
+    ],
+    "title": "Feature Scaling (Standardization vs Normalization)"
+  },
+  "/cards/machine-learning/feature-store/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "production"
+    ],
+    "title": "Feature Store"
+  },
+  "/cards/machine-learning/gradient-boosting/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "models"
+    ],
+    "title": "Gradient Boosting"
+  },
+  "/cards/machine-learning/hierarchical-clustering/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "clustering",
+      "unsupervised-learning"
+    ],
+    "title": "Hierarchical Clustering"
+  },
+  "/cards/machine-learning/imputation/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "preprocessing",
+      "data-quality"
+    ],
+    "title": "Imputation"
+  },
+  "/cards/machine-learning/k-means-clustering/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "clustering",
+      "unsupervised-learning"
+    ],
+    "title": "K-Means Clustering"
+  },
+  "/cards/machine-learning/k-nearest-neighbors/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "supervised-learning",
+      "classification"
+    ],
+    "title": "K-Nearest Neighbors (k-NN)"
+  },
+  "/cards/machine-learning/lasso-regression/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "regression",
+      "regularization"
+    ],
+    "title": "Lasso Regression (L1)"
+  },
+  "/cards/machine-learning/linear-regression/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "regression",
+      "supervised-learning"
+    ],
+    "title": "Linear Regression"
+  },
+  "/cards/machine-learning/logistic-regression/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "classification",
+      "supervised-learning"
+    ],
+    "title": "Logistic Regression"
+  },
+  "/cards/machine-learning/machine-learning-pipeline/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "production"
+    ],
+    "title": "Machine Learning Pipeline"
+  },
+  "/cards/machine-learning/missing-data/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "data-quality",
+      "preprocessing"
+    ],
+    "title": "Missing Data"
+  },
+  "/cards/machine-learning/model-interpretability/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "interpretability"
+    ],
+    "title": "Model Interpretability"
+  },
+  "/cards/machine-learning/partial-dependence-plot/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "interpretability"
+    ],
+    "title": "Partial Dependence Plot (PDP)"
+  },
+  "/cards/machine-learning/permutation-feature-importance/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "interpretability"
+    ],
+    "title": "Permutation Feature Importance"
+  },
+  "/cards/machine-learning/probability-calibration/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "classification",
+      "calibration"
+    ],
+    "title": "Probability Calibration"
+  },
+  "/cards/machine-learning/random-forest/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "models"
+    ],
+    "title": "Random Forest"
+  },
+  "/cards/machine-learning/ridge-regression/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "regression",
+      "regularization"
+    ],
+    "title": "Ridge Regression (L2)"
+  },
+  "/cards/machine-learning/shap-values/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "interpretability"
+    ],
+    "title": "SHAP Values"
+  },
+  "/cards/machine-learning/threshold-selection/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "classification",
+      "decision-making"
+    ],
+    "title": "Threshold Selection"
+  },
+  "/cards/machine-learning/train-validation-test-split/": {
+    "category": "machine-learning",
+    "tags": [
+      "machine-learning",
+      "evaluation",
+      "workflow"
+    ],
+    "title": "Train/Validation/Test Split"
   },
   "/cards/ml-metrics/adjusted-rand-index/": {
     "category": "ml-metrics",
@@ -798,6 +1092,15 @@
       "evaluation"
     ],
     "title": "Cohen's Kappa"
+  },
+  "/cards/ml-metrics/confusion-matrix/": {
+    "category": "ml-metrics",
+    "tags": [
+      "classification",
+      "evaluation",
+      "metrics"
+    ],
+    "title": "Confusion Matrix"
   },
   "/cards/ml-metrics/davies-bouldin-index/": {
     "category": "ml-metrics",
@@ -955,6 +1258,15 @@
     ],
     "title": "ROC Curve"
   },
+  "/cards/ml-metrics/sensitivity/": {
+    "category": "ml-metrics",
+    "tags": [
+      "classification",
+      "evaluation",
+      "metrics"
+    ],
+    "title": "Sensitivity (True Positive Rate)"
+  },
   "/cards/ml-metrics/silhouette-score/": {
     "category": "ml-metrics",
     "tags": [
@@ -962,6 +1274,15 @@
       "evaluation"
     ],
     "title": "Silhouette Score"
+  },
+  "/cards/ml-metrics/specificity/": {
+    "category": "ml-metrics",
+    "tags": [
+      "classification",
+      "evaluation",
+      "metrics"
+    ],
+    "title": "Specificity (True Negative Rate)"
   },
   "/cards/nlp/causal-language-modeling/": {
     "category": "nlp",
@@ -1217,6 +1538,24 @@
     ],
     "title": "Weight Decay"
   },
+  "/cards/probability-stats/ab-testing/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "experimentation",
+      "causal-inference"
+    ],
+    "title": "A/B Testing"
+  },
+  "/cards/probability-stats/anova/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "inference",
+      "experimentation"
+    ],
+    "title": "ANOVA (Analysis of Variance)"
+  },
   "/cards/probability-stats/bayes-rule/": {
     "category": "probability-stats",
     "tags": [
@@ -1225,6 +1564,15 @@
       "inference"
     ],
     "title": "Bayes' Rule"
+  },
+  "/cards/probability-stats/benjamini-hochberg/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "hypothesis-testing",
+      "fdr"
+    ],
+    "title": "Benjamini-Hochberg Procedure"
   },
   "/cards/probability-stats/bernoulli-distribution/": {
     "category": "probability-stats",
@@ -1264,6 +1612,15 @@
       "discrete"
     ],
     "title": "Binomial Distribution"
+  },
+  "/cards/probability-stats/bootstrap/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "resampling",
+      "inference"
+    ],
+    "title": "Bootstrap"
   },
   "/cards/probability-stats/cdf/": {
     "category": "probability-stats",
@@ -1306,6 +1663,15 @@
       "hypothesis-testing"
     ],
     "title": "Chi-Square Test"
+  },
+  "/cards/probability-stats/cohens-d/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "effect-size",
+      "inference"
+    ],
+    "title": "Cohen's d (Effect Size)"
   },
   "/cards/probability-stats/conditional-expectation/": {
     "category": "probability-stats",
@@ -1365,6 +1731,15 @@
       "continuous"
     ],
     "title": "Exponential Distribution"
+  },
+  "/cards/probability-stats/false-discovery-rate/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "hypothesis-testing",
+      "inference"
+    ],
+    "title": "False Discovery Rate (FDR)"
   },
   "/cards/probability-stats/gamma-distribution/": {
     "category": "probability-stats",
@@ -1501,6 +1876,15 @@
     ],
     "title": "Multinomial Distribution"
   },
+  "/cards/probability-stats/multiple-hypothesis-testing/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "hypothesis-testing",
+      "inference"
+    ],
+    "title": "Multiple Hypothesis Testing"
+  },
   "/cards/probability-stats/normal-distribution/": {
     "category": "probability-stats",
     "tags": [
@@ -1537,6 +1921,15 @@
     ],
     "title": "PDF (Probability Density Function)"
   },
+  "/cards/probability-stats/permutation-test/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "hypothesis-testing",
+      "resampling"
+    ],
+    "title": "Permutation Test"
+  },
   "/cards/probability-stats/pmf/": {
     "category": "probability-stats",
     "tags": [
@@ -1556,6 +1949,15 @@
       "discrete"
     ],
     "title": "Poisson Distribution"
+  },
+  "/cards/probability-stats/power-analysis/": {
+    "category": "probability-stats",
+    "tags": [
+      "statistics",
+      "experimentation",
+      "study-design"
+    ],
+    "title": "Power Analysis (Sample Size Planning)"
   },
   "/cards/probability-stats/probability-distribution/": {
     "category": "probability-stats",

@@ -15,6 +15,17 @@ prereqs: [ml.pr-curve]
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+2*x)
+xmin: 0
+xmax: 1
+ymin: 0.3
+ymax: 1.05
+height: 280
+title: Example PR curve shape for AP intuition
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(P_k\): precision at threshold \(k\)

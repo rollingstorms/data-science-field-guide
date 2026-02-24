@@ -34,13 +34,15 @@ Overlap ratio between predicted and true items.
 - Evaluating overlap in segmentation or set prediction tasks.
 - Comparing binary masks (IoU).
 ## Key properties
-- Relation to Dice / F1 (binary):
-  \[
-  D = \frac{2\mathrm{TP}}{2\mathrm{TP}+\mathrm{FP}+\mathrm{FN}}
-  \]
-  \[
-  D = \frac{2J}{1+J},\quad J=\frac{D}{2-D}
-  \]
+- Relation to Dice / F1 (binary) shown below.
+
+\[
+D = \frac{2\mathrm{TP}}{2\mathrm{TP}+\mathrm{FP}+\mathrm{FN}}
+\]
+
+\[
+D = \frac{2J}{1+J},\quad J=\frac{D}{2-D}
+\]
 
 ## Common gotchas
 - Undefined when both sets empty; choose a convention (often 1.0).

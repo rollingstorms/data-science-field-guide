@@ -15,6 +15,17 @@ prereqs: []
 \]
 
 </div>
+## Plot
+```plot
+fn: abs(x)
+xmin: -3
+xmax: 3
+ymin: 0
+ymax: 3.2
+height: 280
+title: Absolute error vs residual r
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(y_i\): true value

@@ -15,6 +15,17 @@ prereqs: [dl.activations]
 \]
 
 </div>
+## Plot
+```plot
+fn: log(1+exp(x))
+xmin: -6
+xmax: 6
+ymin: -0.1
+ymax: 6.5
+height: 280
+title: Softplus(x)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x\): scalar input (applied elementwise)

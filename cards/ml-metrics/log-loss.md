@@ -15,6 +15,17 @@ prereqs: [prob.bernoulli, ml.sigmoid]
 \]
 
 </div>
+## Plot
+```plot
+fn: -log(x)
+xmin: 0.001
+xmax: 0.999
+ymin: 0
+ymax: 7
+height: 280
+title: Binary log loss for y=1 vs predicted p
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(y_i\in\{0,1\}\): true label

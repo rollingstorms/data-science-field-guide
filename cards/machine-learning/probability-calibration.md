@@ -15,6 +15,19 @@ P(Y=1\mid \hat p = p) \approx p
 \]
 
 </div>
+## Plot
+```plot
+fns: x | x^0.8
+colors: #111111 | #ff6b2c
+labels: Perfect calibration | Example model
+xmin: 0
+xmax: 1
+ymin: 0
+ymax: 1.05
+height: 280
+title: Reliability curve vs ideal diagonal
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\hat p\): predicted probability

@@ -15,6 +15,17 @@ f(x)=\frac{\beta^\alpha}{\Gamma(\alpha)}x^{\alpha-1}e^{-\beta x},\quad x\ge 0
 \]
 
 </div>
+## Plot
+```plot
+fn: x*exp(-x)
+xmin: 0
+xmax: 10
+ymin: 0
+ymax: 0.5
+height: 280
+title: Gamma PDF (alpha=2, rate=1)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(\alpha>0\): shape

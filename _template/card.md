@@ -15,6 +15,29 @@ H(X) = -\sum_{x \in \mathcal{X}} p(x)\,\log p(x)
 \]
 
 </div>
+## Plot (optional)
+```plot
+# Single curve example:
+# fn: 1/(1+exp(-x))
+#
+# Or multi-curve example:
+# fns: x | x^0.8
+# colors: #111111 | #ff6b2c
+# labels: ideal | model
+#
+# Or bar chart example:
+# type: bars
+# xs: 0 | 1 | 2
+# ys: 0.2 | 0.5 | 0.3
+#
+xmin: 0
+xmax: 1
+ymin: 0
+ymax: 1
+height: 280
+title: Example plot (optional)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(X\): discrete random variable

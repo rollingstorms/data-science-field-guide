@@ -16,6 +16,17 @@ f(x)=\frac{1}{b-a}\ \text{ for } a\le x\le b
 \]
 
 </div>
+## Plot
+```plot
+fn: 1
+xmin: 0
+xmax: 1
+ymin: 0
+ymax: 1.2
+height: 280
+title: Uniform PDF on [0, 1]
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(a<b\): interval endpoints

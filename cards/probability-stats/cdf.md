@@ -15,6 +15,17 @@ F_X(x)=P(X\le x)
 \]
 
 </div>
+## Plot
+```plot
+fn: 1/(1+exp(-x))
+xmin: -6
+xmax: 6
+ymin: -0.05
+ymax: 1.05
+height: 280
+title: Example CDF shape (logistic CDF)
+```
+
 <div class="parameters" markdown="1">
 ## Parameters
 - \(X\): random variable
