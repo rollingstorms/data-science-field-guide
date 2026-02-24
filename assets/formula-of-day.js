@@ -70,8 +70,15 @@
     const dayNumber = Math.floor(utcMidnight / 86400000);
     return {
       record: formulas[dayNumber % formulas.length],
-      dateStr: new Date(utcMidnight).toISOString().slice(0, 10),
+      dateStr: formatUtcDateMMDDYYYY(new Date(utcMidnight)),
     };
+  }
+
+  function formatUtcDateMMDDYYYY(date) {
+    const mm = String(date.getUTCMonth() + 1).padStart(2, "0");
+    const dd = String(date.getUTCDate()).padStart(2, "0");
+    const yyyy = String(date.getUTCFullYear());
+    return mm + "-" + dd + "-" + yyyy;
   }
 
   function findArticleContainer() {
@@ -99,7 +106,7 @@
 
     const meta = document.createElement("div");
     meta.className = "formula-of-day-meta";
-    meta.textContent = "Deterministic daily pick (UTC): " + pick.dateStr;
+    meta.textContent = "Formula of the day: " + pick.dateStr;
     wrap.appendChild(meta);
 
     const title = document.createElement("a");

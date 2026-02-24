@@ -1,6 +1,6 @@
 # Data Science Field Guide
 
-**Welcome scientists, engineers, mathematicians, and curious learners. **
+**Welcome scientists, engineers, mathematicians, and curious learners.**
 
 This field guide is a compact collection of practical formulas, intuitive notes, and visual insights for the core concepts of data science and machine learning. Use it as a quick reference to refresh your memory and support clear thinking whenever these ideas appear in your work.
 
