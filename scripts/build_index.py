@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import ast
 import json
+import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -331,8 +332,13 @@ def ensure_docs_symlinks() -> None:
     }
     for name, target in targets.items():
         link = DOCS_DIR / name
-        if link.exists():
-            continue
+        # `Path.exists()` is false for broken symlinks. CI can check out symlinks
+        # that point to a local absolute path from another machine, so use lexists.
+        if os.path.lexists(link):
+            if link.is_symlink():
+                link.unlink()
+            else:
+                continue
         link.symlink_to(target)
 
 
