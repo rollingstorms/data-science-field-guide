@@ -53,6 +53,7 @@ _This file is auto-generated. Do not edit by hand._
 - [Depth-First Search (DFS)](../cards/graphs/dfs.md)
 - [Dijkstra's Algorithm](../cards/graphs/dijkstra.md)
 - [Graph Algorithms (Overview)](../cards/graphs/graph-algorithms.md)
+- [Graph Fourier Transform](../cards/graphs/graph-fourier-transform.md)
 - [Graph Laplacian](../cards/graphs/laplacian.md)
 - [Kruskal's Algorithm](../cards/graphs/kruskal.md)
 - [Label Propagation (LPA)](../cards/graphs/label-propagation.md)

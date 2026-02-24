@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
 
 :root {
-  --bg: #f7f2e8;
+  --bg: #f1f1ee;
   --ink: #111111;
-  --accent: #ff6b2c;
-  --accent-2: #1f6feb;
-  --paper: #fffaf0;
-  --grid: rgba(0, 0, 0, 0.08);
+  --accent: #f04f24;
+  --accent-2: #145fe3;
+  --paper: #fbfbf8;
+  --grid: rgba(0, 0, 0, 0.05);
   --border: #111111;
 }
 
@@ -16,9 +16,9 @@ body {
     linear-gradient(0deg, var(--grid) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid) 1px, transparent 1px),
     var(--bg);
-  background-size: 24px 24px, 24px 24px, auto;
+  background-size: 20px 20px, 20px 20px, auto;
   color: var(--ink);
-  font-family: "Fraunces", serif;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .md-container {
@@ -27,59 +27,104 @@ body {
 
 .md-main__inner {
   background: var(--paper);
-  border: 3px solid var(--border);
-  box-shadow: 8px 8px 0 var(--border);
-  padding: 1.5rem;
+  border: 2px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  padding: 1.1rem 1.2rem;
 }
 
 .md-header, .md-tabs {
   background: var(--paper);
   color: var(--ink);
-  border-bottom: 3px solid var(--border);
+  border-bottom: 2px solid var(--border);
 }
 
 .md-header__title, .md-tabs__link {
   font-family: "IBM Plex Mono", monospace;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+}
+
+.md-typeset {
+  font-size: 0.78rem;
+  line-height: 1.5;
 }
 
 .md-typeset h1, .md-typeset h2, .md-typeset h3 {
   font-family: "IBM Plex Mono", monospace;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+}
+
+.md-typeset h1, .md-typeset h2 {
+  font-weight: 700;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
 }
 
 .md-typeset h1 {
-  border-bottom: 4px solid var(--border);
-  padding-bottom: 0.3rem;
+  font-size: 2.5em;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.md-typeset h2 {
+  margin-top: 1.2rem;
+  margin-bottom: 0.45rem;
+}
+
+.md-typeset h3 {
+  margin-top: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.md-typeset p,
+.md-typeset ul,
+.md-typeset ol {
+  margin-top: 0.35rem;
+  margin-bottom: 0.55rem;
 }
 
 .md-typeset a {
   color: var(--accent-2);
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+  text-decoration: none;
 }
 
 .md-typeset a:hover {
   color: var(--accent);
 }
 
+.md-nav__link,
+.md-tabs__link,
+.md-header__button,
+.md-header__topic,
+.md-search__link,
+.md-search-result__link {
+  text-decoration: none !important;
+}
+
 .md-typeset hr {
-  border-top: 3px solid var(--border);
+  border-top: 2px solid var(--border);
 }
 
 .md-typeset code, .md-typeset pre {
   font-family: "IBM Plex Mono", monospace;
 }
 
+.md-typeset code {
+  font-size: 0.9em;
+}
+
 .md-typeset pre {
-  border: 3px solid var(--border);
-  box-shadow: 6px 6px 0 var(--border);
+  border: 2px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
 }
 
 .md-typeset blockquote {
-  border-left: 6px solid var(--border);
-  background: #fff3d6;
+  border-left: 4px solid var(--border);
+  background: #f4f0e6;
 }
 
 /* Keep inline math consistent with surrounding text */
@@ -110,15 +155,16 @@ body {
 
 /* Buttons and pills */
 .md-button {
-  border: 3px solid var(--border);
-  box-shadow: 4px 4px 0 var(--border);
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 0 var(--border);
   background: var(--paper);
   color: var(--ink);
 }
 
 /* Sidebar */
 .md-sidebar {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 0.72rem;
 }
 
 .md-nav__link--active {
@@ -126,10 +172,15 @@ body {
   font-weight: 700;
 }
 
+.md-nav__title,
+.md-nav__item .md-nav__link {
+  letter-spacing: 0.01em;
+}
+
 @media (max-width: 900px) {
   .md-main__inner {
-    padding: 1rem;
-    box-shadow: 5px 5px 0 var(--border);
+    padding: 0.9rem;
+    box-shadow: 2px 2px 0 var(--border);
   }
 }
 
@@ -181,7 +232,7 @@ body {
   padding: 0.7rem;
   border: 2px solid var(--border);
   background: color-mix(in srgb, var(--paper) 88%, white);
-  box-shadow: 4px 4px 0 var(--border);
+  box-shadow: 2px 2px 0 var(--border);
 }
 
 .md-typeset .plot-block-canvas {
@@ -214,18 +265,18 @@ body {
 /* Homepage formula-of-the-day banner (rendered by assets/formula-of-day.js) */
 .md-typeset .formula-of-day-banner {
   margin: 0 0 1.1rem;
-  padding: 0.9rem 1rem 1rem;
-  border: 3px solid var(--border);
-  box-shadow: 6px 6px 0 var(--border);
+  padding: 0.75rem 0.85rem 0.8rem;
+  border: 2px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
   background:
-    linear-gradient(135deg, color-mix(in srgb, var(--paper) 82%, #ffe1c9), var(--paper));
+    linear-gradient(135deg, color-mix(in srgb, var(--paper) 86%, #e8ecef), var(--paper));
 }
 
 .md-typeset .formula-of-day-eyebrow {
   font-family: "IBM Plex Mono", monospace;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--accent);
   margin-bottom: 0.15rem;
 }
@@ -238,7 +289,7 @@ body {
 
 .md-typeset .formula-of-day-title {
   display: inline-block;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
   margin-bottom: 0.6rem;
 }

@@ -264,6 +264,12 @@
     "formula_markdown": "\\[\nG=(V,E)\n\\]"
   },
   {
+    "title": "Graph Fourier Transform",
+    "category": "Graphs",
+    "route": "/cards/graphs/graph-fourier-transform/",
+    "formula_markdown": "\\[\n\\hat{x} = U^\\top x\n\\quad\\text{and}\\quad\nx = U\\hat{x}\n\\]"
+  },
+  {
     "title": "Kruskal's Algorithm",
     "category": "Graphs",
     "route": "/cards/graphs/kruskal/",
@@ -915,7 +921,7 @@
     "title": "Causal Language Modeling",
     "category": "NLP",
     "route": "/cards/nlp/causal-language-modeling/",
-    "formula_markdown": "\\[\n\\mathcal{L}=-\\sum_{t=1}^T \\log P(x_t\\mid x_{<t})\n\\]"
+    "formula_markdown": "\\[\n\\mathcal{L}=-\\sum_{t=1}^T \\log P(x_t\\mid x_{\\lt t})\n\\]"
   },
   {
     "title": "Inverse Document Frequency (IDF)",
@@ -927,7 +933,7 @@
     "title": "Language Model",
     "category": "NLP",
     "route": "/cards/nlp/language-model/",
-    "formula_markdown": "\\[\nP(x_1,\\dots,x_T)=\\prod_{t=1}^T P(x_t\\mid x_{<t})\n\\]"
+    "formula_markdown": "\\[\nP(x_1,\\dots,x_T)=\\prod_{t=1}^T P(x_t\\mid x_{\\lt t})\n\\]"
   },
   {
     "title": "Masked Language Modeling (MLM)",

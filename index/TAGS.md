@@ -304,6 +304,7 @@ _This file is auto-generated. Do not edit by hand._
 - [Adjacency Matrix](../cards/graphs/adjacency-matrix.md)
 - [Clustering Coefficient](../cards/graphs/clustering-coefficient.md)
 - [Degree Matrix](../cards/graphs/degree-matrix.md)
+- [Graph Fourier Transform](../cards/graphs/graph-fourier-transform.md)
 - [Graph Laplacian](../cards/graphs/laplacian.md)
 - [PageRank](../cards/graphs/pagerank.md)
 - [Spectral Clustering](../cards/graphs/spectral-clustering.md)
@@ -722,6 +723,7 @@ _This file is auto-generated. Do not edit by hand._
 - [Discrete Fourier Transform](../cards/signal-processing/dft.md)
 - [Fast Fourier Transform](../cards/signal-processing/fft.md)
 - [Fourier Transform](../cards/signal-processing/fourier-transform.md)
+- [Graph Fourier Transform](../cards/graphs/graph-fourier-transform.md)
 - [Nyquist-Shannon Sampling Theorem](../cards/signal-processing/sampling-theorem.md)
 
 ## similarity
@@ -729,6 +731,7 @@ _This file is auto-generated. Do not edit by hand._
 - [Jaccard Similarity / IoU](../cards/ml-metrics/jaccard.md)
 
 ## spectral
+- [Graph Fourier Transform](../cards/graphs/graph-fourier-transform.md)
 - [Graph Laplacian](../cards/graphs/laplacian.md)
 
 ## statistics

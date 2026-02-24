@@ -35,6 +35,23 @@ Instead of searching scattered notes, docs, and textbooks, this project keeps co
 - `scripts/build_index.py`: generates indexes, tags, metadata, and `mkdocs.yml` from card frontmatter
 - `site/`: built static site output
 
+## Card categories
+
+Current card categories under `cards/`:
+
+- `activations/`
+- `calculus/`
+- `deep-learning/`
+- `graphs/`
+- `info-theory/`
+- `linear-algebra/`
+- `machine-learning/`
+- `ml-metrics/`
+- `nlp/`
+- `optimization/`
+- `probability-stats/`
+- `signal-processing/`
+
 ## How do I use it?
 
 ### Browse (fastest)

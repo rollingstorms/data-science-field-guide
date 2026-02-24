@@ -11,14 +11,14 @@ prereqs: [prob.conditional-probability]
 <div class="formula" markdown="1">
 ## Formula
 \[
-P(x_1,\dots,x_T)=\prod_{t=1}^T P(x_t\mid x_{<t})
+P(x_1,\dots,x_T)=\prod_{t=1}^T P(x_t\mid x_{\lt t})
 \]
 
 </div>
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x_t\): token at position \(t\)
-- \(x_{<t}\): previous tokens (context)
+- \(x_{\lt t}\): previous tokens (context)
 
 </div>
 ## What it means

@@ -11,14 +11,14 @@ prereqs: [nlp.language-model]
 <div class="formula" markdown="1">
 ## Formula
 \[
-\mathcal{L}=-\sum_{t=1}^T \log P(x_t\mid x_{<t})
+\mathcal{L}=-\sum_{t=1}^T \log P(x_t\mid x_{\lt t})
 \]
 
 </div>
 <div class="parameters" markdown="1">
 ## Parameters
 - \(x_t\): token at position \(t\)
-- \(x_{<t}\): past context only
+- \(x_{\lt t}\): past context only
 - \(\mathcal{L}\): training loss
 
 </div>

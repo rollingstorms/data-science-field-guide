@@ -381,6 +381,15 @@
     ],
     "title": "Graph Algorithms (Overview)"
   },
+  "/cards/graphs/graph-fourier-transform/": {
+    "category": "graphs",
+    "tags": [
+      "graph-theory",
+      "spectral",
+      "signal-processing"
+    ],
+    "title": "Graph Fourier Transform"
+  },
   "/cards/graphs/kruskal/": {
     "category": "graphs",
     "tags": [
