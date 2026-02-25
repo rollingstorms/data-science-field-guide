@@ -453,6 +453,15 @@
     ],
     "title": "Graph Fourier Transform"
   },
+  "/cards/graphs/graph-motifs/": {
+    "category": "graphs",
+    "tags": [
+      "graph-theory",
+      "networks",
+      "statistics"
+    ],
+    "title": "Graph Motifs"
+  },
   "/cards/graphs/karger-min-cut/": {
     "category": "graphs",
     "tags": [

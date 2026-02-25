@@ -320,6 +320,7 @@ _This file is auto-generated. Do not edit by hand._
 - [Global Minimum Cut](../cards/graphs/global-minimum-cut.md)
 - [Graph Fourier Transform](../cards/graphs/graph-fourier-transform.md)
 - [Graph Laplacian](../cards/graphs/laplacian.md)
+- [Graph Motifs](../cards/graphs/graph-motifs.md)
 - [PageRank](../cards/graphs/pagerank.md)
 - [Spectral Clustering](../cards/graphs/spectral-clustering.md)
 
@@ -562,6 +563,7 @@ _This file is auto-generated. Do not edit by hand._
 
 ## networks
 - [Clustering Coefficient](../cards/graphs/clustering-coefficient.md)
+- [Graph Motifs](../cards/graphs/graph-motifs.md)
 - [PageRank](../cards/graphs/pagerank.md)
 
 ## neural-networks
@@ -802,6 +804,7 @@ _This file is auto-generated. Do not edit by hand._
 - [Fisher Information](../cards/info-theory/fisher-information.md)
 - [Gamma Distribution](../cards/probability-stats/gamma-distribution.md)
 - [Geometric Distribution](../cards/probability-stats/geometric-distribution.md)
+- [Graph Motifs](../cards/graphs/graph-motifs.md)
 - [Independence](../cards/probability-stats/independence.md)
 - [Joint Probability](../cards/probability-stats/joint-probability.md)
 - [Lognormal Distribution](../cards/probability-stats/lognormal-distribution.md)

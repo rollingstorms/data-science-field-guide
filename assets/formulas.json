@@ -312,6 +312,12 @@
     "formula_markdown": "\\[\n\\hat{x} = U^\\top x\n\\quad\\text{and}\\quad\nx = U\\hat{x}\n\\]"
   },
   {
+    "title": "Graph Motifs",
+    "category": "Graphs",
+    "route": "/cards/graphs/graph-motifs/",
+    "formula_markdown": "\\[\nZ_i = \\frac{N_i^{\\mathrm{obs}} - \\mu_i^{\\mathrm{null}}}{\\sigma_i^{\\mathrm{null}}}\n\\]"
+  },
+  {
     "title": "Karger's Algorithm (Min Cut)",
     "category": "Graphs",
     "route": "/cards/graphs/karger-min-cut/",

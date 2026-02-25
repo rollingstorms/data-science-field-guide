@@ -77,6 +77,7 @@ nav:
           - Graph Algorithms (Overview): cards/graphs/graph-algorithms.md
           - Graph Fourier Transform: cards/graphs/graph-fourier-transform.md
           - Graph Laplacian: cards/graphs/laplacian.md
+          - Graph Motifs: cards/graphs/graph-motifs.md
           - Karger's Algorithm (Min Cut): cards/graphs/karger-min-cut.md
           - Kruskal's Algorithm: cards/graphs/kruskal.md
           - Label Propagation (LPA): cards/graphs/label-propagation.md

@@ -139,9 +139,21 @@ body {
   max-width: 100%;
 }
 
+/* MathJax v3 uses mjx-container instead of .MathJax_Display */
+.md-typeset mjx-container[display="true"] {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 /* Section-specific math sizing */
 .md-typeset .formula .arithmatex,
 .md-typeset .formula .MathJax_Display {
+  font-size: clamp(1.4rem, 2.6vw, 2.1rem);
+}
+
+.md-typeset .formula mjx-container[display="true"] {
   font-size: clamp(1.4rem, 2.6vw, 2.1rem);
 }
 
@@ -181,6 +193,12 @@ body {
   .md-main__inner {
     padding: 0.9rem;
     box-shadow: 2px 2px 0 var(--border);
+  }
+
+  .md-typeset .formula .arithmatex,
+  .md-typeset .formula .MathJax_Display,
+  .md-typeset .formula mjx-container[display="true"] {
+    font-size: clamp(1rem, 4vw, 1.35rem);
   }
 }
 

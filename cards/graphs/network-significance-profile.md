@@ -40,3 +40,7 @@ A unit-length vector of motif z-scores that summarizes a network's motif structu
 
 ## Example
 If \(Z=[2,1]\), then \(\mathrm{SP}=[2/\sqrt{5}, 1/\sqrt{5}]\).
+
+## See also
+- [Graph Motifs](../graphs/graph-motifs.md)
+- [Z-Score](../probability-stats/z-score.md)
