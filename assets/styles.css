@@ -148,12 +148,24 @@ body {
 }
 
 /* Section-specific math sizing */
+.md-typeset .formula {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+}
+
 .md-typeset .formula .arithmatex,
 .md-typeset .formula .MathJax_Display {
+  display: block;
+  min-width: max-content;
   font-size: clamp(1.4rem, 2.6vw, 2.1rem);
 }
 
 .md-typeset .formula mjx-container[display="true"] {
+  min-width: max-content;
   font-size: clamp(1.4rem, 2.6vw, 2.1rem);
 }
 
