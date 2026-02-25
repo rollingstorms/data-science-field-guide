@@ -15,16 +15,26 @@ _This file is auto-generated. Do not edit by hand._
 - [Tanh (Hyperbolic Tangent)](../cards/activations/tanh.md)
 
 ## algorithms
+- [Augmenting Path](../cards/graphs/augmenting-path.md)
 - [Bellman-Ford Algorithm](../cards/graphs/bellman-ford.md)
 - [Breadth-First Search (BFS)](../cards/graphs/bfs.md)
 - [Connected Components](../cards/graphs/connected-components.md)
 - [Depth-First Search (DFS)](../cards/graphs/dfs.md)
 - [Dijkstra's Algorithm](../cards/graphs/dijkstra.md)
+- [Dinic's Algorithm](../cards/graphs/dinic.md)
+- [Edmonds-Karp Algorithm](../cards/graphs/edmonds-karp.md)
 - [Fast Fourier Transform](../cards/signal-processing/fft.md)
+- [Ford-Fulkerson Method](../cards/graphs/ford-fulkerson.md)
+- [Global Minimum Cut](../cards/graphs/global-minimum-cut.md)
 - [Graph Algorithms (Overview)](../cards/graphs/graph-algorithms.md)
+- [Karger's Algorithm (Min Cut)](../cards/graphs/karger-min-cut.md)
 - [Kruskal's Algorithm](../cards/graphs/kruskal.md)
+- [Max-Flow Min-Cut Theorem](../cards/graphs/max-flow-min-cut-theorem.md)
+- [Maximum Flow](../cards/graphs/maximum-flow.md)
+- [Minimum Cut](../cards/graphs/minimum-cut.md)
 - [Minimum Spanning Tree (MST)](../cards/graphs/minimum-spanning-tree.md)
 - [Prim's Algorithm](../cards/graphs/prim.md)
+- [Residual Graph](../cards/graphs/residual-graph.md)
 - [Shortest Path (Overview)](../cards/graphs/shortest-path.md)
 - [Topological Sort](../cards/graphs/topological-sort.md)
 
@@ -109,6 +119,7 @@ _This file is auto-generated. Do not edit by hand._
 
 ## connectivity
 - [Connected Components](../cards/graphs/connected-components.md)
+- [Edge Cut vs Vertex Cut](../cards/graphs/edge-cut-vs-vertex-cut.md)
 
 ## constraints
 - [Lagrangian](../cards/optimization/lagrangian.md)
@@ -304,25 +315,40 @@ _This file is auto-generated. Do not edit by hand._
 - [Adjacency Matrix](../cards/graphs/adjacency-matrix.md)
 - [Clustering Coefficient](../cards/graphs/clustering-coefficient.md)
 - [Degree Matrix](../cards/graphs/degree-matrix.md)
+- [Edge Cut vs Vertex Cut](../cards/graphs/edge-cut-vs-vertex-cut.md)
+- [Flow Network](../cards/graphs/flow-network.md)
+- [Global Minimum Cut](../cards/graphs/global-minimum-cut.md)
 - [Graph Fourier Transform](../cards/graphs/graph-fourier-transform.md)
 - [Graph Laplacian](../cards/graphs/laplacian.md)
 - [PageRank](../cards/graphs/pagerank.md)
 - [Spectral Clustering](../cards/graphs/spectral-clustering.md)
 
 ## graphs
+- [Augmenting Path](../cards/graphs/augmenting-path.md)
 - [Bellman-Ford Algorithm](../cards/graphs/bellman-ford.md)
 - [Breadth-First Search (BFS)](../cards/graphs/bfs.md)
 - [Connected Components](../cards/graphs/connected-components.md)
 - [Depth-First Search (DFS)](../cards/graphs/dfs.md)
 - [Dijkstra's Algorithm](../cards/graphs/dijkstra.md)
+- [Dinic's Algorithm](../cards/graphs/dinic.md)
+- [Edge Cut vs Vertex Cut](../cards/graphs/edge-cut-vs-vertex-cut.md)
+- [Edmonds-Karp Algorithm](../cards/graphs/edmonds-karp.md)
+- [Flow Network](../cards/graphs/flow-network.md)
+- [Ford-Fulkerson Method](../cards/graphs/ford-fulkerson.md)
+- [Global Minimum Cut](../cards/graphs/global-minimum-cut.md)
 - [Graph Algorithms (Overview)](../cards/graphs/graph-algorithms.md)
+- [Karger's Algorithm (Min Cut)](../cards/graphs/karger-min-cut.md)
 - [Kruskal's Algorithm](../cards/graphs/kruskal.md)
 - [Label Propagation (LPA)](../cards/graphs/label-propagation.md)
+- [Max-Flow Min-Cut Theorem](../cards/graphs/max-flow-min-cut-theorem.md)
+- [Maximum Flow](../cards/graphs/maximum-flow.md)
 - [Message Passing (on Graphs)](../cards/graphs/message-passing.md)
+- [Minimum Cut](../cards/graphs/minimum-cut.md)
 - [Minimum Spanning Tree (MST)](../cards/graphs/minimum-spanning-tree.md)
 - [Modularity (Community Quality)](../cards/graphs/modularity.md)
 - [Network Significance Profile](../cards/graphs/network-significance-profile.md)
 - [Prim's Algorithm](../cards/graphs/prim.md)
+- [Residual Graph](../cards/graphs/residual-graph.md)
 - [Shortest Path (Overview)](../cards/graphs/shortest-path.md)
 - [Topological Sort](../cards/graphs/topological-sort.md)
 
@@ -523,6 +549,17 @@ _This file is auto-generated. Do not edit by hand._
 - [Multivariable Chain Rule](../cards/calculus/multivariable-chain-rule.md)
 - [Partial Derivative](../cards/calculus/partial-derivative.md)
 
+## network-flow
+- [Augmenting Path](../cards/graphs/augmenting-path.md)
+- [Dinic's Algorithm](../cards/graphs/dinic.md)
+- [Edmonds-Karp Algorithm](../cards/graphs/edmonds-karp.md)
+- [Flow Network](../cards/graphs/flow-network.md)
+- [Ford-Fulkerson Method](../cards/graphs/ford-fulkerson.md)
+- [Max-Flow Min-Cut Theorem](../cards/graphs/max-flow-min-cut-theorem.md)
+- [Maximum Flow](../cards/graphs/maximum-flow.md)
+- [Minimum Cut](../cards/graphs/minimum-cut.md)
+- [Residual Graph](../cards/graphs/residual-graph.md)
+
 ## networks
 - [Clustering Coefficient](../cards/graphs/clustering-coefficient.md)
 - [PageRank](../cards/graphs/pagerank.md)
@@ -588,6 +625,9 @@ _This file is auto-generated. Do not edit by hand._
 - [Learning Rate Warmup](../cards/optimization/warmup.md)
 - [Least Squares](../cards/linear-algebra/least-squares.md)
 - [Line Search](../cards/optimization/line-search.md)
+- [Max-Flow Min-Cut Theorem](../cards/graphs/max-flow-min-cut-theorem.md)
+- [Maximum Flow](../cards/graphs/maximum-flow.md)
+- [Minimum Cut](../cards/graphs/minimum-cut.md)
 - [Minimum Spanning Tree (MST)](../cards/graphs/minimum-spanning-tree.md)
 - [Momentum (SGD with Momentum)](../cards/optimization/momentum.md)
 - [Negative Log-Likelihood (NLL)](../cards/ml-metrics/negative-log-likelihood.md)
@@ -672,6 +712,9 @@ _This file is auto-generated. Do not edit by hand._
 
 ## random-variable
 - [Random Variable](../cards/probability-stats/random-variable.md)
+
+## randomized
+- [Karger's Algorithm (Min Cut)](../cards/graphs/karger-min-cut.md)
 
 ## ranking
 - [ROC AUC](../cards/ml-metrics/auc-roc.md)

@@ -216,6 +216,12 @@
     "formula_markdown": "\\[\nA_{ij} = \\begin{cases}1,& (i,j)\\in E\\\\0,&\\text{otherwise}\\end{cases}\n\\]"
   },
   {
+    "title": "Augmenting Path",
+    "category": "Graphs",
+    "route": "/cards/graphs/augmenting-path/",
+    "formula_markdown": "\\[\n\\Delta=\\min_{(u,v)\\in P} c_f(u,v)\n\\]"
+  },
+  {
     "title": "Bellman-Ford Algorithm",
     "category": "Graphs",
     "route": "/cards/graphs/bellman-ford/",
@@ -258,6 +264,42 @@
     "formula_markdown": "\\[\nd(v) = \\min_{(u,v)\\in E}\\big(d(u)+w(u,v)\\big)\n\\]"
   },
   {
+    "title": "Dinic's Algorithm",
+    "category": "Graphs",
+    "route": "/cards/graphs/dinic/",
+    "formula_markdown": "\\[\n\\text{Repeat: build level graph via BFS, then send a blocking flow}\n\\]"
+  },
+  {
+    "title": "Edge Cut vs Vertex Cut",
+    "category": "Graphs",
+    "route": "/cards/graphs/edge-cut-vs-vertex-cut/",
+    "formula_markdown": "\\[\n\\lambda(G)=\\min |F| \\text{ over edge cuts }F,\\qquad\n\\kappa(G)=\\min |S| \\text{ over vertex cuts }S\n\\]"
+  },
+  {
+    "title": "Edmonds-Karp Algorithm",
+    "category": "Graphs",
+    "route": "/cards/graphs/edmonds-karp/",
+    "formula_markdown": "\\[\n\\text{Each augmentation uses a BFS shortest path (by edge count) in } G_f\n\\]"
+  },
+  {
+    "title": "Flow Network",
+    "category": "Graphs",
+    "route": "/cards/graphs/flow-network/",
+    "formula_markdown": "\\[\nG=(V,E),\\quad c:E\\to \\mathbb{R}_{\\ge 0},\\quad s,t\\in V\n\\]"
+  },
+  {
+    "title": "Ford-Fulkerson Method",
+    "category": "Graphs",
+    "route": "/cards/graphs/ford-fulkerson/",
+    "formula_markdown": "\\[\nf \\leftarrow f + \\Delta \\text{ along an augmenting path } P,\\quad\n\\Delta=\\min_{e\\in P} c_f(e)\n\\]"
+  },
+  {
+    "title": "Global Minimum Cut",
+    "category": "Graphs",
+    "route": "/cards/graphs/global-minimum-cut/",
+    "formula_markdown": "\\[\n\\lambda(G)=\\min_{\\varnothing\\ne S\\subset V,\\ S\\ne V} \\operatorname{cut}(S,V\\setminus S)\n\\]"
+  },
+  {
     "title": "Graph Algorithms (Overview)",
     "category": "Graphs",
     "route": "/cards/graphs/graph-algorithms/",
@@ -268,6 +310,12 @@
     "category": "Graphs",
     "route": "/cards/graphs/graph-fourier-transform/",
     "formula_markdown": "\\[\n\\hat{x} = U^\\top x\n\\quad\\text{and}\\quad\nx = U\\hat{x}\n\\]"
+  },
+  {
+    "title": "Karger's Algorithm (Min Cut)",
+    "category": "Graphs",
+    "route": "/cards/graphs/karger-min-cut/",
+    "formula_markdown": "\\[\n\\text{Repeat random edge contractions until 2 supernodes remain; return crossing edges}\n\\]"
   },
   {
     "title": "Kruskal's Algorithm",
@@ -288,10 +336,28 @@
     "formula_markdown": "\\[\nL = D - A\n\\]"
   },
   {
+    "title": "Max-Flow Min-Cut Theorem",
+    "category": "Graphs",
+    "route": "/cards/graphs/max-flow-min-cut-theorem/",
+    "formula_markdown": "\\[\n\\max\\{\\text{value of an } s\\text{-}t \\text{ flow}\\}\n=\n\\min\\{\\text{capacity of an } s\\text{-}t \\text{ cut}\\}\n\\]"
+  },
+  {
+    "title": "Maximum Flow",
+    "category": "Graphs",
+    "route": "/cards/graphs/maximum-flow/",
+    "formula_markdown": "\\[\n\\max \\sum_{v} f(s,v)\n\\quad\\text{s.t.}\\quad\n0\\le f(u,v)\\le c(u,v),\\;\n\\sum_u f(u,v)=\\sum_w f(v,w)\\ \\ (v\\ne s,t)\n\\]"
+  },
+  {
     "title": "Message Passing (on Graphs)",
     "category": "Graphs",
     "route": "/cards/graphs/message-passing/",
     "formula_markdown": "\\[\nm_v^{(t+1)}=\\mathrm{AGG}\\big(\\{\\,\\phi(h_v^{(t)},h_u^{(t)},e_{uv}) : u\\in \\mathcal{N}(v)\\,\\}\\big)\n\\]\n\n\\[\nh_v^{(t+1)}=\\psi(h_v^{(t)}, m_v^{(t+1)})\n\\]"
+  },
+  {
+    "title": "Minimum Cut",
+    "category": "Graphs",
+    "route": "/cards/graphs/minimum-cut/",
+    "formula_markdown": "\\[\n\\operatorname{cut}(S,T)=\\sum_{u\\in S,\\ v\\in T} c(u,v),\\qquad\n(S^*,T^*)=\\arg\\min_{s\\in S,\\ t\\in T}\\operatorname{cut}(S,T)\n\\]"
   },
   {
     "title": "Minimum Spanning Tree (MST)",
@@ -322,6 +388,12 @@
     "category": "Graphs",
     "route": "/cards/graphs/prim/",
     "formula_markdown": "\\[\n\\text{Grow a tree by repeatedly adding the minimum-weight edge crossing the cut}\n\\]"
+  },
+  {
+    "title": "Residual Graph",
+    "category": "Graphs",
+    "route": "/cards/graphs/residual-graph/",
+    "formula_markdown": "\\[\nc_f(u,v)=c(u,v)-f(u,v),\\qquad\nc_f(v,u)=f(u,v)\n\\]"
   },
   {
     "title": "Shortest Path (Overview)",

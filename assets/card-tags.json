@@ -312,6 +312,15 @@
     ],
     "title": "Adjacency Matrix"
   },
+  "/cards/graphs/augmenting-path/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "network-flow"
+    ],
+    "title": "Augmenting Path"
+  },
   "/cards/graphs/bellman-ford/": {
     "category": "graphs",
     "tags": [
@@ -373,6 +382,60 @@
     ],
     "title": "Dijkstra's Algorithm"
   },
+  "/cards/graphs/dinic/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "network-flow"
+    ],
+    "title": "Dinic's Algorithm"
+  },
+  "/cards/graphs/edge-cut-vs-vertex-cut/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "graph-theory",
+      "connectivity"
+    ],
+    "title": "Edge Cut vs Vertex Cut"
+  },
+  "/cards/graphs/edmonds-karp/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "network-flow"
+    ],
+    "title": "Edmonds-Karp Algorithm"
+  },
+  "/cards/graphs/flow-network/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "graph-theory",
+      "network-flow"
+    ],
+    "title": "Flow Network"
+  },
+  "/cards/graphs/ford-fulkerson/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "network-flow"
+    ],
+    "title": "Ford-Fulkerson Method"
+  },
+  "/cards/graphs/global-minimum-cut/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "graph-theory"
+    ],
+    "title": "Global Minimum Cut"
+  },
   "/cards/graphs/graph-algorithms/": {
     "category": "graphs",
     "tags": [
@@ -389,6 +452,15 @@
       "signal-processing"
     ],
     "title": "Graph Fourier Transform"
+  },
+  "/cards/graphs/karger-min-cut/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "randomized"
+    ],
+    "title": "Karger's Algorithm (Min Cut)"
   },
   "/cards/graphs/kruskal/": {
     "category": "graphs",
@@ -416,6 +488,26 @@
     ],
     "title": "Graph Laplacian"
   },
+  "/cards/graphs/max-flow-min-cut-theorem/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "optimization",
+      "network-flow"
+    ],
+    "title": "Max-Flow Min-Cut Theorem"
+  },
+  "/cards/graphs/maximum-flow/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "optimization",
+      "network-flow"
+    ],
+    "title": "Maximum Flow"
+  },
   "/cards/graphs/message-passing/": {
     "category": "graphs",
     "tags": [
@@ -424,6 +516,16 @@
       "gnn"
     ],
     "title": "Message Passing (on Graphs)"
+  },
+  "/cards/graphs/minimum-cut/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "optimization",
+      "network-flow"
+    ],
+    "title": "Minimum Cut"
   },
   "/cards/graphs/minimum-spanning-tree/": {
     "category": "graphs",
@@ -467,6 +569,15 @@
       "mst"
     ],
     "title": "Prim's Algorithm"
+  },
+  "/cards/graphs/residual-graph/": {
+    "category": "graphs",
+    "tags": [
+      "graphs",
+      "algorithms",
+      "network-flow"
+    ],
+    "title": "Residual Graph"
   },
   "/cards/graphs/shortest-path/": {
     "category": "graphs",

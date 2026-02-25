@@ -60,6 +60,7 @@ nav:
           - Transformer: cards/deep-learning/transformer.md
       - Graphs:
           - Adjacency Matrix: cards/graphs/adjacency-matrix.md
+          - Augmenting Path: cards/graphs/augmenting-path.md
           - Bellman-Ford Algorithm: cards/graphs/bellman-ford.md
           - Breadth-First Search (BFS): cards/graphs/bfs.md
           - Clustering Coefficient: cards/graphs/clustering-coefficient.md
@@ -67,17 +68,28 @@ nav:
           - Degree Matrix: cards/graphs/degree-matrix.md
           - Depth-First Search (DFS): cards/graphs/dfs.md
           - Dijkstra's Algorithm: cards/graphs/dijkstra.md
+          - Dinic's Algorithm: cards/graphs/dinic.md
+          - Edge Cut vs Vertex Cut: cards/graphs/edge-cut-vs-vertex-cut.md
+          - Edmonds-Karp Algorithm: cards/graphs/edmonds-karp.md
+          - Flow Network: cards/graphs/flow-network.md
+          - Ford-Fulkerson Method: cards/graphs/ford-fulkerson.md
+          - Global Minimum Cut: cards/graphs/global-minimum-cut.md
           - Graph Algorithms (Overview): cards/graphs/graph-algorithms.md
           - Graph Fourier Transform: cards/graphs/graph-fourier-transform.md
           - Graph Laplacian: cards/graphs/laplacian.md
+          - Karger's Algorithm (Min Cut): cards/graphs/karger-min-cut.md
           - Kruskal's Algorithm: cards/graphs/kruskal.md
           - Label Propagation (LPA): cards/graphs/label-propagation.md
+          - Max-Flow Min-Cut Theorem: cards/graphs/max-flow-min-cut-theorem.md
+          - Maximum Flow: cards/graphs/maximum-flow.md
           - Message Passing (on Graphs): cards/graphs/message-passing.md
+          - Minimum Cut: cards/graphs/minimum-cut.md
           - Minimum Spanning Tree (MST): cards/graphs/minimum-spanning-tree.md
           - Modularity (Community Quality): cards/graphs/modularity.md
           - Network Significance Profile: cards/graphs/network-significance-profile.md
           - PageRank: cards/graphs/pagerank.md
           - Prim's Algorithm: cards/graphs/prim.md
+          - Residual Graph: cards/graphs/residual-graph.md
           - Shortest Path (Overview): cards/graphs/shortest-path.md
           - Spectral Clustering: cards/graphs/spectral-clustering.md
           - Topological Sort: cards/graphs/topological-sort.md
