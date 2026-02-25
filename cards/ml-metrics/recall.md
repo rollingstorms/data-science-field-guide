@@ -42,5 +42,21 @@ Of the actual positives, how many are correctly identified.
 ## Example
 If \(\mathrm{TP}=30\) and \(\mathrm{FN}=5\),
 \(\mathrm{Recall}=30/(30+5)=0.857\).
+## How to Compute (Pseudocode)
+```text
+Input: confusion-matrix counts
+Output: recall
+
+compute the required numerator/denominator from TP, FP, FN, TN
+if denominator == 0:
+  return undefined (or use a task-specific convention)
+return numerator / denominator
+```
+
+## Complexity
+- Time: \(O(1)\) once confusion-matrix counts are available
+- Space: \(O(1)\)
+- Assumptions: Binary classification formula shown; computing the confusion matrix itself is typically \(O(n)\)
+
 ## See also
 - [Precision](../ml-metrics/precision.md)

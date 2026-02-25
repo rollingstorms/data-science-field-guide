@@ -42,6 +42,26 @@ Shortest path algorithms find minimum-cost paths between nodes under a chosen ed
 ## Example
 Use BFS for hop-count shortest path in social graphs, and Dijkstra for road-distance shortest path.
 
+## How to Compute (Pseudocode)
+```text
+Input: graph G, source s, target/query needs, edge weights w
+Output: shortest-path distances/paths
+
+if graph is unweighted (or all weights equal):
+  run BFS from s
+else if all edge weights are nonnegative:
+  run Dijkstra from s
+else:
+  run Bellman-Ford from s (and check for negative cycles)
+
+return distances (and optionally predecessor paths)
+```
+
+## Complexity
+- Time: Depends on the chosen algorithm (for example, BFS \(O(|V|+|E|)\), Dijkstra \(O((|V|+|E|)\log|V|)\), Bellman-Ford \(O(|V||E|)\))
+- Space: Depends on the chosen algorithm/representation; common single-source implementations use \(O(|V|)\) additional state plus graph storage
+- Assumptions: Single-source shortest-path workflow; complexity depends on edge-weight conditions and data structures
+
 ## See also
 - [Breadth-First Search (BFS)](../graphs/bfs.md)
 - [Dijkstra's Algorithm](../graphs/dijkstra.md)

@@ -48,5 +48,24 @@ A=
 0&1&0
 \end{bmatrix}
 \].
+## How to Compute (Pseudocode)
+```text
+Input: graph G=(V,E) with n labeled vertices
+Output: adjacency matrix A of size n x n
+
+initialize A[i][j] <- 0 for all i, j
+for each edge (u, v) in E:
+  A[u][v] <- weight(u,v) if weighted else 1
+  if graph is undirected:
+    A[v][u] <- A[u][v]
+
+return A
+```
+
+## Complexity
+- Time: \(O(n^2 + |E|)\) if explicitly zero-initializing the full matrix; edge insertion alone is \(O(|E|)\)
+- Space: \(O(n^2)\) for the matrix
+- Assumptions: \(n=|V|\); vertices are indexed to matrix rows/columns
+
 ## See also
 - [Degree Matrix](../graphs/degree-matrix.md)

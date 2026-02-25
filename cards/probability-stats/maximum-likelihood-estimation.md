@@ -44,6 +44,21 @@ MLE chooses parameter values that make the observed data most likely under the m
 ## Example
 For Bernoulli data, the MLE of \(p\) is the sample mean.
 
+## How to Compute (Pseudocode)
+```text
+Input: data and a parametric likelihood model p(x; theta)
+Output: MLE estimate theta_hat
+
+write the log-likelihood l(theta) from the observed data
+optimize l(theta) over theta (closed form or numerical optimizer)
+return the maximizing parameter estimate theta_hat
+```
+
+## Complexity
+- Time: Depends on model likelihood evaluation cost and optimization method (closed-form solutions can be cheap; numerical optimization is iterative)
+- Space: Depends on parameter dimension and optimizer state, plus data storage
+- Assumptions: Parametric likelihood model specified; optimization tolerance and initialization affect practical runtime
+
 ## See also
 - [Maximum A Posteriori (MAP)](../probability-stats/maximum-a-posteriori.md)
 - [Negative Log-Likelihood (NLL)](../ml-metrics/negative-log-likelihood.md)

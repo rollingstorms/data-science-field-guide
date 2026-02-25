@@ -41,5 +41,22 @@ Measures vector size with different emphasis on components.
 
 ## Example
 For \(x=(3,4)\), \(\|x\|_2=5\), \(\|x\|_1=7\), \(\|x\|_\infty=4\).
+## How to Compute (Pseudocode)
+```text
+Input: vector x and norm type (for example, p-norm or infinity norm)
+Output: ||x||
+
+if p-norm:
+  s <- sum_i |x[i]|^p
+  return s^(1/p)
+if infinity norm:
+  return max_i |x[i]|
+```
+
+## Complexity
+- Time: \(O(n)\) for a vector of length \(n\)
+- Space: \(O(1)\) extra space
+- Assumptions: Vector norms shown; matrix norms can require different computations and higher cost
+
 ## See also
 - [Dot Product](../linear-algebra/dot-product.md)

@@ -42,6 +42,23 @@ Separates data for fitting, model selection, and final unbiased evaluation.
 ## Example
 Use 70/15/15 or 80/10/10 splits, adjusted for dataset size and class balance.
 
+## How to Compute (Pseudocode)
+```text
+Input: dataset D, split ratios, random seed (or time-based rule)
+Output: D_train, D_val, D_test
+
+choose a split strategy (random, stratified, grouped, or time-based)
+partition D into disjoint subsets according to the strategy and ratios
+verify no overlap between train/val/test
+reserve D_test for final evaluation only
+return D_train, D_val, D_test
+```
+
+## Complexity
+- Time: Typically \(O(n)\) to assign \(n\) examples to splits (plus sorting/grouping costs for time- or group-aware strategies)
+- Space: \(O(n)\) to store split assignments or index lists
+- Assumptions: \(n\) is dataset size; exact cost depends on stratification/grouping constraints and implementation
+
 ## See also
 - [Cross-Validation](../machine-learning/cross-validation.md)
 - [Data Leakage](../machine-learning/data-leakage.md)

@@ -48,5 +48,22 @@ Power analysis estimates the sample size needed to detect a practically relevant
 ## Example
 Before launch, compute required traffic to detect a 2% relative lift with 80% power at \(\alpha=0.05\).
 
+## How to Compute (Pseudocode)
+```text
+Input: test family, significance level alpha, effect size assumptions, variance assumptions, candidate sample size(s)
+Output: power estimate(s) or required sample size
+
+choose the target test and alternative-effect scenario
+for each candidate sample size (or solve directly if formula exists):
+  compute the test's power under the assumed effect/variance model
+select the smallest sample size meeting target power (for planning) or report power curve
+return power/sample-size result
+```
+
+## Complexity
+- Time: Depends on the test and whether power is computed analytically or by simulation; grid-search planning scales with the number of candidate sample sizes checked
+- Space: \(O(1)\) to \(O(g)\) for a grid of \(g\) candidate sizes/effect scenarios
+- Assumptions: Model assumptions and effect-size inputs dominate validity; simulation-based power adds Monte Carlo cost
+
 ## See also
 - [P-Value](../probability-stats/p-value.md)

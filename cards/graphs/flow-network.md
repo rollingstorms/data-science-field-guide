@@ -44,6 +44,23 @@ A flow network is a graph model for sending quantity from a source to a sink sub
 ## Example
 Treat routers as nodes and link bandwidths as capacities to analyze achievable throughput from an origin router to a destination router.
 
+## How to Compute (Pseudocode)
+```text
+Input: problem entities and capacities (nodes, links, source, sink)
+Output: flow-network representation G=(V,E,c,s,t)
+
+create a directed node for each entity/state
+add directed edges for allowed transfers/interactions
+assign nonnegative capacity c(e) to each edge
+choose source s and sink t
+return (V, E, c, s, t)
+```
+
+## Complexity
+- Time: Typically \(O(|V|+|E|)\) to build the representation once the input entities/relations are specified
+- Space: \(O(|V|+|E|)\) for the graph and capacities
+- Assumptions: Graph-construction cost excludes upstream data extraction/feature engineering; exact cost depends on how the original problem is encoded
+
 ## See also
 - [Maximum Flow](../graphs/maximum-flow.md)
 - [Residual Graph](../graphs/residual-graph.md)

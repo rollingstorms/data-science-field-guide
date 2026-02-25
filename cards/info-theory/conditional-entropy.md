@@ -41,5 +41,27 @@ Remaining uncertainty about \(X\) after observing \(Y\).
 
 ## Example
 If \(Y=X\), then \(H(X\mid Y)=0\).
+## How to Compute (Pseudocode)
+```text
+Input: joint probabilities p_xy[x,y], log base b
+Output: conditional_entropy H(X|Y)
+
+compute marginals p_y[y] from p_xy
+
+total <- 0
+for each pair (x, y):
+  if p_xy[x,y] == 0:
+    continue
+  p_x_given_y <- p_xy[x,y] / p_y[y]
+  total <- total - p_xy[x,y] * log_base_b(p_x_given_y)
+
+return total
+```
+
+## Complexity
+- Time: \(O(k_x k_y)\) for a dense discrete joint table
+- Space: \(O(k_y)\) additional space for marginals of \(Y\)
+- Assumptions: \(k_x\) and \(k_y\) are support sizes; assumes \(p_y[y] > 0\) whenever \(p_{xy}[x,y] > 0\)
+
 ## See also
 - [Mutual Information](../info-theory/mutual-information.md)

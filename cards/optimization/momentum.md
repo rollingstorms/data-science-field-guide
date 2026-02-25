@@ -42,6 +42,23 @@ Momentum smooths noisy gradients by accumulating a running direction, often spee
 ## Example
 With momentum, parameters keep moving in a consistent downhill direction even if mini-batch gradients are noisy.
 
+## How to Compute (Pseudocode)
+```text
+Input: stochastic gradients g_t, parameters theta, learning rate eta, momentum beta, steps T
+Output: updated parameters theta
+
+initialize velocity v <- 0
+for t from 1 to T:
+  v <- beta * v + g_t
+  theta <- theta - eta * v
+return theta
+```
+
+## Complexity
+- Time: \(O(Tp)\) elementwise optimizer-state updates once gradients are available (plus gradient computation cost)
+- Space: \(O(p)\) additional space for the velocity vector
+- Assumptions: \(p\) parameters; optimizer update cost is usually small relative to backprop/gradient computation
+
 ## See also
 - [Stochastic Gradient Descent](../optimization/stochastic-gradient-descent.md)
 - [RMSProp](../optimization/rmsprop.md)

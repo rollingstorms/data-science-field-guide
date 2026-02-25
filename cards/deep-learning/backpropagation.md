@@ -43,6 +43,24 @@ Backpropagation computes gradients efficiently by applying the chain rule backwa
 ## Example
 For \(y=wx\) and loss \(\mathcal{L}(y)\), backprop computes \(\partial \mathcal{L}/\partial w=(\partial \mathcal{L}/\partial y)\,x\).
 
+## How to Compute (Pseudocode)
+```text
+Input: computation graph, loss L
+Output: gradients for parameters and intermediates
+
+run forward pass and cache needed intermediates
+initialize upstream gradient dL/dL <- 1
+traverse graph in reverse topological order:
+  apply each node's local derivative rule
+  accumulate gradients for parent nodes/parameters
+return parameter gradients
+```
+
+## Complexity
+- Time: Typically on the same order as the forward pass (often a small constant-factor multiple), plus gradient accumulation overhead
+- Space: Depends on stored activations/intermediates for the backward pass (activation memory often dominates)
+- Assumptions: Reverse-mode autodiff for scalar loss; checkpointing/recomputation strategies trade time for memory
+
 ## See also
 - [Chain Rule](../calculus/chain-rule.md)
 - [Gradient](../calculus/gradient.md)

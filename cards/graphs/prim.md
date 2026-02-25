@@ -39,6 +39,41 @@ Prim grows an MST from a seed node by always attaching the cheapest reachable ne
 ## Example
 Starting from node 1, keep adding the cheapest edge that connects the current tree to any outside node.
 
+## How to Compute (Pseudocode)
+```text
+Input: connected weighted graph G=(V,E), start node s
+Output: MST edges tree
+
+for each vertex v in V:
+  key[v] <- infinity
+  parent[v] <- null
+  in_tree[v] <- false
+key[s] <- 0
+push (0, s) into min-priority-queue pq
+
+tree <- empty list
+while pq is not empty:
+  (ku, u) <- pop-min(pq)
+  if in_tree[u]:
+    continue
+  in_tree[u] <- true
+  if parent[u] != null:
+    add edge (parent[u], u) to tree
+
+  for each edge (u, v) in adj[u]:
+    if not in_tree[v] and w(u,v) < key[v]:
+      key[v] <- w(u,v)
+      parent[v] <- u
+      push (key[v], v) into pq
+
+return tree
+```
+
+## Complexity
+- Time: \(O((|V|+|E|)\log |V|)\) with a binary-heap priority queue
+- Space: \(O(|V|+|E|)\) for graph storage plus \(O(|V|)\) metadata/queue keys
+- Assumptions: Adjacency-list representation; connected graph for a single MST tree output
+
 ## See also
 - [Minimum Spanning Tree (MST)](../graphs/minimum-spanning-tree.md)
 - [Kruskal's Algorithm](../graphs/kruskal.md)

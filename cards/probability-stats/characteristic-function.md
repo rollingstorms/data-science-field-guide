@@ -42,5 +42,20 @@ Fourier transform of the probability distribution of \(X\).
 ## Example
 If \(X\) is Bernoulli(0.5), then
 \(arphi_X(t)=0.5(1+e^{it})\).
+## How to Compute (Pseudocode)
+```text
+Input: quantities required by the card formula (distribution parameters, samples, or test setup)
+Output: card-specific statistic/probability/result
+
+compute any required summary quantities from data or model parameters
+apply the card formula or workflow
+return the resulting value(s)
+```
+
+## Complexity
+- Time: Depends on whether the card is applied analytically, numerically, or from sample data (common sample-statistic workflows are often linear in sample size)
+- Space: Depends on whether summaries are streamed or full samples/tables are materialized
+- Assumptions: Exact runtime/memory is method-dependent and driven by the chosen estimator/test/distribution representation
+
 ## See also
 - [Moment Generating Function](../probability-stats/mgf.md)

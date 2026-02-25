@@ -51,5 +51,22 @@ Explained variance ratio tells how much total variance is captured by each princ
 ## Example
 If the first two components explain 85% variance, a 2D projection may preserve much of the spread.
 
+## How to Compute (Pseudocode)
+```text
+Input: PCA eigenvalues lambda[1..p] (usually sorted descending)
+Output: explained variance ratios EVR[1..p]
+
+total <- sum_{j=1..p} lambda[j]
+for k from 1 to p:
+  EVR[k] <- lambda[k] / total
+
+return EVR
+```
+
+## Complexity
+- Time: \(O(p)\) once PCA eigenvalues are available
+- Space: \(O(p)\) for the ratio vector
+- Assumptions: \(p\) is the number of components; the cost of fitting PCA/eigendecomposition is excluded
+
 ## See also
 - [Principal Component Analysis (PCA)](../linear-algebra/pca.md)

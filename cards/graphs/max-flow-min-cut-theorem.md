@@ -45,6 +45,26 @@ The best possible throughput from \(s\) to \(t\) equals the capacity of the tigh
 ## Example
 If a computed flow has value 12 and the reachable/non-reachable partition in the residual graph has cut capacity 12, the solution is provably optimal.
 
+## How to Compute (Pseudocode)
+```text
+Input: flow network G, source s, sink t
+Output: max-flow value and a matching min-cut certificate
+
+run a max-flow algorithm to obtain flow f and residual graph G_f
+S <- vertices reachable from s in G_f using positive-residual edges
+T <- V \ S
+cut_capacity <- sum of original capacities c(u,v) for u in S, v in T
+flow_value <- value of f
+
+verify flow_value == cut_capacity
+return flow_value, (S, T)
+```
+
+## Complexity
+- Time: Dominated by the chosen max-flow algorithm, plus \(O(|V|+|E|)\) for residual reachability and cut-capacity computation
+- Space: \(O(|V|+|E|)\) for residual graph and traversal state
+- Assumptions: This is a computational certification workflow for the theorem in the \(s\)-\(t\) setting; theorem statement itself is not an algorithm
+
 ## See also
 - [Maximum Flow](../graphs/maximum-flow.md)
 - [Minimum Cut](../graphs/minimum-cut.md)

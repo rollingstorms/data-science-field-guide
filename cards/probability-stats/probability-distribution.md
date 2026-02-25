@@ -40,6 +40,21 @@ A distribution specifies how probability mass or density is assigned across the 
 ## Example
 For a fair die roll \(X\in\{1,\dots,6\}\), the distribution is \(P(X=k)=1/6\) for each \(k\).
 
+## How to Compute (Pseudocode)
+```text
+Input: random variable X or data/model assumptions
+Output: probability distribution representation
+
+choose a representation (PMF, PDF, CDF, parametric family, or empirical distribution)
+estimate or specify the required parameters/rules
+return the distribution object/representation
+```
+
+## Complexity
+- Time: Depends on whether the distribution is specified analytically or estimated from data (empirical estimation is often linear in sample size)
+- Space: Depends on representation (parametric parameters vs histogram/empirical tables)
+- Assumptions: This is a modeling/representation workflow; downstream PMF/PDF/CDF computations determine concrete costs
+
 ## See also
 - [PMF (Probability Mass Function)](../probability-stats/pmf.md)
 - [PDF (Probability Density Function)](../probability-stats/pdf.md)

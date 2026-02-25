@@ -53,3 +53,21 @@ Tests whether the population mean differs from \(\mu_0\).
 
 ## Example
 If \(\bar x=52\), \(\mu_0=50\), \(s=6\), \(n=9\), then \(t=(52-50)/(6/3)=1\).
+
+## How to Compute (Pseudocode)
+```text
+Input: data, null hypothesis H0, test statistic T
+Output: test statistic and p-value decision summary
+
+compute the observed test statistic T_obs from the data
+obtain the null distribution (analytic approximation or exact table, depending on the test)
+compute the p-value from the null distribution and tail convention
+compare p-value to alpha (if making a decision)
+return T_obs and p-value
+```
+
+## Complexity
+- Time: Depends on the specific test (summary-statistic computation is often linear in sample size; p-value computation may be constant-time with a CDF call or more expensive if resampling is used)
+- Space: Depends on whether intermediate summaries or resampled/null distributions are materialized
+- Assumptions: Test-specific assumptions (independence, variance structure, distributional assumptions) determine validity and exact computation details
+

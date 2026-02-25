@@ -37,3 +37,21 @@ Model interpretability covers tools and practices for understanding why models b
 
 ## Example
 Use global feature importance plus local examples to review a credit-risk model before launch.
+
+## How to Compute (Pseudocode)
+```text
+Input: trained model, evaluation data, interpretability goals (global/local)
+Output: interpretation report/artifacts
+
+choose interpretation methods appropriate for the model and question
+  examples: feature importance, PDP/ICE, SHAP, local examples, error slices
+compute explanations on held-out or representative data
+cross-check explanations against domain constraints and known correlations
+summarize global patterns and local examples with caveats
+```
+
+## Complexity
+- Time: Depends on the chosen explanation methods and model evaluation costs (for example, SHAP and permutation methods can be expensive)
+- Space: Depends on stored explanation outputs, sampled datasets, and visualization artifacts
+- Assumptions: Interpretability is a workflow umbrella; downstream methods determine actual runtime/memory complexity
+

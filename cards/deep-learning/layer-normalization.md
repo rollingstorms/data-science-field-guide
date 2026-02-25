@@ -45,6 +45,22 @@ Normalizes features within a single example/token, then applies a learned affine
 ## Example
 In a Transformer block, layer norm is applied before or after attention/MLP sublayers depending on architecture.
 
+## How to Compute (Pseudocode)
+```text
+Input: feature vector/tensor x for one token/example, gamma, beta, epsilon
+Output: layer-normalized output
+
+compute mean and variance over the feature dimension(s)
+normalize x elementwise using those statistics
+apply affine transform with gamma and beta
+return output
+```
+
+## Complexity
+- Time: \(O(m)\) per normalized feature vector/tensor slice with \(m\) normalized elements
+- Space: \(O(m)\) for activations/output, plus parameter storage for gamma/beta
+- Assumptions: Normalization axes are the feature dimensions; total model cost is dominated by surrounding attention/MLP layers
+
 ## See also
 - [Batch Normalization](../deep-learning/batch-normalization.md)
 - [Residual Connection](../deep-learning/residual-connection.md)

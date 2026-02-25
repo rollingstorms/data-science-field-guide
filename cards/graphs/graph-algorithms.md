@@ -42,6 +42,23 @@ Graph algorithms solve problems on networks: traversal, connectivity, shortest p
 ## Example
 Use BFS for shortest paths in an unweighted graph, and Dijkstra's algorithm for nonnegative weighted shortest paths.
 
+## How to Compute (Pseudocode)
+```text
+Input: graph problem instance and objective (traversal, shortest path, cut/flow, ranking, etc.)
+Output: problem-specific result
+
+identify graph type (directed/undirected, weighted/unweighted, sparse/dense)
+identify the task category
+select an appropriate algorithm family
+run the chosen algorithm with a compatible graph representation
+return the result and interpret it in the problem domain
+```
+
+## Complexity
+- Time: Depends on the selected algorithm and graph representation (this overview card is for algorithm selection, not a single runtime)
+- Space: Depends on the selected algorithm and representation
+- Assumptions: \(|V|\), \(|E|\), edge weights, and data-structure choices determine complexity in downstream cards
+
 ## See also
 - [PageRank](../graphs/pagerank.md)
 - [Spectral Clustering](../graphs/spectral-clustering.md)

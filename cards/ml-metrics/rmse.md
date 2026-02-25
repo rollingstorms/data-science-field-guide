@@ -33,6 +33,7 @@ title: Root squared error for a single residual (|r|)
 - \(n\): number of samples
 
 </div>
+
 ## What it means
 Typical prediction error in the same units as the target.
 
@@ -52,3 +53,24 @@ Typical prediction error in the same units as the target.
 
 ## Example
 If \(\mathrm{MSE}=1.667\), then \(\mathrm{RMSE}=1.291\).
+
+## How to Compute (Pseudocode)
+```text
+Input: true values y[1..n], predictions y_hat[1..n]
+Output: rmse
+
+sum_sq <- 0
+for i from 1 to n:
+  residual <- y[i] - y_hat[i]
+  sum_sq <- sum_sq + residual^2
+
+mse <- sum_sq / n
+rmse <- sqrt(mse)
+return rmse
+```
+
+## Complexity
+- Time: \(O(n)\)
+- Space: \(O(1)\) additional space
+- Assumptions: \(n\) is the number of paired predictions/targets
+

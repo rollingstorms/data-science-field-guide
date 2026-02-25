@@ -33,6 +33,7 @@ title: Squared error vs residual r
 - \(n\): number of samples
 
 </div>
+
 ## What it means
 Average squared prediction error.
 
@@ -53,3 +54,23 @@ Average squared prediction error.
 ## Example
 If errors are \([-1, 2, 0]\),
 \(\mathrm{MSE}=(1+4+0)/3=1.667\).
+
+## How to Compute (Pseudocode)
+```text
+Input: true values y[1..n], predictions y_hat[1..n]
+Output: mse
+
+sum_sq <- 0
+for i from 1 to n:
+  residual <- y[i] - y_hat[i]
+  sum_sq <- sum_sq + residual^2
+
+mse <- sum_sq / n
+return mse
+```
+
+## Complexity
+- Time: \(O(n)\)
+- Space: \(O(1)\) additional space
+- Assumptions: \(n\) is the number of paired predictions/targets
+

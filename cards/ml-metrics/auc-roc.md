@@ -54,3 +54,20 @@ AUC is the area under the ROC curve (TPR vs FPR) as you sweep a score threshold.
 ## Example
 If all positives are scored above all negatives,
 AUC = 1.0.
+
+## How to Compute (Pseudocode)
+```text
+Input: ROC curve points (FPR, TPR) sorted by FPR
+Output: ROC AUC
+
+auc <- 0
+for each consecutive pair of ROC points:
+  auc <- auc + trapezoid_area_between_points
+return auc
+```
+
+## Complexity
+- Time: \(O(L)\) once \(L\) ROC curve points are available
+- Space: \(O(1)\) extra space (excluding stored curve points)
+- Assumptions: If starting from raw scores, ROC construction typically dominates at \(O(n\log n)\)
+

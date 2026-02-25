@@ -39,6 +39,21 @@ The model predicts a probability distribution for the next token given the curre
 ## Example
 After "2 + 2 =", a model assigns high probability to token "4".
 
+## How to Compute (Pseudocode)
+```text
+Input: context tokens x_{<=t}, language model, decoding rule
+Output: next-token prediction/distribution
+
+run the model on the context to obtain next-token logits/probabilities
+apply a decoding rule (greedy, temperature, top-k, top-p, etc.)
+return the next-token distribution or sampled/selected token
+```
+
+## Complexity
+- Time: Depends on the language model forward pass and decoding rule; decoding-rule postprocessing is usually smaller than model inference cost
+- Space: Depends on model activations/cache and vocabulary logits for the current step
+- Assumptions: One decoding step shown; autoregressive generation repeats this process for each generated token
+
 ## See also
 - [Language Model](../nlp/language-model.md)
 - [Temperature (Sampling)](../nlp/temperature-sampling.md)

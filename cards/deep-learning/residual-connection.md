@@ -40,6 +40,21 @@ A residual connection adds the input directly to a sublayer output, making it ea
 ## Example
 Transformer sublayers often use \(x + \mathrm{Attention}(x)\) and \(x + \mathrm{MLP}(x)\).
 
+## How to Compute (Pseudocode)
+```text
+Input: tensor x and sublayer F
+Output: residual output y
+
+u <- F(x)
+y <- x + u
+return y
+```
+
+## Complexity
+- Time: \(O(m)\) for the elementwise add over \(m\) values, plus the cost of computing \(F(x)\)
+- Space: \(O(m)\) for the output tensor (and any sublayer intermediates)
+- Assumptions: Shapes match for the residual add (or a projection is used before addition)
+
 ## See also
 - [Layer Normalization](../deep-learning/layer-normalization.md)
 - [Transformer](../deep-learning/transformer.md)

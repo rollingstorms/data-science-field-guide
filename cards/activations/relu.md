@@ -49,6 +49,21 @@ ReLU keeps positive values and clips negative values to zero.
 ## Example
 \(\mathrm{ReLU}([-2,0,3])=[0,0,3]\).
 
+## How to Compute (Pseudocode)
+```text
+Input: tensor/vector x
+Output: y = ReLU(x) applied elementwise
+
+for each element x_i in x:
+  y_i <- max(0, x_i)
+return y
+```
+
+## Complexity
+- Time: \(O(m)\) elementwise operations for \(m\) inputs
+- Space: \(O(m)\) for the output tensor/vector (or \(O(1)\) extra if done in place)
+- Assumptions: Elementwise application over \(m\) scalars; exact constant factors depend on operations like \(\exp\), \(\tanh\), or \(\mathrm{erf}/\Phi\) approximations
+
 ## See also
 - [Leaky ReLU](../activations/leaky-relu.md)
 - [GELU](../activations/gelu.md)

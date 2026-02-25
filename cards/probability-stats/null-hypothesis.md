@@ -41,6 +41,22 @@ The null hypothesis is the reference claim tested against the observed data.
 ## Example
 In an A/B test, \(H_0\) may state that the two conversion rates are equal.
 
+## How to Compute (Pseudocode)
+```text
+Input: research question and statistical test setup
+Output: null-hypothesis specification H0
+
+define the parameter/contrast of interest
+state H0 as a baseline/no-effect/no-difference model for that quantity
+pair H0 with an alternative hypothesis H1 and a planned test statistic
+return the hypothesis specification
+```
+
+## Complexity
+- Time: Not an algorithmic computation; this is a study-design/specification step
+- Space: \(O(1)\) for the formal hypothesis statement
+- Assumptions: Hypothesis specification precedes data analysis and determines downstream test/p-value computations
+
 ## See also
 - [P-Value](../probability-stats/p-value.md)
 - [Statistical Power](../probability-stats/statistical-power.md)

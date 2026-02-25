@@ -42,5 +42,19 @@ Model-selection criterion that trades off likelihood fit with a stronger complex
 If \(k=5\), \(n=100\), and \(\log \hat{L}=-120\), then
 \(\mathrm{BIC}=5\log(100)-2(-120)\approx 263.0\).
 
+## How to Compute (Pseudocode)
+```text
+Input: fitted model log-likelihood logL, parameter count k, sample size n
+Output: BIC
+
+compute BIC from logL and the penalty term in the card formula
+return the score
+```
+
+## Complexity
+- Time: \(O(1)\) once log-likelihood and model metadata are available
+- Space: \(O(1)\)
+- Assumptions: The cost of fitting the model and evaluating the likelihood is excluded
+
 ## See also
 - [Akaike Information Criterion (AIC)](../ml-metrics/aic.md)

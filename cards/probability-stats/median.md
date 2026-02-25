@@ -40,3 +40,21 @@ Middle value that splits the distribution into two halves.
 
 ## Example
 For \([1, 2, 10]\), median is 2. For \([1, 2, 10, 11]\), median is \((2+10)/2=6\).
+
+## How to Compute (Pseudocode)
+```text
+Input: sample values x[1..n]
+Output: sample median
+
+sort the values
+if n is odd:
+  return middle value
+else:
+  return average of the two middle values (or a convention-specific choice)
+```
+
+## Complexity
+- Time: \(O(n\log n)\) via sorting (or \(O(n)\) expected time with selection algorithms)
+- Space: Depends on sorting/selection implementation (in-place vs copied arrays)
+- Assumptions: Sample median computation shown; population medians are distribution parameters/quantiles with different estimation workflows
+

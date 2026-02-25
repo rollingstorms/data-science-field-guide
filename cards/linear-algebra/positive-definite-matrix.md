@@ -39,6 +39,24 @@ A positive definite matrix defines a strictly positive quadratic form.
 ## Example
 The identity matrix \(I\) is positive definite because \(x^\top I x=\|x\|^2>0\).
 
+## How to Compute (Pseudocode)
+```text
+Input: symmetric matrix A
+Output: positive-definite check (true/false)
+
+choose a test method
+  examples: try Cholesky factorization, or check all eigenvalues > 0
+if the test succeeds:
+  return true
+else:
+  return false
+```
+
+## Complexity
+- Time: Depends on the test method (dense Cholesky or eigendecomposition methods are typically cubic in matrix size)
+- Space: Depends on matrix storage and factorization/eigensolver workspaces
+- Assumptions: Symmetric real-matrix setting; floating-point tests use tolerances for near-zero eigenvalues/pivots
+
 ## See also
 - [Cholesky Decomposition](../linear-algebra/cholesky.md)
 - [Hessian](../calculus/hessian.md)

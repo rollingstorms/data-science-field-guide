@@ -45,5 +45,22 @@ First-order optimality conditions for constrained problems; for convex problems,
 ## Example
 For \(\min x^2\) s.t. \(x\ge 1\):
 \(x^*=1\), \(\lambda^*=2\) satisfy KKT.
+## How to Compute (Pseudocode)
+```text
+Input: candidate point x and multipliers lambda, nu for a constrained problem
+Output: KKT condition check (satisfied / violated)
+
+check primal feasibility: g(x) <= 0 and h(x) = 0
+check dual feasibility: lambda >= 0
+compute stationarity residual: grad_x L(x, lambda, nu)
+check complementary slackness: lambda_i * g_i(x) = 0 for all i
+report whether all checks pass (within tolerance)
+```
+
+## Complexity
+- Time: Depends on the costs of evaluating constraints and computing the Lagrangian gradient/Jacobians (often dominated by derivative evaluations)
+- Space: Depends on the number of variables/constraints and stored residuals/Jacobians
+- Assumptions: Numerical KKT verification with tolerances is shown; sufficiency depends on convexity and constraint qualifications
+
 ## See also
 - [Lagrangian](../optimization/lagrangian.md)

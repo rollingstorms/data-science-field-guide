@@ -45,3 +45,20 @@ A single random experiment with two outcomes (success/failure).
 
 ## Example
 If 3 successes in 10 trials, \(\hat p=0.3\).
+
+## How to Compute (Pseudocode)
+```text
+Input: success probability p and number of trials n (or observed binary outcomes)
+Output: Bernoulli trial simulation/outcome summary
+
+for i from 1 to n:
+  sample X_i in {0,1} with P(X_i=1)=p   # or record observed outcomes
+compute summary statistics such as sample proportion if needed
+return outcomes (and summaries)
+```
+
+## Complexity
+- Time: \(O(n)\) for \(n\) simulated/observed trials
+- Space: \(O(n)\) to store all outcomes (or \(O(1)\) extra if only accumulating counts)
+- Assumptions: Independent Bernoulli-trial workflow shown; exact PMF/probability formulas are separate computations
+

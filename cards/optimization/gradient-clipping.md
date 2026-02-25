@@ -39,6 +39,22 @@ Gradient clipping limits gradient magnitude to prevent unstable, excessively lar
 ## Example
 If \(\|g\|=10\) and \(\tau=1\), the gradient is scaled down by \(0.1\).
 
+## How to Compute (Pseudocode)
+```text
+Input: gradient vector/tensor collection g, clipping threshold tau
+Output: clipped gradient g_clipped
+
+norm_g <- l2_norm(g)
+scale <- min(1, tau / norm_g)
+g_clipped <- scale * g
+return g_clipped
+```
+
+## Complexity
+- Time: \(O(p)\) to compute the gradient norm and rescale \(p\) parameters (once gradients are available)
+- Space: \(O(1)\) extra space beyond the gradient storage (or \(O(p)\) if writing to a separate clipped copy)
+- Assumptions: Norm clipping shown; value clipping and per-parameter-group clipping use different rules but similar linear-time scans
+
 ## See also
 - [Backpropagation](../deep-learning/backpropagation.md)
 - [Adam Optimizer](../optimization/adam.md)

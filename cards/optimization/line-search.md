@@ -41,6 +41,22 @@ Chooses a step size that reduces the objective along a direction.
 
 ## Example
 For \(f(x)=x^2\), at \(x=1\) with gradient 2,
-exact line search gives \(lpha=0.5\) (next \(x=0\)).
+exact line search gives \(\alpha=0.5\) (next \(x=0\)).
+## How to Compute (Pseudocode)
+```text
+Input: current point x, descent direction d, objective f, line-search rule
+Output: step size alpha
+
+alpha <- initial_step
+while line-search acceptance condition is not satisfied:
+  alpha <- shrink(alpha)   # for example, backtracking
+return alpha
+```
+
+## Complexity
+- Time: Depends on the line-search rule and number of objective/gradient evaluations tried per step (often a small iterative loop, but problem-dependent)
+- Space: \(O(1)\) extra space beyond objective/gradient evaluation storage
+- Assumptions: Inexact line search (for example, backtracking/Wolfe-style checks) rather than exact 1D minimization
+
 ## See also
 - [Gradient Descent](../optimization/gradient-descent.md)

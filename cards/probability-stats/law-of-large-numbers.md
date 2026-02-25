@@ -41,6 +41,21 @@ Sample averages converge in probability to the true mean.
 
 ## Example
 For coin flips with \(p=0.6\), the sample mean
-converges to 0.6 as \(n	o\infty\).
+converges to 0.6 as \(n\to\infty\).
+## How to Compute (Pseudocode)
+```text
+Input: assumptions/quantities required by the theorem or inequality (for example means, variances, sample size)
+Output: bound, approximation, or theorem-based diagnostic
+
+verify the theorem/inequality assumptions (at least approximately/in modeling terms)
+compute the bound or approximation using the card formula
+return the resulting bound/approximation and note its conditions
+```
+
+## Complexity
+- Time: Usually \(O(1)\) once the required summary quantities are available
+- Space: \(O(1)\)
+- Assumptions: This is a formula-application workflow; estimating required moments/parameters from data can dominate cost (often \(O(n)\))
+
 ## See also
 - [Expectation](../probability-stats/expectation.md)

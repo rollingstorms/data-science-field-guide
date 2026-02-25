@@ -40,5 +40,20 @@ Measures linear co-variation between two random variables.
 
 ## Example
 If \(X\) and \(Y\) are independent, then \(\operatorname{Cov}(X,Y)=0\).
+## How to Compute (Pseudocode)
+```text
+Input: sample data (and any reference values needed by the statistic)
+Output: statistic value
+
+compute the summary quantities required by the formula (for example, mean, deviations, counts)
+apply the statistic formula from the card
+return the result
+```
+
+## Complexity
+- Time: Typically \(O(n)\) for \(n\) samples for common one-pass or two-pass summary-statistic computations (sorting-based medians are \(O(n\log n)\) unless selection is used)
+- Space: \(O(1)\) to \(O(n)\) depending on whether values must be stored/sorted
+- Assumptions: Sample-statistic workflow shown; parameter-estimation and streaming/online algorithms can change constants and memory usage
+
 ## See also
 - [Correlation](../probability-stats/correlation.md)

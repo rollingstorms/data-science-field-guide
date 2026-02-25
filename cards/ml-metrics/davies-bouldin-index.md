@@ -41,6 +41,21 @@ Compares cluster spread to separation; each cluster is penalized by its most sim
 ## Example
 If each cluster has a nearby overlapping neighbor, the max ratios are large, so DB increases (worse clustering).
 
+## How to Compute (Pseudocode)
+```text
+Input: data points, cluster labels (and metric-specific settings)
+Output: Davies-Bouldin index
+
+compute the per-cluster and/or per-point quantities required by the metric
+aggregate them according to the metric definition
+return the metric value
+```
+
+## Complexity
+- Time: Depends on the metric and implementation; many clustering validation metrics require at least \(O(n)\) scans, and some need pairwise distances (up to \(O(n^2)\))
+- Space: Depends on whether pairwise distances are materialized (from \(O(1)\)/\(O(k)\) summaries up to \(O(n^2)\))
+- Assumptions: \(n\) points and cluster labels are given; exact cost depends on distance computation/caching and metric-specific formulas
+
 ## See also
 - [Silhouette Score](../ml-metrics/silhouette-score.md)
 - [Calinski-Harabasz Score](../ml-metrics/calinski-harabasz-score.md)

@@ -52,5 +52,22 @@ Tradeoff between precision and recall across thresholds.
 ## Example
 Two thresholds might give points
 \((\mathrm{Recall},\mathrm{Precision})=(0.9,0.6)\) and \((0.6,0.85)\).
+## How to Compute (Pseudocode)
+```text
+Input: scores p_hat[1..n], labels y[1..n]
+Output: PR curve points
+
+sort examples by score descending
+sweep a threshold from high to low through unique scores
+at each threshold, update confusion-matrix counts incrementally
+record the corresponding curve point (TPR/FPR for ROC or Precision/Recall for PR)
+return all curve points
+```
+
+## Complexity
+- Time: \(O(n\log n)\) due to sorting, plus a linear threshold sweep
+- Space: \(O(n)\) for sorted scores/labels and output curve points
+- Assumptions: Binary ranking scores; ties and interpolation conventions depend on the implementation
+
 ## See also
 - [Average Precision](../ml-metrics/average-precision.md)

@@ -38,6 +38,25 @@ Combines L1 and L2 penalties to balance sparsity and stability.
 ## Example
 Elastic net is common for text and genomics where predictors are numerous and correlated.
 
+## How to Compute (Pseudocode)
+```text
+Input: design matrix X, targets y, regularization lambda, mixing alpha
+Output: elastic-net coefficients beta
+
+initialize beta
+repeat until convergence:
+  for each coordinate j:
+    compute partial residual excluding feature j
+    apply coordinate update with L1 soft-thresholding and L2 shrinkage terms
+
+return beta
+```
+
+## Complexity
+- Time: Depends on the solver; coordinate-descent implementations are often analyzed similarly to lasso, roughly \(O(Tnd)\) for \(T\) passes on dense data
+- Space: Typically \(O(nd + d)\) for dense data and coefficient/work vectors
+- Assumptions: \(n\) samples, \(d\) features; costs depend on sparsity, convergence tolerance, and whether a regularization path over many \((\lambda, \alpha)\) settings is computed
+
 ## See also
 - [Linear Regression](../machine-learning/linear-regression.md)
 - [Regularization (L1/L2)](../optimization/regularization.md)

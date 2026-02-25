@@ -51,3 +51,19 @@ Penalizes confident wrong predictions heavily; corresponds to Bernoulli negative
 ## Example
 For \(y=1\) and \(p=0.8\),
 \(-\log p=-\log 0.8\).
+
+## How to Compute (Pseudocode)
+```text
+Input: predicted probabilities (or model likelihoods) and true labels/observations
+Output: log loss
+
+accumulate the negative log probability assigned to the observed outcomes
+average over examples if reporting mean loss
+return the aggregated value
+```
+
+## Complexity
+- Time: \(O(n)\) once per-example predicted probabilities/likelihood terms are available
+- Space: \(O(1)\) extra space for running accumulation
+- Assumptions: Exact formula depends on binary vs multiclass vs sequence likelihood setup; model forward-pass cost is excluded
+

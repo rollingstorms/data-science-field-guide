@@ -54,6 +54,21 @@ Activation functions add nonlinearity to neural networks so stacked layers can r
 ## Example
 For ReLU, if \(z=[-2,0.5]\), then \(\phi(z)=[0,0.5]\).
 
+## How to Compute (Pseudocode)
+```text
+Input: pre-activation vector z = W x + b, activation function phi
+Output: activated vector h
+
+for each component i:
+  h[i] <- phi(z[i])
+return h
+```
+
+## Complexity
+- Time: \(O(m)\) elementwise activation work for an \(m\)-dimensional pre-activation vector (excluding the matrix multiply to compute \(Wx+b\))
+- Space: \(O(m)\) for the activated output vector
+- Assumptions: Elementwise activations (softmax is a notable non-elementwise exception and has its own card)
+
 ## See also
 - [ReLU (Rectified Linear Unit)](../activations/relu.md)
 - [GELU](../activations/gelu.md)

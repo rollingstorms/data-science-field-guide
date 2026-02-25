@@ -49,3 +49,22 @@ A PDP shows the average model prediction as selected feature values vary while a
 
 ## Example
 Plot predicted churn risk versus monthly usage while averaging over other customer attributes.
+
+## How to Compute (Pseudocode)
+```text
+Input: trained model f, dataset X, target feature(s) S, grid values G
+Output: PDP values over the grid
+
+for each grid value z in G:
+  X_copy <- copy of X
+  set feature(s) S in every row of X_copy to z
+  preds <- model predictions f(X_copy)
+  PD[z] <- average(preds)
+
+return {(z, PD[z])}
+```
+
+## Complexity
+- Time: \(O(|G|\cdot \mathrm{PredCost}(X))\) for \(|G|\) grid points, where \(\mathrm{PredCost}(X)\) is the batch prediction cost on the dataset
+- Space: Typically \(O(n d)\) if modified dataset copies are materialized (or lower with in-place feature replacement)
+- Assumptions: \(n\) examples, \(d\) features; one-way PDP shown (two-way PDPs multiply grid size)

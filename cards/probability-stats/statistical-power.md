@@ -51,6 +51,23 @@ Power is the probability a test detects a real effect (i.e., correctly rejects \
 ## Example
 Before an experiment, compute sample size needed to achieve 80% power for a target effect size.
 
+## How to Compute (Pseudocode)
+```text
+Input: test family, significance level alpha, effect size assumptions, variance assumptions, candidate sample size(s)
+Output: power estimate(s) or required sample size
+
+choose the target test and alternative-effect scenario
+for each candidate sample size (or solve directly if formula exists):
+  compute the test's power under the assumed effect/variance model
+select the smallest sample size meeting target power (for planning) or report power curve
+return power/sample-size result
+```
+
+## Complexity
+- Time: Depends on the test and whether power is computed analytically or by simulation; grid-search planning scales with the number of candidate sample sizes checked
+- Space: \(O(1)\) to \(O(g)\) for a grid of \(g\) candidate sizes/effect scenarios
+- Assumptions: Model assumptions and effect-size inputs dominate validity; simulation-based power adds Monte Carlo cost
+
 ## See also
 - [Type I and Type II Errors](../probability-stats/type-i-type-ii-errors.md)
 - [Confidence Interval](../probability-stats/confidence-interval.md)

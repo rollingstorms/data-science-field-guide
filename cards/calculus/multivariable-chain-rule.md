@@ -40,6 +40,22 @@ The Jacobian of a composition is the matrix product of Jacobians in the correct 
 ## Example
 For neural nets, gradients propagate through layers by repeated Jacobian products (implicitly via vector-Jacobian products).
 
+## How to Compute (Pseudocode)
+```text
+Input: functions g: R^n -> R^m, f: R^m -> R^p, point x
+Output: Jacobian of f o g at x
+
+y <- g(x)
+Jg <- Jacobian of g at x
+Jf <- Jacobian of f at y
+return Jf * Jg
+```
+
+## Complexity
+- Time: Depends on the cost of computing the Jacobians and multiplying them (matrix multiply is \(O(pmn)\) in the dense naive case once Jacobians are available)
+- Space: Depends on whether full Jacobians are materialized (up to \(O(pm + mn + pn)\))
+- Assumptions: Full-Jacobian workflow shown; autodiff often uses Jacobian-vector/vector-Jacobian products instead of explicit Jacobian matrices
+
 ## See also
 - [Jacobian](../calculus/jacobian.md)
 - [Backpropagation](../deep-learning/backpropagation.md)

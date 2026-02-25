@@ -45,3 +45,23 @@ Compares actual within-community edges to the expected count under a degree-pres
 ## Example
 Graph with edges (1,2) and (3,4), communities {1,2} and {3,4}:
 \(m=2\), all degrees 1, and \(Q=0.5\).
+
+## How to Compute (Pseudocode)
+```text
+Input: graph G, community labels c[1..n]
+Output: modularity score Q
+
+compute node degrees k_i and total edge count/weight m
+Q <- 0
+for each pair (i, j) (or each edge/nonzero term in an optimized implementation):
+  if c[i] == c[j]:
+    Q <- Q + (A[i,j] - (k_i * k_j) / (2m))
+Q <- Q / (2m)
+return Q
+```
+
+## Complexity
+- Time: Depends on the implementation and representation; dense formula evaluation is \(O(n^2)\), while sparse/community-aggregated implementations can be much faster in practice
+- Space: Depends on graph representation; dense adjacency is \(O(n^2)\), sparse storage is typically \(O(|V|+|E|)\)
+- Assumptions: Undirected modularity formula shown; weighted/directed/resolution-parameter variants modify the computation
+

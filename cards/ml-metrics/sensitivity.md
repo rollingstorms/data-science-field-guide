@@ -38,6 +38,22 @@ Sensitivity measures how well a classifier captures actual positive cases.
 ## Example
 A disease screening test tuned to catch nearly all true cases aims for high sensitivity.
 
+## How to Compute (Pseudocode)
+```text
+Input: confusion-matrix counts
+Output: sensitivity
+
+compute the required numerator/denominator from TP, FP, FN, TN
+if denominator == 0:
+  return undefined (or use a task-specific convention)
+return numerator / denominator
+```
+
+## Complexity
+- Time: \(O(1)\) once confusion-matrix counts are available
+- Space: \(O(1)\)
+- Assumptions: Binary classification formula shown; computing the confusion matrix itself is typically \(O(n)\)
+
 ## See also
 - [Recall](../ml-metrics/recall.md)
 - [Specificity](../ml-metrics/specificity.md)

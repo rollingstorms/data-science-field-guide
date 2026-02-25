@@ -38,5 +38,25 @@ A permutation test builds a null distribution by shuffling labels/assignments un
 ## Example
 Shuffle treatment labels many times to test whether observed uplift exceeds chance.
 
+## How to Compute (Pseudocode)
+```text
+Input: data split into groups, test statistic T, number of permutations B
+Output: permutation p-value
+
+compute observed statistic T_obs
+count_extreme <- 0
+for b from 1 to B:
+  permute labels/assignments under the null
+  compute T_star on permuted data
+  if T_star is at least as extreme as T_obs:
+    count_extreme <- count_extreme + 1
+return (1 + count_extreme) / (B + 1)
+```
+
+## Complexity
+- Time: \(O(B \cdot \mathrm{StatCost})\), where \(\mathrm{StatCost}\) is the cost to recompute the test statistic after one permutation
+- Space: \(O(1)\) extra if statistics are streamed, or \(O(B)\) if storing all null statistics
+- Assumptions: Valid exchangeability under the null; \(B\) controls Monte Carlo error and runtime
+
 ## See also
 - [P-Value](../probability-stats/p-value.md)

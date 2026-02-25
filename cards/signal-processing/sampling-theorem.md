@@ -42,5 +42,25 @@ Bandlimited signals can be perfectly reconstructed from uniform samples.
 ## Example
 If a signal is bandlimited to 3 kHz, any
 \(f_s>6\) kHz (e.g., 8 kHz) is sufficient.
+## How to Compute (Pseudocode)
+```text
+Input: estimated signal bandwidth B, candidate sampling rate f_s
+Output: sampling-rate check (and reconstruction workflow note)
+
+nyquist_rate <- 2 * B
+if f_s >= nyquist_rate:
+  report "sampling theorem condition satisfied (ideal bandlimited case)"
+else:
+  report "aliasing risk: below Nyquist rate"
+
+# Practical workflow note:
+# apply anti-alias filtering before sampling; ideal reconstruction uses sinc interpolation
+```
+
+## Complexity
+- Time: \(O(1)\) for the Nyquist-rate check itself
+- Space: \(O(1)\)
+- Assumptions: This is a design/check workflow for the theorem condition; practical reconstruction/filtering cost depends on the implementation and signal length
+
 ## See also
 - [Aliasing](../signal-processing/aliasing.md)

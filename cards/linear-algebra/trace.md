@@ -39,6 +39,22 @@ The trace is the sum of diagonal entries of a square matrix.
 ## Example
 If \(A=\begin{bmatrix}1&2\\3&4\end{bmatrix}\), then \(\operatorname{tr}(A)=5\).
 
+## How to Compute (Pseudocode)
+```text
+Input: square matrix A (n x n)
+Output: trace(A)
+
+s <- 0
+for i from 1 to n:
+  s <- s + A[i,i]
+return s
+```
+
+## Complexity
+- Time: \(O(n)\) for an \(n\times n\) matrix when diagonal entries are directly accessible
+- Space: \(O(1)\) extra space
+- Assumptions: Square matrix input; matrix-loading/storage cost is excluded
+
 ## See also
 - [Determinant](../linear-algebra/determinant.md)
 - [Eigendecomposition](../linear-algebra/eigendecomposition.md)

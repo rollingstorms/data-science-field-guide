@@ -51,6 +51,23 @@ A classifier is calibrated when predicted probabilities match observed frequenci
 ## Example
 If predictions near 0.8 occur 80% positive in reality, that bin is well calibrated.
 
+## How to Compute (Pseudocode)
+```text
+Input: model scores/probabilities on calibration set, labels
+Output: calibrated prediction function g(. )
+
+fit a calibration model g using held-out calibration data
+  examples: Platt scaling (logistic) or isotonic regression
+
+for a new model score p_hat:
+  return g(p_hat)
+```
+
+## Complexity
+- Time: Depends on the calibration method (for example, Platt scaling is typically cheap iterative optimization; isotonic regression is near-linear after sorting)
+- Space: \(O(n)\) to store calibration examples or fitted calibration map (method-dependent)
+- Assumptions: \(n\) is calibration-set size; calibration is fit on held-out data separate from the final test set
+
 ## See also
 - [Calibration Error](../ml-metrics/calibration-error.md)
 - [Threshold Selection](../machine-learning/threshold-selection.md)

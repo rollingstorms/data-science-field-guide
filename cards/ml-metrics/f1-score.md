@@ -41,6 +41,21 @@ Harmonic mean of precision and recall.
 ## Example
 With \(\mathrm{Precision}=0.75\) and \(\mathrm{Recall}=0.857\),
 \(F_1=0.8\).
+## How to Compute (Pseudocode)
+```text
+Input: precision P, recall R (or confusion-matrix counts)
+Output: F1 score
+
+if P + R == 0:
+  return undefined (or 0 by convention)
+return 2 * P * R / (P + R)
+```
+
+## Complexity
+- Time: \(O(1)\) once precision and recall are available
+- Space: \(O(1)\)
+- Assumptions: Binary F1 shown; macro/micro/weighted F1 aggregate per-class values and add class-wise loops
+
 ## See also
 - [Precision](../ml-metrics/precision.md)
 - [Recall](../ml-metrics/recall.md)

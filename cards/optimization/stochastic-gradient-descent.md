@@ -40,7 +40,25 @@ Uses noisy gradient estimates to optimize large-scale objectives.
 
 
 ## Example
-If \(g=2\), \(x=1\), \(lpha=0.1\), then
-\(x_{	ext{new}}=1-0.1\cdot2=0.8\).
+If \(g=2\), \(x=1\), \(\alpha=0.1\), then
+\(x_{\text{new}}=1-0.1\cdot2=0.8\).
+## How to Compute (Pseudocode)
+```text
+Input: data D, stochastic gradient estimator g(.), initial parameters theta, learning-rate schedule eta_t, steps T
+Output: trained parameters theta
+
+theta <- theta0
+for t from 1 to T:
+  sample a mini-batch B_t from D
+  g_t <- stochastic_gradient(theta, B_t)
+  theta <- theta - eta_t * g_t
+return theta
+```
+
+## Complexity
+- Time: \(O(T \cdot \mathrm{BatchGradCost})\); for dense models this is often proportional to batch size \(b\) and parameter count \(p\)
+- Space: Typically \(O(p)\) model/gradient state plus mini-batch storage
+- Assumptions: \(T\) update steps, mini-batch SGD workflow; data pipeline and hardware parallelism strongly affect runtime
+
 ## See also
 - [Gradient Descent](../optimization/gradient-descent.md)

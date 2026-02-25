@@ -43,6 +43,21 @@ Global minimum cut finds the cheapest way to separate a graph into two nonempty 
 ## Example
 If the smallest set of edges whose removal disconnects a graph has total weight 3, then the global minimum cut value is 3.
 
+## How to Compute (Pseudocode)
+```text
+Input: graph G
+Output: global minimum cut value (and partition)
+
+choose a global min-cut algorithm (for example, Stoer-Wagner or repeated Karger trials)
+run the algorithm on G
+return the minimum cut value and corresponding partition
+```
+
+## Complexity
+- Time: Depends on the chosen algorithm (for example, randomized contraction methods vs deterministic global min-cut algorithms)
+- Space: Depends on the chosen algorithm and graph representation
+- Assumptions: Undirected global min-cut setting unless otherwise specified; directed variants use different algorithms/definitions
+
 ## See also
 - [Minimum Cut](../graphs/minimum-cut.md)
 - [Karger's Algorithm (Min Cut)](../graphs/karger-min-cut.md)

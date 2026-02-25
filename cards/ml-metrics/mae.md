@@ -53,3 +53,20 @@ Average absolute prediction error.
 ## Example
 If errors are \([-1, 2, 0]\),
 \(\mathrm{MAE}=(1+2+0)/3=1.000\).
+
+## How to Compute (Pseudocode)
+```text
+Input: true values y[1..n], predictions y_hat[1..n]
+Output: MAE
+
+sum_abs <- 0
+for i from 1 to n:
+  sum_abs <- sum_abs + abs(y[i] - y_hat[i])
+return sum_abs / n
+```
+
+## Complexity
+- Time: \(O(n)\)
+- Space: \(O(1)\) extra space
+- Assumptions: \(n\) paired predictions/targets; prediction-generation cost is excluded
+

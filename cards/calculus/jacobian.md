@@ -39,6 +39,23 @@ The Jacobian is the matrix of first-order partial derivatives for a vector-value
 ## Example
 If \(f(x,y)=(x+y,xy)\), then \(J_f=\begin{bmatrix}1&1\\ y&x\end{bmatrix}\).
 
+## How to Compute (Pseudocode)
+```text
+Input: vector function f=(f1,...,fm): R^n -> R^m, point x
+Output: Jacobian matrix J of size m x n
+
+for i from 1 to m:
+  for j from 1 to n:
+    J[i,j] <- partial derivative of f_i with respect to x_j evaluated at x
+
+return J
+```
+
+## Complexity
+- Time: \(O(mn)\) partial-derivative evaluations at a high level
+- Space: \(O(mn)\) to store the Jacobian matrix
+- Assumptions: Excludes the internal cost of each derivative evaluation; structured/autodiff methods may compute Jacobian-vector products more efficiently than forming the full matrix
+
 ## See also
 - [Gradient](../calculus/gradient.md)
 - [Multivariable Chain Rule](../calculus/multivariable-chain-rule.md)

@@ -55,6 +55,21 @@ Swish/SiLU multiplies the input by a sigmoid gate, giving a smooth activation th
 ## Example
 At \(x=0\), \(\mathrm{SiLU}(0)=0\). For large positive \(x\), \(\mathrm{SiLU}(x)\approx x\).
 
+## How to Compute (Pseudocode)
+```text
+Input: tensor/vector x
+Output: y = SiLU/Swish(x) applied elementwise
+
+for each element x_i in x:
+  y_i <- x_i * sigmoid(beta * x_i)   # beta=1 for SiLU
+return y
+```
+
+## Complexity
+- Time: \(O(m)\) elementwise operations for \(m\) inputs
+- Space: \(O(m)\) for the output tensor/vector (or \(O(1)\) extra if done in place)
+- Assumptions: Elementwise application over \(m\) scalars; exact constant factors depend on operations like \(\exp\), \(\tanh\), or \(\mathrm{erf}/\Phi\) approximations
+
 ## See also
 - [GELU](../activations/gelu.md)
 - [Sigmoid](../activations/sigmoid.md)

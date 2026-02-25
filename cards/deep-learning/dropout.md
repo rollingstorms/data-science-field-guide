@@ -40,6 +40,22 @@ Randomly zeroes activations during training to reduce co-adaptation and overfitt
 ## Example
 With \(p=0.1\), about 10% of activations are zeroed each training step.
 
+## How to Compute (Pseudocode)
+```text
+Input: activations h, dropout rate p, mode (train/inference)
+Output: dropout-transformed activations
+
+if inference mode:
+  return h
+sample mask m with m_i ~ Bernoulli(1-p)
+return (m * h) / (1-p)   # inverted dropout
+```
+
+## Complexity
+- Time: \(O(m)\) elementwise masking/scaling for \(m\) activation values
+- Space: \(O(m)\) for the sampled mask during training (or less if fused/implicit)
+- Assumptions: Inverted-dropout formulation; total training cost is dominated by surrounding forward/backward computations
+
 ## See also
 - [MLP (Multi-Layer Perceptron)](../deep-learning/mlp.md)
 - [Regularization (L1/L2)](../optimization/regularization.md)

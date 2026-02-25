@@ -39,6 +39,23 @@ The Hessian captures local curvature of a scalar function.
 ## Example
 For \(f(x,y)=x^2+3y^2\), \(H_f=\begin{bmatrix}2&0\\0&6\end{bmatrix}\).
 
+## How to Compute (Pseudocode)
+```text
+Input: scalar function f: R^n -> R, point x
+Output: Hessian matrix H (n x n)
+
+for i from 1 to n:
+  for j from 1 to n:
+    H[i,j] <- second partial derivative d^2 f / (d x_i d x_j) evaluated at x
+
+return H
+```
+
+## Complexity
+- Time: \(O(n^2)\) second-derivative evaluations at a high level
+- Space: \(O(n^2)\) to store the Hessian matrix
+- Assumptions: Excludes the internal cost of each derivative evaluation; autodiff/Hessian-vector-product methods may avoid forming the full Hessian
+
 ## See also
 - [Gradient](../calculus/gradient.md)
 - [Newton's Method](../optimization/newton-method.md)

@@ -37,3 +37,25 @@ Measures importance by how much performance drops when a feature’s information
 
 ## Example
 If permuting "account_age" sharply drops AUC, the feature is important for the model’s ranking.
+
+## How to Compute (Pseudocode)
+```text
+Input: trained model f, evaluation set (X, y), metric M, repeats R
+Output: feature importances I_j
+
+baseline <- evaluate metric M on (X, y)
+for each feature j:
+  drops <- empty list
+  for r from 1 to R:
+    X_perm <- copy of X with column j randomly permuted
+    score_perm <- evaluate metric M on (X_perm, y)
+    append (baseline - score_perm) to drops   # for higher-is-better metrics
+  I_j <- average(drops)
+
+return {I_j}
+```
+
+## Complexity
+- Time: \(O(dR\cdot \mathrm{EvalCost})\) for \(d\) features and \(R\) permutations per feature, where \(\mathrm{EvalCost}\) is the model+metric evaluation cost on the held-out set
+- Space: Typically \(O(n d)\) if permuted copies are materialized (less with in-place permutation/restoration)
+- Assumptions: \(n\) examples, \(d\) features; evaluation is performed on held-out data, and repeated permutations are used to reduce variance

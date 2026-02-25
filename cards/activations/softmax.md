@@ -39,6 +39,25 @@ Softmax converts a vector of real-valued scores (logits) into a probability dist
 ## Example
 If \(z=[1,2]\), then \(\mathrm{softmax}(z)\approx [0.269,0.731]\).
 
+## How to Compute (Pseudocode)
+```text
+Input: logits z[1..K]
+Output: probabilities p[1..K]
+
+z_max <- max_i z[i]            # numerical stability trick
+for i from 1 to K:
+  e[i] <- exp(z[i] - z_max)
+den <- sum_{i=1..K} e[i]
+for i from 1 to K:
+  p[i] <- e[i] / den
+return p
+```
+
+## Complexity
+- Time: \(O(K)\) for a \(K\)-class logit vector
+- Space: \(O(K)\) for exponentials/output probabilities (or \(O(1)\) extra in place)
+- Assumptions: One logit vector shown; batched softmax scales linearly with batch size and sequence dimensions
+
 ## See also
 - [Attention](../deep-learning/attention.md)
 - [Sigmoid](../activations/sigmoid.md)

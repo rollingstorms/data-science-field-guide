@@ -39,6 +39,22 @@ Temperature rescales logits before softmax to control randomness in sampling.
 ## Example
 At \(T=0.7\), top tokens become more concentrated than at \(T=1.0\).
 
+## How to Compute (Pseudocode)
+```text
+Input: logits z[1..V], temperature T
+Output: sampled token (or adjusted distribution)
+
+scale logits: z'[i] <- z[i] / T
+p <- softmax(z')
+sample next token from p
+return token (or p)
+```
+
+## Complexity
+- Time: \(O(V)\) per decoding step for vocabulary size \(V\) (softmax + sampling), excluding model forward-pass cost
+- Space: \(O(V)\) for logits/probabilities at the decoding step
+- Assumptions: One decoding step shown; total generation cost multiplies by generated length and is often dominated by model inference
+
 ## See also
 - [Top-k Sampling](../nlp/top-k-sampling.md)
 - [Top-p Sampling (Nucleus)](../nlp/top-p-sampling.md)

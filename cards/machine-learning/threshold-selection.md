@@ -49,6 +49,29 @@ Converts scores or probabilities into decisions by choosing a cutoff aligned wit
 ## Example
 Choose a threshold that keeps false positives under a review-team capacity while maximizing recall.
 
+## How to Compute (Pseudocode)
+```text
+Input: validation scores p_hat[1..n], labels y[1..n], objective/constraint
+Output: selected threshold t*
+
+candidate_thresholds <- sorted unique scores (or a grid)
+best_t <- default_threshold
+best_value <- -infinity
+
+for each threshold t in candidate_thresholds:
+  predictions <- 1[p_hat >= t]
+  metrics <- compute validation metrics/objective
+  if metrics satisfy constraints and improve objective:
+    update best_t, best_value
+
+return best_t
+```
+
+## Complexity
+- Time: \(O(nL)\) for a straightforward scan over \(L\) candidate thresholds on \(n\) validation examples (can be improved with sorting/cumulative counts)
+- Space: \(O(n)\) for scores/labels and optional sorted copies
+- Assumptions: Threshold is chosen on validation data; \(L\) depends on whether a full unique-score scan or a coarse grid is used
+
 ## See also
 - [Confusion Matrix](../ml-metrics/confusion-matrix.md)
 - [Class Imbalance](../machine-learning/class-imbalance.md)

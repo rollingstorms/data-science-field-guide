@@ -37,6 +37,23 @@ Class imbalance means one class is much rarer than another, which changes traini
 ## Example
 With 1% fraud prevalence, a model predicting all negatives gets 99% accuracy but zero recall.
 
+## How to Compute (Pseudocode)
+```text
+Input: labeled dataset and task objective
+Output: imbalance-aware training/evaluation setup
+
+measure class prevalence and baseline class counts
+choose metrics aligned with costs (for example precision/recall, PR AUC)
+choose mitigation strategy if needed (class weights, resampling, threshold tuning)
+validate using leakage-safe splits (often stratified)
+report metrics by class and at the chosen threshold
+```
+
+## Complexity
+- Time: Mostly \(O(n)\) data scans for prevalence/metrics, plus the cost of the chosen training and validation workflow
+- Space: Depends on whether resampled datasets, weights, or per-class reports are materialized
+- Assumptions: Exact cost is dominated by the mitigation/training method rather than imbalance measurement itself
+
 ## See also
 - [Confusion Matrix](../ml-metrics/confusion-matrix.md)
 - [Threshold Selection](../machine-learning/threshold-selection.md)

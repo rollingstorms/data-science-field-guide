@@ -40,6 +40,21 @@ A confidence interval is a data-derived range produced by a procedure that captu
 ## Example
 Estimate a mean and report \(\hat\mu \pm 1.96\cdot \mathrm{SE}(\hat\mu)\) for an approximate 95% CI.
 
+## How to Compute (Pseudocode)
+```text
+Input: estimator theta_hat, standard error estimate SE(theta_hat), confidence level, critical-value method
+Output: confidence interval
+
+compute the critical value for the chosen confidence level/test distribution
+compute margin <- critical_value * SE(theta_hat)
+return [theta_hat - margin, theta_hat + margin]   # or a one-sided variant
+```
+
+## Complexity
+- Time: \(O(1)\) once the estimator and standard error are available
+- Space: \(O(1)\)
+- Assumptions: The dominant cost is usually estimating \(\hat\theta\) and \(SE(\hat\theta)\), not the interval arithmetic itself
+
 ## See also
 - [P-Value](../probability-stats/p-value.md)
 - [Z-Score](../probability-stats/z-score.md)

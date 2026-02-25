@@ -42,5 +42,22 @@ Decomposes a signal into its frequency components.
 ## Example
 The Fourier transform of \(\cos(2\pi f_0 t)\) is two impulses at
 \(\pm f_0\).
+## How to Compute (Pseudocode)
+```text
+Input: signal x(t), frequency grid w[1..K]
+Output: approximate transform values X[w_j]
+
+for each frequency w_j in the grid:
+  approximate X[w_j] <- integral of x(t) * exp(-i * w_j * t) over t
+  # in practice: truncate the time range and use numerical quadrature or sampled approximations
+
+return sampled transform values
+```
+
+## Complexity
+- Time: Depends on the numerical method and discretization (for example, direct quadrature over \(K\) frequencies and \(T\) time samples is often \(O(KT)\))
+- Space: Depends on discretization; typically at least \(O(K)\) for the sampled output
+- Assumptions: Continuous Fourier transforms are usually computed numerically on truncated/sampled domains; exact symbolic transforms are a different workflow
+
 ## See also
 - [Convolution](../signal-processing/convolution.md)

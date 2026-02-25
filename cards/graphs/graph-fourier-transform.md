@@ -48,6 +48,24 @@ Low graph frequencies vary smoothly across connected nodes; high graph frequenci
 ## Example
 If neighboring nodes have similar values, most energy of \(x\) is concentrated in low-frequency GFT coefficients; a high-frequency noise component appears in larger-eigenvalue modes.
 
+## How to Compute (Pseudocode)
+```text
+Input: graph Laplacian L, node signal x
+Output: graph Fourier coefficients x_hat
+
+compute eigendecomposition L = U Lambda U^T  (for symmetric Laplacian)
+x_hat <- U^T x
+
+# Inverse transform (optional reconstruction)
+x_reconstructed <- U x_hat
+return x_hat
+```
+
+## Complexity
+- Time: \(O(n^3)\) for dense eigendecomposition plus \(O(n^2)\) for the matrix-vector transform in dense form
+- Space: \(O(n^2)\) to store dense eigenvectors (plus \(O(n)\) for signals)
+- Assumptions: \(n=|V|\); dense symmetric Laplacian eigendecomposition; sparse/partial spectral methods can reduce cost when only a subset of modes is needed
+
 ## See also
 - [Graph Laplacian](../graphs/laplacian.md)
 - [Spectral Clustering](../graphs/spectral-clustering.md)

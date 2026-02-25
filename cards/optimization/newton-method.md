@@ -42,5 +42,24 @@ Uses curvature information for faster local convergence.
 ## Example
 For \(f(x)=x^2-2\), \(x_0=1\):
 \(x_1=1-(-1)/2=1.5\).
+## How to Compute (Pseudocode)
+```text
+Input: objective f, gradient grad_f, Hessian hess_f, initial x0, iterations T
+Output: approximate minimizer x
+
+x <- x0
+for k from 1 to T:
+  g <- grad_f(x)
+  H <- hess_f(x)
+  solve H * delta = g
+  x <- x - delta        # optionally use damping/line search
+return x
+```
+
+## Complexity
+- Time: Per iteration cost is dominated by gradient/Hessian evaluation and solving a linear system (dense solve often \(O(p^3)\) for \(p\) variables)
+- Space: Often \(O(p^2)\) to store a dense Hessian plus \(O(p)\) vectors
+- Assumptions: Dense full-Newton workflow shown; quasi-Newton and Hessian-vector methods have different costs and memory profiles
+
 ## See also
 - [Gradient Descent](../optimization/gradient-descent.md)

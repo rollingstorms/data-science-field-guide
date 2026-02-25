@@ -41,3 +41,29 @@ Iteratively updates node labels to match the most frequent label in the neighbor
 
 ## Example
 If node \(i\) has neighbors labeled \([2,2,3]\), then \(\ell_i\leftarrow 2\).
+## How to Compute (Pseudocode)
+```text
+Input: graph G=(V,E), max iterations T
+Output: node labels l[.]
+
+initialize each node with a unique label
+
+for iter from 1 to T:
+  changed <- false
+  for each node i (often in random order):
+    choose the most frequent neighbor label around i
+    break ties by a fixed rule or randomly
+    if new label differs from l[i]:
+      l[i] <- new label
+      changed <- true
+  if not changed:
+    break
+
+return labels l
+```
+
+## Complexity
+- Time: Typically \(O(T|E|)\) for \(T\) passes over neighborhoods
+- Space: \(O(|V|+|E|)\) including graph storage and labels
+- Assumptions: Neighborhood scans dominate cost; runtime and output depend on update order and tie-breaking strategy
+

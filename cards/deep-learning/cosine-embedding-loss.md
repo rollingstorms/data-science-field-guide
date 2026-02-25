@@ -54,5 +54,25 @@ Pulls similar pairs to have high cosine similarity and pushes dissimilar pairs b
 ## Example
 For a similar pair with \(\cos(x_i,x_j)=0.9\), the loss term is \(0.1\).
 
+## How to Compute (Pseudocode)
+```text
+Input: embedding pairs (x_i, x_j), pair labels y_ij, margin m
+Output: average cosine embedding loss
+
+for each pair:
+  compute cosine similarity c = cos(x_i, x_j)
+  if y_ij == 1:
+    loss_pair <- 1 - c
+  else:
+    loss_pair <- max(0, c - m)
+average all pair losses
+return loss
+```
+
+## Complexity
+- Time: \(O(Pd)\) for \(P\) embedding pairs of dimension \(d\) (assuming cosine similarities are computed directly)
+- Space: \(O(1)\) extra accumulation space beyond storing the pairs/embeddings (or \(O(P)\) if storing all pair losses)
+- Assumptions: Pairwise loss computation shown; training cost also includes encoder forward/backward passes that produce the embeddings
+
 ## See also
 - [Embedding](../deep-learning/embedding.md)

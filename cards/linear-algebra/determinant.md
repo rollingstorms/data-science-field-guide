@@ -43,6 +43,22 @@ The determinant measures volume scaling (and orientation sign) of the linear map
 ## Example
 \(\det\!\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc\).
 
+## How to Compute (Pseudocode)
+```text
+Input: square matrix A
+Output: det(A)
+
+compute an LU decomposition with row permutations: P A = L U
+sign <- sign of the permutation matrix P
+detA <- sign * product of diagonal entries of U
+return detA
+```
+
+## Complexity
+- Time: \(O(n^3)\) for dense \(n\times n\) matrices using LU-type methods
+- Space: \(O(n^2)\) for dense matrix/factor storage
+- Assumptions: LU-based numerical computation shown; direct cofactor expansion is exponentially expensive and used only for tiny symbolic examples
+
 ## See also
 - [Eigenvalues and Eigenvectors](../linear-algebra/eigenvalues-eigenvectors.md)
 - [Condition Number](../linear-algebra/condition-number.md)

@@ -53,5 +53,21 @@ Area under the precision-recall curve using a stepwise approximation.
 ## Example
 If every positive is ranked before any negative,
 AP = 1.0.
+## How to Compute (Pseudocode)
+```text
+Input: scores p_hat[1..n], labels y[1..n]
+Output: average precision (AP)
+
+sort examples by score descending
+sweep down the ranked list and compute precision/recall at each positive instance
+accumulate the precision-weighted recall increments
+return AP
+```
+
+## Complexity
+- Time: \(O(n\log n)\) due to sorting, plus a linear sweep over the ranked list
+- Space: \(O(n)\) for sorted scores/labels (and optional precision-recall arrays)
+- Assumptions: Binary relevance ranking setup; AP conventions can differ slightly across libraries/interpolation rules
+
 ## See also
 - [Precision-Recall Curve](../ml-metrics/pr-curve.md)

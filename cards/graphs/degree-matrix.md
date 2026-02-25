@@ -42,5 +42,23 @@ Diagonal matrix collecting node degrees.
 ## Example
 If degrees are \([2,1,1]\), then
 \(D=\operatorname{diag}(2,1,1)\).
+## How to Compute (Pseudocode)
+```text
+Input: adjacency matrix A (n x n)
+Output: degree matrix D (n x n)
+
+initialize D as an n x n zero matrix
+for i from 1 to n:
+  d_i <- sum of row i of A   # use column sum instead if using in-degree convention
+  D[i,i] <- d_i
+
+return D
+```
+
+## Complexity
+- Time: \(O(n^2)\) from summing rows of an \(n\times n\) adjacency matrix
+- Space: \(O(n^2)\) for the degree matrix (or \(O(n)\) for just the degree vector)
+- Assumptions: Matrix-based graph representation; directed graphs require a consistent in-degree vs out-degree convention
+
 ## See also
 - [Adjacency Matrix](../graphs/adjacency-matrix.md)

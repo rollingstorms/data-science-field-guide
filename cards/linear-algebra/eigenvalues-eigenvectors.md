@@ -40,6 +40,22 @@ An eigenvector keeps its direction under \(A\), scaled by eigenvalue \(\lambda\)
 ## Example
 For \(A=\operatorname{diag}(2,3)\), basis vectors are eigenvectors with eigenvalues 2 and 3.
 
+## How to Compute (Pseudocode)
+```text
+Input: square matrix A
+Output: eigenvalues lambda and eigenvectors v (when requested)
+
+run an eigensolver (for example, QR-based methods for dense matrices)
+extract eigenvalues from the solver output
+compute/recover eigenvectors if needed
+return eigenvalues (and eigenvectors)
+```
+
+## Complexity
+- Time: Typically \(O(n^3)\) for dense eigensolver methods on an \(n\times n\) matrix
+- Space: \(O(n^2)\) for dense matrix/factor storage
+- Assumptions: Dense direct eigensolver workflow shown; sparse/iterative methods can compute only a few eigenpairs more cheaply
+
 ## See also
 - [Eigendecomposition](../linear-algebra/eigendecomposition.md)
 - [Determinant](../linear-algebra/determinant.md)

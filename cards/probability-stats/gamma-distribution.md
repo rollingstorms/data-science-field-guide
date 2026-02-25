@@ -51,6 +51,23 @@ A flexible positive-valued distribution that generalizes the exponential distrib
 ## Example
 The waiting time until the 3rd Poisson event follows a Gamma distribution.
 
+## How to Compute (Pseudocode)
+```text
+Input: distribution parameters and query values (for PMF/PDF/CDF or moments)
+Output: distribution quantities
+
+validate parameters
+for each query value x (or count k):
+  evaluate the PMF/PDF/CDF formula from the card
+optionally compute moments/statistics from known closed forms or by summation/integration
+return the requested values
+```
+
+## Complexity
+- Time: Typically \(O(q)\) for \(q\) query values once parameters are known (assuming constant-time formula evaluation per query)
+- Space: \(O(q)\) for output values (or \(O(1)\) for a single query)
+- Assumptions: Parameter estimation/fitting cost is excluded; numerical special-function evaluation can affect constants for some families
+
 ## See also
 - [Exponential Distribution](../probability-stats/exponential-distribution.md)
 - [Beta Distribution](../probability-stats/beta-distribution.md)

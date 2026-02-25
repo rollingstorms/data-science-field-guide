@@ -39,6 +39,22 @@ Conditional probability updates probabilities when you already know some event \
 ## Example
 From a deck, let \(A=\) "card is a king", \(B=\) "card is a face card." Then \(P(A\mid B)=4/12=1/3\).
 
+## How to Compute (Pseudocode)
+```text
+Input: event probabilities / joint distribution entries
+Output: requested probability quantity
+
+identify the relevant events/variables and required joint/marginal terms
+apply the probability identity in the card formula
+check denominator/normalization terms are valid (nonzero when required)
+return the computed probability
+```
+
+## Complexity
+- Time: Typically \(O(1)\) for a single event computation once required probabilities are available; larger table-based calculations scale with table size
+- Space: \(O(1)\) extra space for a single computation
+- Assumptions: Probability terms (joint/marginals/conditionals) are already known or computed separately
+
 ## See also
 - [Bayes' Rule](../probability-stats/bayes-rule.md)
 - [Joint Probability](../probability-stats/joint-probability.md)

@@ -46,6 +46,26 @@ Adam combines momentum and adaptive per-parameter step sizes using running gradi
 ## Example
 Transformer training often starts with Adam/AdamW plus learning-rate warmup.
 
+## How to Compute (Pseudocode)
+```text
+Input: gradients g_t, parameters theta, lr eta, betas beta1,beta2, epsilon, steps T
+Output: updated parameters theta
+
+initialize m <- 0, v <- 0
+for t from 1 to T:
+  m <- beta1 * m + (1 - beta1) * g_t
+  v <- beta2 * v + (1 - beta2) * (g_t * g_t)
+  m_hat <- m / (1 - beta1^t)
+  v_hat <- v / (1 - beta2^t)
+  theta <- theta - eta * m_hat / (sqrt(v_hat) + epsilon)
+return theta
+```
+
+## Complexity
+- Time: \(O(Tp)\) elementwise optimizer-state updates once gradients are available (plus gradient computation cost)
+- Space: \(O(p)\) additional space for first- and second-moment accumulators (about 2 extra parameter-sized buffers)
+- Assumptions: \(p\) parameters; bias-corrected Adam update shown; backprop/gradient computation usually dominates end-to-end training cost
+
 ## See also
 - [AdamW Optimizer](../optimization/adamw.md)
 - [Momentum](../optimization/momentum.md)

@@ -54,6 +54,21 @@ ELU behaves like ReLU for positive inputs but uses a smooth exponential curve fo
 ## Example
 With \(\alpha=1\), \(\mathrm{ELU}(-1)=e^{-1}-1\approx -0.632\).
 
+## How to Compute (Pseudocode)
+```text
+Input: tensor/vector x
+Output: y = ELU(x) applied elementwise
+
+for each element x_i in x:
+  y_i <- x_i if x_i > 0 else alpha * (exp(x_i) - 1)
+return y
+```
+
+## Complexity
+- Time: \(O(m)\) elementwise operations for \(m\) inputs
+- Space: \(O(m)\) for the output tensor/vector (or \(O(1)\) extra if done in place)
+- Assumptions: Elementwise application over \(m\) scalars; exact constant factors depend on operations like \(\exp\), \(\tanh\), or \(\mathrm{erf}/\Phi\) approximations
+
 ## See also
 - [ReLU (Rectified Linear Unit)](../activations/relu.md)
 - [SELU](../activations/selu.md)

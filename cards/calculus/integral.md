@@ -43,6 +43,24 @@ An integral accumulates quantities (often area under a curve) over an interval.
 ## Example
 \(\int_0^1 x\,dx = 1/2\).
 
+## How to Compute (Pseudocode)
+```text
+Input: function f, interval [a,b], numerical integration method, subdivisions n
+Output: approximate integral value
+
+# Example: composite trapezoidal rule
+h <- (b - a) / n
+total <- 0.5 * f(a) + 0.5 * f(b)
+for i from 1 to n-1:
+  total <- total + f(a + i*h)
+return h * total
+```
+
+## Complexity
+- Time: \(O(n)\) function evaluations for common fixed-grid numerical rules (for example, trapezoidal or midpoint)
+- Space: \(O(1)\) extra space
+- Assumptions: Numerical approximation of a definite integral is shown; symbolic integration uses different algorithms/workflows
+
 ## See also
 - [PDF (Probability Density Function)](../probability-stats/pdf.md)
 - [Derivative](../calculus/derivative.md)

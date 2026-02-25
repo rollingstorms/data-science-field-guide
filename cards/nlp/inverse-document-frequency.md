@@ -40,3 +40,23 @@ Downweights terms that appear in many documents.
 
 ## Example
 If \(N=1000\) and \(\mathrm{df}(t)=10\), then \(\mathrm{idf}=\log(100)\).
+
+## How to Compute (Pseudocode)
+```text
+Input: corpus of N documents
+Output: IDF values for terms
+
+initialize document-frequency counts df(term) <- 0
+for each document:
+  collect unique terms in the document
+  increment df(term) once per term present
+for each term:
+  idf(term) <- log(N / df(term))   # or a smoothed variant
+return IDF values
+```
+
+## Complexity
+- Time: Linear in the total number of tokens (or unique-term occurrences) across the corpus, plus per-term IDF computation
+- Space: Depends on vocabulary size \(V\) (typically \(O(V)\) for document-frequency tables)
+- Assumptions: Tokenized corpus; smoothing and log-base choices affect values but not the overall asymptotic pattern
+

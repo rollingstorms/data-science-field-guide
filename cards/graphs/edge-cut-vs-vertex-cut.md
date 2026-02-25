@@ -45,6 +45,25 @@ Edge cuts disconnect a graph by removing edges; vertex cuts disconnect it by rem
 ## Example
 A star graph has edge connectivity 1 and vertex connectivity 1, but many graphs have different values for the two measures.
 
+## How to Compute (Pseudocode)
+```text
+Input: graph G and a connectivity question (edge cut or vertex cut)
+Output: appropriate cut formulation/result
+
+if the problem is about removing links/edges:
+  formulate an edge-cut problem (possibly as a min-cut / max-flow instance)
+else if the problem is about removing nodes:
+  formulate a vertex-cut problem
+  optionally reduce to edge cut via node splitting for computation
+
+solve with the appropriate algorithm and report the cut set/value
+```
+
+## Complexity
+- Time: Depends on the chosen cut formulation and solver (edge-cut and vertex-cut computations can have different reductions/algorithms)
+- Space: Depends on the solver and whether graph transformations (such as node splitting) are materialized
+- Assumptions: This card is a formulation/selection guide; \(s\)-\(t\) vs global variants and weighted vs unweighted settings change the computational workflow
+
 ## See also
 - [Minimum Cut](../graphs/minimum-cut.md)
 - [Connected Components](../graphs/connected-components.md)

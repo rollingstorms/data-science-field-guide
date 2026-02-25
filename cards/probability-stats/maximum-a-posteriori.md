@@ -42,6 +42,21 @@ MAP estimation chooses the most probable parameter value after combining data li
 ## Example
 Gaussian prior on weights plus Gaussian noise yields a ridge-like objective (L2 regularization).
 
+## How to Compute (Pseudocode)
+```text
+Input: data likelihood p(x|theta) and prior p(theta)
+Output: MAP estimate theta_hat
+
+form the log posterior up to a constant: log p(x|theta) + log p(theta)
+maximize it over theta (closed form or numerical optimization)
+return the maximizing theta_hat
+```
+
+## Complexity
+- Time: Depends on posterior objective evaluation and optimization method (same iterative considerations as MLE, plus prior terms)
+- Space: Depends on parameter dimension and optimizer state, plus data storage
+- Assumptions: Posterior normalization constant is not needed for MAP optimization; optimization method determines runtime details
+
 ## See also
 - [Maximum Likelihood Estimation (MLE)](../probability-stats/maximum-likelihood-estimation.md)
 - [Bayes' Rule](../probability-stats/bayes-rule.md)

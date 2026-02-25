@@ -40,6 +40,23 @@ Top-p sampling keeps a dynamic set of likely tokens whose cumulative probability
 ## Example
 If the distribution is very sharp, top-p with \(p=0.9\) may keep only a handful of tokens.
 
+## How to Compute (Pseudocode)
+```text
+Input: next-token probabilities/logits and nucleus threshold p
+Output: sampled token
+
+compute probabilities (or sorted logits -> probabilities)
+sort tokens by probability descending
+accumulate probability mass until cumulative mass >= p
+keep that smallest prefix set, renormalize, and sample one token
+return token
+```
+
+## Complexity
+- Time: Often dominated by sorting/ranking over vocabulary \(V\) per decoding step (commonly \(O(V\log V)\) unless approximated), excluding model forward-pass cost
+- Space: \(O(V)\) for probabilities/logits and sorted indices, plus the selected nucleus set
+- Assumptions: One decoding step shown; implementations may use partial sorting or fused filters to reduce constants
+
 ## See also
 - [Top-k Sampling](../nlp/top-k-sampling.md)
 - [Temperature (Sampling)](../nlp/temperature-sampling.md)

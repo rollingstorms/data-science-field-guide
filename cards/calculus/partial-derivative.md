@@ -40,6 +40,24 @@ A partial derivative measures how \(f\) changes with respect to one variable whi
 ## Example
 For \(f(x,y)=x^2y+y\), \(\partial f/\partial x = 2xy\) and \(\partial f/\partial y=x^2+1\).
 
+## How to Compute (Pseudocode)
+```text
+Input: function f(x1,...,xn), point x, coordinate i, small step h
+Output: approximate partial derivative d f / d x_i at x
+
+x_plus <- copy of x
+x_minus <- copy of x
+x_plus[i] <- x_plus[i] + h
+x_minus[i] <- x_minus[i] - h
+
+return (f(x_plus) - f(x_minus)) / (2h)
+```
+
+## Complexity
+- Time: \(O(1)\) function evaluations (2 evaluations of \(f\)) for this finite-difference estimate
+- Space: \(O(n)\) if copies of the input vector are materialized (or \(O(1)\) extra with in-place perturbation/restoration)
+- Assumptions: Excludes the internal cost of evaluating \(f\); symbolic or automatic differentiation follows different computational workflows
+
 ## See also
 - [Gradient](../calculus/gradient.md)
 - [Jacobian](../calculus/jacobian.md)

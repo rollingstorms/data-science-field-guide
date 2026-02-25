@@ -54,6 +54,22 @@ Tabulates prediction outcomes against true labels for a chosen threshold.
 ## Example
 If fraud is rare, inspect FP and FN directly rather than relying on accuracy alone.
 
+## How to Compute (Pseudocode)
+```text
+Input: true labels y[1..n], predicted labels y_hat[1..n] (binary)
+Output: TP, FP, FN, TN counts
+
+initialize TP, FP, FN, TN <- 0
+for i from 1 to n:
+  update the appropriate count based on (y[i], y_hat[i])
+return TP, FP, FN, TN
+```
+
+## Complexity
+- Time: \(O(n)\) for \(n\) labeled predictions
+- Space: \(O(1)\) extra space for the four counts
+- Assumptions: Binary classification confusion matrix; multiclass confusion matrices use \(K\times K\) count tables
+
 ## See also
 - [Precision](../ml-metrics/precision.md)
 - [Recall](../ml-metrics/recall.md)

@@ -39,6 +39,23 @@ Approximates a smooth function locally by a polynomial around a point.
 ## Example
 \(e^x \approx 1+x\) near \(x=0\) (first-order Taylor approximation).
 
+## How to Compute (Pseudocode)
+```text
+Input: function f, expansion point a, evaluation point x, order K
+Output: Taylor approximation T_K(x)
+
+T <- 0
+for k from 0 to K:
+  deriv_k <- k-th derivative of f evaluated at a
+  T <- T + deriv_k * (x - a)^k / k!
+return T
+```
+
+## Complexity
+- Time: \(O(K)\) term accumulation once derivatives \(f^{(k)}(a)\) are available; derivative computation cost is additional
+- Space: \(O(1)\) extra space (or \(O(K)\) if storing coefficients)
+- Assumptions: Scalar Taylor expansion shown; symbolic or automatic derivative computation can dominate runtime
+
 ## See also
 - [Derivative](../calculus/derivative.md)
 - [Hessian](../calculus/hessian.md)

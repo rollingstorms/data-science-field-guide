@@ -41,6 +41,22 @@ Attention computes weighted combinations of value vectors, where weights are det
 ## Example
 If a query strongly matches the key for token 3, the output becomes a weighted average dominated by value 3.
 
+## How to Compute (Pseudocode)
+```text
+Input: queries Q, keys K, values V
+Output: attention outputs
+
+scores <- (Q K^T) / sqrt(d_k)
+weights <- softmax(scores)   # row-wise over keys
+output <- weights V
+return output
+```
+
+## Complexity
+- Time: \(O(L_q L_k d_k + L_q L_k d_v)\) for dense attention (often summarized as quadratic in sequence length when \(L_q \approx L_k\))
+- Space: \(O(L_q L_k)\) for attention score/weight matrices, plus input/output tensors
+- Assumptions: Dense scaled dot-product attention without sparsity/flash-style kernels; batch and head dimensions are omitted for readability
+
 ## See also
 - [Self-Attention](../deep-learning/self-attention.md)
 - [Cross-Attention](../deep-learning/cross-attention.md)

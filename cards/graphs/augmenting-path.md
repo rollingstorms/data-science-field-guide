@@ -42,6 +42,24 @@ An augmenting path is a path from source to sink in the residual graph along whi
 ## Example
 If a residual path has capacities \((5,3,9)\), you can augment by 3 units along that path.
 
+## How to Compute (Pseudocode)
+```text
+Input: residual graph G_f, source s, sink t
+Output: augmenting path P (if one exists) and bottleneck Delta
+
+find any s-to-t path P in G_f using only positive-residual edges
+if no such path exists:
+  return none
+
+Delta <- minimum residual capacity along edges of P
+return P, Delta
+```
+
+## Complexity
+- Time: Depends on the path-finding method (for example, BFS/DFS gives \(O(|V|+|E|)\) on the residual graph)
+- Space: Depends on the traversal method; typically \(O(|V|)\) additional space for visited/parent state
+- Assumptions: Residual graph is represented with positive-capacity edges accessible for traversal; path-selection rule is algorithm-dependent
+
 ## See also
 - [Residual Graph](../graphs/residual-graph.md)
 - [Ford-Fulkerson Method](../graphs/ford-fulkerson.md)

@@ -41,5 +41,20 @@ Closest vector to \(x\) that lies in subspace \(U\).
 
 ## Example
 Project \(v=(2,1)\) onto the x-axis: \(\mathrm{proj}(v)=(2,0)\).
+## How to Compute (Pseudocode)
+```text
+Input: orthonormal basis matrix Q (n x r), vector x in R^n
+Output: projection p of x onto span(Q)
+
+coeffs <- Q^T x
+p <- Q coeffs
+return p
+```
+
+## Complexity
+- Time: \(O(nr)\) for dense matrix-vector multiplies with \(Q \in \mathbb{R}^{n \times r}\)
+- Space: \(O(n + r)\) for the projected vector and coefficient vector
+- Assumptions: Q has orthonormal columns; dense computation of \(Q^T x\) and \(Q\,\mathrm{coeffs}\)
+
 ## See also
 - [Least Squares](../linear-algebra/least-squares.md)

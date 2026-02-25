@@ -36,3 +36,21 @@ Concept drift means the relationship between features and outcomes changes over 
 
 ## Example
 Fraudsters change tactics, so old transaction patterns no longer predict fraud as well.
+
+## How to Compute (Pseudocode)
+```text
+Input: time-stamped model predictions/features and delayed labels (if available)
+Output: concept-drift monitoring signals
+
+monitor model performance over time windows when labels arrive
+compare recent conditional behavior/performance to a baseline period
+rule out obvious pipeline/data-quality issues
+if sustained degradation suggests P(Y|X) changed:
+  trigger investigation and retraining/model update workflow
+```
+
+## Complexity
+- Time: Depends on monitoring cadence, window sizes, and metric computations (often periodic \(O(n_w)\) window scans plus alerting logic)
+- Space: Depends on retained prediction/label history and summary dashboards
+- Assumptions: Label-delayed monitoring workflow; true concept-drift confirmation often depends on business-specific feedback loops
+

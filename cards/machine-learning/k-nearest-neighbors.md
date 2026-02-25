@@ -52,6 +52,26 @@ k-NN predicts using the labels/targets of nearby training examples in feature sp
 ## Example
 To classify a new point, find its 5 nearest labeled examples and predict the majority class among them.
 
+## How to Compute (Pseudocode)
+```text
+Input: training set {(x_i, y_i)}, query point x, neighbors k
+Output: prediction y_hat
+
+for each training point x_i:
+  d[i] <- distance(x, x_i)
+
+idx <- indices of the k smallest distances in d
+if classification:
+  return majority_vote(y_i for i in idx)
+if regression:
+  return average(y_i for i in idx)
+```
+
+## Complexity
+- Time: Training/store phase is typically \(O(nd)\) just to store data; naive prediction is \(O(nd + n\log n)\) per query (or \(O(nd + n)\) with partial selection)
+- Space: \(O(nd)\) to store \(n\) training points with \(d\) features (plus labels)
+- Assumptions: \(n\) training examples, \(d\) features, brute-force neighbor search; tree/ANN indexes change prediction-time complexity and constants
+
 ## See also
 - [K-Means Clustering](../machine-learning/k-means-clustering.md)
 - [Feature Scaling (Standardization vs Normalization)](../machine-learning/feature-scaling.md)

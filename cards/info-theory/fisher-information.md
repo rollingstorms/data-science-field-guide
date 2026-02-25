@@ -43,5 +43,21 @@ Measures how sensitive the likelihood is to changes in \(\theta\).
 ## Example
 For \(X\sim\mathcal{N}(\mu,\sigma^2)\) with known \(\sigma\),
 \(I(\mu)=1/\sigma^2\).
+## How to Compute (Pseudocode)
+```text
+Input: likelihood model p(x; theta) and parameter value theta (or sample-based estimator setup)
+Output: Fisher information I(theta)
+
+compute the score function s(x; theta) <- d/dtheta log p(x; theta)
+compute I(theta) = E[s(X; theta)^2] under the model
+# in practice, evaluate the expectation analytically or approximate it numerically / by Monte Carlo
+return I(theta)
+```
+
+## Complexity
+- Time: Depends on whether the expectation is analytic or estimated numerically; sample-based estimation is typically linear in the number of samples used times score-evaluation cost
+- Space: Depends on the estimation method; often \(O(1)\) to \(O(n)\) beyond model parameters/sample storage
+- Assumptions: Scalar-parameter form shown; vector parameters use the Fisher information matrix and correspondingly larger computation/storage
+
 ## See also
 - [Expectation](../probability-stats/expectation.md)

@@ -18,9 +18,18 @@ This spec defines the canonical card format for the handbook.
 7. `## Example`
 8. `## See also` (optional)
 
+## Optional algorithm sections (recommended when computation is involved)
+- Use broad inclusion criteria: include pseudocode whenever it improves clarity, even for simple one-step formulas.
+- Add `## How to Compute (Pseudocode)` near the bottom of the card (recommended: after `## Example`, before `## See also`) when useful.
+- Add `## Complexity` after `## How to Compute (Pseudocode)` when pseudocode is present.
+- Report `Time: O(...)` at minimum.
+- Report `Space: O(...)` when non-trivial (or for consistency).
+- Define symbols used in complexity claims (for example, \(n\), \(|V|\), \(|E|\)).
+
 ## Section labels
 - Use `##` headings for sections.
 - `## Plot` is optional if you want a labeled plot section.
+- `## How to Compute (Pseudocode)` and `## Complexity` are optional.
 
 ## Equations
 - Display math allowed: `\[ ... \]`.
@@ -76,6 +85,12 @@ title: Example PMF
 - Parameters are medium.
 - Explanatory text is smaller (encyclopedia style).
 
+## Pseudocode style (for `## How to Compute (Pseudocode)`)
+- Keep it language-agnostic and easy to scan.
+- Include inputs and outputs when helpful.
+- Prefer short blocks and clear variable names.
+- For simple formulas, pseudocode can be only a few lines.
+
 ## Valid example skeleton
 
 ```markdown
@@ -118,6 +133,19 @@ ymax: 1.2
 
 ## Example
 ...
+
+## How to Compute (Pseudocode)
+```text
+Input: ...
+Output: ...
+
+...
+```
+
+## Complexity
+- Time: \(O(\cdot)\)
+- Space: \(O(\cdot)\) (if useful)
+- Assumptions: define symbols used above
 
 ## See also
 - ...

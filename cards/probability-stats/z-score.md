@@ -41,3 +41,19 @@ How many standard deviations \(x\) is from the mean.
 
 ## Example
 If \(x=80\), \(\mu=70\), \(\sigma=5\), then \(z=2\).
+
+## How to Compute (Pseudocode)
+```text
+Input: value x, mean mu, standard deviation sigma
+Output: z-score
+
+if sigma == 0:
+  return undefined
+return (x - mu) / sigma
+```
+
+## Complexity
+- Time: \(O(1)\) once \(\mu\) and \(\sigma\) are known
+- Space: \(O(1)\)
+- Assumptions: Computing \(\mu\) and \(\sigma\) from data is a separate step (often \(O(n)\))
+

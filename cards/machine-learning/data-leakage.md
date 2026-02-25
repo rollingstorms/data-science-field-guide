@@ -41,6 +41,23 @@ Leakage happens when future or target-derived information enters training featur
 ## Example
 If a fraud model uses chargeback outcomes not available at authorization time, offline results will be inflated.
 
+## How to Compute (Pseudocode)
+```text
+Input: dataset, feature definitions, split strategy, pipeline design
+Output: leakage audit findings
+
+verify train/val/test split logic (time/group/duplicate safety)
+check each feature for availability at prediction time
+ensure preprocessing/encoding/imputation is fit inside training folds only
+audit target-derived and future-derived columns
+flag suspiciously optimistic validation patterns for review
+```
+
+## Complexity
+- Time: Depends on dataset audits and validation checks; often dominated by metadata review plus targeted data scans and reruns of evaluation pipelines
+- Space: Depends on audit artifacts and validation outputs
+- Assumptions: Leakage detection is a workflow/checklist process, not a single metric computation
+
 ## See also
 - [Train/Validation/Test Split](../machine-learning/train-validation-test-split.md)
 - [Machine Learning Pipeline](../machine-learning/machine-learning-pipeline.md)

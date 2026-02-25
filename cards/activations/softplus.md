@@ -49,6 +49,21 @@ Softplus is a smooth approximation to ReLU.
 ## Example
 \(\mathrm{Softplus}(0)=\log 2 \approx 0.693\).
 
+## How to Compute (Pseudocode)
+```text
+Input: tensor/vector x
+Output: y = Softplus(x) applied elementwise
+
+for each element x_i in x:
+  y_i <- log(1 + exp(x_i))
+return y
+```
+
+## Complexity
+- Time: \(O(m)\) elementwise operations for \(m\) inputs
+- Space: \(O(m)\) for the output tensor/vector (or \(O(1)\) extra if done in place)
+- Assumptions: Elementwise application over \(m\) scalars; exact constant factors depend on operations like \(\exp\), \(\tanh\), or \(\mathrm{erf}/\Phi\) approximations
+
 ## See also
 - [ReLU (Rectified Linear Unit)](../activations/relu.md)
 - [Sigmoid](../activations/sigmoid.md)

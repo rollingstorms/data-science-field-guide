@@ -38,5 +38,21 @@ Missing values are not just blanks; the mechanism behind missingness affects bia
 ## Example
 A medical lab test missing because only severe patients receive it is not random missingness.
 
+## How to Compute (Pseudocode)
+```text
+Input: dataset with missing values
+Output: missingness audit and handling plan
+
+compute missing-value counts/rates per feature and optionally per subgroup
+identify likely missingness mechanisms (MCAR/MAR/MNAR assumptions)
+choose handling strategy (drop, impute, model-based, indicators)
+validate impact on downstream model performance and bias
+```
+
+## Complexity
+- Time: Typically \(O(nd)\) for an initial missingness audit over \(n\) samples and \(d\) features, plus the cost of the chosen handling method
+- Space: \(O(d)\) for summary statistics (plus any transformed datasets or imputation state)
+- Assumptions: Audit workflow shown; imputation/modeling costs depend on the selected method and pipeline implementation
+
 ## See also
 - [Imputation](../machine-learning/imputation.md)

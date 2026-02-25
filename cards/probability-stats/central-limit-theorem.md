@@ -42,5 +42,20 @@ Normalized sums of i.i.d. variables converge in distribution to a Gaussian.
 ## Example
 For 100 fair coin flips, the sample mean is
 approximately \(\mathcal{N}(0.5, 0.25/100)\).
+## How to Compute (Pseudocode)
+```text
+Input: assumptions/quantities required by the theorem or inequality (for example means, variances, sample size)
+Output: bound, approximation, or theorem-based diagnostic
+
+verify the theorem/inequality assumptions (at least approximately/in modeling terms)
+compute the bound or approximation using the card formula
+return the resulting bound/approximation and note its conditions
+```
+
+## Complexity
+- Time: Usually \(O(1)\) once the required summary quantities are available
+- Space: \(O(1)\)
+- Assumptions: This is a formula-application workflow; estimating required moments/parameters from data can dominate cost (often \(O(n)\))
+
 ## See also
 - [Variance](../probability-stats/variance.md)

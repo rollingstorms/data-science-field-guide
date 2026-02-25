@@ -39,6 +39,37 @@ A topological ordering is a linear order of DAG nodes consistent with all direct
 ## Example
 If course A is a prerequisite for B, a topological order places A before B.
 
+## How to Compute (Pseudocode)
+```text
+Input: directed graph G=(V,E)
+Output: topological order, or failure if cycle exists
+
+for each vertex v in V:
+  indegree[v] <- 0
+for each edge (u, v) in E:
+  indegree[v] <- indegree[v] + 1
+
+enqueue all vertices with indegree 0 into queue q
+order <- empty list
+
+while q is not empty:
+  u <- dequeue q
+  append u to order
+  for each neighbor v in adj[u]:
+    indegree[v] <- indegree[v] - 1
+    if indegree[v] == 0:
+      enqueue v into q
+
+if length(order) < |V|:
+  return failure  // graph has a cycle
+return order
+```
+
+## Complexity
+- Time: \(O(|V|+|E|)\) with adjacency lists (Kahn's algorithm)
+- Space: \(O(|V|)\) additional space for indegrees, queue, and output (excluding graph storage)
+- Assumptions: \(|V|\) vertices, \(|E|\) edges
+
 ## See also
 - [Depth-First Search (DFS)](../graphs/dfs.md)
 - [Graph Algorithms (Overview)](../graphs/graph-algorithms.md)

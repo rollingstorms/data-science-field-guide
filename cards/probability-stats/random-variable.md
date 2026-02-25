@@ -39,6 +39,21 @@ A random variable converts outcomes of a random experiment into numbers so we ca
 ## Example
 If \(\Omega=\{\text{HH},\text{HT},\text{TH},\text{TT}\}\) for two coin flips, let \(X\) be the number of heads. Then \(X(\text{HT})=1\), \(X(\text{HH})=2\).
 
+## How to Compute (Pseudocode)
+```text
+Input: sample space outcomes and a numeric mapping rule X
+Output: random-variable values X(omega)
+
+for each outcome omega in the sample space representation:
+  assign X(omega) according to the modeling rule
+return the random variable mapping (or sampled values under that mapping)
+```
+
+## Complexity
+- Time: Depends on how outcomes are represented and whether you are defining the mapping symbolically or evaluating it on sampled outcomes
+- Space: Depends on whether the mapping is symbolic or materialized over many outcomes/samples
+- Assumptions: Conceptual definition card; practical computation usually happens via sampled data or a known distribution model
+
 ## See also
 - [Probability Distribution](../probability-stats/probability-distribution.md)
 - [CDF (Cumulative Distribution Function)](../probability-stats/cdf.md)

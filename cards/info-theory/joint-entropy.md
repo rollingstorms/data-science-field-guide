@@ -41,5 +41,24 @@ Uncertainty of the pair \((X,Y)\) considered together.
 
 ## Example
 Two independent fair coins give \(H(X,Y)=2\) bits.
+## How to Compute (Pseudocode)
+```text
+Input: joint probabilities p_xy[x,y], log base b
+Output: joint_entropy
+
+total <- 0
+for each pair (x, y):
+  if p_xy[x,y] == 0:
+    continue  // treat 0 * log(0) as 0
+  total <- total - p_xy[x,y] * log_base_b(p_xy[x,y])
+
+return total
+```
+
+## Complexity
+- Time: \(O(k_x k_y)\) for a dense discrete joint table
+- Space: \(O(1)\) additional space
+- Assumptions: \(k_x\) and \(k_y\) are support sizes; continuous joint entropy uses differential-entropy analogs
+
 ## See also
 - [Conditional Entropy](../info-theory/conditional-entropy.md)

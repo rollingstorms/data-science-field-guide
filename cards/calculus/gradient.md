@@ -44,6 +44,22 @@ The gradient points in the direction of steepest increase of a scalar function.
 ## Example
 For \(f(x,y)=x^2+y^2\), \(\nabla f=(2x,2y)\).
 
+## How to Compute (Pseudocode)
+```text
+Input: scalar function f(x1, ..., xn), point x in R^n
+Output: gradient vector grad
+
+for j from 1 to n:
+  grad[j] <- partial derivative of f with respect to x_j evaluated at x
+
+return grad
+```
+
+## Complexity
+- Time: \(O(n)\) partial-derivative evaluations at a high level
+- Space: \(O(n)\) to store the gradient vector
+- Assumptions: Excludes the internal cost of each partial derivative evaluation; automatic differentiation can change constants and practical cost
+
 ## See also
 - [Partial Derivative](../calculus/partial-derivative.md)
 - [Hessian](../calculus/hessian.md)

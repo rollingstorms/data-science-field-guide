@@ -42,6 +42,24 @@ Regularization adds penalties to discourage overly complex models and improve ge
 ## Example
 Adding an L2 penalty can improve validation performance even if training loss increases slightly.
 
+## How to Compute (Pseudocode)
+```text
+Input: base loss L(theta), parameters theta, regularization type, strength lambda
+Output: regularized loss L_reg(theta)
+
+if L1 regularization:
+  penalty <- lambda * l1_norm(theta)
+if L2 regularization:
+  penalty <- lambda * l2_norm(theta)^2
+L_reg <- L(theta) + penalty
+return L_reg
+```
+
+## Complexity
+- Time: \(O(p)\) to compute common L1/L2 penalties over \(p\) parameters (in addition to the base loss/gradient computation)
+- Space: \(O(1)\) extra space beyond parameter storage (or \(O(p)\) if storing per-parameter penalty terms)
+- Assumptions: Penalty computation shown at the objective level; optimizer-side implementations (for example, decoupled weight decay) may realize regularization differently
+
 ## See also
 - [Weight Decay](../optimization/weight-decay.md)
 - [Dropout](../deep-learning/dropout.md)

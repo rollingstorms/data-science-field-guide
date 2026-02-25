@@ -51,3 +51,23 @@ Expected uncertainty (“average surprise”) of outcomes of \(X\).
 
 ## Example
 For a fair coin \(p=[0.5,0.5]\), \(H=1\) bit (log base 2).
+
+## How to Compute (Pseudocode)
+```text
+Input: discrete probabilities p[1..k], log base b
+Output: entropy
+
+total <- 0
+for i from 1 to k:
+  if p[i] == 0:
+    continue  // treat 0 * log(0) as 0
+  total <- total - p[i] * log_base_b(p[i])
+
+return total
+```
+
+## Complexity
+- Time: \(O(k)\) for the discrete sum
+- Space: \(O(1)\) additional space
+- Assumptions: \(k\) is the number of possible outcomes in the discrete support
+

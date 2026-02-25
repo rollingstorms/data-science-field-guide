@@ -50,6 +50,20 @@ A learning-rate schedule changes the step size over training instead of keeping 
 ## Example
 Cosine decay starts high and gradually reduces the learning rate toward a small final value.
 
+## How to Compute (Pseudocode)
+```text
+Input: current step/epoch t and a schedule definition s(t)
+Output: learning rate eta_t
+
+eta_t <- s(t)
+return eta_t
+```
+
+## Complexity
+- Time: \(O(1)\) per step for common closed-form schedules (step, cosine, exponential, linear)
+- Space: \(O(1)\)
+- Assumptions: Schedule value computation only; total training cost is dominated by optimizer/model updates over many steps
+
 ## See also
 - [Warmup](../optimization/warmup.md)
 - [AdamW Optimizer](../optimization/adamw.md)

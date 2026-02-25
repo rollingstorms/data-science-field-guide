@@ -39,6 +39,21 @@ Vectors are linearly independent if no nontrivial linear combination of them equ
 ## Example
 \((1,0)\) and \((0,1)\) are independent; \((1,0)\) and \((2,0)\) are dependent.
 
+## How to Compute (Pseudocode)
+```text
+Input: vectors v_1, ..., v_k
+Output: whether the vectors are linearly independent
+
+form matrix V with vectors as columns
+compute rank(V) (or row-reduce / QR)
+return (rank(V) == k)
+```
+
+## Complexity
+- Time: Depends on the matrix factorization/rank algorithm (often cubic in the smaller dimension for dense exact/factorization methods)
+- Space: Depends on matrix storage and factorization workspace
+- Assumptions: Numerical implementations require a tolerance for near-dependence in floating-point arithmetic
+
 ## See also
 - [Span](../linear-algebra/span.md)
 - [Matrix Rank](../linear-algebra/matrix-rank.md)

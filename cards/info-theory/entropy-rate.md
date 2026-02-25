@@ -42,5 +42,21 @@ Average uncertainty per symbol in a long sequence.
 ## Example
 For IID Bernoulli(\(p\)), the entropy rate is
 \(H_\infty = H(p)\).
+## How to Compute (Pseudocode)
+```text
+Input: stochastic process model or sequence data, block size n
+Output: entropy-rate estimate
+
+# Common practical route: estimate using conditional entropy of finite context
+estimate H(X_n | X_1, ..., X_{n-1}) from the model/data
+increase n until the estimate stabilizes (if feasible)
+return stabilized value as an entropy-rate estimate
+```
+
+## Complexity
+- Time: Depends on the process model and estimation method (counting-, model-, and compression-based estimators have different costs)
+- Space: Depends on the estimator and state/context representation
+- Assumptions: Entropy rate is often estimated from finite-order approximations on finite data; asymptotic limits are a theoretical definition
+
 ## See also
 - [Shannon Entropy](../info-theory/entropy-shannon.md)

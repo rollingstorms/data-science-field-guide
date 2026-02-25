@@ -44,6 +44,24 @@ Runs several attention mechanisms in parallel so the model can attend to differe
 ## Example
 One head may focus on local syntax while another captures long-range dependencies.
 
+## How to Compute (Pseudocode)
+```text
+Input: Q, K, V and number of heads h
+Output: multi-head attention output
+
+for each head i in 1..h:
+  project Q, K, V into head i subspace
+  compute head_i <- Attention(Q_i, K_i, V_i)
+concat all head_i outputs
+apply output projection W_O
+return result
+```
+
+## Complexity
+- Time: Same asymptotic order as attention with projection overhead, often summarized as \(O(h L^2 d_h) \approx O(L^2 d)\) for dense self-attention
+- Space: Includes per-head attention matrices (overall still quadratic in sequence length for dense attention)
+- Assumptions: Hidden dimension \(d = h d_h\); dense attention implementation without sparsity/linear-attention approximations
+
 ## See also
 - [Attention](../deep-learning/attention.md)
 - [Transformer](../deep-learning/transformer.md)

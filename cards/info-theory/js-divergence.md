@@ -52,5 +52,22 @@ A symmetric, smoothed divergence between two distributions.
 
 ## Example
 If \(P=Q\), then \(\mathrm{JS}(P,Q)=0\).
+## How to Compute (Pseudocode)
+```text
+Input: discrete probabilities p[1..k], q[1..k], log base b
+Output: js_divergence
+
+for i from 1 to k:
+  m[i] <- 0.5 * (p[i] + q[i])
+
+js_divergence <- 0.5 * KL(p || m) + 0.5 * KL(q || m)
+return js_divergence
+```
+
+## Complexity
+- Time: \(O(k)\) assuming linear-time KL computations on discrete arrays
+- Space: \(O(k)\) if materializing the mixture distribution \(m\) (or \(O(1)\) extra if streamed)
+- Assumptions: \(k\) is the number of outcomes in the shared discrete support; KL subroutine handles zero-probability terms safely
+
 ## See also
 - [KL Divergence](../info-theory/kl-divergence.md)

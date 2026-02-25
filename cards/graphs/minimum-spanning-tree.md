@@ -40,6 +40,21 @@ An MST connects all nodes with no cycles and minimum total edge weight.
 ## Example
 For connecting cities with minimum cable length, an MST gives a cheapest cycle-free backbone.
 
+## How to Compute (Pseudocode)
+```text
+Input: connected weighted undirected graph G
+Output: minimum spanning tree T
+
+choose an MST algorithm (for example, Kruskal or Prim)
+run the chosen algorithm on G
+return the resulting tree T
+```
+
+## Complexity
+- Time: Depends on the chosen algorithm (for example, Kruskal \(O(|E|\log|E|)\), Prim with binary heap \(O((|V|+|E|)\log|V|)\))
+- Space: Depends on the algorithm and graph representation; typically \(O(|V|+|E|)\) including graph storage and metadata
+- Assumptions: Connected weighted undirected graph; disconnected graphs produce a minimum spanning forest instead
+
 ## See also
 - [Kruskal's Algorithm](../graphs/kruskal.md)
 - [Prim's Algorithm](../graphs/prim.md)

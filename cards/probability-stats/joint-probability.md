@@ -43,6 +43,22 @@ Joint probability is the probability of two events happening together. This is t
 ## Example
 If \(P(A)=0.4\) and \(P(B\mid A)=0.5\), then \(P(A,B)=0.5\cdot 0.4=0.2\).
 
+## How to Compute (Pseudocode)
+```text
+Input: event probabilities / joint distribution entries
+Output: requested probability quantity
+
+identify the relevant events/variables and required joint/marginal terms
+apply the probability identity in the card formula
+check denominator/normalization terms are valid (nonzero when required)
+return the computed probability
+```
+
+## Complexity
+- Time: Typically \(O(1)\) for a single event computation once required probabilities are available; larger table-based calculations scale with table size
+- Space: \(O(1)\) extra space for a single computation
+- Assumptions: Probability terms (joint/marginals/conditionals) are already known or computed separately
+
 ## See also
 - [Independence](../probability-stats/independence.md)
 - [Bayes' Rule](../probability-stats/bayes-rule.md)

@@ -51,5 +51,22 @@ A scree plot visualizes component importance to help choose a truncation point i
 ## Example
 If cumulative variance jumps to 95% by component 20 and then flattens, 20 is a reasonable candidate.
 
+## How to Compute (Pseudocode)
+```text
+Input: ordered eigenvalues or explained-variance ratios
+Output: scree plot data points (and optionally cumulative curve)
+
+for k from 1 to K:
+  y[k] <- eigenvalue[k] or explained_variance_ratio[k]
+  cumulative[k] <- sum_{j=1..k} explained_variance_ratio[j]   # optional
+plot k vs y (and/or cumulative[k])
+return plot data
+```
+
+## Complexity
+- Time: \(O(K)\) once eigenvalues/EVR values are available
+- Space: \(O(K)\) for plot vectors
+- Assumptions: Cost of PCA/eigendecomposition is excluded; this card covers postprocessing/visualization preparation
+
 ## See also
 - [PCA Explained Variance Ratio](../linear-algebra/pca-explained-variance.md)

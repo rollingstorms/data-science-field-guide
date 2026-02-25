@@ -53,5 +53,21 @@ Effective number of equally likely choices under the model \(Q\).
 ## Example
 If average cross-entropy is \(H=2\) bits, perplexity is
 \(2^2=4\).
+## How to Compute (Pseudocode)
+```text
+Input: cross-entropy H and log base convention
+Output: perplexity
+
+if H is measured in nats:
+  return exp(H)
+if H is measured in bits:
+  return 2^H
+```
+
+## Complexity
+- Time: \(O(1)\) once cross-entropy is known
+- Space: \(O(1)\)
+- Assumptions: The cost of computing cross-entropy itself is excluded; for a discrete support of size \(k\), that step is typically \(O(k)\)
+
 ## See also
 - [Cross Entropy](../info-theory/cross-entropy.md)

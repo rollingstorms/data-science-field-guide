@@ -44,6 +44,24 @@ Cross-attention lets one sequence (or modality) read information from another se
 ## Example
 In machine translation, decoder token states query encoder outputs via cross-attention to condition on the source sentence.
 
+## How to Compute (Pseudocode)
+```text
+Input: query-side states X_q, context states X_c
+Output: cross-attended query representations
+
+Q <- X_q W_Q
+K <- X_c W_K
+V <- X_c W_V
+scores <- (Q K^T) / sqrt(d_k)
+weights <- softmax(scores)
+return weights V
+```
+
+## Complexity
+- Time: \(O(L_q L_c d)\)-style dense attention cost, where \(L_q\) is query length and \(L_c\) is context length
+- Space: \(O(L_q L_c)\) for attention scores/weights (per head, per batch element), plus projections/outputs
+- Assumptions: Dense cross-attention; batch and multi-head dimensions omitted for readability
+
 ## See also
 - [Attention](../deep-learning/attention.md)
 - [Self-Attention](../deep-learning/self-attention.md)

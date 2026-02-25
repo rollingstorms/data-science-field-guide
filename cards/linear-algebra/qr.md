@@ -42,5 +42,19 @@ Factorizes a matrix into an orthonormal basis and a triangular matrix.
 
 ## Example
 For \(A=I\), one QR factorization is \(Q=I, R=I\).
+## How to Compute (Pseudocode)
+```text
+Input: matrix A (m x n)
+Output: Q, R such that A = Q R
+
+compute QR factorization (for example, Householder reflections)
+return Q and R (thin or full form, as needed)
+```
+
+## Complexity
+- Time: \(O(m n^2)\) for dense QR when \(m \ge n\)
+- Space: \(O(mn)\) for dense matrix/factor storage (implementation-dependent)
+- Assumptions: Dense QR workflow shown; thin vs full QR affects constants and output storage shapes
+
 ## See also
 - [Least Squares](../linear-algebra/least-squares.md)

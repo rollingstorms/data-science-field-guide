@@ -40,6 +40,22 @@ The pseudoinverse generalizes matrix inversion to non-square or singular matrice
 ## Example
 In linear regression, \(x^*=A^+b\) gives a least-squares solution.
 
+## How to Compute (Pseudocode)
+```text
+Input: matrix A
+Output: pseudoinverse A^+
+
+compute SVD: A = U Sigma V^T
+invert nonzero singular values in Sigma to form Sigma^+
+set very small singular values to zero (tolerance-based)
+return A^+ = V Sigma^+ U^T
+```
+
+## Complexity
+- Time: Dominated by SVD computation (dense full SVD is typically polynomial and often cubic in matrix dimensions)
+- Space: Depends on storing SVD factors and the pseudoinverse matrix
+- Assumptions: SVD-based pseudoinverse shown; tolerance choice affects numerical rank and stability
+
 ## See also
 - [Singular Value Decomposition (SVD)](../linear-algebra/svd.md)
 - [Least Squares](../linear-algebra/least-squares.md)

@@ -40,6 +40,22 @@ Tokenization splits text into units (tokens) that a model can process.
 ## Example
 "unhappiness" might be one word token, multiple subword tokens, or many character tokens.
 
+## How to Compute (Pseudocode)
+```text
+Input: raw text string and tokenizer rules/model
+Output: token sequence (and optionally token IDs)
+
+normalize text according to tokenizer settings (if applicable)
+apply tokenizer rules/model to split text into tokens/subwords/bytes
+map tokens to IDs using the tokenizer vocabulary
+return tokens/IDs
+```
+
+## Complexity
+- Time: Depends on tokenizer type and implementation; typically linear in input text length for common tokenizers
+- Space: Linear in the number of produced tokens plus tokenizer vocabulary/model storage
+- Assumptions: Exact complexity depends on tokenization scheme (word, subword, byte-level) and preprocessing rules
+
 ## See also
 - [Subword Tokenization (BPE / WordPiece)](../nlp/subword-tokenization.md)
 - [Embedding](../deep-learning/embedding.md)

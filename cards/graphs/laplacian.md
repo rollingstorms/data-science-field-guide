@@ -47,5 +47,20 @@ For the path 1-2-3 with
 \end{bmatrix}\) and \(D=\operatorname{diag}(1,2,1)\),
 \(L=D-A=egin{bmatrix}1&-1&0\-1&2&-1\0&-1&1
 \end{bmatrix}\).
+## How to Compute (Pseudocode)
+```text
+Input: adjacency matrix A (n x n)
+Output: graph Laplacian L
+
+D <- degree_matrix(A)
+L <- D - A
+return L
+```
+
+## Complexity
+- Time: \(O(n^2)\) with dense matrix representation (degree computation plus matrix subtraction)
+- Space: \(O(n^2)\) for storing \(A\), \(D\), and/or \(L\)
+- Assumptions: Combinatorial Laplacian for an undirected graph; normalized/directed variants use modified formulas
+
 ## See also
 - [Adjacency Matrix](../graphs/adjacency-matrix.md)

@@ -36,3 +36,21 @@ Data drift means the input feature distribution changes over time relative to tr
 
 ## Example
 A payments model sees a new merchant mix after expansion into a new country, shifting transaction features.
+
+## How to Compute (Pseudocode)
+```text
+Input: baseline feature distribution and recent production feature data
+Output: drift scores/alerts
+
+for each monitored feature:
+  compute a drift statistic between baseline and recent windows
+    (for example PSI, KS statistic, histogram distance)
+compare drift statistics to alert thresholds
+aggregate alerts and route for investigation/retraining decisions
+```
+
+## Complexity
+- Time: Typically linear in the number of monitored records/features for histogram/statistic updates, plus metric-specific costs
+- Space: Depends on retained baselines, histograms, and monitoring windows (often summary-statistics sized)
+- Assumptions: Exact complexity depends on drift metric choice, binning strategy, and monitoring frequency
+

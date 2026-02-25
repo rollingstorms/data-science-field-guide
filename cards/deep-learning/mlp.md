@@ -47,6 +47,23 @@ An MLP is a feedforward neural network made of stacked linear layers plus nonlin
 ## Example
 A 2-layer MLP classifier might map \(x\in\mathbb{R}^{d}\) to hidden size 128 with GELU, then to class logits with a final linear layer.
 
+## How to Compute (Pseudocode)
+```text
+Input: x and layer parameters {(W^(l), b^(l))}
+Output: network output y_hat
+
+h <- x
+for each hidden layer l:
+  h <- activation(W^(l) h + b^(l))
+y_hat <- W^(L) h + b^(L)
+return y_hat
+```
+
+## Complexity
+- Time: Sum of matrix-multiply and activation costs across layers (typically dominated by dense linear layers)
+- Space: Depends on layer widths and whether activations are cached for backpropagation
+- Assumptions: Dense MLP shown; batch size and layer widths determine concrete runtime/memory costs
+
 ## See also
 - [Activation Functions](../activations/activations.md)
 - [Attention](../deep-learning/attention.md)

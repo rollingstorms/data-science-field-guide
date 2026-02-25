@@ -44,5 +44,22 @@ Minimize \(\|Ax-b\|^2\) with
 \(A=egin{bmatrix}1\2
 \end{bmatrix}\), \(b=egin{bmatrix}1\2
 \end{bmatrix}\) gives \(x=1\).
+## How to Compute (Pseudocode)
+```text
+Input: matrix A (m x n), vector b (m x 1)
+Output: least-squares solution x
+
+# Preferred stable route: QR factorization
+compute thin QR factorization A = Q R
+compute y <- Q^T b
+solve upper-triangular system R x = y
+return x
+```
+
+## Complexity
+- Time: \(O(mn^2)\) for dense QR-based least squares when \(m \ge n\)
+- Space: \(O(mn)\) for storing dense factors/matrix data (implementation-dependent)
+- Assumptions: Dense matrix \(A \in \mathbb{R}^{m\times n}\); complexity shown for the numerically stable QR approach (normal equations have different cost/stability tradeoffs)
+
 ## See also
 - [Projection](../linear-algebra/projection.md)

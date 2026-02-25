@@ -38,5 +38,22 @@ The bootstrap estimates sampling variability by repeatedly resampling the observ
 ## Example
 Estimate a 95% CI for median revenue by bootstrapping users 10,000 times.
 
+## How to Compute (Pseudocode)
+```text
+Input: dataset, statistic s(.), number of bootstrap resamples B
+Output: bootstrap replicates and uncertainty summary
+
+for b from 1 to B:
+  sample a bootstrap dataset by resampling with replacement
+  compute theta_star[b] <- s(resampled_data)
+aggregate theta_star values (SE, CI, quantiles, etc.)
+return bootstrap summary
+```
+
+## Complexity
+- Time: \(O(B \cdot \mathrm{StatCost})\), where \(\mathrm{StatCost}\) is the cost to compute the statistic on one resample
+- Space: \(O(B)\) to store bootstrap replicates (or \(O(1)\) extra if streaming a summary only) plus resample/statistic workspace
+- Assumptions: Resampling unit and dependence structure must match the study design; \(B\) controls Monte Carlo error and runtime
+
 ## See also
 - [P-Value](../probability-stats/p-value.md)

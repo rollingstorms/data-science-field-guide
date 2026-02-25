@@ -53,6 +53,26 @@ Rescales numeric features so optimization and distance-based methods behave more
 ## Example
 Standardize income and age before logistic regression so regularization treats them comparably.
 
+## How to Compute (Pseudocode)
+```text
+Input: training feature column x and scaling method
+Output: fitted scaling parameters and transformed values
+
+if standardization:
+  compute mu <- mean(x_train), sigma <- std(x_train)
+  transform each value as (x - mu) / sigma
+if min-max scaling:
+  compute x_min, x_max on training data
+  transform each value as (x - x_min) / (x_max - x_min)
+
+store fitted parameters for reuse on validation/test/production data
+```
+
+## Complexity
+- Time: \(O(n)\) per numeric feature to fit summary statistics and \(O(n)\) to transform \(n\) values
+- Space: \(O(1)\) fitted state per feature (plus transformed output storage)
+- Assumptions: \(n\) values in one feature column; extending to \(d\) features scales roughly linearly in \(d\)
+
 ## See also
 - [Z-Score](../probability-stats/z-score.md)
 - [K-Means Clustering](../machine-learning/k-means-clustering.md)

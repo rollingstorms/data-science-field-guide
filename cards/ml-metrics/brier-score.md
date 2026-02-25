@@ -53,5 +53,21 @@ Mean squared error of probabilistic predictions.
 ## Example
 For a single example with \(y=1\) and \(p=0.8\),
 \((p-y)^2=(0.8-1)^2=0.04\).
+## How to Compute (Pseudocode)
+```text
+Input: predicted probabilities p[1..N], labels y[1..N]
+Output: Brier score
+
+sum_sq <- 0
+for i from 1 to N:
+  sum_sq <- sum_sq + (p[i] - y[i])^2
+return sum_sq / N
+```
+
+## Complexity
+- Time: \(O(N)\) for \(N\) predictions
+- Space: \(O(1)\) extra space
+- Assumptions: Binary Brier score shown; multiclass versions use vector probabilities per sample
+
 ## See also
 - [Calibration Error](../ml-metrics/calibration-error.md)

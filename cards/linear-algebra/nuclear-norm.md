@@ -40,6 +40,20 @@ The nuclear norm measures matrix size by summing its singular values.
 ## Example
 If \(A\) has singular values \(3,1,0\), then \(\|A\|_* = 4\).
 
+## How to Compute (Pseudocode)
+```text
+Input: matrix A
+Output: nuclear norm ||A||_*
+
+compute singular values sigma_i of A (for example, via SVD)
+return sum of singular values
+```
+
+## Complexity
+- Time: Dominated by singular-value computation (dense SVD/eigensolver workflow)
+- Space: Depends on whether full SVD factors or only singular values are computed
+- Assumptions: Exact computation shown; large-scale applications often use partial/approximate spectral methods
+
 ## See also
 - [Singular Value Decomposition (SVD)](../linear-algebra/svd.md)
 - [Matrix Rank](../linear-algebra/matrix-rank.md)

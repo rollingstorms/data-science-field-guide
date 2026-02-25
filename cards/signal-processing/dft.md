@@ -42,5 +42,23 @@ Represents a finite sequence as a sum of complex sinusoids.
 
 ## Example
 For \(x=[1,1,1,1]\), the DFT has \(X_0=4\) and \(X_k=0\) for \(k>0\).
+## How to Compute (Pseudocode)
+```text
+Input: samples x[0..N-1]
+Output: DFT coefficients X[0..N-1]
+
+for k from 0 to N-1:
+  X[k] <- 0
+  for n from 0 to N-1:
+    X[k] <- X[k] + x[n] * exp(-i * 2*pi*k*n / N)
+
+return X
+```
+
+## Complexity
+- Time: \(O(N^2)\) for the direct DFT sum
+- Space: \(O(N)\) to store the output coefficients (excluding input storage)
+- Assumptions: \(N\) is the number of samples; direct computation (not FFT)
+
 ## See also
 - [FFT](../signal-processing/fft.md)

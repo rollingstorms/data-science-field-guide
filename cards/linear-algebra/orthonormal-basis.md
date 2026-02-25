@@ -42,5 +42,20 @@ A basis with unit-length, mutually orthogonal vectors.
 ## Example
 In \(\mathbb{R}^2\), the standard basis \((1,0),(0,1)\) is orthonormal;
 \((3,4)=3(1,0)+4(0,1)\).
+## How to Compute (Pseudocode)
+```text
+Input: linearly independent vectors v_1, ..., v_k
+Output: orthonormal basis q_1, ..., q_k for the same span
+
+apply Gram-Schmidt (or QR factorization) to the vectors
+normalize each resulting basis vector to unit norm
+return q_1, ..., q_k
+```
+
+## Complexity
+- Time: Depends on the orthonormalization method; dense Gram-Schmidt/QR workflows are polynomial in vector dimension and number of vectors
+- Space: Depends on storing the input vectors and orthonormal basis (and any factorization workspace)
+- Assumptions: Numerical stability is method-dependent (Householder QR is usually preferred over classical Gram-Schmidt)
+
 ## See also
 - [Projection](../linear-algebra/projection.md)

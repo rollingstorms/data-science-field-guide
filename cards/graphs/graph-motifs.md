@@ -46,6 +46,27 @@ They are used as building blocks for characterizing local network structure.
 ## Example
 In a directed network, a feed-forward loop may occur much more often than in degree-preserving random graphs, giving it a large positive motif z-score.
 
+## How to Compute (Pseudocode)
+```text
+Input: graph G, motif family, null-model generator, number of null samples R
+Output: motif counts and z-scores Z_i
+
+count motif occurrences in G to get N_obs[i]
+for r from 1 to R:
+  G_r <- sample a null graph under the chosen null model
+  count motifs in G_r to get N_r[i]
+compute null means mu_i and standard deviations sigma_i from {N_r[i]}
+for each motif i:
+  Z_i <- (N_obs[i] - mu_i) / sigma_i
+
+return motif counts and z-scores
+```
+
+## Complexity
+- Time: Dominated by motif counting plus repeated null-model sampling/counting; exact cost depends strongly on motif size, graph size/density, and counting algorithm
+- Space: Depends on graph representation and whether null samples/count tables are stored simultaneously; often \(O(|V|+|E|)\) plus motif-count summaries
+- Assumptions: \(R\) null samples; directed vs undirected motifs and exact vs sampled motif counting change complexity substantially
+
 ## See also
 - [Network Significance Profile](../graphs/network-significance-profile.md)
 - [Clustering Coefficient](../graphs/clustering-coefficient.md)

@@ -42,5 +42,20 @@ Cohen's d standardizes the difference between two means to express practical eff
 ## Example
 A mean uplift of 2 points with pooled SD 10 gives \(d=0.2\), a small standardized effect.
 
+## How to Compute (Pseudocode)
+```text
+Input: two sample groups (or summary stats)
+Output: Cohen's d effect size
+
+compute group means and standard deviations
+compute pooled standard deviation (or the variant-specific denominator)
+return standardized mean difference d
+```
+
+## Complexity
+- Time: Typically \(O(n)\) to compute summary statistics from raw data (or \(O(1)\) from provided summaries)
+- Space: \(O(1)\) extra space for streaming summary computations
+- Assumptions: Exact formula depends on independent/paired design and pooled vs unpooled standardization choice
+
 ## See also
 - [P-Value](../probability-stats/p-value.md)

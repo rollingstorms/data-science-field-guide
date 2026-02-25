@@ -47,6 +47,23 @@ Top-k sampling restricts sampling to the \(k\) most likely tokens, then renormal
 ## Example
 With \(k=50\), sampling only occurs among the 50 most likely next tokens.
 
+## How to Compute (Pseudocode)
+```text
+Input: next-token probabilities/logits and top-k parameter k
+Output: sampled token
+
+compute probabilities (or logits ranking)
+select the top-k tokens by probability/logit
+renormalize probabilities over those k tokens only
+sample one token from the truncated distribution
+return token
+```
+
+## Complexity
+- Time: Depends on top-k selection method; commonly \(O(V\log k)\) or \(O(V)\) selection per decoding step, plus renormalization over \(k\) tokens (excluding model forward-pass cost)
+- Space: \(O(V)\) for logits/probabilities plus \(O(k)\) for the retained candidate set
+- Assumptions: One decoding step shown; practical implementations may fuse temperature/top-k/top-p filtering
+
 ## See also
 - [Temperature (Sampling)](../nlp/temperature-sampling.md)
 - [Top-p Sampling (Nucleus)](../nlp/top-p-sampling.md)

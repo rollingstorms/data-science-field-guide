@@ -44,6 +44,28 @@ The residual graph shows where additional flow can still be pushed (forward edge
 ## Example
 If an edge of capacity 10 currently carries flow 6, the residual graph has forward capacity 4 and backward capacity 6 for that pair.
 
+## How to Compute (Pseudocode)
+```text
+Input: flow network G with capacities c and current flow f
+Output: residual graph G_f
+
+initialize empty residual graph G_f
+for each directed edge (u, v) in G:
+  forward_residual <- c(u,v) - f(u,v)
+  backward_residual <- f(u,v)
+  if forward_residual > 0:
+    add residual edge (u, v) with capacity forward_residual
+  if backward_residual > 0:
+    add residual edge (v, u) with capacity backward_residual
+
+return G_f
+```
+
+## Complexity
+- Time: \(O(|E|)\) to compute/update residual capacities from the current flow
+- Space: \(O(|V|+|E|)\) for the residual graph representation (up to a constant-factor multiple of original edges)
+- Assumptions: Directed network representation; reverse residual edges are included even if the original reverse edge is absent
+
 ## See also
 - [Augmenting Path](../graphs/augmenting-path.md)
 - [Ford-Fulkerson Method](../graphs/ford-fulkerson.md)

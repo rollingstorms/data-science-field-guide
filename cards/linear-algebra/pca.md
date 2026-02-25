@@ -53,6 +53,23 @@ Finds orthogonal directions of maximum variance and projects data onto them.
 ## Example
 Reducing 100-dimensional embeddings to 2D for visualization uses \(Z=X_cW_2\).
 
+## How to Compute (Pseudocode)
+```text
+Input: data matrix X (n samples x d features), target components k
+Output: principal components and projected data
+
+center data: X_c <- X - column_means(X)
+compute PCA via SVD or covariance eigendecomposition
+select the top k principal directions W_k
+project data: Z <- X_c W_k
+return W_k, Z
+```
+
+## Complexity
+- Time: Dominated by SVD/eigendecomposition (dense PCA is typically polynomial and often cubic in the smaller matrix dimension)
+- Space: Depends on data storage and whether full covariance or SVD factors are materialized
+- Assumptions: Dense PCA workflow shown; randomized/incremental PCA methods have different runtime/memory tradeoffs
+
 ## See also
 - [Singular Value Decomposition (SVD)](../linear-algebra/svd.md)
 - [Eigenvalues & Eigenvectors](../linear-algebra/eigenvalues-eigenvectors.md)

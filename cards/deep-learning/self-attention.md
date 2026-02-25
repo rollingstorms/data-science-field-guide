@@ -44,6 +44,25 @@ Self-attention lets each token attend to other tokens in the same sequence (and 
 ## Example
 In "The animal didn't cross because it was tired," self-attention can help "it" attend to "animal."
 
+## How to Compute (Pseudocode)
+```text
+Input: sequence representations X
+Output: context-aware sequence representations
+
+Q <- X W_Q
+K <- X W_K
+V <- X W_V
+scores <- (Q K^T) / sqrt(d_k)
+apply mask if needed (for example, causal mask)
+weights <- softmax(scores)
+return weights V
+```
+
+## Complexity
+- Time: Typically \(O(L^2 d)\) for sequence length \(L\) and hidden/head dimension \(d\) in dense self-attention
+- Space: Typically \(O(L^2)\) attention-score/weight memory (per head, per batch element), plus projections and outputs
+- Assumptions: Standard dense self-attention; multi-head/batch factors multiply constants and memory usage
+
 ## See also
 - [Attention](../deep-learning/attention.md)
 - [Cross-Attention](../deep-learning/cross-attention.md)

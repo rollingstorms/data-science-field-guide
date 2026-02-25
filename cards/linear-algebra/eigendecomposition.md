@@ -43,5 +43,22 @@ Represents a linear map in a basis where it only scales coordinates.
 ## Example
 For \(A=\operatorname{diag}(2,1)\),
 \(\lambda_1=2,\lambda_2=1\) with eigenvectors \(e_1,e_2\).
+## How to Compute (Pseudocode)
+```text
+Input: square matrix A (n x n)
+Output: eigenvalues Lambda and eigenvectors Q (when diagonalizable)
+
+# High-level dense workflow
+reduce A to Hessenberg form (or tridiagonal if symmetric)
+run a QR-based eigenvalue algorithm until convergence
+recover eigenvectors from accumulated transformations (if requested)
+return Q, Lambda
+```
+
+## Complexity
+- Time: Typically \(O(n^3)\) for dense eigendecomposition of an \(n \times n\) matrix
+- Space: \(O(n^2)\) for dense matrix/factor storage
+- Assumptions: Dense direct methods; symmetric matrices use specialized routines and have better constants but same cubic Big O in dense settings
+
 ## See also
 - [SVD](../linear-algebra/svd.md)

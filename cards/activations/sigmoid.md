@@ -49,6 +49,21 @@ Sigmoid maps real numbers to \((0,1)\), making outputs interpretable as probabil
 ## Example
 \(\sigma(0)=0.5\), \(\sigma(4)\approx 0.982\).
 
+## How to Compute (Pseudocode)
+```text
+Input: tensor/vector x
+Output: y = sigmoid(x) applied elementwise
+
+for each element x_i in x:
+  y_i <- 1 / (1 + exp(-x_i))
+return y
+```
+
+## Complexity
+- Time: \(O(m)\) elementwise operations for \(m\) inputs
+- Space: \(O(m)\) for the output tensor/vector (or \(O(1)\) extra if done in place)
+- Assumptions: Elementwise application over \(m\) scalars; exact constant factors depend on operations like \(\exp\), \(\tanh\), or \(\mathrm{erf}/\Phi\) approximations
+
 ## See also
 - [Tanh](../activations/tanh.md)
 - [Softmax](../activations/softmax.md)

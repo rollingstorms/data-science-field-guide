@@ -40,6 +40,23 @@ A position-wise MLP applied independently to each token after attention in a Tra
 ## Example
 A Transformer block may map \(d=768\) to \(3072\) with GELU, then back to \(768\).
 
+## How to Compute (Pseudocode)
+```text
+Input: token representations X
+Output: transformed token representations
+
+for each token vector x in X:
+  h <- activation(W1 x + b1)
+  y <- W2 h + b2
+  emit y
+return all token outputs
+```
+
+## Complexity
+- Time: \(O(B L d d_{ff})\) for batch size \(B\), sequence length \(L\), model width \(d\), and FFN hidden width \(d_{ff}\) (dense implementation)
+- Space: \(O(B L d_{ff})\) for hidden activations plus output/storage tensors (training caches add more)
+- Assumptions: Position-wise dense FFN with shared weights across tokens; activation cost is lower-order relative to matrix multiplies
+
 ## See also
 - [MLP (Multi-Layer Perceptron)](../deep-learning/mlp.md)
 - [Transformer](../deep-learning/transformer.md)

@@ -39,5 +39,21 @@ Benjamini-Hochberg controls FDR by finding the largest ordered p-value under a l
 ## Example
 Sort 500 p-values, find the largest \(k\) meeting the BH line, and reject the first \(k\).
 
+## How to Compute (Pseudocode)
+```text
+Input: p-values p[1..m] and target FDR level q
+Output: rejected hypothesis set
+
+sort p-values ascending with their hypothesis indices
+find the largest k such that p_(k) <= (k/m) * q
+reject hypotheses corresponding to p_(1), ..., p_(k)
+return rejected set
+```
+
+## Complexity
+- Time: \(O(m\log m)\) due to sorting \(m\) p-values
+- Space: \(O(m)\) for sorted p-values/indices
+- Assumptions: BH procedure shown; dependence structure affects guarantees but not the basic computational pattern
+
 ## See also
 - [P-Value](../probability-stats/p-value.md)

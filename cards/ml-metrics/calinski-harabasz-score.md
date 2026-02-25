@@ -45,6 +45,21 @@ Ratio of between-cluster dispersion to within-cluster dispersion, adjusted for d
 ## Example
 If clusters are tight (small \(W_k\)) and far apart (large \(B_k\)), CH is large.
 
+## How to Compute (Pseudocode)
+```text
+Input: data points, cluster labels (and metric-specific settings)
+Output: Calinski-Harabasz index
+
+compute the per-cluster and/or per-point quantities required by the metric
+aggregate them according to the metric definition
+return the metric value
+```
+
+## Complexity
+- Time: Depends on the metric and implementation; many clustering validation metrics require at least \(O(n)\) scans, and some need pairwise distances (up to \(O(n^2)\))
+- Space: Depends on whether pairwise distances are materialized (from \(O(1)\)/\(O(k)\) summaries up to \(O(n^2)\))
+- Assumptions: \(n\) points and cluster labels are given; exact cost depends on distance computation/caching and metric-specific formulas
+
 ## See also
 - [Silhouette Score](../ml-metrics/silhouette-score.md)
 - [Davies-Bouldin Index](../ml-metrics/davies-bouldin-index.md)

@@ -39,6 +39,22 @@ The derivative of a composition is the product of the outer derivative (evaluate
 ## Example
 If \(f(u)=u^2\) and \(g(x)=\sin x\), then \(\frac{d}{dx}(\sin x)^2 = 2\sin x \cos x\).
 
+## How to Compute (Pseudocode)
+```text
+Input: outer function f, inner function g, point x
+Output: derivative of h(x) = f(g(x)) at x
+
+u <- g(x)
+inner_deriv <- g'(x)
+outer_deriv <- f'(u)
+return outer_deriv * inner_deriv
+```
+
+## Complexity
+- Time: \(O(1)\) high-level composition steps, plus the costs of evaluating \(g(x)\), \(g'(x)\), and \(f'(g(x))\)
+- Space: \(O(1)\)
+- Assumptions: This is the scalar single-composition case; nested compositions scale with the number of layers/operations
+
 ## See also
 - [Multivariable Chain Rule](../calculus/multivariable-chain-rule.md)
 - [Backpropagation](../deep-learning/backpropagation.md)

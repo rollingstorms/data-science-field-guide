@@ -42,6 +42,27 @@ Dinic accelerates max-flow by batching augmentations within layered residual gra
 ## Example
 After BFS assigns levels, DFS pushes flow only along level-respecting edges until all \(s\)-\(t\) paths in that level graph are blocked.
 
+## How to Compute (Pseudocode)
+```text
+Input: flow network G with capacities c, source s, sink t
+Output: maximum flow f
+
+initialize flow f(e) <- 0 for all edges e
+build residual graph G_f
+
+while BFS builds levels from s to t in G_f:
+  reset current-edge pointers for all vertices
+  while DFS sends positive flow through level-respecting paths:
+    push flow and update residual edges
+
+return f
+```
+
+## Complexity
+- Time: \(O(|V|^2|E|)\) in general networks (classical bound)
+- Space: \(O(|V|+|E|)\) for residual graph, level array, and DFS/BFS metadata
+- Assumptions: Adjacency-list residual graph with reverse edges and current-edge pointers
+
 ## See also
 - [Maximum Flow](../graphs/maximum-flow.md)
 - [Edmonds-Karp Algorithm](../graphs/edmonds-karp.md)

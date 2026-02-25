@@ -43,3 +43,21 @@ Weights terms by frequency in a document and rarity across documents.
 ## Example
 If \(\mathrm{tf}=0.03\) and \(\mathrm{idf}=\log(100)\approx 4.605\),
 then \(\mathrm{tfidf}=0.138\).
+
+## How to Compute (Pseudocode)
+```text
+Input: tokenized corpus/documents
+Output: TF-IDF features
+
+compute TF values per document
+compute corpus-level IDF values
+for each document-term pair used in the representation:
+  tfidf(term, doc) <- tf(term, doc) * idf(term)
+return TF-IDF vectors/matrix
+```
+
+## Complexity
+- Time: Dominated by TF and IDF computation plus sparse feature assembly (typically linear in corpus token count for sparse pipelines)
+- Space: Depends on vocabulary size and sparsity of the document-term matrix (sparse storage is standard)
+- Assumptions: Tokenized corpus and sparse vectorization workflow; exact costs depend on preprocessing and vocabulary filtering
+

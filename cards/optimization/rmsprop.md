@@ -45,6 +45,23 @@ RMSProp rescales updates by a running estimate of gradient magnitude, giving ada
 ## Example
 Parameters with consistently large gradients receive smaller effective step sizes.
 
+## How to Compute (Pseudocode)
+```text
+Input: gradients g_t, parameters theta, learning rate eta, decay rho, epsilon, steps T
+Output: updated parameters theta
+
+initialize accumulator s <- 0
+for t from 1 to T:
+  s <- rho * s + (1 - rho) * (g_t * g_t)   # elementwise square
+  theta <- theta - eta * g_t / (sqrt(s) + epsilon)
+return theta
+```
+
+## Complexity
+- Time: \(O(Tp)\) elementwise optimizer-state updates once gradients are available (plus gradient computation cost)
+- Space: \(O(p)\) additional space for the squared-gradient accumulator
+- Assumptions: \(p\) parameters; elementwise operations shown for a dense parameter vector/tensor collection
+
 ## See also
 - [Adam Optimizer](../optimization/adam.md)
 - [Momentum](../optimization/momentum.md)

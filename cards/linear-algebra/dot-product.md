@@ -40,5 +40,21 @@ Measures alignment between vectors; equals \(\|x\|\,\|y\|\cos\theta\).
 
 ## Example
 If \(a=(1,2)\) and \(b=(3,4)\), then \(a\cdot b=11\).
+## How to Compute (Pseudocode)
+```text
+Input: vectors x[1..n], y[1..n]
+Output: dot product x . y
+
+s <- 0
+for i from 1 to n:
+  s <- s + x[i] * y[i]
+return s
+```
+
+## Complexity
+- Time: \(O(n)\)
+- Space: \(O(1)\) extra space
+- Assumptions: Vectors have length \(n\); complex-valued vectors use a conjugate inner product convention
+
 ## See also
 - [Vector Norms](../linear-algebra/norms.md)

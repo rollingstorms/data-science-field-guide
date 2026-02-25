@@ -40,6 +40,23 @@ Causal language modeling trains a model to predict each token using only earlier
 ## Example
 Given "The sky is", the model predicts the next token distribution for words like "blue".
 
+## How to Compute (Pseudocode)
+```text
+Input: token sequence batch and a decoder-only/causal LM
+Output: causal LM training loss
+
+shift targets so each position predicts the next token
+run the model with a causal mask to obtain logits for all positions
+compute cross-entropy loss against next-token targets
+average/sum over valid positions
+return loss
+```
+
+## Complexity
+- Time: Depends on model architecture; for Transformers, training cost is dominated by masked self-attention and FFN computation over sequence length and batch size
+- Space: Depends on model size and activation storage across sequence length (attention memory can dominate)
+- Assumptions: Teacher-forced training on full sequences; exact complexity inherits the underlying model (for example, Transformer) runtime/memory behavior
+
 ## See also
 - [Next-Token Prediction](../nlp/next-token-prediction.md)
 - [Self-Attention](../deep-learning/self-attention.md)

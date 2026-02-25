@@ -36,3 +36,22 @@ A feature store manages reusable, versioned feature definitions and serving/trai
 
 ## Example
 Define a "30-day spend" feature once and reuse it in both batch training and online scoring systems.
+
+## How to Compute (Pseudocode)
+```text
+Input: feature definitions, entities, timestamps, source tables/events
+Output: point-in-time correct feature retrieval pipeline
+
+define versioned feature transformations and source dependencies
+for training data generation:
+  join features by entity and timestamp using point-in-time constraints
+for online serving:
+  compute/lookup the same feature definitions for incoming requests
+monitor freshness, lineage, and online/offline consistency
+```
+
+## Complexity
+- Time: Depends on storage/query engines, feature definitions, and join/backfill workloads (often dominated by data processing infrastructure)
+- Space: Depends on offline feature tables, online caches, and retained lineage/version metadata
+- Assumptions: This card describes system workflow complexity; infrastructure and data volume dominate over local algorithmic costs
+

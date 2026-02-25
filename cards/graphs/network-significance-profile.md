@@ -41,6 +41,25 @@ A unit-length vector of motif z-scores that summarizes a network's motif structu
 ## Example
 If \(Z=[2,1]\), then \(\mathrm{SP}=[2/\sqrt{5}, 1/\sqrt{5}]\).
 
+## How to Compute (Pseudocode)
+```text
+Input: motif z-scores Z[1..m]
+Output: significance profile SP[1..m]
+
+norm <- sqrt(sum_{i=1..m} Z[i]^2)
+if norm == 0:
+  handle degenerate case (for example, return zeros or mark undefined)
+for i from 1 to m:
+  SP[i] <- Z[i] / norm
+
+return SP
+```
+
+## Complexity
+- Time: \(O(m)\) for \(m\) motif z-scores
+- Space: \(O(m)\) for the output profile (or \(O(1)\) extra if normalizing in place)
+- Assumptions: Motif z-scores are already computed; the cost of motif counting/null-model estimation is excluded and can dominate overall runtime
+
 ## See also
 - [Graph Motifs](../graphs/graph-motifs.md)
 - [Z-Score](../probability-stats/z-score.md)

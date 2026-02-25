@@ -40,6 +40,24 @@ A Transformer is a sequence model built from attention and feedforward blocks in
 ## Example
 A decoder-only Transformer stacks masked self-attention + MLP blocks to predict the next token.
 
+## How to Compute (Pseudocode)
+```text
+Input: token embeddings + positions, stack of Transformer blocks
+Output: contextualized sequence representations (or logits via output head)
+
+X <- input embeddings with positional information
+for each Transformer block:
+  X <- attention sublayer + residual + normalization
+  X <- FFN sublayer + residual + normalization
+apply task/output head if needed
+return outputs
+```
+
+## Complexity
+- Time: Dominated by attention and FFN costs across layers (standard dense self-attention gives quadratic dependence on sequence length per layer)
+- Space: Dominated by activations and attention matrices during training (quadratic in sequence length for standard dense attention)
+- Assumptions: Standard dense Transformer blocks; exact cost depends on layer count, hidden width, head count, sequence length, and implementation kernels
+
 ## See also
 - [Attention](../deep-learning/attention.md)
 - [Multi-Head Attention](../deep-learning/multi-head-attention.md)

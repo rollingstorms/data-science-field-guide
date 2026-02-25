@@ -56,6 +56,25 @@ Models the log-odds of a binary outcome as a linear function of features, then m
 ## Example
 Predict churn probability and choose a threshold based on business cost, not just 0.5.
 
+## How to Compute (Pseudocode)
+```text
+Input: training data X, labels y, learning settings
+Output: parameters w, b and predicted probabilities
+
+initialize w, b
+repeat until convergence (or max iterations):
+  p <- sigmoid(X w + b)
+  compute gradient of log-loss with respect to w, b
+  update w, b using an optimizer (for example, gradient descent or LBFGS/Newton-style method)
+
+return w, b
+```
+
+## Complexity
+- Time: Depends on the optimizer; many iterative methods cost roughly \(O(Tnd)\) for \(T\) passes/iterations with dense gradients, plus optimizer-specific overhead
+- Space: Typically \(O(nd)\) for dense data plus \(O(d)\) model/gradient state (more for second-order/quasi-Newton methods)
+- Assumptions: \(n\) samples, \(d\) features, binary logistic regression; convergence rate and constants depend on regularization, conditioning, and optimizer choice
+
 ## See also
 - [Log Loss](../ml-metrics/log-loss.md)
 - [Threshold Selection](../machine-learning/threshold-selection.md)

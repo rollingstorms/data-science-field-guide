@@ -39,5 +39,26 @@ Gradient boosting builds an additive model by sequentially fitting weak learners
 ## Example
 Use shallow trees with a small learning rate and early stopping on validation AUC.
 
+## How to Compute (Pseudocode)
+```text
+Input: training data X, y; rounds M; learning rate eta; weak learner family
+Output: boosted model F_M
+
+initialize model F_0(x) (for example, constant baseline)
+for m from 1 to M:
+  compute pseudo-residuals / gradients from current model F_{m-1}
+  fit weak learner h_m to the residual targets
+  choose step size (or use eta)
+  update F_m(x) <- F_{m-1}(x) + eta * h_m(x)
+  optionally monitor validation metric for early stopping
+
+return F_M
+```
+
+## Complexity
+- Time: Roughly \(M\) times the cost of fitting one weak learner plus gradient/residual computation (commonly dominated by tree fitting in tree-boosting implementations)
+- Space: Depends on the number of learners \(M\) and learner size, plus training data and gradient/residual buffers
+- Assumptions: Exact complexity depends on weak learner type, tree depth/histogram methods, subsampling, and regularization/early-stopping settings
+
 ## See also
 - [Cross-Validation](../machine-learning/cross-validation.md)

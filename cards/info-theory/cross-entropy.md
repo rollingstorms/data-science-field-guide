@@ -38,6 +38,7 @@ title: Bernoulli cross-entropy H(P,Q) with P(1)=0.7 (bits)
 - Bottom equation: continuous case
 
 </div>
+
 ## What it means
 Expected code length when encoding samples from \(P\) using a code optimized for \(Q\).
 
@@ -60,6 +61,24 @@ Expected code length when encoding samples from \(P\) using a code optimized for
 ## Example
 If \(p=[1,0]\) and \(q=[0.8,0.2]\),
 \(H(p,q)=-\log 0.8\).
+
+## How to Compute (Pseudocode)
+```text
+Input: discrete probabilities p[1..k], q[1..k], log base b
+Output: cross_entropy
+
+total <- 0
+for i from 1 to k:
+  total <- total - p[i] * log_base_b(q[i])
+
+return total
+```
+
+## Complexity
+- Time: \(O(k)\) for the discrete sum
+- Space: \(O(1)\) additional space
+- Assumptions: \(k\) is the number of outcomes in the discrete support; continuous cross-entropy is computed via integration/approximation instead
+
 ## See also
 - [KL Divergence](../info-theory/kl-divergence.md)
 - [Shannon Entropy](../info-theory/entropy-shannon.md)

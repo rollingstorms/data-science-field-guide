@@ -61,3 +61,25 @@ title: Bernoulli KL divergence D_KL(P||Q), P(1)=0.7 (bits)
 
 ## Example
 If \(P=Q\), then \(D_{\mathrm{KL}}(P\|Q)=0\).
+
+## How to Compute (Pseudocode)
+```text
+Input: discrete probabilities p[1..k], q[1..k], log base b
+Output: kl_divergence
+
+total <- 0
+for i from 1 to k:
+  if p[i] == 0:
+    continue
+  if q[i] == 0:
+    return infinity
+  total <- total + p[i] * log_base_b(p[i] / q[i])
+
+return total
+```
+
+## Complexity
+- Time: \(O(k)\) for the discrete sum
+- Space: \(O(1)\) additional space
+- Assumptions: \(k\) is the number of outcomes in the discrete support; continuous KL is computed via integration/approximation instead
+

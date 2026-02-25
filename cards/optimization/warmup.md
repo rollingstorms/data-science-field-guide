@@ -52,6 +52,23 @@ Warmup starts training with a small learning rate and ramps it up over the first
 ## Example
 Train with linear warmup for 1,000 steps, then cosine decay for the remaining steps.
 
+## How to Compute (Pseudocode)
+```text
+Input: step t, warmup steps T_warmup, target lr eta_max, post-warmup schedule
+Output: learning rate eta_t
+
+if t <= T_warmup:
+  eta_t <- eta_max * t / T_warmup
+else:
+  eta_t <- post_warmup_schedule(t)
+return eta_t
+```
+
+## Complexity
+- Time: \(O(1)\) per step to compute the warmup-adjusted learning rate
+- Space: \(O(1)\)
+- Assumptions: Schedule evaluation only; warmup is typically composed with a longer decay schedule and does not dominate training cost
+
 ## See also
 - [Learning Rate Schedule](../optimization/learning-rate-schedule.md)
 - [AdamW Optimizer](../optimization/adamw.md)

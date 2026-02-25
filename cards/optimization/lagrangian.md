@@ -44,5 +44,20 @@ Converts constrained optimization into an unconstrained objective by penalizing 
 ## Example
 For \(\min x^2\) s.t. \(x=1\),
 \(\mathcal{L}(x,\lambda)=x^2+\lambda(x-1)\).
+## How to Compute (Pseudocode)
+```text
+Input: objective f(x), constraints g(x) <= 0 and h(x) = 0, multipliers lambda, nu
+Output: Lagrangian value L(x, lambda, nu)
+
+compute constraint values g(x), h(x)
+L <- f(x) + lambda^T g(x) + nu^T h(x)
+return L
+```
+
+## Complexity
+- Time: Depends on the costs of evaluating the objective and constraint functions at \(x\)
+- Space: Depends on the number of variables/constraints and any stored evaluations/Jacobians
+- Assumptions: This card covers Lagrangian construction/evaluation; downstream use in dual/KKT methods adds solver-dependent cost
+
 ## See also
 - [KKT Conditions](../optimization/kkt-conditions.md)

@@ -38,6 +38,25 @@ Adds an L1 penalty, which can drive some coefficients exactly to zero and perfor
 ## Example
 Lasso can shrink 500 features down to a smaller active set for a simpler model.
 
+## How to Compute (Pseudocode)
+```text
+Input: design matrix X, targets y, regularization lambda
+Output: lasso coefficients beta
+
+initialize beta
+repeat until convergence:
+  for each coordinate j:
+    compute partial residual excluding feature j
+    update beta[j] using a soft-thresholding coordinate step
+
+return beta
+```
+
+## Complexity
+- Time: Depends on the solver; a common coordinate-descent view is roughly \(O(Tnd)\) for \(T\) passes over \(d\) coordinates with dense data
+- Space: Typically \(O(nd + d)\) for dense data and coefficient/work vectors
+- Assumptions: \(n\) samples, \(d\) features; complexity depends on sparsity, screening rules, and convergence tolerance
+
 ## See also
 - [Linear Regression](../machine-learning/linear-regression.md)
 - [Regularization (L1/L2)](../optimization/regularization.md)

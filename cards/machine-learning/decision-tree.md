@@ -42,5 +42,30 @@ A decision tree recursively partitions feature space into regions with simple pr
 ## Example
 A tree might first split on income, then on account age to predict default risk.
 
+## How to Compute (Pseudocode)
+```text
+Input: training data X, targets y, stopping rules
+Output: decision tree
+
+function BUILD_NODE(data):
+  if stopping_rule_met(data):
+    return leaf(prediction_from(data))
+
+  evaluate candidate splits and choose best split s*
+  split data into left_data, right_data using s*
+
+  node <- internal_node(split=s*)
+  node.left <- BUILD_NODE(left_data)
+  node.right <- BUILD_NODE(right_data)
+  return node
+
+return BUILD_NODE((X, y))
+```
+
+## Complexity
+- Time: Depends on the split search strategy and implementation; a common training-time bound is roughly \(O(n d \log n)\) to \(O(n d n_{levels})\) for greedy tree growth on tabular data
+- Space: Typically \(O(n d)\) for data storage plus tree structure and recursion/work buffers
+- Assumptions: \(n\) samples, \(d\) features; exact split search, feature types, and sorting reuse strongly affect practical complexity
+
 ## See also
 - [Cross-Validation](../machine-learning/cross-validation.md)

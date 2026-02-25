@@ -46,5 +46,22 @@ Decomposes any matrix into rotations/reflections and axis-aligned scaling.
 For \(A=egin{bmatrix}1&0\0&0
 \end{bmatrix}\),
 \(U=I,\;\Sigma=\operatorname{diag}(1,0),\;V=I\).
+## How to Compute (Pseudocode)
+```text
+Input: matrix A (m x n)
+Output: singular vectors/values U, Sigma, V^T
+
+# High-level dense workflow used in many libraries
+reduce A to bidiagonal form B using orthogonal transforms
+compute singular values/vectors of bidiagonal B (iterative solver)
+accumulate transforms to recover U and V
+return U, Sigma, V^T
+```
+
+## Complexity
+- Time: Typically \(O(mn\min(m,n))\) for dense full SVD (often summarized as \(O(n^3)\) for square \(n \times n\) matrices)
+- Space: \(O(mn)\) for dense storage, plus workspaces/factors
+- Assumptions: Dense direct full SVD; truncated/iterative sparse SVD can be much cheaper and has different complexity
+
 ## See also
 - [Eigendecomposition](../linear-algebra/eigendecomposition.md)

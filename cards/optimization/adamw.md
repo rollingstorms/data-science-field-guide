@@ -41,6 +41,23 @@ AdamW applies decoupled weight decay, separating parameter shrinkage from the gr
 ## Example
 A common setup is AdamW with warmup + cosine decay for Transformer training.
 
+## How to Compute (Pseudocode)
+```text
+Input: gradients g_t, parameters theta, lr eta, Adam hyperparameters, weight decay lambda, steps T
+Output: updated parameters theta
+
+perform the Adam moment updates and bias correction
+for each parameter element:
+  theta <- theta - eta * adam_update(theta, g_t)
+  theta <- theta - eta * lambda * theta    # decoupled weight decay
+return theta
+```
+
+## Complexity
+- Time: \(O(Tp)\) elementwise optimizer-state updates once gradients are available (plus gradient computation cost)
+- Space: \(O(p)\) additional Adam moment buffers, similar to Adam
+- Assumptions: \(p\) parameters; decoupled decay shown conceptually (implementations may fuse the operations)
+
 ## See also
 - [Adam Optimizer](../optimization/adam.md)
 - [Weight Decay](../optimization/weight-decay.md)

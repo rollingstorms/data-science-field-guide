@@ -56,6 +56,22 @@ The PMF gives the probability of each exact outcome for a discrete random variab
 ## Example
 For a fair die, \(p_X(4)=1/6\) and \(P(X\in\{1,2\})=p_X(1)+p_X(2)=1/3\).
 
+## How to Compute (Pseudocode)
+```text
+Input: distribution specification and query value(s)
+Output: PMF values (or probabilities from it)
+
+for each query value/interval:
+  evaluate the distribution rule for the card's representation
+  (PMF: point probability, PDF: density, CDF: cumulative probability)
+return the computed value(s)
+```
+
+## Complexity
+- Time: Depends on the distribution family and number of queries (often \(O(q)\) for \(q\) query points once parameters are known)
+- Space: \(O(q)\) for returned values (or \(O(1)\) for a single query)
+- Assumptions: Parameter-estimation cost is excluded; exact formulas and numerical methods vary by distribution family
+
 ## See also
 - [PDF (Probability Density Function)](../probability-stats/pdf.md)
 - [CDF (Cumulative Distribution Function)](../probability-stats/cdf.md)

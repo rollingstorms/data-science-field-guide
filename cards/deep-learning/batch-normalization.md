@@ -40,6 +40,26 @@ Normalizes activations using batch statistics during training, then applies a le
 ## Example
 CNN activations are often batch-normalized after convolution and before nonlinear activation.
 
+## How to Compute (Pseudocode)
+```text
+Input: batch activations x, learned gamma/beta, epsilon, mode
+Output: normalized activations y
+
+if training:
+  compute batch mean and variance over the normalization axes
+  normalize x using batch statistics
+  update running mean/variance estimates
+else:
+  normalize x using running mean/variance
+apply affine transform y <- gamma * x_hat + beta
+return y
+```
+
+## Complexity
+- Time: \(O(m)\) per batch for \(m\) normalized activation values (plus reduction operations for mean/variance)
+- Space: \(O(m)\) for activations and normalized outputs, plus \(O(c)\) running stats/affine parameters for normalized channels/features
+- Assumptions: Exact axes and constants depend on BN variant (1D/2D/3D) and tensor layout
+
 ## See also
 - [Layer Normalization](../deep-learning/layer-normalization.md)
 - [MLP (Multi-Layer Perceptron)](../deep-learning/mlp.md)

@@ -38,6 +38,23 @@ Adds an L2 penalty to linear regression to shrink coefficients and reduce varian
 ## Example
 Ridge is often a strong baseline when many correlated features exist.
 
+## How to Compute (Pseudocode)
+```text
+Input: design matrix X (n x d), targets y, regularization lambda
+Output: ridge coefficients beta
+
+# One common closed-form solve
+A <- X^T X + lambda * I
+b <- X^T y
+beta <- solve_linear_system(A, b)
+return beta
+```
+
+## Complexity
+- Time: Dense direct solving is typically \(O(nd^2 + d^3)\) (forming \(X^T X\) and solving the \(d \times d\) system)
+- Space: Typically \(O(nd + d^2)\) for dense data plus the normal-equation matrix
+- Assumptions: \(n\) samples, \(d\) features; iterative solvers (especially for large sparse data) have different costs and memory profiles
+
 ## See also
 - [Linear Regression](../machine-learning/linear-regression.md)
 - [Regularization (L1/L2)](../optimization/regularization.md)

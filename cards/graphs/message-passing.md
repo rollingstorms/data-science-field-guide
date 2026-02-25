@@ -47,6 +47,28 @@ Message passing updates each node representation by aggregating information from
 ## Example
 A mean-aggregation layer sets each node's next embedding to the average of its neighbors' transformed embeddings.
 
+## How to Compute (Pseudocode)
+```text
+Input: graph G=(V,E), node states h^(0), message/update functions phi, AGG, psi, rounds T
+Output: updated node states h^(T)
+
+for t from 0 to T-1:
+  for each node v in V:
+    messages <- []
+    for each neighbor u in N(v):
+      append phi(h_v^(t), h_u^(t), e_uv) to messages
+    m_v <- AGG(messages)
+  for each node v in V:
+    h_v^(t+1) <- psi(h_v^(t), m_v)
+
+return h^(T)
+```
+
+## Complexity
+- Time: Typically \(O(T(|V|+|E|)\cdot c_{msg})\) to \(O(T|E|\cdot c_{msg})\), where cost depends on message/update function complexity
+- Space: \(O(|V|\cdot d_h + |E|\cdot d_e)\) for node/edge features plus intermediate message buffers (implementation-dependent)
+- Assumptions: \(T\) message-passing rounds; sparse graph traversal; tensor dimensions and batching determine constants
+
 ## See also
 - [Adjacency Matrix](../graphs/adjacency-matrix.md)
 - [Graph Laplacian](../graphs/laplacian.md)

@@ -40,7 +40,24 @@ Iteratively moves downhill along the steepest descent direction.
 
 
 ## Example
-For \(f(x)=x^2\), \(x_0=1\), \(lpha=0.1\):
+For \(f(x)=x^2\), \(x_0=1\), \(\alpha=0.1\):
 \(x_1=1-0.1\cdot2\cdot1=0.8\).
+## How to Compute (Pseudocode)
+```text
+Input: objective f, gradient function grad_f, initial x0, step sizes eta_k, iterations T
+Output: approximate minimizer x
+
+x <- x0
+for k from 1 to T:
+  g <- grad_f(x)
+  x <- x - eta_k * g
+return x
+```
+
+## Complexity
+- Time: \(O(T \cdot \mathrm{GradCost})\), where \(\mathrm{GradCost}\) is the cost of one full gradient evaluation
+- Space: Depends on problem dimension; typically \(O(p)\) for \(p\) parameters plus gradient storage
+- Assumptions: First-order iterative method; exact cost depends on gradient computation and step-size strategy
+
 ## See also
 - [Line Search](../optimization/line-search.md)

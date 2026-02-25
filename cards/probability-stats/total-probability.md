@@ -43,5 +43,21 @@ Computes \(P(B)\) by conditioning on a partition of cases.
 If \(P(B)=0.3\), \(P(A\mid B)=0.8\), \(P(A\mid
 eg B)=0.2\),
 then \(P(A)=0.8\cdot0.3+0.2\cdot0.7=0.38\).
+## How to Compute (Pseudocode)
+```text
+Input: event probabilities / joint distribution entries
+Output: requested probability quantity
+
+identify the relevant events/variables and required joint/marginal terms
+apply the probability identity in the card formula
+check denominator/normalization terms are valid (nonzero when required)
+return the computed probability
+```
+
+## Complexity
+- Time: Typically \(O(1)\) for a single event computation once required probabilities are available; larger table-based calculations scale with table size
+- Space: \(O(1)\) extra space for a single computation
+- Assumptions: Probability terms (joint/marginals/conditionals) are already known or computed separately
+
 ## See also
 - [Bayes' Rule](../probability-stats/bayes-rule.md)

@@ -40,6 +40,23 @@ Type I error is a false positive; Type II error is a false negative.
 ## Example
 In medical screening, a Type I error may wrongly flag a healthy patient, while Type II misses a true condition.
 
+## How to Compute (Pseudocode)
+```text
+Input: hypothesis test procedure and null/alternative scenarios
+Output: Type I/Type II error rates (alpha, beta) and power
+
+specify the rejection rule of the test
+compute alpha under the null model (false-positive probability)
+compute beta under the alternative model (false-negative probability)
+compute power <- 1 - beta
+return alpha, beta, power
+```
+
+## Complexity
+- Time: Depends on whether error rates are derived analytically or estimated by simulation; simulation cost scales with the number of simulated trials and test-evaluation cost
+- Space: Depends on whether simulated outcomes are stored or streamed into summary counts
+- Assumptions: Error rates are properties of a test procedure under specified data-generating models, not one-off experimental outcomes
+
 ## See also
 - [P-Value](../probability-stats/p-value.md)
 - [Statistical Power](../probability-stats/statistical-power.md)

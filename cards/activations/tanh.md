@@ -49,6 +49,21 @@ Tanh maps real inputs to \((-1,1)\), giving a zero-centered bounded activation.
 ## Example
 \(\tanh(0)=0\), \(\tanh(2)\approx 0.964\).
 
+## How to Compute (Pseudocode)
+```text
+Input: tensor/vector x
+Output: y = tanh(x) applied elementwise
+
+for each element x_i in x:
+  y_i <- tanh(x_i)
+return y
+```
+
+## Complexity
+- Time: \(O(m)\) elementwise operations for \(m\) inputs
+- Space: \(O(m)\) for the output tensor/vector (or \(O(1)\) extra if done in place)
+- Assumptions: Elementwise application over \(m\) scalars; exact constant factors depend on operations like \(\exp\), \(\tanh\), or \(\mathrm{erf}/\Phi\) approximations
+
 ## See also
 - [Sigmoid](../activations/sigmoid.md)
 - [ReLU (Rectified Linear Unit)](../activations/relu.md)

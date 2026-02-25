@@ -41,6 +41,20 @@ Weight decay shrinks parameters toward zero during training, discouraging overly
 ## Example
 Applying weight decay to a large linear layer gradually reduces weight magnitudes unless supported by the data gradient.
 
+## How to Compute (Pseudocode)
+```text
+Input: parameters theta, gradient g, learning rate eta, decay lambda
+Output: updated parameters theta
+
+theta <- (1 - eta * lambda) * theta - eta * g
+return theta
+```
+
+## Complexity
+- Time: \(O(p)\) elementwise parameter updates once gradients are available
+- Space: \(O(1)\) extra optimizer state for plain decoupled decay (beyond parameter/gradient storage)
+- Assumptions: \(p\) parameters; shown as a per-step update rule (overall training cost scales with the number of optimization steps)
+
 ## See also
 - [AdamW Optimizer](../optimization/adamw.md)
 - [Regularization (L1/L2)](../optimization/regularization.md)

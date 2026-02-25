@@ -52,6 +52,24 @@ Prediction error can be decomposed into systematic error (bias), estimation vari
 ## Example
 A deep tree may fit training data perfectly (low bias) but vary a lot across resamples (high variance).
 
+## How to Compute (Pseudocode)
+```text
+Input: model family and a resampling/evaluation procedure
+Output: qualitative or empirical bias/variance assessment
+
+fit models of varying complexity (or regularization strength)
+evaluate training and validation/test error across resamples/folds
+observe patterns:
+  high bias -> both errors high
+  high variance -> train error low, validation error much higher / unstable
+choose a complexity/regularization level balancing the tradeoff
+```
+
+## Complexity
+- Time: Dominated by repeated model fitting/evaluation across model settings and resamples (workflow-dependent)
+- Space: Depends on stored models, predictions, and resampling results
+- Assumptions: This is an empirical model-selection workflow rather than direct computation of the theoretical decomposition terms
+
 ## See also
 - [Cross-Validation](../machine-learning/cross-validation.md)
 - [Regularization (L1/L2)](../optimization/regularization.md)

@@ -44,6 +44,21 @@ Independence means knowing one event/variable does not change probabilities for 
 ## Example
 Two independent fair coin flips: \(A=\) first flip is heads, \(B=\) second flip is heads. Then \(P(A,B)=1/4=(1/2)(1/2)\).
 
+## How to Compute (Pseudocode)
+```text
+Input: probabilities or data estimates for events/variables A and B
+Output: independence check/result
+
+compute/obtain P(A), P(B), and P(A,B)
+compare P(A,B) to P(A) * P(B) (within tolerance if estimated numerically)
+return whether independence appears to hold under the chosen criterion
+```
+
+## Complexity
+- Time: \(O(1)\) once the relevant probabilities are available (or data-estimation cost if computed from samples)
+- Space: \(O(1)\)
+- Assumptions: Exact equality is a theoretical property; empirical checks require estimation error/tolerance handling
+
 ## See also
 - [Joint Probability](../probability-stats/joint-probability.md)
 - [Correlation](../probability-stats/correlation.md)

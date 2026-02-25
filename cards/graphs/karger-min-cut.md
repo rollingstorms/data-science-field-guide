@@ -42,6 +42,29 @@ Karger's algorithm is a randomized algorithm for global min cut that repeatedly 
 ## Example
 Run random contractions many times and keep the smallest cut found; with enough trials, the probability of missing the true min cut becomes small.
 
+## How to Compute (Pseudocode)
+```text
+Input: connected undirected multigraph G, number of trials T
+Output: best cut found
+
+best_cut <- infinity
+for trial from 1 to T:
+  H <- copy of G
+  while number of supernodes in H > 2:
+    choose a uniformly random edge (u, v) in H
+    contract (u, v) into one supernode
+    remove self-loops
+  cut_size <- number (or total weight) of edges between the 2 remaining supernodes
+  best_cut <- min(best_cut, cut_size)
+
+return best_cut
+```
+
+## Complexity
+- Time: \(O(T |V|^2)\) to \(O(T |E|)\)-style bounds depending on the contraction data structure/implementation (naive implementations are often slower)
+- Space: \(O(|V|+|E|)\) per trial to store the working multigraph copy
+- Assumptions: Undirected graph; \(T\) independent trials for success amplification; exact constants and asymptotics depend on how contractions are represented
+
 ## See also
 - [Global Minimum Cut](../graphs/global-minimum-cut.md)
 - [Minimum Cut](../graphs/minimum-cut.md)

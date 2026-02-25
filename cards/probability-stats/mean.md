@@ -45,3 +45,19 @@ Average value of a distribution or dataset.
 
 ## Example
 For samples \([1, 2, 4]\), \(\bar x=(1+2+4)/3=2.333\).
+
+## How to Compute (Pseudocode)
+```text
+Input: sample data (and any reference values needed by the statistic)
+Output: statistic value
+
+compute the summary quantities required by the formula (for example, mean, deviations, counts)
+apply the statistic formula from the card
+return the result
+```
+
+## Complexity
+- Time: Typically \(O(n)\) for \(n\) samples for common one-pass or two-pass summary-statistic computations (sorting-based medians are \(O(n\log n)\) unless selection is used)
+- Space: \(O(1)\) to \(O(n)\) depending on whether values must be stored/sorted
+- Assumptions: Sample-statistic workflow shown; parameter-estimation and streaming/online algorithms can change constants and memory usage
+

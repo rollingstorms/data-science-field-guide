@@ -54,6 +54,21 @@ GELU smoothly gates inputs by their magnitude, rather than hard-thresholding lik
 ## Example
 For large positive \(x\), \(\mathrm{GELU}(x)\approx x\); for large negative \(x\), \(\mathrm{GELU}(x)\approx 0\).
 
+## How to Compute (Pseudocode)
+```text
+Input: tensor/vector x
+Output: y = GELU(x) applied elementwise
+
+for each element x_i in x:
+  y_i <- x_i * Phi(x_i)   # or a standard GELU approximation
+return y
+```
+
+## Complexity
+- Time: \(O(m)\) elementwise operations for \(m\) inputs
+- Space: \(O(m)\) for the output tensor/vector (or \(O(1)\) extra if done in place)
+- Assumptions: Elementwise application over \(m\) scalars; exact constant factors depend on operations like \(\exp\), \(\tanh\), or \(\mathrm{erf}/\Phi\) approximations
+
 ## See also
 - [ReLU (Rectified Linear Unit)](../activations/relu.md)
 - [Swish / SiLU](../activations/swish-silu.md)
