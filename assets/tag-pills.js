@@ -1,9 +1,52 @@
 (function () {
   let tagsIndexPromise = null;
 
+  function getScriptElement() {
+    return document.currentScript || Array.from(document.scripts).find((s) => {
+      const src = s.getAttribute("src") || "";
+      return src.includes("tag-pills.js");
+    });
+  }
+
+  function getSiteRootPath() {
+    const script = getScriptElement();
+    if (!script) return "/";
+    try {
+      const url = new URL(script.src, window.location.href);
+      return url.pathname.replace(/assets\/tag-pills\.js$/, "");
+    } catch (_err) {
+      return "/";
+    }
+  }
+
+  function getHomePathFromNav() {
+    const links = Array.from(document.querySelectorAll("a[href]"));
+    for (const link of links) {
+      const text = (link.textContent || "").trim();
+      if (text !== "Home") continue;
+      try {
+        const url = new URL(link.href, window.location.href);
+        return normalizePath(url.pathname);
+      } catch (_err) {
+        continue;
+      }
+    }
+    return null;
+  }
+
+  function toSiteHref(route) {
+    const homePath = getHomePathFromNav() || normalizePath(getSiteRootPath());
+    const rootTrimmed = homePath.endsWith("/") ? homePath.slice(0, -1) : homePath;
+    return rootTrimmed + route;
+  }
+
   function getTagsIndex() {
     if (!tagsIndexPromise) {
-      tagsIndexPromise = fetch("/assets/card-tags.json", { cache: "no-cache" })
+      const script = getScriptElement();
+      const dataUrl = script
+        ? new URL("card-tags.json", script.src).toString()
+        : "/assets/card-tags.json";
+      tagsIndexPromise = fetch(dataUrl, { cache: "no-cache" })
         .then((r) => (r.ok ? r.json() : {}))
         .catch(() => ({}));
     }
@@ -47,7 +90,7 @@
       const pill = document.createElement("a");
       pill.className = "card-tag-pill";
       pill.textContent = tag;
-      pill.href = "/index/TAGS/#" + slugifyHeading(tag);
+      pill.href = toSiteHref("/index/TAGS/#" + slugifyHeading(tag));
       row.appendChild(pill);
     }
 
